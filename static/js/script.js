@@ -9,7 +9,8 @@ $(document).ready( function () {
 
         if (currentLocation.indexOf('publication') > -1 || 
                 currentLocation.indexOf('research') > -1 || 
-                currentLocation.indexOf('teaching') > -1) {
+                currentLocation.indexOf('teaching') > -1 ||
+                currentLocation.indexOf('academic') > -1 ) {
             $('#research').addClass('selected');
         }
         else { 
@@ -17,7 +18,8 @@ $(document).ready( function () {
         }
     });
 
-    $('#content a').attr('target', '_blank');
+    $('#content a[href^="http"]').attr('target', '_blank');
+    $('#content a[href*="files"]').attr('target', '_blank');
     $('#content a[href*="\#"]').removeAttr('target')
 
     $(window).scroll( function(event) {

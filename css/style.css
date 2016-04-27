@@ -146,7 +146,7 @@ body {
 }
 
 #content a:hover {
-    font-weight: bold;
+    text-decoration: underline;
 }
 
 #banner img {
