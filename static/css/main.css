@@ -1,0 +1,111 @@
+body {
+    background-color: #1D2731;
+}
+
+div.banner {
+    background-image: url('../images/banner.jpg');
+    height: 150px;
+}
+
+div.banner h1 {
+    font-family: Helvetica;
+    font-size: 3em;
+    color: white;
+    margin-top: 35px;
+    font-weight: bold;
+}
+
+div.banner h3 {
+    margin-top: -0.4em;
+    color: rgb(225, 225, 225);
+}
+
+div.bannerLayer {
+    background-color: rgba(22,22,22,0.2);
+    margin: 0em;
+    padding: 0em;
+    height: 100%;
+}
+
+div.navArea {
+    background-color: black;
+    padding: 0em;
+}
+
+nav.navbar {
+    margin-bottom: 0em;
+}
+
+div.navArea li {
+    margin-right: 2em;
+    font-variant: small-caps;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+ul.dropdown-menu {
+    background-color: black;
+}
+
+ul.dropdown-menu > li > a {
+    color: #338cc1;
+}
+
+ul.dropdown-menu > li > a:hover {
+    color: white;
+    background-color: black;
+}
+
+div.content {
+    padding-top: 1em;
+    background-color: white;
+    font-size: 1.4em;
+}
+
+div.content h1 {
+    color: #338cc1;
+    font-family: "Open Sans";
+    margin-bottom: 1em;
+}
+
+div.content h2 {
+    color: #338cc1;
+    font-family: "Open Sans";
+}
+
+div.content p {
+    margin-left: 1em;
+    color: #1D2731;
+}
+
+img.profile {
+    width: 300px;
+    height: 300px;
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 30px;
+}
+
+p.quote {
+    text-align: center;
+    font-size: 1.0em;
+    margin-top: 0.5em;
+}
+
+img.linkedin {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1.2em;
+    margin-bottom: 1.2em;
+}
+
+#topimage img{
+    display: block;
+    margin: 0em;
+}
+
+div.footer p {
+    text-align: center;
+    color: white;
+}

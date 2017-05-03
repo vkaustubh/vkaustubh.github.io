@@ -1,65 +1,75 @@
 <!DOCTYPE HTML>
+
 <html>
 
 <head>
-    <meta charset='utf-8'>
-    <link rel='stylesheet' href='/css/style.css'>
-    <title> About Myself </title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-    <script src='/static/js/script.js'> </script>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="static/css/main.css">
+    <script type="text/javascript" src="static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
 
 </head>
 
 <body>
-    <div id='outerContainer'>
-        <div id='header'>
-            <div id='name'> Kaustubh Vaghmare </div> 
-            <div id='designation'> Data Scientist, IUCAA </div>
 
-            <div id='navigation'>
-                <ul>
-                    <li> <a href='index.html'> Home </a> </li>
-                    <li> <a href='myself.html'> Myself </a> </li>
-                    <li> <a id='research' href='academics.html'> Academics </a> 
-                        <ul>
-                            <li> <a href='research.html'> Research </a> </li>
-                            <li> <a href='publications.html'> Publications </a> </li>
-                            <li> <a href='teaching.html'> Teaching </a> </li>
-                            <div class='clear'></div>
-                        </ul>
-                    </li>
-                    <li> <a href='resources.html'> Resources </a> </li>
-                    <li> <a href='contact.html'> Contact </a> </li>
+    <div class="container banner">
+
+            <h1> Kaustubh Vaghmare </h1>
+            <h3> Data Scientist, IUCAA </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="myself.html">Myself</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"
+                        href="#}}"> Academics
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="publication.html">Publications</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="resources.html">Resources</a></li>
+                  <li><a href="contact.html">Contact</a></li>
                 </ul>
-            </div>
+              </div>
+</nav>
 
-        </div>
+    </div>
 
+    <div class="container content">
+    
+            
 
-
+<div id='banner'>
+    <center>
+        <img width='80%' src="static/images/evolution.jpg">
+    </center>
+</div>
         
-            <div id='banner'>
-                <center>
-              <img width='940px' src='/static/images/evolution.jpg'>
-                </center>
-            </div>
-        
 
-        <div id='content'>
-            <blockquote>
-  <p>“Don’t forget that I cannot see myself – that my role is limited to being the
-one who looks in the mirror.”
-- Jacques Rigaut</p>
-</blockquote>
+<div id='content'>
+    <p class="quote">"Don’t forget that I cannot see myself – that my role is limited to being the
+        one who looks in the mirror." <b> - Jacques Rigaut </b></p>
 
-<h1 id="when-i-am-working">When I am Working…</h1>
+<h2 id="when-i-am-working">When I am Working…</h2>
 
 <p>You can access my Linkedin Profile below. It should give you most of the details
 you need about the working me!</p>
 
-<p><a href="http://in.linkedin.com/in/kvaghmare"><img src="/static/images/linkedin.png" alt="LinkedIn Profile" /></a></p>
+<p><a href="http://in.linkedin.com/in/kvaghmare"><img class="linkedin" src="static/images/linkedin.png" alt="LinkedIn Profile" /></a></p>
 
-<h1 id="and-when-i-am-not">And When I am Not…</h1>
+<h2 id="and-when-i-am-not">And When I am Not…</h2>
 
 <p>I have always been fond of reading. Starting from Enid Blyton’s novels, moving
 slowly towards Nancy Drew and Hardy Boys I have eventually climbed the ladder to
@@ -86,18 +96,28 @@ guitar.</p>
 playing Chess but has been a while. As far as watching is concerned, I hardly do
 that! But if given a chance, I love watching Snooker, Pool, Boxing and Tennis.</p>
 
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+
+
         </div>
 
-        <div id='top'>
-            <a href=''><img src='/static/images/top.png'></a>
-        </div>
+        <div class="container footer">
+            <p> Copyright 2017. All rights reserved. </p>
+       </div>
 
-        <div id='footer'>
-            <p> &#169; 2016. All rights reserved. </p>
 
-        </div>
-    </div>
 </body>
 
 </html>
-
