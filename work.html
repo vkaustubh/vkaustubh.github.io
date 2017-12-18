@@ -1,0 +1,212 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="static/css/main.css">
+    <script type="text/javascript" src="static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+            <h1> Kaustubh Vaghmare </h1>
+            <h3> Data Scientist, IUCAA </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="myself.html">Myself</a></li>
+                    <li><a href="work.html">Work</a></li>
+                  <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown"
+                        href="#}}"> Academics
+                    <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="research.html">Research</a></li>
+                        <li><a href="publication.html">Publications</a></li>
+                        <li><a href="teaching.html">Teaching</a></li>
+                    </ul>
+                  </li>
+                  <li><a href="resources.html">Resources</a></li>
+                  <li><a href="contact.html">Contact</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div id='topimage'>
+    <center>
+        <img width='100%' src="static/images/galaxy.jpg">
+    </center>
+</div>
+
+<br>
+
+<p> In my position as a Data Scientist, I have largely worked on projects more to do
+    with data archiving, visualization, curation and serving. This work does not
+    sound glamorous to the modern generation of people who have come to
+    associate data science with running <em> cool </em> machine learning
+    algorithms to discover secrets hidden within the data. But the need for
+    good, high quality and well maintained data with services to access these
+    is often brushed under the carpet when talking about data science. Of
+    course, that does not mean that predictive analytics isn't important, in my
+    opinion. I simply wish to point out that if your data is not in order, there
+    is no use of having access to the best visualization and analytics routines!
+</p> 
+
+<h1 id="table-of-contents">Table of Contents</h1>
+<ul>
+  <li><a href="#kso-dda">Kodaikanal Solar Observatory Digitized Data</a></li>
+  <li><a href="#biological"> Data Archiving Solutions for Biological Data </a></li>
+  <li><a href="#czti-dms"> The CZTI Data Management System</a></li>
+  <li><a href="#crts-web-app"> The Catalina Realtime Transient Survey </a></li>
+</ul>
+
+<br>
+
+<h2 id="kso-dda"> The Kodaikanal Digitized Data Archive </h2>
+
+<p> The Kodaikanal Solar observatory is operational since more than a century.
+    Dedicated observers have been at work since 1904, imaging the sun using
+    photographic plates. Given that the sun exhibits periodical changes such as
+    sun spots over periods spanning decades, such a data set becomes immensely
+    important. To make the data amenable to the sophisticated analysis
+    computerized routines available to, they must be present in digitized form.
+    The folks at Indian Institute of Astrophysics (IIA, which now operates the
+    Kodaikanal Observatory), have carried out an immense undertaking, lasting
+    several years, to digitize these data. </p>
+
+<p> As a part of my project, we decided to build an archive for them. We used
+    modern web frameworks to design a data archive which would make data access
+    easier for the scientific community. Novel features we included in this site
+    include the following: </p>
+
+<ul>
+    <li> An interactive histogram based visualization, coded using D3.js which
+        allows users to get a feel for the distribution of the data spanning
+        100+ years. </li>
+    <li>
+        A time uniformity visualization which informs the user about the
+        sampling uniformity along time, for a given search data set. This helps
+        the user make informed decisions about whether the data is amenable for
+        the nature of analysis intended. </li>
+
+    <li>
+        A Virtual Solar Observatory compatible SOAP service layer. This will
+        enable generic data scraping tools capable of speaking the VSO SOAP
+        specification, to stumble across Kodaikanal digitized data. </li>
+</ul>
+
+<p> [Link to Site to come soon. For more details, you may visit the <a
+        href="https://kso.iiap.res.in">  current KSO
+        web site </a> ] </p>
+
+
+<h2 id="biological"> Data Archiving Solutions for Biological Data </h2>
+
+<p> I am also working with colleages from Regional Centre of Biotechnology, at
+    Faridabad to design data storage and dissemination solutions for large data
+    sets gathering using complex instruments such as the new X-Ray Diffraction
+    facility at the European Sycnhrotron Research Facility. Generally,
+    biological data have been produced in personal labs and thus the need for a
+    centralized archive with appropriate search and download services has been
+    scarce. However, the situation in Astronomy has been the opposite.
+    Astronomers often have had to work in far-off locations in facilities hard
+    to construct using a single lab's resources. </p>
+
+<p> The idea of this ongoing work is to adopt battle tested techniques from
+    Astronomy and apply them to help organize biological data better. </b>
+
+
+<h2 id="czti-dms"> The CZTI Data Management System </h2>
+
+<p> The Cadmium Zinc Telluride Image (CZTI) is one of five payloads onboard the
+    Astrosat satellite, the first ever space telescope launched by India. The
+    Payload Operations Center for this instrument is situated ... well, right
+    next to where I sit! So, in collaboration with them, we decided to do some
+    complex database management system development. Features include: </p>
+
+<ul>
+    <li> Detailed track of every single processing pipeline parameter including
+        the SVN checkout version. </li>
+    <li> A modern web based GUI for searching observations based on a number of
+        input parameters. </li>
+    <li> Search results include options such as previewing history of the
+        processing, information about multiple versions of data products etc.
+    </li>
+</ul>
+
+<p> In an ideally planned project, such a system would allow storage of detailed
+    metadata, sufficient to construct any version of the data product. Thus, as
+    new versions get created, one may dispose of these products knowing that
+    should the need arise, the metadata can be used to reconstruct the product
+    on demand. </p>
+
+<h2 id="crts-web-app"> The CRTS Image Archive </h2>
+
+<p> The Catalina Real-time Transient Survey is a collection of three telescopes
+    which have operated over a period spanning more than a decade. The
+    telescopes visit specific areas of the sky at defined intervals of time and
+    take images. These images are then processed to derive photometric
+    measurements. IUCAA is a host to the image archive. Some features of this
+    image archive include: </p>
+
+<ul>
+    <li> A script that cuts-out the large field images into small images with
+        more convenient footprint and manageable size. </li>
+
+    <li> A MySQL database with 8 billion records, which utilize the Hierarchical
+        Triangular Mesh (HTM) to enable speedy searches based on the 2-d
+        position on the celestial sphere. </li>
+
+    <li> A Virtual Observatory (Simple Image Access Protocol) compliant web
+        service that allows all VO compatible tools to access these images.
+    </li>
+</ul>
+
+<p> [An older version of the site may <a href="http://crts.iucaa.in"> be
+        accessed here. </a> A more modern UI is going to be released soon.] </p>
+
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2017. All rights reserved. </p>
+       </div>
+
+<a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<script src="static/js/scroll_top.js"></script>
+
+</body>
+
+</html>
