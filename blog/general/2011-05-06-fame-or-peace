@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Fame or Peace</h2>
+    <span class="date"> Friday, 06 May, 2011</span>
+    <div></div>
+    <br/>
+
+    <p>I wake up in the morning. No, I am not care free. I do have to go to work. I
+look at the time as shown in my mobile phone. After a few minutes of lazying
+around, I finally get up. I silently sit in my bed and think about all the
+things that I am suppose to get done today. I have to go to the bank to deposit
+my salary cheque. I need to go to the citizen center to pay my bills. Once done,
+I would go to my office and quietly do my work. Sometimes, I wonder why I cannot
+have private secretaries to do these jobs for me. But my routine does not allow
+me to wonder too much and I go about my life as usual.</p>
+<p>As I prepare to go out of my house, I see this really famous man. He emerges
+from his car. There is a moment's peace but at least one common man recognizes
+him to be someone really famous. Could it be really him? A few moments of
+thinking and the doubts get dispelled as other members of the crowd start
+resonating with the thought of the first. Soon, there is a large crowd moving
+towards the man from the car struggling to get a good look at him. Suddenly, 2
+more men alight, looking rather alarmed. Immediately they keep themselves in
+between the crowd and the man. A struggle ensues. I wonder, how easy it is for
+me to get out of the car and walk across the street into a building. But here is
+a man who has struggled and got what others can only dream of - unlimited fame.
+And he cannot even cross street without breaking a sweat. I smile to myself and
+go about my work.</p>
+<p>As I reach the bank, I cannot help but peeping into a newspaper being read by
+another man. There is a an article with a very interesting headline - "Man
+Arrested for Stalking Actress". This was turning out to be a very interesting
+day indeed. The fact that a man could not cross the road without physical
+assistance from some people despite being in the pink of his health had already
+made me question the deepest of my desires to be someone famous, a celebrity!
+And now, I have eyes fixated on this headline which makes me wonder how that
+actress would have felt knowing that there was someone following her and
+watching her wherever she went! Goodness,  what would I do if I was in her
+place? I'd spend nights without sleep. I'd spend half my time looking around and
+seeing if I could spot any suspicious character and also get alarmed each time
+the door bell or the phone rang.</p>
+<p>With these thoughts in my mind, I stood in the line waiting for my turn. And I
+could not help but overhear the two people in front of me speaking to each
+other. The conversation was about how a certain actor had called off her
+marriage with another actor. They immediately pointed out an example of a
+sportsperson who had been spotted going to the movies and restaurants with a
+certain business man's daughter. And I again wondered, "How would I feel if
+someone I did not know was interested in my marriage and other important
+decisions that can be without doubt described as personal? How would I feel if
+someone was keeping an eye out for me and the instant I ended up dating a friend
+from the past two times, become the talk of the town and have pictures published
+on the page 3 of all tabloids?"</p>
+<p>The man who used to see the 'big people' sign autographs and wave to the crowd
+and get inspired to do something with his life so as to enjoy such experience
+was slowly being replaced by a man who suddenly realized how peace loving he was
+indeed. How blessed did I feel that I was not going to wake up one fine morning
+and find my own photo in the paper alongside an article talking about things
+completely personal to me? How blessed I did feel when I realized that I could
+almost walk out and go wherever I wanted without having to plan a secret
+itinerary! No sooner did I share my revelation with another man, I got another
+revelation. Not everyone in the world thought the way I was thinking. There
+would still be people willing to accept all the cons that came with being a
+celebrity for the pros were too overwhelming.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2011-05-06-fame-or-peace';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2011-05-06-fame-or-peace'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

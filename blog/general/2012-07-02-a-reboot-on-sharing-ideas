@@ -1,0 +1,164 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>A Reboot, On Sharing Ideas</h2>
+    <span class="date"> Monday, 02 July, 2012</span>
+    <div></div>
+    <br/>
+
+    <p><strong><em>Note: Somehow I convinced myself around the time of writing this post that I
+needed to abandon Google Blogspot and move to Wordpress. This was the first post
+that appeared there. You will likely benefit from this context while reading this
+post, hence the note!</em></strong></p>
+<p>Hello friends. As much as this appears to be my first post on this blog, I must
+make open the fact that I had a very elaborate blog elsewhere. So, in this first
+post, let me partly use this chance for talking about why I had to create a new
+blog and also present my views on why idea sharing is a good thing.</p>
+<p>I was immensely dissatisfied with what I had managed to achieve with my previous
+blog. A constant confusion between upgraded features of that site and unnoticed
+cum accidental setting of certain options ensured that my words were not to be
+seen by anybody but a few very close friends. This defeated the purpose of using
+a public domain sharing site or a blog site altogether for I might as well have
+sent my views via e-mail to those few who were reading my thoughts and my work.
+When contemplating on this, I realised that it would in fact be a good idea to
+make a new beginning and in a new location with the hope that this time, the
+thoughts, the ideas will reach a bit more further and will enable more learning.</p>
+<p>I have spent many hours and even days learning various things and in the end,
+the only way I ever discovered the flaws in my understanding and methods to
+correct them, was when I presented what I had understood to a broad audience.
+When you communicate an idea with someone, the very effort of communication can
+refine your ideas and your understanding of it. Once the presentation has been
+done, people will come forth and present their views on it. They might ask
+questions that you, all by yourself, could not ask and thus have unexplored but
+easily accessible territory.</p>
+<p>The views that people present can range from senseless criticism and mockery to
+some very deep suggestions or comments. It has been my tendency to actually feel
+discouraged from even posting an idea for the simple reason that in the end all
+I would get is senseless commentary. But I realised that in our daily life,
+there will always be a situation where our primary task-at-hand will be to sift
+through everything in front of us and choose the good from the bad or the useful
+from the useless. So, I finally have come to a mean solution that it is a good
+idea to present your ideas! You will be bombarded with a large number of
+comments covering a wide range of the spectrum but in the end, with a little
+effort, there is bound to be a set of comments or suggestions or feedback which
+can enhance your understanding of something.</p>
+<p>With regards to our tendency to bad mouth someone’s opinion, the host of the
+famous 3-part BBC documentary “The Story of God” has pointed out something which
+I found truly wonderful. As can be guessed, he has pointed out that we have had
+disagreements among humans for a very long time on various issues. Some of these
+disagreements have resulted in catastrophic events that have led to tremendous
+bloodshed. Every one of us has wondered of why this problem has existed and what
+the solution to this problem is. A relatively simple statement by the host of
+this documentary who explored these kind of conflicts, struck me very hard. I
+paraphrase (severely) his point of view below.</p>
+<blockquote>
+<p>The disagreements, whether it be between two religions or two groups of the
+same religion or between religion and science are always present. What makes
+these disagreements acquire the potential of creating destruction or
+becoming ugly is the lack of acknowledgement of the principle of
+uncertainty. This principle reminds us that whether it is our own religion
+or be it our study of science, there is always an uncertainty in our
+understanding of the same. If people of any discipline or any sect merely
+acknowledge that there can be an uncertainty in our understanding of
+anything, will we stop outright  and violent disagreements with each other.</p>
+</blockquote>
+<p>The purpose of presenting this thought here is simple. I want to highlight what
+I have always kept telling my friends. Use the chance of sharing a thought or
+the event of someone sharing their thought as a chance to learn. Use
+disagreements not as blows to yourself but as windows of opportunity to think
+from a different perspective. Do not disagree with the other, with the intention
+of giving him a blow but to remind the other that there is an alternate way of
+looking at something. After all, in this exchange of views, which is seen by
+many people as a battle of wits, who is to judge the correct from the wrong? Is
+there even one single correct which makes everything else wrong? I leave you
+with another paraphrased thought and with the hope that you enjoy my future
+posts and we can all exchange something that leads us all to taking progressive
+strides.</p>
+<blockquote>
+<p>A major mistake we can make is to impose one single method of progress, one
+single method of learning or one single method of worship on everybody,
+ignoring their individual strengths and weaknesses. Each person wants to
+progress towards the centre of some circle but lies at different points on
+the circumference. Each can take a different radial path and try reaching
+the centre.</p>
+</blockquote>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2012-07-02-a-reboot-on-sharing-ideas';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2012-07-02-a-reboot-on-sharing-ideas'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

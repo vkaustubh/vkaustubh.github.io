@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="static/css/main.css">
+    <script type="text/javascript" src="static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+
+    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li class="active"><a href="general.html">General</a></li>
+                    <li class="active"><a href="geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<h1> Welcome to the general section! </h1>
+<p> This section contains a lot of posts from days on Blogspot and Wordpress. Plus
+some more I've begun to add since my realization that work is not everything!
+Some posts are more than a decade old which means that I need to ponder over
+whether I believe in what I wrote or not! </p>
+
+
+    <table id="bloglist" class="display"> 
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date Published</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+    
+    </table>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <script>
+        var pages = $.parseJSON("[{\"title\": \"The Last Days\", \"date\": \"02 April, 2018\", \"path\": \"\u003ca href=\u0027general/2018-04-02-the-last-days\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"A Tribute to Managers and Leaders\", \"date\": \"25 February, 2018\", \"path\": \"\u003ca href=\u0027general/2018-02-25-tribute-to-managers\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Human Thought and the Animal Thought\", \"date\": \"17 July, 2012\", \"path\": \"\u003ca href=\u0027general/2012-07-17-human-thought-and-animal-thought\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Is It Really Safe To Put Too Much Information Out There?\", \"date\": \"07 July, 2012\", \"path\": \"\u003ca href=\u0027general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"A Reboot, On Sharing Ideas\", \"date\": \"02 July, 2012\", \"path\": \"\u003ca href=\u0027general/2012-07-02-a-reboot-on-sharing-ideas\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Smart Technology is Here, Where are the Smart People?\", \"date\": \"12 March, 2012\", \"path\": \"\u003ca href=\u0027general/2012-03-12-smart-tech-smart-people\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Apples and Oranges\", \"date\": \"04 March, 2012\", \"path\": \"\u003ca href=\u0027general/2012-03-04-apples-oranges\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Exceptional\", \"date\": \"04 September, 2011\", \"path\": \"\u003ca href=\u0027general/2011-09-04-the-exceptional\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Mind of an Observer of Friendship\", \"date\": \"03 September, 2011\", \"path\": \"\u003ca href=\u0027general/2011-09-03-mind-observer-friendship\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Fashion of Vedas and Upanishads\", \"date\": \"31 May, 2011\", \"path\": \"\u003ca href=\u0027general/2011-05-31-fashion-vedas-upanishads\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Fame or Peace\", \"date\": \"06 May, 2011\", \"path\": \"\u003ca href=\u0027general/2011-05-06-fame-or-peace\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Narrow Minded Accounting\", \"date\": \"14 December, 2010\", \"path\": \"\u003ca href=\u0027general/2010-12-14-narrow-minded-accounting\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Small Things\", \"date\": \"08 December, 2010\", \"path\": \"\u003ca href=\u0027general/2010-12-08-small-things\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Real Value of Human Life\", \"date\": \"19 June, 2010\", \"path\": \"\u003ca href=\u0027general/2010-06-19-real-value-of-life\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Walking a Path\", \"date\": \"30 April, 2010\", \"path\": \"\u003ca href=\u0027general/2010-04-30-walking-a-path\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Lost in Words\", \"date\": \"29 April, 2010\", \"path\": \"\u003ca href=\u0027general/2010-04-29-lost-in-words\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Faith and Trust \\u2013 The Limits of Skepticism\", \"date\": \"04 January, 2010\", \"path\": \"\u003ca href=\u0027general/2010-01-04-faith-trust-limits-skepticism\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"When Ignorance Is Not Bliss\", \"date\": \"02 January, 2010\", \"path\": \"\u003ca href=\u0027general/2010-01-02-when-ignorance-not-bliss\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"In The Mind of the Fanatic of the Second Kind\", \"date\": \"28 December, 2009\", \"path\": \"\u003ca href=\u0027general/2009-12-28-mind-fanatic-second-kind\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Deepavali Today!\", \"date\": \"06 November, 2009\", \"path\": \"\u003ca href=\u0027general/2009-11-06-deepavali-today\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The End of Logic\", \"date\": \"30 May, 2009\", \"path\": \"\u003ca href=\u0027general/2009-05-30-end-of-logic\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"What Does Help?\", \"date\": \"05 May, 2009\", \"path\": \"\u003ca href=\u0027general/2009-05-05-what-does-help\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Running Spiritualist\", \"date\": \"01 May, 2009\", \"path\": \"\u003ca href=\u0027general/2009-05-01-the-running-spiritualist\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Inter-religious Harmony\", \"date\": \"29 December, 2008\", \"path\": \"\u003ca href=\u0027general/2008-12-29-inter-religious-harmony\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Left Behind!\", \"date\": \"29 October, 2008\", \"path\": \"\u003ca href=\u0027general/2008-10-29-left-behind\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Failure to Communicate!\", \"date\": \"18 October, 2008\", \"path\": \"\u003ca href=\u0027general/2008-10-18-failure-to-communicate\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"A Father\", \"date\": \"13 October, 2008\", \"path\": \"\u003ca href=\u0027general/2008-10-13-a-father\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Exploitation Invited!\", \"date\": \"20 July, 2008\", \"path\": \"\u003ca href=\u0027general/2008-07-20-exploitation-invited\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Source Of Knowledge\", \"date\": \"11 April, 2007\", \"path\": \"\u003ca href=\u0027general/2007-04-11-source-of-knowledge\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"An Imaginary Conversation Between Me And A Friend\", \"date\": \"05 April, 2007\", \"path\": \"\u003ca href=\u0027general/2007-04-05-an-imaginary-conversation-me-and-friend\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"\\\"Philosophers\\\" - The 2 Types\", \"date\": \"11 January, 2007\", \"path\": \"\u003ca href=\u0027general/2007-01-11-philosophers-two-types\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Senseless Plundering of Natural Resources\", \"date\": \"19 October, 2006\", \"path\": \"\u003ca href=\u0027general/2006-10-19-senseless-plundering-of-natural-resources\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Silly Days\", \"date\": \"20 September, 2006\", \"path\": \"\u003ca href=\u0027general/2006-09-20-silly-days\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Why Damn Dan Brown?\", \"date\": \"29 May, 2006\", \"path\": \"\u003ca href=\u0027general/2006-05-29-why-damn-dan-brown\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Metallic Thought\", \"date\": \"26 May, 2006\", \"path\": \"\u003ca href=\u0027general/2006-05-26-the-metallic-thought\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Physics and Humility\", \"date\": \"25 May, 2006\", \"path\": \"\u003ca href=\u0027general/2006-05-26-physics-and-humility\u0027\u003e Read \u003c/a\u003e\"}]");
+        $("#bloglist").DataTable({
+            data: pages,
+            columns: [
+                {data: 'title'},
+                {data: 'date'},
+                {data: 'path'},
+            ],
+            order: [],
+            pageLength: 20,
+            "bPaginate": false,
+            ordering: false,
+        });
+    </script>
+
+
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

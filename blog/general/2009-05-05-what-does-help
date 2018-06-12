@@ -1,0 +1,150 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>What Does Help?</h2>
+    <span class="date"> Tuesday, 05 May, 2009</span>
+    <div></div>
+    <br/>
+
+    <p>I have noticed people lying at both ends of the spectrum. At one end, you find
+people who are completely humble. There is not one bit of snobby tendency in
+them and they are in almost perfect control of themselves. At the other end of
+the spectrum are humans who have reactions quite similar to animals. They will
+shout, fight, scream and burst out just like animals would give natural
+responses to certain stimuli. As I saw people distributed across the spectrum, I
+have always asked as to what could help people to acquire the other former
+extreme. Why would one want to reach that extreme? Well, is it not what
+separates us from animals? The power of asking “Why?” before taking every step!
+The power of being able to sort out our thoughts instead of letting them dictate
+our actions without our involvement!</p>
+<p>Coincidentally it so happened that I came across some eminent academicians who
+indeed fit the bill. I did a generalization and thought that academicians, after
+years of disciplined study of their subjects in the greatest depth would have
+eventually trained their minds to be more peaceful and more in-control. The
+typical picture of an academician to me had become that of a man who pursues
+knowledge like performing a sacred duty. He believes in the acquisition and
+spread of knowledge. He disconnects himself from the common complaints of life.
+But we all know that spending five minutes with people is different from
+spending five fours or more with them. It is always easy to project the best of
+yourself for five minutes to a person but it is difficult or nearly impossible
+to project the best of yourself for more time.</p>
+<p>I have now spent a significant amount of time among academicians and as an
+academician myself. I turn back and laugh at how naïve and innocent was my
+generalization of academicians. I realized that spectrum was more or less the
+same here. There were people on both extremes of the spectrum. The animalistic
+tendency of doing things not thought-out completely and purely out of some inner
+uncontrollable thought process was evident here as well. The tendency to blurt
+out and lose control was present here too. In fact, I felt that sometimes it was
+more pronounced here. After all, these people have locked themselves away from
+the world and taken great mental stress to reach the position that they are in
+today, why not? Why would not the stress cause them to become irritable?</p>
+<p>The acquisition of knowledge was for me a ways or means of realizing the
+insignificance of the human race in the face of the marvels of nature. And
+indeed you could find people quieted by their life’s journeys. But you find such
+people very little in number. There are people who have grown proud of their
+achievements and their intellectual superiority. There are people who do not
+consider their own ignorance when trying to establish what they know to the
+others. They walk with fear that they should not be proved inferior. They go out
+of control and they become wild like animals. The problems that they face are
+similar. They have frustrations, obligations, emotions and they are in-control
+and out-of-control as anybody else.</p>
+<p>Long years of hard work and studying the most difficult of subjects can give you
+the necessary intelligence to perhaps do something more intellectual than the
+layman. But of what use is the honing of the intellect when it does not help us
+understand what drives us? Of what use is this vast collection of facts and
+skills in our heads when they do not help us even control the relatively
+easy-to-control emotions? How can the so called bliss found in knowledge be true
+bliss when it so temporal? It is temporal, isn’t it? For if it were permanent,
+would it not have given the bearer a stronger mind and a peaceful heart and
+hence a better control?</p>
+<p>The answer to the question as to what does help in acquiring that control and
+that peace still runs away from me. I do not have a satisfactory answer. I do
+not even find myself anywhere close to the answer as well. Sometimes I feel that
+there is no answer to the question. Sometimes I feel that whether people are
+born with some tendencies and there hardly seems to be any way to fight it.
+There seems to be hardly anything a common man can do to change the world around
+him. But the quest for the answer must go on. There is something on the inside
+that drives us to search for the answer. Again, one does not truly understand
+what that thing on the inside is! I guess it is best to not ask that one
+question and keep looking walking forwards only with a desperate hope of finding
+some meaningful answer to these bigger questions.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2009-05-05-what-does-help';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2009-05-05-what-does-help'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Walking a Path</h2>
+    <span class="date"> Friday, 30 April, 2010</span>
+    <div></div>
+    <br/>
+
+    <p>Every man chooses a path to walk on. Time and now he realizes that the path of
+his choice is not good for him and decides to change his path. A key question to
+ask is how this man knows how and when to change the path? The answer is
+'bliss'. He contemplates in one way or another and searches for bliss. And when
+he finds a great absence of bliss along the path of his choosing, he knows deep
+down that it is time to change the path. All of us are making choices and one
+thing that either consciously or unconsciously is governing these choices is
+that bliss. We lay the path for us because we feel it is going to give us bliss.
+And many a times it happens that a realization comes that the path chosen is not
+the right one and hence the decision to change the course of life's journey.</p>
+<p>Of all the paths we can follow the most difficult one is the path that no one
+treads. It is difficult because it is lonely. But just because it is lonely, it
+does not mean that the path is wrong. History in fact shows that the right path
+has always been the one that made a person feel extremely alone. Of the billions
+of people history remembers only a hand few. And of these hand few, some are
+remembered for walking the right path, 'right' being defined as that which has
+brought a positive change in the world. Does that not clearly say that the path
+of the right was a lonely one? History also remembers a few who changed the
+world for the negative and they have also been quite a few. But that says that
+the path of the wrong was a lonely one too! What a dilemma!</p>
+<p>This observation reminds me as to how true it seems that symbol of Taoism which
+depicts the similarity between two extremities. Now, the path taken by a man
+seems to him right when he can feel the bliss that comes along with it. And if
+he does not feel that satisfaction, he no longer feels driven to walk the path.
+So, that makes life very easy, right? Just choose a path and walk along it. Give
+it some time and if it keeps you happy, well and good else search another path.
+Continue until you find a path where you have been left with no room for
+dissatisfaction at all. Is this it? Is this the algorithm of life? Sounds quite
+simple! But have you ever heard of a proverb that celebrates the simplicity of
+life? I haven't.</p>
+<p>I have come across certain instances wherein the path lying ahead of me seemed
+like the right one but the bliss was missing. It is difficult to describe this
+situation in words. One has to experience it and contemplate hard on that
+experience in order to get it right. But it does happen. The path in front is
+convincingly good, the right one but the bliss is missing. Satisfaction has gone
+for a toss. Smiles are lost! The strength is gone! Why? There could be many
+answers to these questions, I do not know. And of course, as is the case with
+life, no answer be right for sure and no answer be wrong! So, what is one
+possible answer?</p>
+<p>I suspect that walking the path is not enough. Knowing does matter! And by
+knowing, I mean that it is essential for someone who is walking his path to know
+what his path really is and be sure that he truly wants to walk on it. It seems
+to happen that the man is walking the path that is best suited to him but for
+reasons that could span from a lack of confidence to severe confusion, he does
+not know that the path is right for him. This is when the man walking the right
+path still finds no bliss and satisfaction in his life. They exist but their
+existance has been clouded by doubt and uncertainty. All doubts be dispelled,
+all uncertainty be removed and the same path can be a path of bliss again.</p>
+<p>But but but! The question comes out - my path does not give me bliss, should I
+be searching for the clouds and try dispelling them or should I be searching for
+another path? We are talking about life here, how could one possibly give one
+single answer? All that I could say is that blessed are those who can and find
+the answer.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2010-04-30-walking-a-path';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2010-04-30-walking-a-path'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>The Source Of Knowledge</h2>
+    <span class="date"> Wednesday, 11 April, 2007</span>
+    <div></div>
+    <br/>
+
+    <p>Philosophy, to me, had been a center of attraction where people including myself
+got attracted to and discussed “important matters”. At this center, people, who
+had spent a long time reading the greatest works of the famous philosophers,
+would talk about various issues. They’d spend time reasoning out answers to
+various questions. Someone would pose a question and people would try and answer
+them each one trying to justify whose answer was correct. And then one fine day,
+a “philosopher” backed out. And that was me!</p>
+<p>For some strange reason I cannot explain I knew there was something wrong about
+this and could not bring myself to continue getting attracted to the center. I
+did not feel this was philosophy. But then again, I strongly feel that maybe it
+is me who does not understand what philosophy means. I was perhaps under some
+kind of a spell that did not allow me to truly understand what philosophy is.</p>
+<p>I find it quite interesting to note that the word “philosophy” and the word
+“progress” occur in the same section of the dictionary. My firm belief is that
+philosophy is all about progress. And I do not find progress in endless debates
+at the “centers” about the meaning of truth, meaning of this and the meaning of
+that. Let me make it clear that these debates can be enriching but usually end
+up being loops and circles or arguments rather than enlightening most of the
+times.</p>
+<p>There are two sources of philosophical knowledge according to me. One is a room
+full of books. Yes, lock yourself up in a room, read one book. Read it well and
+once that is completed proceed to reading the second book. Third, fourth and so
+on! And then one day, you leave the room and go out only to enter another room
+which is the center I was talking about earlier. Here, you meet people who have
+been doing what you have been doing. And now, you start discussing which of the
+authors has been correct and why.</p>
+<p>Then there is the second source of knowledge. Life itself! Yes, life can teach
+us a lot. Go out and see life. See the people on the streets. Talk to all the
+people from all the walks of life. See the criminal committing crimes, see the
+children, see the adults! And then come back home and think about the
+differences between the happiness of one man and the happiness of the other, the
+happiness of the adult and the happiness of the child. Think about the
+mechanical existences of the people and think about what could be common in all
+this diversity. Listen to people, listen to what they have to say about their
+lives and the lives of the others.</p>
+<p>And somewhere down the line, the person whose source of knowledge has been the
+one described above comes across a book written by one great philosopher. As he
+reads the words of wisdom, he feels a strange resonance. He literally ‘feels’
+the truth in his words. All this time when the man was experiencing life, his
+counterpart was reading and reading. Now, in terms of books there is a
+difference of perhaps a hundred books. But the latter man has experience and it
+is he who is on the path of the progress and in my view, the true philosopher.
+This reminds me of what the character of Morpheus tells Neo in the Matrix movie
+: “There is a difference between walking the path and knowing the path!”</p>
+<p>When we read books and we debate about the rightness of one thing and the
+wrongness of the other, we are trying to know the path. And by ‘knowing’ I only
+mean that we are merely speculating about how it would be to walk the path and
+possible experiences one might gain from it. But that is all we are doing. We
+simply gaze down a road and speculate about where it leads and how that place
+can be but what we ought to be doing is walking on it and seeing where it leads.
+And walking is something only life can teach! I refuse to believe that there can
+be a book which, to a ‘normal’ man can give both knowledge and wisdom.</p>
+<p>It is like all the subjects we read in our universities. We have something
+called theory and then something known as practical or field work. Why is that
+necessary? Imagine a man who has been living his entire life in zero gravity in
+space. Now, he does not know what gravity is. He can read a lot of books about
+it. But let us take him to a planet and let him feel gravity for himself. That
+experience of gravity cannot be got from any book! Same is the case with
+philosophy. You may read a hundred books. But there are life lessons out there
+waiting to be learnt. Go out and meet life!  See what you can learn from people,
+“lowest” and the “highest” whatever that means. Question and reason, the answers
+will come!</p>
+<p>You talk about the meaning of life and death. You talk about suffering and
+happiness. You talk about mechanical nature of existence. You talk about how
+desire is the root cause of all misery. You talk about the hundred paths
+prescribed a hundred philosophers to “evaluate the truth”. That is all talk and
+nothing but talk. Only a man who has experienced life can truly feel and
+understand all this! An experienced man who has never read a book can many a
+times speak words that stun the best of “philosophers”.</p>
+<p>And in conclusion, let me just say that for those of you who tend to think only
+from one extreme to the other extreme, I am neither suggesting that you detest
+books and neither am I suggesting you to lock yourself up with books! Who am I
+to suggest anyway? I only state my belief, my conviction that the lessons life
+teaches are far greater and far richer than all books of knowledge together.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2007-04-11-source-of-knowledge';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2007-04-11-source-of-knowledge'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

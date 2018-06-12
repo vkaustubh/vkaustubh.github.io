@@ -1,0 +1,142 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Left Behind!</h2>
+    <span class="date"> Wednesday, 29 October, 2008</span>
+    <div></div>
+    <br/>
+
+    <p>In the process of meeting new people and seeing various homes, I have come
+across two distinct types of households. One is a very typical and orthodox home
+where you have the man who does the outside work and the woman who does the
+inside work. The man’s job is to do a job and get money inside the home and the
+job of the woman is to take care of the house and ensure that the house becomes
+a home. I guess one does not actually need to talk much about such households
+and what happens in them on a typical day because these are pretty well known in
+our part of the world.</p>
+<p>But I guess I should specify some common features of these households. You have
+the man and generally he does not do any of the household chores. He does not do
+the dishes, the laundry or cook the food and other household activities. Why?
+Because, he is working terribly hard and is the sole man in the house to bring
+in the money that is needed to run it in the first place! And then you have the
+woman, who does all the household work and then helps the man out of the bed,
+make his meals, button his shirt, so on and so forth. I guess you get the
+general idea of what I am trying to say.</p>
+<p>There is a new kind of household that is evolving in recent times. It has been
+around for some time but the number of such households has been rising because
+of the changing trends in the society. In this type of household, both the man
+and the woman are working. Both are bringing the money into the home but the one
+thing I find really sad in most of such households is that they retain all the
+features of the previous type of households I just described. The man still
+enjoys the privileges that come with being the sole money bringer and woman
+still continues to do all the jobs without help as if she is not bringing in any
+money at all.</p>
+<p>And this picture really bothers me. Of course, these are my thoughts and if you
+disagree with them, pray do not argue or fight with me for that will be
+completely useless. If the woman has evolved and is now able to do what a man
+can do, why has the man not evolved and is doing what a woman can do? Why is it
+that the woman has doubled her responsibilities and the man is still sitting
+around at the same level? If a woman has learnt to pay the taxes, has the man
+learnt to make his own tea? If a woman has become the money earning machine, why
+has the man not taken a single step to being a home maker? If a woman has become
+financially self-reliant, why does the man still need the woman to dress him up
+and help him find his slippers, coat, shirt, etc?</p>
+<p>Do the simple math. Earlier, a man would do some X amount of work and the woman
+would do Y amount of work. The magnitudes of both X and Y would be pretty close
+to each other. Today, the woman is doing Z amount of work and this Z is almost
+double that of Y. So, simple math tells us that this Z is definitely greater in
+magnitude than the X. So, in other words the math tells us that man has kept
+himself behind. I personally believe that a man has to evolve and adapt to the
+change and bring about the equalization of the magnitudes of responsibilities
+that once existed.</p>
+<p>I have so far been unfair in my writing. I have not acknowledged that there are
+indeed men who have brought about the equalization. But I should ask the
+question – how many? I have not found too many! Again, I will admit that this
+analysis could be something unique to my part of the world. But I believe the
+purpose of my writing this post down is not to conclude or prove. Nor is the
+purpose of my writing to state what equalization means and how it should be
+brought about. Equalization is relative, each man defines his own meaning of
+equalization. The purpose is to induce a rethinking! We all have to rethink and
+introspect and see if there is a need to bring about the equalization if it has
+been lost. Are we being fair in sharing responsibilities? Or are we being left
+behind?</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2008-10-29-left-behind';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2008-10-29-left-behind'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

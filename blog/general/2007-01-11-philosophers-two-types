@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>&#34;Philosophers&#34; - The 2 Types</h2>
+    <span class="date"> Thursday, 11 January, 2007</span>
+    <div></div>
+    <br/>
+
+    <p>In the little time I have spent interacting with so many people from different
+walks of life, I found a vast majority (alarming as well) who are very
+complacent with regards to the knowledge that they possess. Everyone is very
+happy about the little, pathetic and the partial knowledge that they possess
+having read the books prescribed to them during the course of their education.
+But there are also those who do not stop where the line is drawn. They venture
+further and deeper to harness all the sources of knowledge that exist around
+them.</p>
+<p>These are the people who exploit every channel, medium or resource through which
+they could learn something. These are the people who may have exceptionally good
+knowledge about the discipline or the area they choose. Be it the knowledge of
+fine arts, be it the knowledge of sciences or religion or philosophy, these are
+the people who set themselves apart from the crowd. In my endeavor to talk about
+them, I shall be referring to them as philosophers. This is a slight deviation
+from the usual meaning associated with the term but I choose to do this for
+convenience.</p>
+<p>The “philosophers” I have met, to me, have come in two types. The type 1
+philosopher and of a more common occurrence is the one who possesses and also
+makes the effort to let others know he possesses. He is the person who, perhaps
+by gifted skill and ability, has managed to garner a vast amount of knowledge.
+But he is also a person who is ready to engage in factual debates and arguments.
+He is a person with a cynical air around him. He is a person who would leave no
+chance to show his superiority. And especially if this person has never met
+anyone who matches his knowledge will also exhibit a complex best described as
+superior.</p>
+<p>Yes, these have taken pains and done a lot of hard work to get what they have
+but these are also the persons who are no good for they shall be more interested
+to tell what they know to show how much they know rather than to help the person
+in front. These are also the people who shall be laughed at and maybe even
+despised in the society for their haughtiness. Painful it is for me to say this
+but it seems like their whole purpose of acquisition of knowledge was merely to
+show the very acquisition.</p>
+<p>Then there are the type 2 philosophers – contented, at peace and humbled by the
+knowledge they acquire. Humbled, because they know how insignificant they
+themselves are! These are the people who not only possess knowledge but also
+have the wisdom to know their knowledge and its purpose. These are the people
+who will avoid cynicism and haughtiness. These are the people who will share
+their knowledge and not blurt it out. These people also understand that the
+reason some people do not possess knowledge is because the conditions prevalent
+around them have not been favorable for such intellectual inquiry. They shall
+hence feel glad for having been granted conditions wherein they could elevate
+themselves.</p>
+<p>So, if you were to become a “philosopher”, do try and make yourselves the type 2
+philosopher. And let the type 1 go extinct. We do need men of knowledge but more
+importantly we need men of wisdom. And if you are led to think about the people
+around you and start putting them in type 1 or type 2, please don’t. These are
+not mutually exclusive, according to me. Both the types are living in us. The
+effort should be to gradually evolve with less of type 1 in us and more of type
+2.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2007-01-11-philosophers-two-types';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2007-01-11-philosophers-two-types'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

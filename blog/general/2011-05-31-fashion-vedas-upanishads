@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>The Fashion of Vedas and Upanishads</h2>
+    <span class="date"> Tuesday, 31 May, 2011</span>
+    <div></div>
+    <br/>
+
+    <p>Think intellectuals! Think party! Think of both of these together! Does some
+scene flash before your eyes? Some of you might picture men holding a glass of
+golden water in a crystal clear and lustrous glass, making critical remarks on
+the political scenario in the country or in the whole world. Theories flying
+across about how one must do things in order to ensure world peace. Theories
+flying across about how a certain law should be framed in order to prevent
+certain adverse circumstances. In recent times, another topic of discussion has
+apparently become a favorite among partying intellectuals. And no points for
+guessing - the Vedas and the Upanishads.</p>
+<p>The shocking series of events in the field of Physics post 1900 have led to many
+physicists unable to control themselves from making philosophical remarks. And
+who would blame them? Anyone who has even attempted to grasp the essentials of
+these modern theories of Physics will perfectly understand why the founding
+fathers of these theories retorted to making philosophical statements. Libraries
+today are filled with books whose central theme is the philosophical
+implications of modern physical theories. Among these books exist a class of
+books which cannot but draw parallels between the ancient texts of India i.e.
+Vedas and Upanishads and the findings of modern Physics.</p>
+<p>The Vedas and Upanishads have come in the spotlight because of some well written
+books by Westerners who earlier never imagined themselves reading and trying to
+understand these ancient texts. If not the political crisis of the world or the
+ever existing threat of terrorism, the Vedas and the Upanishads have become the
+talk of these parties. Groups gather around. The one who manages to quote
+Nachiketa from the Katho Upanishad wins the spotlight. If not, then someone who
+manages to quote a verse from the Aryabhatiya wins the spotlight. There are
+people who work really hard day and night in order to gain mastery over the
+sayings of Krishna in the Bhagvat Gita, over the metaphysical exposition of Yama
+in the Upanishads and over the true meaning of Ramayana and Mahabharata; only to
+exploit this as an attraction seeker in a group of intellectuals drunk, if not
+by consuming golden water, by their belief that their thoughts will change the
+world.</p>
+<p>The simplest proof that there is a difference between reading about something
+and following something becomes precisely clear when you attend one such Veda
+party. Opinions and debates will fly around for hours and at the end of the
+night, when it is all said and done, the party but remains one event which
+served the purpose of entertaining and perhaps in small proportions educating
+but definitely not enlightening. The same intellectuals, who on the previous
+night talked about the various statements in which the peace of the mind was
+emphasized will land up in a foul mouthed argument over a petty thing the next
+day. The same intellectuals, who talked about how selfless devotion and morality
+was highlighted as a means of attaining the highest knowledge will remember the
+beautiful red dress worn by one of his friend's wives.</p>
+<p>To attain so much inertia that not one word from these texts can change you for
+the better or the worse and to fill oneself with so much false pride that
+knowledge of these ancient texts is but a tool to save your face in a
+congregation of intellectuals is this fashion of the Vedas and Upanishads. As
+the political and all other problems of the world remain unsolved despite a
+dedicated group of intellectuals debating over the solutions over golden water,
+so will the Vedas and Upanishads fail to impact the society. At the heart of all
+this lies the one common cause - no action, all fashion!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2011-05-31-fashion-vedas-upanishads';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2011-05-31-fashion-vedas-upanishads'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

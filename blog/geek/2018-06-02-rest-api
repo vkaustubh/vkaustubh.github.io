@@ -1,0 +1,240 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>When are APIs RESTful?</h2>
+    <span class="date"> Friday, 01 June, 2018</span>
+    <div></div>
+    <br/>
+
+    <p><strong>(Warning: This post assumes you know your HTTP. Attempts to include an
+introduction to HTTP would have exploded the length of an already long post.)</strong></p>
+<p>For a long time, I have always been confused about whether I should be calling
+an API (Application Programming Interface) as a RESTful (REpresentation State
+Transfer) API or not. During the course of one of my projects, I was tasked with
+studying something known as the <strong>Virtual Solar Observatory</strong> standards, which
+allow people to share solar astronomy data in a standardized format. This way,
+multiple data centers around the world can share their data using different
+backends but it becomes possible for a single client to access it as if doing so
+from a single server.</p>
+<p>The Virtual Solar Observatory standards require data centers to make their data
+available to the world through a SOAP (Simple Object Access Protocol) service.
+Somewhere in the corner of <a href="https://virtualsolar.org">their website</a>, one can
+find exactly how this SOAP service should be designed i.e. what are the methods
+that should be supported, the format in which the input should be accepted and
+the format in which the output should be presented. If a solar observatory
+manages to present its data through such a service, then a client like
+<strong>SolarSoft</strong> in IDL can query you as well when its user searches for some data.</p>
+<p>Anyway, the article is about REST APIs. The only reason I brought out the
+Virtual Solar observatory is because it was the first time I had to seriously
+study SOAP. And of course while studying SOAP, the word RESTful was encountered
+quite a number of times. The reason obviously is because RESTful and
+SOAP are means of designing web services which is what enables a program to
+communicate objects and data over the web. But the whole process of reading
+about SOAP and RESTful got me confused. And the question - <em>what exactly
+qualifies a service to be RESTful?</em> - continued to beg for a satisfactory
+answer. There were tutorials for SOAP and there were tutorials for RESTful but none
+went into the depth of trying to answer the above question.</p>
+<p>One day, I was to participate in a discussion about RESTful services and I
+decided that this would be a perfect opportunity to read some literature (not an
+online tutorial) which explained what RESTful really means! This led me to find
+a book <em>REST API</em> by Leonard Richardson and Sam Ruby. I had attempted to read
+this once before but circumstances somehow didn't give me the luxury of time. I
+personally feel the first few chapters of this book really help in clarification
+of the questioned raised by me.</p>
+<p>I'm now going to attempt summarizing the difference between RESTful and non
+RESTful APIs in a crisp manner here. Essentially, try to do something in a few
+paragraphs the book has the luxury of doing in several pages.</p>
+<p>We are going to start with a fictional situation. Consider that you wish to
+design or interact with a service that allows you to use a program to store,
+replace or delete an image from a web server. The service is called
+'www.photostorage.com'. Every user is given a directory where they can store
+their photos. If your user name is 'loverboy1989' (takes you back to the Yahoo
+Chat room days, isn't it? And no, I never held any such IDs in case you are
+wondering!), your photos get stored in a location called
+<code>www.photostorage.com/loverboy1989</code>. So, a photo 'myvodkashot.jpg' is available
+as <code>www.photostorage.com/loverboy1989/myvodakshot.jpg</code>.</p>
+<p>Now, any program which wishes to work with the above photograph must communicate
+over the web and hence must deliver HTTP (Hyper Text Transfer Protocol) messages
+and receive HTTP responses. We will see that how they use HTTP is what
+determines whether a service is RESTful or not.</p>
+<h3>First Approach</h3>
+<p>In our first approach, which the authors of the book call the RPC (Remote
+Procedure Call) approach, we send out an HTTP message that looks like this.</p>
+<div class="codehilite"><pre><span></span><span class="nf">POST</span> <span class="nn">/someLink</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.photostorage.com</span>
+<span class="err">...</span>
+... header ends ...
+
+(some complex way describing a method you wish to run and the
+data, the image, you wish to upload)
+</pre></div>
+
+
+<p>Here, the link is a mere pointer to some link which the server side recognizes
+as a port where it expects RPCs to be sent. The entire action happens in the
+body of the HTTP message. Whether you wish to add a new image, retrieve an
+existing image, get the metadata for the existing image or you are replacing an
+image with a newer version, the first line and the header section of the HTTP
+message will remain largely unchained. Most changes happen in the body.</p>
+<h3>Second Approach</h3>
+<p>The second approach is described by the authors of the book as a hybrid system
+or approach. Here, I place the data to be transferred in the body of the
+message. But what I want the server to do with the data is captured in the URL.</p>
+<div class="codehilite"><pre><span></span><span class="nf">GET</span> <span class="nn">/someLink?action=getMetadata&amp;image=vodkashot.jpg&amp;format=JSON</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.photostorage.com</span>
+<span class="err">...</span>
+... header ends ...
+
+(could be empty, could be the bytes representing the image)
+</pre></div>
+
+
+<p>Now, in this particular example, I seem to be asking the service to try and send
+me the metadata for an already existing image. If I were to ask for fetching a
+new image, I might replace the 'action' part of the above message with something
+like <code>action=getImage</code>, for example. So, compared to the first approach I am now
+no longer relying on complex messages embedded in a body. A RESTful API
+encourages the usage of HTTP method (or verbs) and URIs to convey the full
+meaning of the request being sent. In a sense, this HTTP message seems to be
+doing this but is still short of a full RESTful service request. Why?</p>
+<h3>Third Approach</h3>
+<p>In the previous example, the HTTP request's method or verb is not being utilized
+in conveying the intent of the request. The <code>GET</code> makes no sense in many cases.
+I am not GETting a resource from the server if the 'action' says things such
+<code>getMetadata</code> or <code>replace</code> or <code>createNew</code>. So, I will now substitute the 'action' 
+with an appropriate choice of a HTTP verb. Next, I will allow the URI to refer
+to the resource, the image itself. I am still allowed to use query parameters if
+I need to but in this case we will not.</p>
+<p>So, let's see the message for an attempt to create a new resource. Note that the same
+message works for replacing an existing image with a new image of the same name.</p>
+<div class="codehilite"><pre><span></span><span class="nf">PUT</span> <span class="nn">/loverboy1989/vodkashot.jpg</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.photostorage.com</span>
+<span class="err">...</span>
+...
+
+(image bytes)
+</pre></div>
+
+
+<p>The message for fetching this image,</p>
+<div class="codehilite"><pre><span></span><span class="nf">GET</span> <span class="nn">/loverboy1989/vodkashot.jpg</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.photostorage.com</span>
+<span class="err">...</span>
+...
+
+(empty body)
+</pre></div>
+
+
+<p>The message for getting the metadata about this image,</p>
+<div class="codehilite"><pre><span></span><span class="nf">HEAD</span> <span class="nn">/loverboy1989/vodkashot.jpg</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.photostorage.com</span>
+<span class="err">...</span>
+...
+
+(empty body)
+</pre></div>
+
+
+<p>The message for deleting this image,</p>
+<div class="codehilite"><pre><span></span><span class="nf">DELETE</span> <span class="nn">/loverboy1989/vodkashot.jpg</span> <span class="kr">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+<span class="na">Host</span><span class="o">:</span> <span class="l">www.photostorage.com</span>
+<span class="err">...</span>
+...
+
+(empty body)
+</pre></div>
+
+
+<p>See how a true RESTful API takes advantage of the HTTP's ability to have
+different methods or verbs in its request messages. I have come across resources
+and developers who seem to think the second approach is RESTful in nature and
+I was also among those who thought so. <em>Yeah, if all the intent is being
+conveyed in the first line of the HTTP message, it is RESTful.</em> Well, now we
+know that is not fully true. I hope these examples also clarify why if the only
+purpose of the service is to GET the data, your API ends up being RESTful
+without you not knowing what RESTful means (you will naturally use a GET request
+and it will be the only request needed).</p>
+<p>Hope this helped the readers in understanding what a RESTful API means and looks
+like and perhaps also why these APIs are preferred. Corrections? Enhancements?
+Improvements? Hit the comment section below!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2018-06-02-rest-api';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2018-06-02-rest-api'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

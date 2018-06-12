@@ -1,0 +1,155 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Lost in Words</h2>
+    <span class="date"> Thursday, 29 April, 2010</span>
+    <div></div>
+    <br/>
+
+    <p>I think the theme of this post is not going to be really new. Those of you who
+have read the post "The Source of Knowledge" would find this article somehow
+exploring similar subjects. For those of you who have not, let me briefly
+summarize it by saying that the primary argument of that article was that a
+broad minded journey through the ocean of life itself will be a very rich source
+of knowledge. Not only will it be a rich source of knowledge but it will not
+have an equal. I try to argue that a man must not isolate himself into the world
+of books but go beyond books and explore the various facets of life if he truly
+wants to enrich his knowledge. To me, at least, the topic itself is so
+interesting that I can't but help divert a casual discussion on life onto this
+topic. I have met the most brilliant of people who can quote from so many books,
+none of which I would have even heard of. But a second thought makes me realize
+that the ideas have always been around for ages. How could they not be? They did
+not come out of nowhere. They came from a common occurence in life. But authors
+are known for their ability to translate a common experience of the human life
+into a rich collection of words that set them apart and also make the common
+experience appear uncommon.</p>
+<p>How simple thinking can be a complete failure is a fact that just does not cease
+to amaze me. The simple thought that I am talking about is this: if someone
+knows something then he or she is best prepared to handle any experiences in
+life that come their way that requires one to have the knowledge of that
+something. A simple and a a reasonable argument, don't you think? I thought too!
+But it turns out, at least to me, that it is not. Just because you read about
+death, it does not prepare you to face the loss of a near one. Just because you
+have read about someone's struggle against all odds to come up in life does not
+exactly prepare you to smoothly struggle against your own demons. It somehow
+just does not work that way. A man's accumulated knowledge can easily go for a
+toss when he finds himself into the deepest of waters of trouble. How easy it is
+for one to say, "Have faith in yourself! You will pull through!" Somewhere,
+something you heard or saw or read is perpahs making you say all this to the
+weeping friend sitting in front of you. But can you say this to yourself when
+the your time changes for the worse?</p>
+<p>All words and thoughts are but maps while all first hand experiences are the
+territory. This perhaps will sum up the above thoughts. Not only is it about day
+to day life and about your personal experiences but it is also about religion
+and philosophy. People are making careers out of stage shows in which they use
+intellect and logic alone to argue in favor of their faith. It can be a
+different topic that the application of logic and intellect can also be subject
+to prejudice but let us leave it at that. How did ever religion get mixed up
+with stage shows and logic snob?! Here is another one of those simple thoughts
+that never showed life in it! Religion is a man's personal journey. Anyway, the
+point regarding religion and philosophy is they seem to have become all
+intellectual endeavours. People read day in and day out and discuss over drinks
+the subtle meanings of words. But nobody seems to be walking the path! They are
+lost in words. Hopelessly and completely! Their faith might tell them to do this
+and that but they are not bothered. They are more interested in flinging words
+and trying to prove their point!</p>
+<p>Who are you anyway? Are you a man of X faith which teaches you to be this and
+that? Then, why are you so lost in words and living under the illusion that the
+study of the words is the study your faith's teachings? Why in the world are you
+not practising what your faith is asking you to practise? Why don't you let the
+actions speak for themselves because last I heard they apparently speak louder
+than words? Why do you spend all your energies losing yourself in a maze of
+words doing nothing but justifying your faith but all the while never following
+it? Are you then an atheist who has faith in himself? Why you are then, sir, so
+lost in your words which desperately try to justify your path of atheism? Why
+don't you go onwards on your path and do what you believe? What are you going to
+get spending time day in and day out indulging in exchange of words? What are
+you going to get by coming up with a clever argument that for a moment has you
+smiling? How is it going to change anything? How is it going to make you better?
+You will remain the same or maybe become worse because of pride and poison but
+never become better!</p>
+<p>At this point in typing all this out, I am now at a loss of words as to what I
+should say! I can't be sure but I guess the mind today seems to find some kind
+of happiness in words and word play. My two cents - it is better for the mind to
+create its own words from that rich source of knowledge called life rather than
+to play and be lost in words.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2010-04-29-lost-in-words';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2010-04-29-lost-in-words'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Setting up an Chroot Jail SFTP Server</h2>
+    <span class="date"> Tuesday, 29 May, 2018</span>
+    <div></div>
+    <br/>
+
+    <h3>Preliminaries</h3>
+<p>We are going to imagine a simple situation. You have, in your control, a server
+class machine, exposed to the world as 'www.myfantasticserver.com'. On this
+server, is a hard disk (logical or physical) mounted as '/data'. Now, you wish
+to allow someone, let's say user 'abc' to place some files on this storage
+volume and retrieve it. Assuming your server is a Linux machine hosting a Debian
+based operating system (such as Debian itself or Ubuntu), we are going to try
+and achieve the following. (With a little adjustment, it should work for non
+Debian distributions as well.)</p>
+<ul>
+<li>Allow a user to access the storage space using a GUI friendly client such as
+  Filezilla.</li>
+<li>When the user logs in, the user will only see their folder and nothing else.
+  In other words, they will not have the ability to see the parent folders of
+  the folder assigned to them. (This is called a 'chroot' jail.)</li>
+</ul>
+<h3>Setting Up</h3>
+<p>Traditionally, the File Transfer Protocol (FTP) based servers and clients were
+used for this purpose. The machine willing to host the files would have to setup
+an FTP server and the users logging into the machine would have to use an FTP
+client to access the files. But this is a very insecure protocol. All
+communication over this protocol, whether it is the authentication password or
+the files themselves, is unencrypted.</p>
+<p>A more modern approach is to setup an SFTP server (a secure FTP). However, the
+name is a little confusing. It seems to suggest that instead of installing some
+kind of an FTP server, you will install an SFTP server. Actually, the SFTP
+server is a part of the OpenSSH software which implements or enables SSH (Secure
+Shell) communication with your server. So, the first step is to install this
+software, if not already installed.</p>
+<div class="codehilite"><pre><span></span>$ sudo apt-get update
+$ sudo apt-get install openssh-server
+$ sudo systemctl start ssh.service
+$ sudo systemctl <span class="nb">enable</span> ssh.service
+</pre></div>
+
+
+<p>All SSH communication happens through port 22. It is therefore extremely
+important to ensure that in case there is a firewall system enabled on your
+machine, it allows incoming traffic through port 22. On a Debian based machine,
+a typical firewall software is the "Uncomplicated Firewall" which can be
+accessed using the command <code>ufw</code>. To enable all incoming SSH connections,</p>
+<div class="codehilite"><pre><span></span>$ sudo ufw allow ssh
+</pre></div>
+
+
+<p>If you wish to have a more  fine grained control over whether SSH should be allowed only from
+a particular network, please refer to the excellent tutorial <a href="https://www.digitalocean.com/community/tutorials/ufw-essentials-common-firewall-rules-and-commands">available on
+Digital Ocean's website</a>.</p>
+<h3>Configuring the Secure Shell</h3>
+<p>How the SSH server behaves is governed by a configuration file
+<code>/etc/ssh/sshd_config</code>. We need to modify its behavior to setup an SFTP server.
+Since these files are critical and the smallest of modifications to this file
+can lead to a breakdown of the service, it is a healthy practice to back it up
+before changing it.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> /etc/ssh
+$ sudo su
+<span class="c1"># cp sshd_config sshd_config.backup</span>
+</pre></div>
+
+
+<p>Now, we edit the file. You can use 'vi', 'vim' or 'nano' to edit the file. You
+need to find a line that says <code>Subsystem sftp /usr/lib/openssh/sftp-server</code> and
+replace it with <code>Subsystem sftp internal-sftp</code>. You may find that there is no
+need of such a replacement but if there is, please do so. Not too long ago,
+'sftp-server' was a stand alone program requiring its own separate process but
+now there is an internal SFTP module within the SSH server. By performing this
+replacement, we are conveying our intent to use this module instead of the older
+stand-alone server.</p>
+<p>Next, we will tell SSH to do the following</p>
+<ul>
+<li>Take all users who belong to the group 'sftponly'</li>
+<li>Force them to be controlled by the submodule 'internal-sftp'.</li>
+<li>Let them locked inside a special folder which they will think of as a root
+  directory (construct a chroot jail for them).</li>
+<li>Take away their rights to access the graphical X11 server.</li>
+</ul>
+<p>This is achieved by adding the following lines in the 'sshd_config' file.</p>
+<div class="codehilite"><pre><span></span>Match Group sftponly
+        ChrootDirectory /data/sftpusers/%u
+        ForceCommand internal-sftp
+        X11Forwarding no
+        AllowTcpForwarding no
+</pre></div>
+
+
+<p>And finally, we restart our server to reflect the new additions/edits to the
+configuration file. Make sure the following command does not give you any error.</p>
+<div class="codehilite"><pre><span></span># /etc/init.d/ssh restart
+</pre></div>
+
+
+<p>Since we need users to belong to 'sftponly' group, let us create that group.
+Further, we are going to give a non-conventional home directory for each user
+i.e. '/data/sftpusers', so let's create that as well.</p>
+<div class="codehilite"><pre><span></span># groupadd sftponly
+# mkdir /data/sftpusers
+</pre></div>
+
+
+<h3>Creating a New User to Login to our SFTP server</h3>
+<p>For any user, one needs to follow these steps. If you find yourself creating too
+many users (because your server is meant to be a dedicated SFTP server), you
+could make a shell script out of the following commands. First step, creator the
+user. We use the '-m' to demand that the user's home directory be created
+automatically and the '-d' option to specify the home directory (since we need
+it to be something other than the usual '/home' directory).</p>
+<div class="codehilite"><pre><span></span># mkdir /data/sftpusers/abc
+# useradd -d /data/sftpusers/abc abc
+</pre></div>
+
+
+<p>Add the user to sftponly group and also deny them any default shell (so that
+they cannot control the command line once logged in this machine),</p>
+<div class="codehilite"><pre><span></span># useradd -g sftponly abc
+# usermod -s /bin/false abc
+</pre></div>
+
+
+<p>It is important that the directory which will be used a chroot jail for any user
+be under the ownership of the root. So, '/data/sftpusers/abc' should be owned by
+the root. If you created this directory as a root, this should already be the
+case else you can change the ownership easily by saying,</p>
+<div class="codehilite"><pre><span></span># chown root:root /data/sftpusers/abc
+</pre></div>
+
+
+<p>Now, here is a problem! Because of the requirement that the main folder which
+will serve as the jail be owned by the root, we have left no place where the
+user in question will have write access! So, let's create a mock home directory
+for the user within the folder and make the user its owner.</p>
+<div class="codehilite"><pre><span></span># mkdir /data/sftpusers/abc/abc
+# chown abc:abc /data/sftpusers/abc/abc
+</pre></div>
+
+
+<p>Final step is set a password for the user.</p>
+<div class="codehilite"><pre><span></span># passwd abc
+</pre></div>
+
+
+<p>Done! Your user is setup.</p>
+<h3>Accessing SFTP using FileZilla.</h3>
+<p>FileZilla is a friendly program which can be run on all major operating
+systems which allows easy access to an FTP/SFTP server using a simple GUI.
+Please refer to instructions specific to your OS for installing this. Once it is
+installed, you can launch the program. At the top are four fields - server,
+username, password and port.</p>
+<p>The server can either be the hostname or the IP address. Generally, when
+accessing SFTP over a LAN, it will be an IP address beginning with <code>192.168</code> but
+it could be a name if the local administrator has setup a local DNS server. For
+a public facing machine, the domain name or IP can be provided. The username and
+password should be as set in the previous section. <em>It is important to note that
+the port should be set to 22.</em> FileZilla assumes the connection is an FTP
+connection which uses port 21 for negotiation (authenticating user and for
+commands) and therefore you may get an error if it is left blank. Clicking
+QuickConnect should show the a directory with folder 'abc' inside it. All files
+should be transferred to this location.</p>
+<p>Hope this helps!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2018-05-29-setting-up-sftp-server';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2018-05-29-setting-up-sftp-server'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

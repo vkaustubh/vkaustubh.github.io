@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>An Imaginary Conversation Between Me And A Friend</h2>
+    <span class="date"> Thursday, 05 April, 2007</span>
+    <div></div>
+    <br/>
+
+    <p><strong>Friend</strong>: I have recently read the Da Vinci Code. Found it quite interesting. I
+almost got convinced that what it says is entirely true.
+<strong>Myself</strong>: Hahaha! Dan Brown has a way of writing that does that to a layman at
+the first go.
+<strong>Friend</strong>: Then I also happened to see a documentary which clearly gave convincing
+evidences about the historical inaccuracies in the facts laid down by Dan Brown
+in the book. Wonder what I ought to believe?</p>
+<p>I smiled at my friend. He looked at me and said, "What do you believe, Kaustubh?
+Which is more probable? Jesus being a bachelor or being a married man?"</p>
+<p><strong>Myself</strong>: To me, it does not matter, quite frankly.
+<strong>Friend:</strong> You mean, the divinity of Jesus Christ does not matter to you...</p>
+<p><strong>Myself</strong>: The divinity of a person, according to me, depends on the man’s thinking
+and the man’s actions. If a person thinks and preaches divine acts, he is close
+to divine and if a person practices all divine acts, he is divine. As per the
+stories, Jesus was someone, a man or son of God, whatever you want to say, who
+showed compassion to fellow beings and provided support in a time especially
+when they needed most. He preached words that aided men in a huge way. Hence his
+act was divine. Now, his marriage hardly makes difference once we look at his
+actions.</p>
+<p><strong>Friend</strong>: And assume it were true that he gave birth to a daughter. The act he
+would commit to give birth, would it not compromise on his divinity?</p>
+<p><strong>Myself</strong>:Don’t we consider life divine? Don’t we consider the very arrival of a new-born
+in this world a happy and a momentous occasion? Don’t we have ceremonies of
+highest order in majority of cultures to commemorate such an occasion? Then, why
+do we disgust at the act that is the cause for this event?</p>
+<p><strong>Friend</strong>: But what about the existence of Jesus’ heir right now on this planet
+Earth?
+<strong>Myself</strong>: Did Einstein’s sons bring about the revolutions Einstein did?
+Blood is a material, a fluid. We ought to worship idea, we ought to worship
+character, that is what is needed. We do not need bloodlines and heirs. We do
+not need persons and portraits, we need ideas and philosophies. If we assume
+that the nobility and holiness of Jesus Christ or for that matter anyone can be
+transported through a bloodline, would not the living descendants of Jesus
+Christ possess the same nobility and holiness and hence the same potential to
+cause revolutions and aid people and give them strength? But we know somewhere
+that the truth is that nobility does not flow through any bloodline. Jesus’
+nobility and purity was in his heart and soul and not in his saliva, blood or
+genes.</p>
+<p><strong>Myself</strong>: As long as humans make quests out of these trivialities there will be no
+peace. We have people considered ideal and holy and we tend to imitate them in
+physicality. We grow beards or wear clothes and live in the illusion of having
+chosen a higher path. Nonsense! The path be solely determined by actions and
+intentions and not imitations or arguments. He who shall be triggered by the
+wave of arguments and discussions about Jesus’ bloodline and other issues and
+walk down the roads in protest, break glasses, damage property and burn posters
+bear in mind that he defies the very message of tolerance, peace and universal
+brotherhood that Jesus is said to have preached. And he who bases his religion
+on historical facts, cups or chalices, bloodlines and genes and not on
+philosophies and ideas of universal peace will best be described as a hypocrite.
+And this hypocrite will spread his disease and the world shall be engulfed in
+hypocrisy. My biggest fear is whether this time there shall be a saviour?</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2007-04-05-an-imaginary-conversation-me-and-friend';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2007-04-05-an-imaginary-conversation-me-and-friend'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

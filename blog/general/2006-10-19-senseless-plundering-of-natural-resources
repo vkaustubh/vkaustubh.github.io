@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Senseless Plundering of Natural Resources</h2>
+    <span class="date"> Thursday, 19 October, 2006</span>
+    <div></div>
+    <br/>
+
+    <p>I have come across so many people time and now who have absolutely no idea what
+they are doing when they leave the water tap running or when they leave the
+lights and fans switched on when there is no necessity. I once came across a
+certain person who was doing his Master’s degree in Engineering from a premier
+institute. As a part of his specialization, he was studying methods of reducing
+friction, which is the culprit that causes unnecessary or rather undesirable
+power dissipation or power loss. He would leave the lights and fans on whenever
+he left a room. One day he sent the clothes to the laundry and explained that he
+would not wash them himself because he wanted to conserve his energy! Imagine
+the nerve of the guy! He wants to conserve that form of energy that can be
+replenished and waste the form of energy that is not.</p>
+<p>Now here was a person who had spent much time of his professional studies in
+understanding how to reduce power consumption and this was his attitude. Then
+what should I expect from people who do not specialize in this knowledge? My
+view is that there are no excuses. One cannot say that I did not study this and
+that, etc. As long as you have done your basic schooling you should understand
+that the electricity that one is consuming is a limited resource and so is the
+water that is being supplied to our homes. People have such pathetic views
+towards these resources. My God! I sometimes close my eyes praying to myself not
+to beat the living hell out of such people.</p>
+<p>Once when I was in the college, my friends and I were having a discussion after
+all the lectures had been finished. Post this discussion we walked out of the
+classrooms. Being the last person to come out I reached out for the switchboard
+behind the door and started to switch off the fans and the tube lights. And then
+one of my friends asked, “Damn! Why do you bother so much to save electricity
+and money for the college? You are paying fees, aren’t you?” And I looked at him
+and said, “My dear friend, why don’t you understand that this is a natural
+resource that has its own limits? It is not the question of money. Of course you
+need to pay money to buy electricity but this electricity is limited. What is
+the use of all the money in the world when there is not the commodity left over
+to buy?”</p>
+<p>Another incident that reflects the attitude of the people is as follows. I had
+gone to the restroom during a break time. One of the students there was telling
+the other with full frustration, “Hey! You just leave the damn tap open and let
+the water flow. This college authorities think themselves too high…blah blah
+blah..” Apparently this man was frustrated and the method in which he took out
+the frustration was to let the water flow! In the place where I live people do a
+similar thing time and now. Because of scarcity of water there is a huge bill
+incurred for water tankers. Some of the flats with lesser number people in it
+then think that since I am paying the same amount as the other flat where the
+people being more they use more water, I shall let the water flow to even things
+up. How much lower could one get? Letting water flow because you are paying for
+it!</p>
+<p>It is high time that we realize by recapitulating our school studies that these
+resources are limited. And hence we must make it a point to preserve them. Many
+people look at various programs run for the conservation of natural resources
+and lift their hands and say, “I’d love to save Mother Nature but family first.
+I have to save money for the family and if at all I think I have more, I shall
+think about it!” My point is that one need not spend money on charity to save
+nature. Start out by saving electricity and water and you will make a certain
+contribution. Maybe like a drop in the ocean yet important. Switch off the
+ignitions when you stop at traffic lights. Statistics say that in an average
+city a thousand people practicing this would save significant amount of fuel.</p>
+<p>I have had the chance to see a modern facility where all the taps have sensors
+fit to them, which detect when water needs to flow out. Also there are sensors
+in the room, which in the absence of motion and noise in the rooms automatically
+switch off the lights. Some people call it a wasteful expenditure but in my
+opinion it is a good step towards resource conservation. You may argue that
+these sensors themselves consume energy. Fine! But how much do they consume and
+how much do they save in return? In fact, I’d like to say that these are among
+the most sensible use of technologies. And let me just end this blog quoting
+Michael Jackson, “If you want to make the world a better place, take a look at
+yourself and make that change.”</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2006-10-19-senseless-plundering-of-natural-resources';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2006-10-19-senseless-plundering-of-natural-resources'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

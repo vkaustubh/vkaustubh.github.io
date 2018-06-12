@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Why Damn Dan Brown?</h2>
+    <span class="date"> Monday, 29 May, 2006</span>
+    <div></div>
+    <br/>
+
+    <p>Just like millions of others, I have also read the “Da Vinci Code” written by
+Dan Brown. I have found it to be a very good thriller and a very entertaining as
+well as interesting read. The way the historical theories have been blended into
+the plot of an action thriller is creditable.</p>
+<p>In recent times, especially because of the movie being released based on the
+same novel I have been hearing so many people criticizing Dan Brown and calling
+him a heretic and all sorts of names. His novel has been deemed by many people
+to be outrages and blasphemous. I have heard the voices of the people walking
+down the streets burning the posters of the movie as well as that of Dan Brown.
+One impression I got by hearing their views is this : they are convinced that
+Dan Brown proposed the theory of Christ’s marriage. How absurd could it get? The
+novel itself says that there have been many books supporting this theory and
+even goes one step further mentioning the name of the book “The Holy Blood, The
+Holy Grail”. I am now convinced that most of the people who are walking down the
+streets asking that the movie be banned have not even read the novel! Had they
+read the novel, they would understand that it is only the characters that are
+discussing among themselves available material.</p>
+<p>And then there is the never ending line of critics who call Dan Brown’s novel
+all sorts of names and comment on his style of writing and at the same time
+there are these authors who have written parodies about this book. I do not
+understand the people who write the critics’ review of the novel. A critical
+review is supposed to be a balanced treatment of the material appreciating the
+good and bringing into the light the bad. They spend 99% of their reviews
+writing about the historical inaccuracies of the novel. Fine, let us assume that
+the novel was historically inaccurate. (I don’t know, I am not well versed with
+them) Even then, a correct review would have to bring this into light and at the
+same time stress as to how the central plot of the story is. I believe that the
+purpose of a review is to help improve the subject. One should not stress on one
+side of the coin so much that the other side virtually becomes non-existent.</p>
+<p>The essential reason why I have written all this is whether or not the material
+in Dan Brown’s novel is no truth, half-truth or the full truth, many critics
+have failed in balancing their treatment of Dan Brown’s work.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2006-05-29-why-damn-dan-brown';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2006-05-29-why-damn-dan-brown'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

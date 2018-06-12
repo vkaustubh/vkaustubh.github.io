@@ -1,0 +1,144 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Inter-religious Harmony</h2>
+    <span class="date"> Monday, 29 December, 2008</span>
+    <div></div>
+    <br/>
+
+    <p>People sometimes can be found to be debating as to how this can be achieved! I
+thought about this for a while and in the course of my journey through life
+encountering various situations, meeting many people, listening and reading to a
+lot of people I think one does not need to think about ways of achieving
+inter-religious harmony. It had dawned upon me that one simply needs to
+understand the meaning of religion better and the inter-religious harmony, as we
+would like to call, follows in automatically.</p>
+<p>Let us consider a man wanting to change to a certain religion X. What does he
+do? How does he go about doing it? Let us just cook up an imaginary process of
+his conversion into the religion of X. He goes to some committee or some head of
+that religion and puts forward his wishes. He is welcomed and told to follow
+some of the cultural norms of that religion. He changes his name, changes his
+looks and starts learning the scriptures of that religion in order to facilitate
+his conversion into that religion.</p>
+<p>Days later you see him all dressed up looking like a typical man of the X
+religion. You see him greet you in a style typical to that religion. He has to
+remind you that he has to be called by his new name which was given to him by
+the religious heads who prescribed the procedure for his conversion process. He
+has started visiting a specific place of worship. To put in simple and short
+phrase, he is doing everything that most people of the same religion X are
+usually found doing.</p>
+<p>Now, the important of all questions! Has he really “converted” into the
+“religion” X? Some of you might choose to answer this question as a simple
+“Yes”. But I would like to pose several more questions before I can convince
+myself whether the person in question has really converted into the religion of
+X! Perhaps in the course of these questions, you will come to know what I think
+about “religion”.</p>
+<p>The man has a thousand defects before joining this new X religion. Over the
+course of his transformation, how many defects has he gotten rid of? Has he
+managed to bring down these 1000 to even 995? Does each day of reading the
+scriptures, each visit to the holy monument and each day of ritual reduce this
+number from 995 to 990 and then onwards to lesser and lesser? Does each of the
+above make the smile on his face broader? Does it make him happy on the inside?
+Does he start becoming a better husband? Does he get rid of his jealousies? Does
+he get rid of his obsessions? Does it help him control his actions? Does it make
+him more charitable? Does it make him peaceful?</p>
+<p>Has this man reached a point where suppose he is locked inside a room and told
+that he will not be allowed to go to that monument today, does he say “I do not
+care for my happiness is in me and does not reside in the monument.”? Say, he is
+denied to read his scriptures; does he smile and say “All the scriptures are in
+me! Their essence is in me. Their message is in me!” Say he is made to remove
+all the attire that “defined” him as a member of the X religion, he smiles and
+says, “If it makes you happy, go ahead. But my religion is in me, it is my
+strength, it is my happiness and it is happiness that is inside me and not this
+piece of cloth.” Further on does he say, “I am progressing! Progress is not in
+my clothes and my looks but progress is inside me. How can you stop progress
+when it is inside me?”?</p>
+<p>I hope these questions have been more than enough to elucidate what I believe
+religion is. We are wasting our time and energy when we seek the name, the
+monument and the attire in defining a religion. Religion should be a journey
+towards inner peace and strength. What’s in name and form? Member of any
+religion, if he has found this via his practices should be able to recognize the
+same in any other person who has found them. Would it then matter how he found
+them? The fact is that if he has found them, he is on his way.</p>
+<p>I believe there is only one step that can bring about inter-religious harmony –
+understanding religion for what it really is and what it is meant to give.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2008-12-29-inter-religious-harmony';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2008-12-29-inter-religious-harmony'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

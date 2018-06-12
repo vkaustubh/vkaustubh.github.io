@@ -1,0 +1,136 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Silly Days</h2>
+    <span class="date"> Wednesday, 20 September, 2006</span>
+    <div></div>
+    <br/>
+
+    <p>One fine day I sat in front of my PC checking my emails and I found that I had
+received an email from an old friend of mine. The subject of the email: “Happy
+Friendship Day” And then I thought about all the silly days that had come into
+existence in the recent times. There was a day for your father, a day for your
+mother, a day for your lover and I am not sure of this but probably there are
+days for brothers and sisters too. I don’t approve of them quite frankly. I
+don’t quite understand the logic of dedicating 1 of your 365 days (or 366 if the
+year happens to be leap) for some relation of yours.</p>
+<p>One day, during a course of a discussion, one of my friends tried to demonstrate
+to me the importance of having these days. He asked me visualize a scenario. He
+asked me to consider two good friends whose relationship had been strained
+because of some misunderstanding. Since the “bad day” the event had taken place
+they were not talking to each other. But on one fine day, they notice the date
+shown by the calendar and the calendar also showed that it was Friendship’s Day.
+Seeing this both of them were forced to rethink about their hindered friendship.
+They began to recollect the good old days they had spent together as friends.
+And slowly one took the initiative and picked up the phone. They talked over the
+phone and said that it was the ideal day to patch things up. Hence, the
+tradition of celebrating the Friendship Day had helped them rekindle their
+relationship.</p>
+<p>I thought over this scenario for some time and asked my friend as to how he
+could justify the existence of Father’s Day or Mother’s Day. He sat in front of
+me silently and seemed to have no answer to my question. And then he stands up
+and offers some explanation. He asks me to visualize another scenario in which
+the son has gone to some far off place maybe for his education or maybe for some
+job. Since he is away from his family the existence of such days would make him
+call up his father or mother and speak to them. And then I stood up emphatically
+and said, “Exactly. This is what I am trying to tell you.”</p>
+<p>Why is that we need the calendars to remind us that back home we have a mother
+or a father who have worked so hard their entire lives to make our life? Why is
+that we should need a calendar to instruct us that we should give a call and
+speak to our parents, our brothers or sisters or our lovers? I mean it is
+possible for me to understand the fact that a calendar could be used to remind
+us of what work is to be done when and what meeting we have to attend on which
+day and at what time; and what time which program on the television is going to
+be aired but I do not understand why calendars should remind us what relations
+we have in this world and that we must take time out for them.</p>
+<p>With changing times our lives have become more and more mechanical. But have we
+become so mechanical that we need to be programmed like robots to filter out
+days in the year for each relationship? Have we become so mechanical that we
+cannot celebrate these wonderful relationships on each of the 365 or 366 days of
+the year? Celebration does not mean that we call and talk to every single person
+every day. Though ideal, I guess it is not practical. But I sincerely pray that
+there be enough humanity alive in all of us that we don’t need to be reminded by
+the calendars through the medium of these “silly days” that there is something
+in this world called a father, a mother, a brother, a sister, a friend or a
+lover. Our life is defined by our relationships to a very large extent. Let us
+cherish them every single day of our life.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2006-09-20-silly-days';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2006-09-20-silly-days'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

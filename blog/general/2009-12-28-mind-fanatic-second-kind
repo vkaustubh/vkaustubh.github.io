@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>In The Mind of the Fanatic of the Second Kind</h2>
+    <span class="date"> Monday, 28 December, 2009</span>
+    <div></div>
+    <br/>
+
+    <p>Let us first start out by making clear what a fanatic of the first kind is so
+that we are in a position to better understand what the fanatic of the second
+kind is about to tell us. The meaning of “fanatic of the first kind” is exactly
+the meaning of the word “fanatic” you already know. But the other day, I met
+this man sitting under a tree in my garden with a sad smile on his face. I asked
+him, “Who are you?” And he said, “Me… I am best described as the fanatic of the
+second kind.” I looked up with surprise. He smiled, “Do you want to know why?” I
+nodded. The following are his words.</p>
+<p>I receive a call one fine day from a certain friend. He and I talk excitedly and
+we decide to make a plan to meet at certain place at 4.00 PM in the evening. I
+do not want to be late. I do not like to wait for people who are unreasonably
+late and in interest of fairness I don’t like making someone wait for me beyond
+the time chosen. I reached there at 3.55 PM and I wasted 35 minutes of my life
+waiting for him. When he finally arrived, he smiled with no trace of apology.
+The smile on his face was painful to me.</p>
+<p>Another time I had gone to watch a play. Very sincerely, I took my mobile phone
+out and switched it to the Silent mode so that I would not be the one to disturb
+the play. But to what avail? The woman next to me caused me to lose fifteen
+minutes of play because the dialogues were getting entangled with her pathetic
+telephonic conversation. I glared at her and what I got back is a smile. Yet
+another time I was struggling to remember the answer to a question in the exam
+hall. Out came a shrill call from my side meant for the person on the other
+side. Answers were being exchanged as if nothing wrong was being committed. The
+mental agony it caused me could not be put in words.</p>
+<p>I went to get some work done in a government agency. Following the straight most
+path, I read the rule book and played by it. I did not understand what was meant
+by “arranging documents in order” when they had already been arranged and twice
+checked. The end result did not come out as expected. It seems I had followed
+all the written rules but there were some unwritten rules about how cash was
+also a part of the documents that thus I had failed in that endeavor. At the
+start of a picnic, I reached 15 minutes late to the destination; my heart was
+beating faster in all these 15 minutes. With a cold sweat, I kept looking at the
+watch and a heavy feeling overtook me until I finally reached my destination
+only to realize the remaining party was a few hours late!</p>
+<p>Once I committed a grave mistake of not being able to do a certain work on time.
+It filled my heart with incredible sorrow for having caused inconvenience to the
+other person involved. I had forgotten my sleep. No other thought entered my
+head except one – get the work done at the earliest and minimize the
+inconvenience caused. Having gone through perhaps the toughest hours I finally
+meet the other person and apologize to him three whole times. And the next time,
+when I am the receiving end, the other person does nothing to alleviate the
+anger and frustration locked within me.</p>
+<p>As anger and frustration built, I had to choose whether to let it burn me from
+the inside or to burst out and vent it out of me. I choose the latter path. The
+next time someone turned up late and it was not the first time, I scolded him
+for half an hour for his failure to keep time. Another time, someone could not
+keep up his end of the deal in accordance with his regular trend; I thrashed him
+real hard to let him know my truest feelings. Yet another time, when someone
+could not stick to the planned schedule, again in accordance with his regular
+habit, I let them know how inferior it was of them to make that mistake. When
+the phone rang in the theater next time, I not only glared but voiced out what I
+truly felt about the ringing phone. And on each of these occasions, I was deemed
+an inflexible fanatic.</p>
+<p>But was I like all those fanatics out there killing and torturing people? I
+could clearly see that I was not! And yet here I was being called a fanatic and
+why? For wanting to not be a minute late?! For wanting to not be the slightest
+cause of inconvenience?! For wanting not to be the one at fault?! So, who was I?
+The only answer I could come up with – “I am a fanatic but a fanatic of the
+second kind!”</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2009-12-28-mind-fanatic-second-kind';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2009-12-28-mind-fanatic-second-kind'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Narrow Minded Accounting</h2>
+    <span class="date"> Tuesday, 14 December, 2010</span>
+    <div></div>
+    <br/>
+
+    <p>There is a joke which I keep bringing up now and then during discussions with
+people when the topic of discussion is related to the mentality of people in
+general. The joke is as follows. In a locality, there are three photocopying
+centers all side by side. One has a board claiming, “Only 5 seconds per page.”
+Another one has a board on it saying, “Only 2 seconds per page.” And the third
+one has a board reading, “1 second per page.” During peak business hours, there
+is a queue of 100 people or so standing and guess what, all are queuing in front
+of the third (and fastest) vendor. There is not a soul to be seen in front of
+the other two vendors. This is what I call narrow minded accounting. I shall
+return to this point again.</p>
+<p>During a conversation with a neighbor, I was pointing out that it took two
+hundred rupees for a certain X-ray to be taken at a hospital situated three
+blocks from our house. She in turn pointed out that there is another hospital
+where it costs fifty whole rupees lesser. Her main point was that any sane
+person for whom money mattered should go to the latter hospital for his test. I
+asked her, “How much would you pay for the cab to take you to the hospital and
+back?” Her reply was – “Forty – fifty rupees.” I continued, “Would you get the
+reports instantly or would you be asked to come back some time later?” The
+answer was the latter. So, in effect, she would be spending fifty rupees or so
+more for getting her tests done from the “cheaper” place. But I, on the other
+hand, would save fifty rupees by going to the “expensive” place!</p>
+<p>Trying to sound as modest as possible, I’d call my way of thinking as “broad
+minded accounting” and her way of thinking as “narrow minded accounting”. And I
+can assure, it takes experience and the company of the wise (which you have to
+be lucky to have) in order to develop this thought process. Before the sharp
+brains start working, let me point out that the assumptions in the above example
+are - a) The quality of both the X-ray machines is the same and b) You have no
+choice but to use a cab to get your test done.</p>
+<p>The doctors recommend that you get annual check ups done after a certain age.
+Most people around me ignore this advice. The general rule of thumb is that if
+you are feeling good and happy, there can be nothing wrong with you. But take it
+from me, it is not so. The body is an amazing machine. I often get baffled by
+the amount of flexibility exhibited by the body. Even if your heart has 70-80%
+blockage, there is a good chance that you won’t feel a thing. You won’t start
+fainting until at least 70-80% of your blood supply to the brain has been cut
+off thanks to growing plaque deposits in your blood vessels. I have witnessed
+with my own eyes a feat of a person having driven 150 kilometers despite having
+a Hemoglobin level of ~ 3 (normal being 12+). How does it connect to the topic
+here? Well, these tests cost you about two thousand rupees or so. People find
+them expensive. But, are they more expensive than your hospitalization for
+problems that only reveal themselves only after reaching their peak? I’d rather
+spend money on getting myself checked rather than a couple of lakhs later on!
+Again, let us put a disclaimer. Some things are meant to happen in your life and
+will happen no matter what you do in terms of self care. It is of course an
+individual choice but my choice would be to avoid procrastination – “Had I gone
+for regular tests, maybe…” and instead be at peace, “Well, bad luck!”</p>
+<p>The same narrow minded accounting also holds in case of your shoes, your
+electronics and your clothes. Narrow minded accounting would mean you buy
+something with a single variable in your mind – the cost at present. But a broad
+minded accounting would be when you consider questions like, “How long will I be
+able to use?”, “How much will I spend to maintain the same?”, etc.  It could
+well be that you might pay more now but in the long run end up spending less
+when you take into account recurring costs, etc.</p>
+<p>Of course, money is not the only variable always. Sometimes, time and effort,
+convenience, etc also become important. Returning to the example at the
+beginning, I would go to a ‘slower shop’ and get my work done in say, a minute
+than to wait for 10 minutes in the queue. Narrow minded accounting will
+calculate only the time taken for the service but broad minded accounting will
+take into account the other variable namely the amount of time spent in the
+queue. Sometimes, the question can be like, “Do I spend more now and avoid
+possessing outdated technology in a few months from now or do I spend less two
+times, one for current technology and another for the technology that will be
+released in a couple of months?”</p>
+<p>Then there are questions which demand that a balance be struck between the
+“amount of convenience” and the “amount of money spent”. Sometimes the answers
+can be obvious but sometimes the answers are of course left to be a matter of
+personal taste and choice. But what matters in the end is the assertion that it
+is best to avoid narrowing minded accounting and broaden the horizons of our
+thought and analysis.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2010-12-14-narrow-minded-accounting';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2010-12-14-narrow-minded-accounting'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

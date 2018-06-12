@@ -1,0 +1,120 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Faith and Trust – The Limits of Skepticism</h2>
+    <span class="date"> Monday, 04 January, 2010</span>
+    <div></div>
+    <br/>
+
+    <p>It would do well for anyone reading this article to read my previous post entitled “When Ignorance Is Not Bliss”. The reason for this is that in that article I find myself encouraging the reader to arm themselves with information. I encourage indirectly a certain amount of skepticism. And thinking about this indirect encouragement to skepticism that is there for the reader to see, I was inevitably led to write this post down which is about skepticism. And what better way, I thought, to elucidate my point through a dialogue between two people. Our two people in this case will be called The Extreme Skeptic (henceforth to be called as ES) and The Questioner (henceforth to be called simply Q). Let us see what they are talking about.</p>
+<p>ES: Skepticism is life. It is always good to be skeptic about everything. This keeps you alert and prevents you from being duped. Never have faith in anything. Never trust anything. Always, be skeptic! Life will be better that way.
+Q: Oh, you mean faith and trust are things of no use. Are you implying that trust and faith are dangerous?</p>
+<p>ES: Of course. If you trust your doctor fully, he might prescribe some wrong drugs that could even kill you. If you are skeptic and question everything he tells you, you can prevent such a catastrophe. If you are skeptic about a salesperson trying to tell you that something is correct and something is wrong, then you can save a lot of trouble. You can prevent, “Oh my God!” kind of reactions, you know.
+Q: But surely, there is a limit to our skepticism. We cannot be skeptic all the time for everything.</p>
+<p>ES: Come on, lad. Your life depends on it. Somebody might come and tell you that if you follow this path, you will get this and that. And then you are not skeptic about what is being said, you never know that one fine day you ask yourself why you wasted your time listening to people who were telling you crap. You will blame yourself for not having been skeptic about what was being said and believing things wrongly.
+Q: So, what you are saying is that skepticism is everything.
+ES: Of course, it is the first thing a person must do.</p>
+<p>(Silence in the air for some time. And then Q decides to put forth some doubts to ES.)</p>
+<p>Q: Let us say, the doctor prescribed me a drug for my illness. What should I do in this case?</p>
+<p>ES: Lad, you verify if the drug given to you is correct and meant for your illness or not.</p>
+<p>Q: And how do I go about verifying this?</p>
+<p>ES: You could ask the medical guy?</p>
+<p>Q: And trust him to give me the correct information?</p>
+<p>ES: You don’t. You open a medical encyclopedia and cross check whether the given illness is treatable with that drug.</p>
+<p>Q: And trust the medical encyclopedia?</p>
+<p>ES: Of course, how can encyclopedias be wrong?</p>
+<p>Q: Why? Are they not written by human beings?</p>
+<p>ES: Er…yes…</p>
+<p>Q: So, they can be liable to contain mistakes.</p>
+<p>ES: It is not written by one lad, my lad. It is checked several times over to contain the correct information.</p>
+<p>Q: By a board of writers, I presume?</p>
+<p>ES: Yes…</p>
+<p>Q: And they would have then written the material based on some other material, right?</p>
+<p>ES: Generally, yes.</p>
+<p>Q: So, in this way they are having faith in their sources, is it not?</p>
+<p>ES: .Er…</p>
+<p>Q: And we are having faith indirectly in some source whose precise origin and whereabouts are as good as unknown?</p>
+<p>ES: Er…</p>
+<p>(Post a blank expression on ES’s face, Q has this to say…)</p>
+<p>Q: I agree skepticism is good. But it is not a complete alternative to faith and trust. We cannot do without it. Just like the above chain of steps you traced out, most of the steps end somewhere, I believe. And then, it does really no good to continue to follow the straight most path of a skeptic i.e. to question and question each every layer of information. At some point, faith and hope become important. If each scientist or doctor started questioning each and everything in the greatest of detail then science would not have progressed. Progress has always come by building upon something that already existed. And to start building upon something, we have to have faith in it. We have to trust that what we build upon something will not topple down, be in vain!</p>
+<p>Q: I simply do not understand why! But somewhere deep down inside I know the faith and hope are important. They are playing a huge role in our lives. I understand that sometimes faith has been a cause of great misery upon our land. But that still does not prevent one from having faith. I guess I would like to take the middle ground. I would not like to be a man of extreme faith and become an object of use to the whole world without really doing anything good. At the same time I would not like to be an extreme skeptic for the simple reason that I believe it cannot do much good. And when I use the word “good” I trust I know what I am talking about!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2010-01-04-faith-trust-limits-skepticism';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2010-01-04-faith-trust-limits-skepticism'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

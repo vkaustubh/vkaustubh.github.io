@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>The Mind of an Observer of Friendship</h2>
+    <span class="date"> Saturday, 03 September, 2011</span>
+    <div></div>
+    <br/>
+
+    <p>Warning: The article has been written a long time back in a state of extremely
+pessimistic observation of the things around me. It does not necessarily reflect
+my rational most observation. Hence the title contains "an observer..." meaning
+the article is from the point of view of one of many observers.</p>
+<p>How many times has it happened that you wake up in the morning and naively get
+ready for the day only to discover later that you are going to meet someone who
+will become a close friend of yours? It happens to many people many a times. The
+day all seems ordinary and humble but you get introduced to a person with whom
+you strike a chord. Friendship forms and it brings about a positive change in
+your life. For the first few days, every day seems like a special one with time
+spent in bonding with a new found friend and feeling the excitement of having
+found someone who resonates with your inner being.</p>
+<p>And a couple of months or maybe years later, you wake up to find that excitement
+gone. That certain thrill you used to feel on meeting that person just
+disappears. That exuberant show of affection has been replaced with a blank and
+a blunt outward look. Those were the good old days when the new found joy could
+have disappeared easily and thus care was exercised to preserve it. So intense
+was the care taken to preserve this new found friendship that you show affection
+at every chance you get, you show immeasurable tolerance when needed and show
+flexibility that borders being comparable to a rubber.</p>
+<p>This mind somehow feels no remorse when letting go of someone with whom you have
+spent only a couple of days. But the mind apparently has a problem abandoning
+someone who has been around for a very long time. But when the mind and the
+heart desire someone who has been around for a couple of days to be around for a
+very long time, efforts come out quite effortlessly. A passionate show of
+affection, care and concern. A strong exercise of self control to tolerate the
+fallacies of the person in front coming out of fear that a loss of temper for an
+occassional trivial reason should not destroy the long term prospects.</p>
+<p>And a couple of years later, something seems to have changed. Like a tree that
+has now firm roots and hence is capable of tolerating some blows given to it,
+the friendship has become immune to mild friction. The participants have no
+hesitation in screaming out their views. They feel no need to show intense
+affection. They take liberties they would not have dare taken couple of years
+earlier. The careful precision and the watchful eye that scouted for the
+smallest of needs of the other seems no longer a necessity. Everything that had
+to be said has been said and it feels like nothing else can be said. Time is
+spent in looking at each other but no words flow.</p>
+<p>Probably, the heart in its state of missing a lot many emotions so cherishable
+takes over the mind. Irrational actions become common. The point of focus shifts
+from the outside to the inside. The necessity of checking this shift is not
+felt. Why would it? The focus used to be outside for a purpose and the purpose
+has been achieved, the other person is not going to let you go in one snap just
+because the focus is off him or her! But when the focus which you could feel
+upon yourself is gone, it carves out a hollow in the heart. Now, we have two
+hollowed hearts instead of one. The first hollow emerged when it focussed on
+itself and the second hollow emerged when the focus could no longer be felt!</p>
+<p>What can two hollow hearts do but to bleed? And so they bleed. The famous cycle
+of friendship is set in motion. From an initial excitement to neutrality and now
+has emerged the negative phase. A time of chaos and misunderstanding. A time
+when negative energy spreads engulfing all in a state of misery. The hollowed
+hearts get hollower and hollower. And finally comes a decisive time where the
+either the desire to eradicate the source of hollowness appears or the desire to
+fill the hollowness appears. When the former happens, relationships break. The
+two people part their ways perhaps never to see each other again. But when the
+latter happens, the two people are filled with the urge to fill the hollow and
+make their friendship full again. But the process is too slow. The hollowed
+hearts must first fill. Then they must rise. Why is this such a common story, to
+me is something quite amusing and amazing!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2011-09-03-mind-observer-friendship';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2011-09-03-mind-observer-friendship'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Failure to Communicate!</h2>
+    <span class="date"> Saturday, 18 October, 2008</span>
+    <div></div>
+    <br/>
+
+    <p>This is a story about a pursuit. A pursuit of finding out why people could not
+be in touch with each other! Once upon a time there was a group of friends who
+played and ran around together and then one fine day they had to separate. They
+were going to live in different cities. With the enthusiasm and innocence of
+childhood all over them, they exchanged postal addresses and decided to stay in
+touch. One fine day, one of them jumped up and down with excitement. In his hand
+was an Inland Letter on which he would write a letter to his friend. There is
+now an exchange of posts between friends for some time.</p>
+<p>But soon the postal exchange reduces. There is so much to write daily in those
+notebooks that will go under the scanning eyes of the teacher who will then spit
+out red marks all over the notebook. There does not seem to be much time it
+seems to go out and buy an Inland letter, write a letter down, go all the way to
+the post-office and then post it. With time, the postal exchange dies down. The
+friends never hear from each other and the world teaches them not to wonder why
+they haven’t heard from each other.</p>
+<p>In another sequence, the government takes up a wonderful initiative. The
+telephones get cheaper. Buying a telephone has become affordable and gradually
+evolved into a necessity. Two friends now just need a couple of seconds during
+which they have to punch in some numbers and voila - they can now talk to each
+other! Oh, but how expensive is this way of communicating? So taxing on the
+pockets! No, let us speak with some time gap. With time, this “time gap” grows
+to being nearly “forever”. Another separation, another reason!</p>
+<p>The world is changing and witnessing a revolution. A wonderful thing called the
+Internet is emerging. It first hits the business centers and then slowly reaches
+the homes. Soon, there are generous people who are providing E-mail services for
+free. Wow! The end of reasons is near and people can finally stay in touch or
+can they? The e-mail is free but the Internet is not. So, no wow! Soon, the
+semiconductor industry evolves to strikingly reduce the cost of the computer,
+the modem and the mobile phone. Both government and private ISPs (Internet
+Service Providers) slash down Internet charges making it affordable even to the
+lower middle class. What reason can there be now for people to not stay in touch
+with each other?</p>
+<p>Each one has an email address, but wait, do we not have to type the whole
+address down in the “To” section and then the subject line and then type the
+email and then send it? Oh, who has time? Then comes another invention – the
+messengers, the MSN Messenger and the Yahoo Messenger and many others. All one
+has to do is click on the name and just type a message, only the message. No
+need to type the address and no need to type the subject. But oh, the IDs they
+are so complex. I don’t have time to figure out whose ID is whose! But you can
+type the names in the Address Book so that you don’t have to remember whose ID
+is whose! No, who has time and patience for all that?</p>
+<p>And one fine day, the solution to this laziness is invented. Social networking
+sites! Orkut, Facebox and many others! But how do they work? Simple, there is a
+list, the name of the person and his photo appear in the list and all one has to
+do is click and leave a message for the other. In the meantime, one can speak
+across the globe for free. Audio and Video chatting and conferencing have become
+free and so has the little additional hardware needed to use them become cheap.</p>
+<p>But still people are not in touch! A curious character spends hours pondering
+over this in the corner of his house. He is troubled by this question. He stands
+up as he has found his answer. But the discovery does not excite him and make
+him run around shouting “Eureka!” Contrary to this, it makes him lower his
+shoulders, hang his face down, sigh and say in a low voice, “<em>There is no will
+left to communicate!</em>”</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2008-10-18-failure-to-communicate';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2008-10-18-failure-to-communicate'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

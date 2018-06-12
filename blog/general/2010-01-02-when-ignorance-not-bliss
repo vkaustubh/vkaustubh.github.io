@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>When Ignorance Is Not Bliss</h2>
+    <span class="date"> Saturday, 02 January, 2010</span>
+    <div></div>
+    <br/>
+
+    <p>We cannot accumulate all knowledge of all fields in today’s world. It is way too
+much. And thus we have specializations and specialists. When a doctor passes a
+judgment on our health and prescribes something we accept it without too much
+questioning. And I have also seen the same happening when people go out to
+purchase some electronic gadget or item. You take the words of the salesperson
+as prophetic. I would like to share some incidents in this post in which I hope
+to convince you to be more cautious and careful.</p>
+<p>I went out to purchase a DVD player recently since the old one in the house had
+failed. My friends will not be surprised to hear that I read the list of all
+models on the Internet and when I went to visit the showrooms I took a notepad
+with me for noting down various things. In the first showroom I walked into, I
+looked around to find predominantly LG and Philips’ players. Onida found a
+corner spot. I was interested in an Onida model and on my asking I was told that
+it cannot do some of the things that other players could do. Like? I asked. I
+was told that Onida does read a USB drive but it does not play Video from it but
+only audio. I was shocked to hear this and let me explain why I was shocked.</p>
+<p>In any player there has to be a central unit which receives the information
+(today, it is all digital) and makes the audio and video out of it. Now, who
+sends this information to this unit? Earlier, it used to be only the DVD reading
+unit but now the players support USB drives and memory cards. So, my logic told
+me that if you can play Video from a CD or a DVD then you can play it from a
+card too because in the end there is only one unit which is going to interpret
+the data independent from where it came! I was not at all convinced. And in the
+very next shop, I was proved right.</p>
+<p>But I was hammered with all kinds of bullshit during this venture. I was told
+that Component video was useless when Composite video was working. Wrong! I can
+explain the difference in a simple way. Component video means that the video
+signal is transmitted in three parts through three cables. In composite, all is
+merged into one. But in the end, the TV internally splits the signal into three
+parts again. Now, imagine an essay made into a summary and given to you. You are
+now asked to reconstruct the essay based on the summary. Can you? Not fully,
+right? Same way, here! Component video is superior to Composite. And here I was
+being fed this bullshit.</p>
+<p>I gave the salesperson a tough time. I asked him to demonstrate each and every
+feature of the player. I made him show me all three video modes, made him play
+USB, memory card and of course the DVDs. I checked everything and took me 45
+minutes to get it done. And I am glad I did it. Because I discovered the HDMI
+cable (for Plasma TVs) was faulty! Had I not known this, I would have discovered
+it only if I got a plasma TV! Would have been too late then! Is ignorance then
+bliss? Certainly not! Much against some of the folks around me calling me a nerd
+or a geek (maybe a fanatic) I am glad I spent my time going through loads of
+information. I know now at least that what I have spent my money on is a clean
+product.</p>
+<p>Yet another incident where I was saved was when I walked into a doctor’s place
+for my cough. He prescribes a healthy guy like me (minus the throat) five days
+of Antibiotics and two other pills. Two days later, this healthy guy becomes
+weak and dull. When he goes back to the doctor, the doctor extends my dosage to
+ten days! I know one thing from my experience. Ten days of antibiotics is crazy.
+And my instinct told me to go for a second consultation. And the new advice
+given to me was to forego the medicines I was already taking. And guess what? I
+was alright again! I was given an overdose of sleeping drugs thanks to the
+combination concocted by the first doctor. And an even earlier incident is when
+one doctor wanted to suck money out of me for a standard knee injury. Again,
+information helped me a lot. I knew my problem had one simple cure. Strengthen
+the muscles of my knee and today I have no trace of that problem.</p>
+<p>The whole purpose of telling you all about these incidents is to demonstrate
+that information is power. Twenty years ago, without books and internet, we did
+not have that power. Today, we have the power but are we using it? I’ve seen
+many people getting deceived by jokers and clowns simply because they did not
+arm themselves with information. I would like to solemnly request you to not
+ignore information sources when they come along. They can save a lot of trouble
+in many cases whether it is about a purchase of your computer, DVD player or
+whether it is about some financial investment or even if it is a visit to a
+doctor. Insist on demos when buying products or at least read reviews if demos
+are not possible. If you have some major illness, try to know about it. Remember
+– information is power!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2010-01-02-when-ignorance-not-bliss';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2010-01-02-when-ignorance-not-bliss'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

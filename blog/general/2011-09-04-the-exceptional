@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>The Exceptional</h2>
+    <span class="date"> Sunday, 04 September, 2011</span>
+    <div></div>
+    <br/>
+
+    <p>Exceptions are dangerous when looked at individually. To elaborate on this
+statement, a question we can ask ourselves is the following – how did the first
+of the laws of Nature or the laws of economics or any other law get discovered?
+Laws are discovered by statistical patterns in our “data set”. Having found a
+pattern, we occasionally find something deviating systematically from this
+pattern and then in our process of explaining the deviation, make our
+understanding of the law more subtle. Imagine ourselves formulating the laws
+based on a few exceptional elements. It should be quite dangerous. I want to
+dedicate this piece of my writing to all those poor people coming from outside
+our country who formulate preconceptions about our country based on the data
+available to them!</p>
+<p>Whenever some bold representative of our country makes a mark in the
+international arena, the whole country acting under the action of the generous
+press join in celebration of the mark made. The adrenaline is high and so are
+the levels of pride especially when the world is appreciating us. These
+exceptional people who make their marks always show a culture that in turn is
+exceptional. But from a country of vast millions of people, whom do we blame for
+making popular only the most exceptional people? Nobody! It is obvious that only
+the exceptional are talked about and usually the exceptional have exceptional
+cultures. And since these exceptions are all that a man not of our own kin can
+watch, he forms a preconception of us based on these exceptions and in the rush
+of things, decides to come and see the masses!</p>
+<p>The visitor stands on a street side of a decent locality of one of our cities.
+He is possibly waiting for one of our decent buses or cab to pick him up. Around
+he turns and notices the corners of all railings stained by rust. He soon
+realizes that it is not rust! And neither is it red oxide. It is but the
+byproduct of the typical man’s uncontrollable desire to chew tobacco leaves and
+spit the juice out wherever he goes! And thus the first shock. He then notices a
+man gargling on the street, a man spitting on the road side and another
+littering. With an expanded data set, he realizes that all his preconceptions
+are breaking apart!</p>
+<p>He thinks that the torture is over when the bus finally arrives but he is so
+very wrong. Somebody told him that our country was making so much progress that
+every other man in the city was having a cell phone. But what he was not told is
+that the people do not know how to use an ear phone or control the volume of the
+built-in MP3 player. His entire bus journey is a tormenting experience as he is
+caught in the middle of the “battle of the volumes” wherein people attempt
+playing their favorite music louder than the other person. He consoles himself
+that what he had seen was a local phenomenon. He is therefore a bit optimistic
+about the train journey that he has to take.</p>
+<p>It’s the same story on the train as well. But there are a few additions. He has
+caught a night train and has the naïve expectation that people on the train
+would have their dinners already. He then notices people taking out big boxes
+full of food. The people spend their time carelessly sharing their food within
+the group dropping some of it on the berths and some on the floor. Of course,
+that is bound to happen. But what is even more shocking is the callousness that
+follows. The food on the floor is left as it is. The food on the berths is just
+wiped out in the most ineffective manner! I shall spare the reader the trouble
+he will undergo when he walks into the toilet!</p>
+<p>The country is developing! The country is developing! Why? How? Are you saying
+this because every second person you see in the city has a cell phone? Or it
+because the number of medals we won in the recent games is quite a large one? Or
+it is because some scientist got some international recognition recently? Or is
+it because you received an e-mail that talks about how your Prime Minister is
+possibly among the most academically qualified in the world? These are
+individual achievements but where is the collective culture that can be the true
+indicator of the overall development of the nation? How fair is it to measure
+the development of a nation by measuring the qualities of the Exceptional?</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2011-09-04-the-exceptional';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2011-09-04-the-exceptional'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

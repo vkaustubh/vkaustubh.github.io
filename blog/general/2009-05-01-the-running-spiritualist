@@ -1,0 +1,140 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>The Running Spiritualist</h2>
+    <span class="date"> Friday, 01 May, 2009</span>
+    <div></div>
+    <br/>
+
+    <p>Life throws at you many hurdles and also makes your path cross the paths of many
+others. I've come across many people of different thoughts, customs, traditions
+and approaches. The running spiritualist class is one such class of people that
+I have come across. A good question that one can ask himself is the following -
+why do people sometimes find deep motivation to study complicated texts written
+by complicated people with complicated lives? Sometimes these texts can be quite
+depressing but there nonetheless exist a whole lot of people who read them and
+find a lot of solace and comfort in them. What leads a man on this path of self
+inquiry?</p>
+<p>I say again. Life throws hurdles at you, in some lives, there are just too many
+of them. If an individual facing too many hurdles is either cursed (or gifted, I
+don't know) he asks the following important question - why? Why is my existence
+a one without bliss? Why these hurdles? What purpose does my existence serve?
+The mind has a trouble letting go once these questions get embedded in it. Man
+then goes around hunting for the answer filled with unrest and very well knowing
+that this unrest can go away only if he somehow finds some explanation, some
+answer for his questions.</p>
+<p>As one of the end product of such experiences and pursuit of answers, comes the
+Running Spiritualist. He is a spritualist in the sense that he is pondering hard
+over the subjects of relative and absolute existence, liberation, etc. He seeks
+happiness. He learns that emotional attachment can bring him harm. He wants to
+escape from being hurt. He tries to detach himself. But he is doing it by force
+.He is literally hammering himself on the head saying, "No attachment, no
+attachment." He deliberately tries to somehow use the following sentence in a
+conversation, "Anyway, I don't get affected by these things..." He is trying to
+find happiness by eradicating the so-called hurdles to happiness. What are these
+hurdles? Are they emotions?  How can he be happy by trying to become emotionless
+when happiness is itself an emotion?</p>
+<p>He is disconnected from people. He does not reciprocate the feelings shown by
+others towards him. And all this he does based on his drawn conclusion,
+"Emotions are painful." In this process he ends up being so neutral and passive
+that he inevitably hurts other who try get close to him. I strongly ask - how is
+he a spiritualist? He is of no service to the society. The people around him not
+only find the absence of happiness around him but in fact find depression. Why
+does he not understand that it is emotions that usher people forward in life?
+And if he had truly found some majestic answer to the riddle of existence then
+would he not understand that different people need different solutions based on
+what their tendencies are and so on?</p>
+<p>I guess so far there have been more questions coming from me rather answers. And
+the reason for this is simple. In matters such as this sometimes it is easier to
+ask the questions and difficult or seemingly impossible to answer them. I can
+propose my own views and that is all I can do. I cannot say whether I am right
+or wrong because at the end of the day one asks, "Who is to decide?" Someone can
+come up with a bright suggestion that he who finds bliss in life is correct in
+the way he thinks. Then I say that different people with totally different train
+of thoughts can also find "bliss" as they see it and understand it.</p>
+<p>I have no idea as to whether I should be calling this relative nature of truth a
+boon or a curse! I can only say that at least these class of people - the
+running spiritualists are someone I'd like to avoid to say the least for in them
+I see nothing but imperfection manifested in the same magnitude as I see in any
+other people. And I said earlier, different people, different thoughts - no
+conclusion!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2009-05-01-the-running-spiritualist';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2009-05-01-the-running-spiritualist'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>

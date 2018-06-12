@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title> Welcome! </title>
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="../index.html">Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>The End of Logic</h2>
+    <span class="date"> Saturday, 30 May, 2009</span>
+    <div></div>
+    <br/>
+
+    <p>The power of logic is beyond doubt. There cannot be any doubt that the power of
+reasoning and logic have always given mankind huge amount of power. Power so
+much that he now controls the fate of his world with a couple of buttons. Yes,
+one button and the whole world can be destroyed! If nature chooses to destroy
+someone, mark the end of his life, a couple of hours of precise work and a man
+is able to reverse the effect thanks to the modern technology of medicine. A man
+does not have to think twice before he steps out of his house and ventures on
+some crazy adventure because he is hardly alone. He is able to carry a certain
+device, a brain child of modern technology, which enables to him to stay in
+touch with the rest of the world no matter how far he chooses to venture away
+from home and for that matter civilization. But this power of reasoning that man
+has used all this time in order to increase his powers and influence is so
+limited!</p>
+<p>How far has reasoning taken man when it comes to the questions of his own life?
+When a man stops thinking about how he can achieve a certain material based
+benefit and starts to ponder over tougher questions like life itself, we begin
+to see the end of reason. The power of reasoning and logic fail miserably, isn't
+it? Each man is taught by the world that his existence is temporary. There will
+be an end to his life. There will come a time when he will pass away and make
+way for the future generations. So, why does a man live? Why does a man lead
+such an entangled life as if he is going to live forever. He thirsts and desires
+for wealth and power in his life in spite of knowing that none if it will be
+useful when death will stare into his face. He knows that no matter how powerful
+medicine becomes, we still do not have a reply that we can give to the angel of
+death when he knocks that fateful knock!</p>
+<p>Fine, death is always assumed to be far away from us. Let us talk about life.
+How much is logic important in driving us onwards in life itself? How much? You
+cannot predict death and yet with the hope that there will be a tomorrow, you do
+something today. What is hope? You need love of your friends and family and
+several a people who have tried to run away from love or denied love have
+suffered so much misery! What is love and what is misery? Mistakes are an
+eventual part of life! Same is the case with repeating mistakes. In our day to
+day relationships, we repeat mistakes often, cause someone to feel hurt and yet
+we find it in ourselves to forgive and forget! What is hurt? What is
+forgiveness? Even the people who study logic study it because they feel
+passionate about studying logic! What is passion? And as we ponder over the
+issues of lfie, we are eventually led to the questions of death. Death is like
+the other side of the coin, one side being life. Both are inseparable!</p>
+<p>Why do we procreate? When the eventual fate of the offspring and yourself is
+death, why do we procreate? When there are a hundred examples of how miserable
+our existence is, why do we keep hoping for something good and move forward?
+Again, we do not know for sure what is hope and misery! But do we even know what
+is good? Can logic give us the answer as to what is good and what is bad? Can
+logic explain the craziness of a mother's love for her child, a lover yearning
+for the love of his love? There are many more questions that one can ask only if
+he breaks away from the mechanical existence of his life and think for some
+time. I have similar questions! There is something called instinct. I don't know
+what is and the best I can talk about it is that is a word that describes the
+process of decisions coming out from the void, the wherabouts of this void being
+unknown. I see life as being driven by instinct. And when we begin to question
+instinct, I believe we reach the end of logic!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2009-05-30-end-of-logic';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2009-05-30-end-of-logic'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+
+</body>
+
+</html>
