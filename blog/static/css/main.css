@@ -114,3 +114,15 @@ span.date {
     font-size: 0.8em;
     color: grey;
 }
+
+#back-to-top {
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display:none;
+    color:white;  
+    background-color:#000000;
+
+}
+

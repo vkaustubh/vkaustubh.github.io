@@ -70,7 +70,7 @@ to you all.</p>
 <br>
 
     <script>
-        var pages = $.parseJSON("[{\"title\": \"When are APIs RESTful?\", \"date\": \"01 June, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-06-02-rest-api.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Setting up an Chroot Jail SFTP Server\", \"date\": \"29 May, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-05-29-setting-up-sftp-server.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Unteachable Parts of Data Science\", \"date\": \"22 February, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-04-22-unteachable-parts-of-data-science.html\u0027\u003e Read \u003c/a\u003e\"}]");
+        var pages = $.parseJSON("[{\"date\": \"01 June, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-06-02-rest-api.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"When are APIs RESTful?\"}, {\"date\": \"29 May, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-05-29-setting-up-sftp-server.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Setting up an Chroot Jail SFTP Server\"}, {\"date\": \"22 February, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-04-22-unteachable-parts-of-data-science.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Unteachable Parts of Data Science\"}]");
         $("#bloglist").DataTable({
             data: pages,
             columns: [
@@ -94,6 +94,11 @@ to you all.</p>
         <div class="container footer">
             <p> Copyright 2018. All rights reserved. </p>
        </div>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<script src="static/js/scroll_top.js"></script>
 
 
 </body>
