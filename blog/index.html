@@ -74,17 +74,48 @@ latter section. Hope you enjoy your sojourn here. </p>
 <br/>
 <a href="geek.html"> <button type="button" class="btn
         btn-primary">Geek Section</button></a>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+
 </div>
+<div class="clearfix"></div>
+<br/>
+<h2>  Most Recent Articles </h2>
+
+    <table id="bloglist" class="display"> 
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Date Published</th>
+                    <th>Link</th>
+                </tr>
+            </thead>
+    
+    </table>
 
 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+    <script>
+        var pages = $.parseJSON("[{\"title\": \"When are APIs RESTful?\", \"date\": \"01 June, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-06-02-rest-api.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Setting up a Chroot Jail SFTP Server\", \"date\": \"29 May, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-05-29-setting-up-sftp-server.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Last Days\", \"date\": \"02 April, 2018\", \"path\": \"\u003ca href=\u0027general/2018-04-02-the-last-days.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"A Tribute to Managers and Leaders\", \"date\": \"25 February, 2018\", \"path\": \"\u003ca href=\u0027general/2018-02-25-tribute-to-managers.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Unteachable Parts of Data Science\", \"date\": \"22 February, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-04-22-unteachable-parts-of-data-science.html\u0027\u003e Read \u003c/a\u003e\"}]");
+        $("#bloglist").DataTable({
+            data: pages,
+            columns: [
+                {data: 'title'},
+                {data: 'date'},
+                {data: 'path'},
+            ],
+            order: [],
+            pageLength: 20,
+            "bPaginate": false,
+            ordering: false,
+        });
+    </script>
 
 
 

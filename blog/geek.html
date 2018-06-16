@@ -55,12 +55,16 @@
     <div class="container content">
     
             
+<div class="col-md-offset-1 col-md-8">
 
 <h1> Welcome to the geek section! </h1>
 <p> Since not all people want to talk about technology, science, coding and the
 likes, I have designated this area for all such things. Hope this can be helpful
 to you all.</p>
-
+</div>
+<div class="clearfix"></div>
+<br/>
+<h2>List of Posts</h2>
     <table id="bloglist" class="display"> 
             <thead>
                 <tr>
@@ -81,7 +85,7 @@ to you all.</p>
 <br>
 
     <script>
-        var pages = $.parseJSON("[{\"date\": \"01 June, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-06-02-rest-api.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"When are APIs RESTful?\"}, {\"date\": \"29 May, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-05-29-setting-up-sftp-server.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Setting up an Chroot Jail SFTP Server\"}, {\"date\": \"22 February, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-04-22-unteachable-parts-of-data-science.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Unteachable Parts of Data Science\"}]");
+        var pages = $.parseJSON("[{\"title\": \"When are APIs RESTful?\", \"date\": \"01 June, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-06-02-rest-api.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Setting up a Chroot Jail SFTP Server\", \"date\": \"29 May, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-05-29-setting-up-sftp-server.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Unteachable Parts of Data Science\", \"date\": \"22 February, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-04-22-unteachable-parts-of-data-science.html\u0027\u003e Read \u003c/a\u003e\"}]");
         $("#bloglist").DataTable({
             data: pages,
             columns: [
