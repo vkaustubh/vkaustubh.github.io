@@ -17,6 +17,8 @@
     <script type="text/javascript" src="static/js/jquery-3.2.0.min.js"></script>
     <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
 
+    <link rel="stylesheet" href="pygments.css">
+
     
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
     <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
@@ -91,7 +93,7 @@ to you all.</p>
 <br>
 
     <script>
-        var pages = $.parseJSON("[{\"date\": \"20 September, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-09-20-the-scary-scale-of-ten.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Scary Scale of Ten\"}, {\"date\": \"01 June, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-06-02-rest-api.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"When are APIs RESTful?\"}, {\"date\": \"29 May, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-05-29-setting-up-sftp-server.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Setting up a Chroot Jail SFTP Server\"}, {\"date\": \"22 February, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-04-22-unteachable-parts-of-data-science.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Unteachable Parts of Data Science\"}]");
+        var pages = $.parseJSON("[{\"date\": \"24 September, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-09-24-python-decorators.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Python Decorators\"}, {\"date\": \"20 September, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-09-20-the-scary-scale-of-ten.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Scary Scale of Ten\"}, {\"date\": \"01 June, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-06-02-rest-api.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"When are APIs RESTful?\"}, {\"date\": \"29 May, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-05-29-setting-up-sftp-server.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Setting up a Chroot Jail SFTP Server\"}, {\"date\": \"22 February, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-04-22-unteachable-parts-of-data-science.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Unteachable Parts of Data Science\"}]");
         $("#bloglist").DataTable({
             data: pages,
             columns: [

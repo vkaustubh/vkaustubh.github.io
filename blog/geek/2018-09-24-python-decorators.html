@@ -1,0 +1,505 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title> Python Decorators </title>
+
+
+    
+    
+    <meta name="description" content="My take on understanding and explaining Python decorators.">
+    
+
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../pygments.css">
+
+    
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="https://vkaustubh.github.io">Home Page</a></li>
+                    <li class="active"><a href="../index.html">Blog Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Python Decorators</h2>
+    <span class="date"> Monday, 24 September, 2018</span>
+    <div></div>
+    <br/>
+
+    <p>There are four steps to understanding Python decorators.</p>
+<ul>
+<li>Understand Python functions and their being first class objects.</li>
+<li>The concept of modifying functions using higher order functions.</li>
+<li>The decorator syntax.</li>
+<li>Seeing them in action!</li>
+</ul>
+<h3>Python Functions are First Class Objects</h3>
+<p>An object in Python can be assigned a reference. It can be passed as an argument.
+It can be returned from a function. It can become a part of a list, tuple,
+dictionary or wherever objects can be placed.</p>
+<p>The major difference between most conventional objects and Python function objects
+is - <strong>latter are callable</strong>.</p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">5</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">type</span><span class="p">(</span><span class="n">f</span><span class="p">))</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>&lt;function f at 0x7f667039d048&gt;
+5
+&lt;class &#39;function&#39;&gt;
+</pre></div>
+
+
+<p>Key thing to note in the above statement is that 'f' is a reference to a
+function object. It is the syntax <code>f()</code> which calls it. And then notice that
+<code>type(f)</code> gives <code>&lt;class 'function'&gt;</code>. This means there is a class called
+<code>function</code> which describes how function objects behave.</p>
+<p>This is not true with functions in many other languages. Functions are something
+special and cannot be treated like other objects. That is why we say <strong>Python
+functions are first class objects.</strong></p>
+<p>Let us see more examples of the first class nature of objects.</p>
+<div class="codehilite"><pre><span></span><span class="n">g</span> <span class="o">=</span> <span class="n">f</span>
+<span class="n">g</span><span class="p">()</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>5
+</pre></div>
+
+
+<p>In the above example, <code>f</code> evaluates to a function object and the assignment
+operator results in <code>g</code> now pointing to the same object. So, whether I say,
+<code>f()</code> or <code>g()</code>, I get the same result.</p>
+<p> </p>
+
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">a</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">a</span><span class="o">**</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">caller</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">a</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">f</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="n">caller</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>9
+</pre></div>
+
+
+<p>In the above example, I am passing an object <code>f</code> to the <code>caller()</code> function
+which in turn is able to call <code>f</code> using the usual <code>f()</code> syntax. The in-built
+Python function <code>map()</code> follows this exact approach. You pass a function and a
+list, <code>map</code> then applies the function on every member of the list.</p>
+<p> </p>
+
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">function_maker</span><span class="p">(</span><span class="n">num</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">func</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">x</span><span class="o">**</span><span class="n">num</span>
+    <span class="k">return</span> <span class="n">func</span>
+
+<span class="n">cuber</span> <span class="o">=</span> <span class="n">function_maker</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+<span class="n">cuber</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+
+<p> </p>
+
+<div class="codehilite"><pre><span></span>27
+</pre></div>
+
+
+<p>The above example is different from the previous two examples in that we are
+able to define a function inside a function. Why not? It is just like any other
+object and I should be able to declare them anywhere where other objects can be
+declared. The function <code>function_maker</code> is also referred to as a <em>function
+factory</em> by some peope. Here it is important to remember that <code>func</code> is inside
+the scope of <code>function_maker</code> and therefore is not callable from outside. Try
+it!</p>
+<div class="codehilite"><pre><span></span><span class="n">func</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>---------------------------------------------------------------------------
+
+NameError                                 Traceback (most recent call last)
+
+&lt;ipython-input-6-b523faf31d8e&gt; in &lt;module&gt;()
+----&gt; 1 func(3)
+
+
+NameError: name &#39;func&#39; is not defined
+</pre></div>
+
+
+<p></p>
+
+<p>In the next example, we illustrate how functions, being first class objects, can
+be placed inside a list.</p>
+<div class="codehilite"><pre><span></span><span class="c1"># A wicked example.</span>
+<span class="k">def</span> <span class="nf">f1</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="mi">2</span>
+
+<span class="k">def</span> <span class="nf">f2</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="mi">3</span>
+
+<span class="k">def</span> <span class="nf">f3</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="k">return</span> <span class="n">x</span><span class="o">*</span><span class="mi">4</span>
+
+<span class="n">funcs</span> <span class="o">=</span> <span class="p">[</span><span class="n">f1</span><span class="p">,</span> <span class="n">f2</span><span class="p">,</span> <span class="n">f3</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">funcs</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">f</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>20
+30
+40
+</pre></div>
+
+
+<h3>Modifying or Extending Functions Using Higher Order Functions</h3>
+<p>A small terminology absorption that we need to do - a function that works on
+other functions is called a <em>higher order function</em>.</p>
+<p>Okay, now imagine we want a function to be modified so that it is able to tell
+us how much time it took for executing the function. Let's see how we do this.</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="k">def</span> <span class="nf">add_self_timing</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">modified_function</span><span class="p">():</span>
+        <span class="n">t1</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="n">f</span><span class="p">()</span>
+        <span class="n">t2</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Execution Time = &quot;</span><span class="p">,</span> <span class="p">(</span><span class="n">t2</span> <span class="o">-</span> <span class="n">t1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">modified_function</span>
+
+<span class="k">def</span> <span class="nf">myFunction</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">):</span>
+        <span class="n">i</span><span class="o">**</span><span class="mi">22</span>
+
+<span class="c1"># Now, we modify myFunction to declare its own timing.</span>
+<span class="n">myFunction</span> <span class="o">=</span> <span class="n">add_self_timing</span><span class="p">(</span><span class="n">myFunction</span><span class="p">)</span>
+<span class="n">myFunction</span><span class="p">()</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>Execution Time =  0.05740070343017578
+</pre></div>
+
+
+<h3>Decorator Syntax</h3>
+<div class="codehilite"><pre><span></span>myFunction = add_self_timing(myFunction)
+</pre></div>
+
+
+<p>This is how we modified our function in accordance with the definition of
+<code>add_self_timing</code>. Below is a nice syntax that allows us to be lazy (and adds beautiful
+expression capability to the Python language).</p>
+<div class="codehilite"><pre><span></span><span class="nd">@add_self_timing</span>
+<span class="k">def</span> <span class="nf">myFunction</span><span class="p">():</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">100000</span><span class="p">):</span>
+    <span class="n">i</span><span class="o">**</span><span class="mi">22</span>
+</pre></div>
+
+
+<p></p>
+
+<p>It can be applied on any function.</p>
+<div class="codehilite"><pre><span></span><span class="nd">@add_self_timing</span>
+<span class="k">def</span> <span class="nf">myFunction2</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">),</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">2000</span><span class="p">)):</span>
+        <span class="n">i</span> <span class="o">**</span> <span class="n">j</span>
+
+<span class="n">myFunction2</span><span class="p">()</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>Execution Time =  0.07813024520874023
+</pre></div>
+
+
+<h3>Some Real Examples of Decorators</h3>
+<p>A very frequently found decorator is called <code>wraps</code>. Lot of people find it
+confusing. Let's understand this guy! Let's create a function and apply <code>dir()</code>
+to it, which will give me a list of all the properties or attributes of the
+function object.</p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">superBoy</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello&quot;</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="nb">dir</span><span class="p">(</span><span class="n">superBoy</span><span class="p">))</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>[&#39;__annotations__&#39;, &#39;__call__&#39;, &#39;__class__&#39;, &#39;__closure__&#39;, &#39;__code__&#39;, &#39;__defaults__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__get__&#39;, &#39;__getattribute__&#39;, &#39;__globals__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__kwdefaults__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__name__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__qualname__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;]
+</pre></div>
+
+
+<p>Specifically, let us print out the value of <code>__name__</code> attribute.</p>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">superBoy</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>superBoy
+</pre></div>
+
+
+<p>Let us consider making some decorator for this function.</p>
+<div class="codehilite"><pre><span></span><span class="k">def</span> <span class="nf">some_decorator</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">new_guy</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Executing&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">new_guy</span>
+
+<span class="nd">@some_decorator</span>
+<span class="k">def</span> <span class="nf">myFunction4</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">33</span><span class="o">**</span><span class="mi">12</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span><span class="n">myFunction4</span><span class="o">.</span><span class="vm">__name__</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>&#39;new_guy&#39;
+</pre></div>
+
+
+<p>Did you notice what happened? The decorator replaces the function <code>myFunction4</code>
+with <code>new_guy</code>. So, when you decided to ask its name by printing out its
+<code>__name__</code> attribute, you are printing <code>__name__</code> of the <code>new_guy</code> function
+defined by the decorator. So, the original properties of the function being
+modified are replaced by the properties of the new function that the decorator
+creates! That is bad! The <code>functools</code> library in Python provides another
+decorator which can be used on top of the modified function. This is called
+<code>wraps</code> and what it does is to modify all properties of the new function to be
+the same as the function being modified. Let's see an example.</p>
+<p></p>
+
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">wraps</span>
+
+<span class="k">def</span> <span class="nf">some_decorator2</span><span class="p">(</span><span class="n">f</span><span class="p">):</span>
+    <span class="nd">@wraps</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">new_guy</span><span class="p">():</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Executing&quot;</span><span class="p">)</span>
+        <span class="n">f</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">new_guy</span>
+
+<span class="nd">@some_decorator2</span>
+<span class="k">def</span> <span class="nf">myFunction4</span><span class="p">():</span>
+    <span class="k">return</span> <span class="mi">33</span><span class="o">**</span><span class="mi">12</span>
+</pre></div>
+
+
+<p></p>
+
+<p>Let's print <code>myFunction4.__name__</code>.</p>
+<div class="codehilite"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="n">myFunction4</span><span class="o">.</span><span class="vm">__name__</span><span class="p">)</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>&#39;myFunction4&#39;
+</pre></div>
+
+
+<p>We have only looked at <code>__name__</code> variable in this case. But the same argument
+would matter to the all important <code>__doc__</code> attribute as well. Without <code>wraps</code>
+you will lose the documentation of the function being modified. So <code>@wraps(f)</code> is
+actually very important to master.</p>
+<p>Another example of decorators at work is in Flask. Flask is a web framework
+which means one of the main things you use it for is designing functions that
+can be assigned to handle various URLs. These are called view functions. What
+Django (another web framework) does is maintain a list of URL - function
+mappings and when you add a new function, you have to go and make a new entry in
+that file. Whereas in Flask, you simply say something like:</p>
+<div class="codehilite"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="o">...</span>
+</pre></div>
+
+
+<p>The route() decorator will then go and update this URL - view function mapping.
+Further, it will extend the function to actually return an HTTP response while
+you as a programmer can simply return a string!</p>
+<p>Yet another example from the world of Flask is that you want a view function to
+be executed only if the user is authenticated. With the Flask-Login extension
+for Flask, you can achieve this as simply as:</p>
+<div class="codehilite"><pre><span></span><span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/wall/&lt;id&gt;&#39;</span><span class="p">)</span>
+<span class="nd">@login_required</span>
+<span class="k">def</span> <span class="nf">wall</span><span class="p">(</span><span class="nb">id</span><span class="p">):</span>
+    <span class="o">...</span>
+    <span class="o">...</span>
+</pre></div>
+
+
+<p>Yet another place where decorators are intensively used is when you are
+designing classes and indulging in OOP design. Let's see an example.</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">someMethod</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Inside method&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">someMethod</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">someMethod</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>Inside method
+(&lt;__main__.A object at 0x7f66702c47b8&gt;,)
+None
+Inside method
+(&lt;__main__.A object at 0x7f66702c47b8&gt;, 2, 3, 4)
+None
+</pre></div>
+
+
+<p>By default, all methods inside a class are <strong>bound methods</strong>. This means that
+these methods always expect one argument which is <strong>self</strong>, the object of the
+class in the context of which the method was called.</p>
+<p>Sometimes, we want some methods to be part of a class but not require an object
+context for being called. In other words, we want our method to be <strong>static</strong>.</p>
+<div class="codehilite"><pre><span></span><span class="k">class</span> <span class="nc">A</span><span class="p">:</span>
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">someMethod</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s2">&quot;Inside method&quot;</span><span class="p">)</span>
+        <span class="k">print</span><span class="p">(</span><span class="n">args</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">A</span><span class="p">()</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">someMethod</span><span class="p">())</span>
+<span class="k">print</span><span class="p">(</span><span class="n">a</span><span class="o">.</span><span class="n">someMethod</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">))</span>
+</pre></div>
+
+
+<p></p>
+
+<div class="codehilite"><pre><span></span>Inside method
+()
+None
+Inside method
+(2, 3, 4)
+None
+</pre></div>
+
+
+<p>Notice the difference in the output. When a method is not static, the first
+argument being passed to the method is always the object from which the method
+is called. But when the method is static, as in the second example, no object
+reference is passed to the method.</p>
+<p>That's it, folks! If you have made it this far, kudos to you! Hope you have more
+clarity than before about the concept of decorators in Python.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2018-09-24-python-decorators.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2018-09-24-python-decorators'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<script src="../static/js/scroll_top.js"></script>
+
+
+</body>
+
+</html>
