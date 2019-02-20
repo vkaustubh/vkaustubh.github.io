@@ -1,0 +1,252 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title> Towards using GPG For Security - Part 1 </title>
+
+
+    
+    
+    <meta name="description" content="A first of two articles guiding readers towards usage of GPG.">
+    
+
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../pygments.css">
+
+    
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="https://vkaustubh.github.io">Home Page</a></li>
+                    <li class="active"><a href="../index.html">Blog Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Towards using GPG For Security - Part 1</h2>
+    <span class="date"> Wednesday, 20 February, 2019</span>
+    <div></div>
+    <br/>
+
+    <p>This article is the first of two articles aimed at explaining how secure
+communications work and how GnuPG (the GNU Privacy Guard) can be used to secure
+our communication, verify the authenticity of a communication and other things.
+The first article aims at explaining the basics of encrypted communication while
+the second article aims at trying to help you secure yourself using the GNU
+Privacy Guard.</p>
+<h3>Symmetric Encryption</h3>
+<p>Consider Alice and Bob, two people who wish to communicate with each other
+securely and privately. Alice fires up her e-mail composer, writes what she
+wishes to write and hits the Send button. Bob opens his Inbox and reads the
+e-mail. This is how the problem of communication itself has been solved, by
+using e-mail.</p>
+<p>Mallory wants to eavesdrop on the conversation. He simply writes a packet
+sniffer program, a program that keeps monitoring the information sent between
+Alice and Bob. With relatively little effort, he is able to see the message
+Alice sent to Bob. This is the problem we are trying to solve. We need to
+prevent Mallory from reading what Alice intends to be read only by Bob. How do we
+do it?</p>
+<p>Let us clear one thing first. It is extremely hard to control what happens
+between all those wireless and wired transmissions that take place once Alice
+hits the Send button. So, you can hardly prevent Mallory from being able to
+capture  the 'packets' of information running all over the world as a result of
+the Send button being clicked. What we wish to achieve is that Mallory will not
+be able to make sense of any information captured by him. In other words, we
+wish to encode our informaiton in such a way that Mallory cannot make sense of
+it BUT BUT BUT ... Bob, the intended recipient should be able to make sense.
+This is called encryption.</p>
+<p>Let's see the simplest example of how communication can be encrypted. Consider
+the following message.</p>
+<p><code>i love you</code></p>
+<p>We now adopt a simple (and perhaps one of the oldest) schemes to encrypt this
+message. We shift each letter by 2 in the order it appears in the English
+alphabet. 'a' becomes 'c', 'e' becomes 'g' etc. And our message now transforms
+to:</p>
+<p><code>k nqyg aqw</code></p>
+<p>Note that since there are is no letter after 'z', we have rewound to 'a' in the
+case of 'y'. Now, that looks hard to read, isn't it? If Mallory were to capture
+this content, he would not be able to make sense of it. But so would Bob! For
+Bob to be able to make sense, Alice would have to tell Bob what kind of
+encryption was used and also mention the number '2' to indicate by how many
+places should Bob shift back each letter to recover the message. This '2' is
+known as the 'key' because it sort of unlocks the message.</p>
+<p>How does Alice convey the key i.e. number '2' to Bob? One could argue that she
+would use an alternate secure connection to convey this but that is not the
+solution. Firstly, there is hardly anything such as a secure channel in the
+world of Internet but even otherwise if there was a secure channel which Mallory
+could not access, then she could send the message itself through that secure
+channel!</p>
+<p>Because the key K that encrypts the message and the key K that decrypts the
+message are the same, this method of encryption is called <strong>symmetric
+encrytion</strong>. And we cannot use it, as explained above, for communication over a
+network or the Internet.</p>
+<h3>Asymmetric Encryption</h3>
+<p>Let's now see another form of communication that takes us closer to solving the
+problem. Bob generates a pair of keys - K<sub>public</sub> and
+K<sub>private</sub>. The private key is kept secured, never exposed publicly to
+the world and depending on how diligent Bob is, highly guarded and secured. Here
+is the interesting thing, his public key is kept completely exposed. He sends it
+people via e-mail, even makes it available as a downloadable file on his web
+site and in fact even publishes it on a public server where people can search
+for it!</p>
+<p>Alice therefore can easily discover K<sub>public</sub>. She uses this to encrypt
+any message she wishes to send to Bob. Now, here is the ingenuity behind the
+encrytion algorithm being used by her. There is a special mathematical relation
+between K<sub>public</sub> and K<sub>private</sub> so that what is encrypted by
+one <strong>can only be decrypted by the other</strong>. Since the key that encrypts is not
+the key that decrypts, this form of encryption is called asymmetric encryption.</p>
+<p>Since Alice encrypts using K<sub>public</sub>, the <strong>only way her message can be
+decrypted is using Bob's K<sub>private</sub></strong>. And note that Bob has
+safeguarded this very carefully. If Mallory were to capture the message, since
+he does not have access to the private key of Bob, he will not be able to
+decrypt the message at all (unless Alice and Bob have used a weak algorithm to
+encrypt with known security holes).</p>
+<h3>Digital Signatures</h3>
+<p>Before we move on to the next article which goes into hands on, one last concept
+to explain is that of a digital signature. Let us consider another problem.
+Alice wants to publish something relatively publicly. She does this. Bob
+discovers this and downloads it. As he peruses the material, he grows a little
+suspicious. Did Alice really write this? It doesn't sound like her. How does Bob
+verify the content in front of him is indeed Alice's?</p>
+<p>Enter checksums. Consider the following text.</p>
+<div class="codehilite"><pre><span></span>Hello World!
+I am Alice. Find Mallory.
+Kill him not, keep him alive!
+</pre></div>
+
+
+<p>A checksum algorithm is one that converts a stream of bytes like above and
+transforms it into a collection of characters in an irreversible manner. For
+example, running the following command on a file containing above text gives the
+following output.</p>
+<div class="codehilite"><pre><span></span>$ md5sum some.txt 
+727f0e11d7c4c8d2932048414332c611  some.txt
+</pre></div>
+
+
+<p><code>727f0e11d7c4c8d2932048414332c611</code> cannot be used to recover the content. This
+is what we mean by checksums being irreversible. The second important property
+of checksums is that the slightest change in the contents results in a
+completely different checksum. Consider a subtly different version of the same
+message by Alice.</p>
+<div class="codehilite"><pre><span></span>Hello World!
+I am Alice. Find Mallory.
+Kill him, not keep him alive!
+</pre></div>
+
+
+<p>Notice the comma which changes the meaning of the message drastically. But let's
+see what it's checksum will be - </p>
+<div class="codehilite"><pre><span></span>$ md5sum some.txt 
+d768054291acb3084480eb3d3b3f5aa7  some.txt
+</pre></div>
+
+
+<p><code>d768054291acb3084480eb3d3b3f5aa7</code> looks nothing like <code>727f0e11d7c4c8d2932048414332c611</code>!
+And all that changed was a comma! Okay, what does this have to do with
+signatures? Let's go back to the problem. How does Alice sign her work so that
+people like Bob can be sure that she is indeed the author of this work and that
+nobody has tampered with her work?</p>
+<p>She creates a checksum of her work. She puts it at the end of it. Bob can
+now calculate the checksum and compare it with the checksum Alice has put at the
+end of the work. Meh! Mallory could recompute the checksum of his modifications
+to Alice's message and replace her checksum as well.</p>
+<p>So, Alice takes it one step further. She computes the checksum and encrypts it
+using her private key. Since the public key is, well, public, Bob can easily
+decrypt it using her public key. Then he compares the checksums to ensure that
+Alice's message has not been modified. Now, suppose Mallory modified the
+message, he could indeed replace the checksum but since he does not have Alice's
+private key he will either not do so OR will use some other private key. But
+then Bob cannot use Alice's public key to decrypt the checksum. So, Bob
+immediately calls foul and refuses to believe what he is seeing and even warn
+Alice or any consumer of Alice's work.</p>
+<p>The process of computing a checksum and encrypting with your private key is
+what we call 'digital signing'.</p>
+<hr />
+<p>In the next article, I will explain how to use GnuPG to achieve all of the above
+in practice.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-1.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2019-02-20-gpg-1'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<script src="../static/js/scroll_top.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title> Towards using GPG For Security - Part 2 </title>
+
+
+    
+    
+    <meta name="description" content="Second of two articles guiding readers towards usage of GPG.">
+    
+
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../pygments.css">
+
+    
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="https://vkaustubh.github.io">Home Page</a></li>
+                    <li class="active"><a href="../index.html">Blog Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Towards using GPG For Security - Part 2</h2>
+    <span class="date"> Wednesday, 20 February, 2019</span>
+    <div></div>
+    <br/>
+
+    <p>This is the second of two articles on using the GNU Privacy Guard for securing
+your communication. It is imperative that you understand the fundamentals of
+public and private keys as well as the purpose of digital signatures to make
+sense of this post. Also, this article assumes you have installed GPG for your
+OS and are using the 2.X version. Google is your friend - please use it have GPG
+installed. The use of Linux command line is also assumed but my best guess is
+that the commands shouldn't change much on the Windows command line. Of course,
+the notation for file path will be different. To verify,</p>
+<p><code>$ gpg2 --version</code></p>
+<div class="codehilite"><pre><span></span>gpg (GnuPG) 2.2.10
+libgcrypt 1.8.4
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &lt;https://gnu.org/licenses/gpl.html&gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Home: /home/kaustubh/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
+</pre></div>
+
+
+<h3>Creating Public-Private Key Pair</h3>
+<p>This is the first step. We need to create a public / private key pair. And since
+we will be sharing the public key with the world, we will need to share some
+identification information along with it. This way we make it easier for people
+to keep track of our public key in their database. Let's do that now.</p>
+<p><code>$ gpg2 --full-generate-key</code></p>
+<div class="codehilite"><pre><span></span>gpg (GnuPG) 2.2.10; Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
+
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection?
+</pre></div>
+
+
+<p>So, we are being asked to choose the algorithm to be used for the generation of
+the key. If you have no idea how to choose and/or the differences between the
+options, it's best to choose the default option. Press Enter.</p>
+<div class="codehilite"><pre><span></span>RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072)
+</pre></div>
+
+
+<p>A key can be of different sizes. The larger the size of the key (in bits), the
+stronger the protection. But this also means longer times in terms of
+computations needed for encryption and decryption process. But with today's
+hardware, I'd imagine it should be fine to choose the highest. Here, I am using
+the default option on my machine - 3072.</p>
+<div class="codehilite"><pre><span></span>Requested keysize is 3072 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &lt;n&gt;  = key expires in n days
+      &lt;n&gt;w = key expires in n weeks
+      &lt;n&gt;m = key expires in n months
+      &lt;n&gt;y = key expires in n years
+Key is valid for? (0)
+</pre></div>
+
+
+<p>Next, we need to specify the expiry date of our key. While is it allowed to have
+a key that never expires, it is recommended by security experts to specify a
+period between 1 to 3 years. To choose 2 years, say <code>2y</code> and press Enter.</p>
+<div class="codehilite"><pre><span></span>Key expires at Friday 19 February 2021 11:43:31 AM IST
+Is this correct? (y/N)
+</pre></div>
+
+
+<p>This is just a confirmation prompt. Press 'y' and hit Enter. Next up, you will
+be asked for your real name, email address and comment. For real name, try to
+keep the name as close as possible to your government ID proof, don't go for
+names like loverboy and such! E-mail address must be your primary e-mail
+address. If you are going to use this key for corporate communication, you may
+want to use your company e-mail address. A 'comment' can be just about anything.
+I personally write down some profile info in few words. This helps people using
+your public key recollect you better. Once typed, say 'O' to proceed.</p>
+<p>Next, a prompt appears for password. Type in a password of your choice. Why is
+this needed? In the eventuality that someone accesses your machine, they can
+easily get access to your private key and this defeats the purpose of generating
+one to begin with! By specifying a password, you are encrypting (using symmetric
+encryption) the private key itself so that whenever you need to use it, you have
+to use the password. This way, nobody who is using your machine can try and
+recover the private key.</p>
+<p>Next up, you may be asked to continue performing some activity so that the bits
+generated can be used to create a truly random pair of keys. If you now return
+to the prompt, you are done! Congratulations!</p>
+<p><strong>Where are the keys?</strong>
+They are stored in a database. Related files are usually found in ~/.gnupg
+directory.</p>
+<h3>Sharing the Public Key</h3>
+<p>Remember, asymmetric encryption required that the public keys be made available
+publicly. There are two ways to do this. One is to export your public key in the
+form of an ASCII file and either send it via e-mail or upload it to your web
+site. The other method is to publish the key to a public key server.</p>
+<p>To generate a file containing the public key, do the following:</p>
+<p><code>$ gpg2 --output &lt;email&gt;.pub.key --armor --export &lt;email&gt;</code></p>
+<p>Here, we are following a common convention to use e-mail address as the base
+name of the file which will contain the keys. You should now see a file with the
+name chosen by you. You can view it using any text editor. This file can be now
+uploaded to your web site or sent via e-mail.</p>
+<p>To publish your key to a public key server is also easy.</p>
+<ul>
+<li>Choose a public key server (eg. keyserver.ubuntu.com)</li>
+<li>Then run the following command.</li>
+</ul>
+<p><code>$ gpg2 --keyserver keyserver.ubuntu.com --send-keys &lt;email&gt;</code></p>
+<h3>Generating a revocation certificate</h3>
+<p>Ok, consider the scenario where someone compromises your private key. What
+should one do? Well, the heart and soul of the security provided by asymmetric
+encryption is that the private key is inaccessible to anyone but the owner. So,
+the first thing to do is to tell the world that the associated public key is
+useless!</p>
+<p>Now, using a simple command, this can be easily done. But this means that anyone
+can run the command and make your public key invalid. To prevent this from
+happening, the command used for recovation will only work if there is a special
+key available to do this. Assuming you will find yourself in the situation that
+you will need to revoke your public key before it actually expires, it is good
+to generate this special key aka recovation certificate sooner than later. The
+following command and its associated output explains the procedure for creating
+a revocation certificate. You may be asked for a password to generate this
+certificate (assuming you provided one when creating the pair).</p>
+<p><code>$ gpg2 --output test.rev.asc --gen-revoke test@demo.com</code></p>
+<div class="codehilite"><pre><span></span>Create a revocation certificate for this key? (y/N) y
+Please select the reason for the revocation:
+  0 = No reason specified
+  1 = Key has been compromised
+  2 = Key is superseded
+  3 = Key is no longer used
+  Q = Cancel
+(Probably you want to select 1 here)
+Your decision? 0
+Enter an optional description; end it with an empty line:
+&gt; Emergency
+&gt; 
+Reason for revocation: No reason specified
+Emergency
+Is this okay? (y/N) y
+ASCII armored output forced.
+Revocation certificate created.
+
+Please move it to a medium which you can hide away; if Mallory gets
+access to this certificate he can use it to make your key unusable.
+It is smart to print this certificate and store it away, just in case
+your media become unreadable.  But have some caution:  The print system of
+your machine might store the data and make it available to others!
+</pre></div>
+
+
+<p>Don't try the following commands but keep them aside for that unfortunate day when
+you do need to revoke your public key from the public server. First, import the
+certificate.</p>
+<p><code>$ gpg2 --import &lt;revocation_file&gt;</code></p>
+<p>Note down the 8 letter short code for the imported key. And then,
+<code>$ gpg2 --keyserver &lt;server&gt; --send-keys &lt;keycode&gt;</code></p>
+<p>It is worth asking what happens if the person who wants to make your life a
+living hell, also gains access to your revocation certificate. Well, it is for
+this reason, it's best to stash away the revocation certificate in a safe place.
+I have seen some experts recommending printing the certificate and keeping it on
+a locker and remove any digital copies! How much is too much? You can decide!</p>
+<h3>Enough, let's encrypt and decrypt!</h3>
+<p>Here I will show you how easy it is to encrypt a file using someone's public key
+so that only they can decrypt it (using their private key). Let's assume the
+file to be encrypted is 'message.txt'.</p>
+<p><code>$ gpg2 -r &lt;recipient_email&gt; --encrypt message.txt</code></p>
+<p>You should now see a file called 'message.txt.gpg'. If you try to open it, you
+will see gibberish. Now, if you have access to the private key of the recipient
+(and the password, if set), you can decrypt by saying,</p>
+<p><code>$ gpg2 --decrypt message.txt.gpg</code></p>
+<p>The decrypted output is directly shown in the console. But, it is possible to
+store it in a file by redirecting the output by appending <code>&gt; filename</code> at the
+end.</p>
+<p>Remember, if you encrypt with <code>-r &lt;some_email&gt;</code> only the owner of the private
+key for <code>some_email</code> can decrypt! <strong>Not even you!</strong> To allow yourself to decrypt
+as well, you must use a second <code>-r</code> flag.</p>
+<p><code>$ gpg2 -r &lt;recipient_email&gt; -r &lt;your_email&gt; --encrypt message.txt</code></p>
+<h3>Let's sign!</h3>
+<p>We have seen how to encrypt and decrypt files. But let's now see how to sign
+your files. Let's start with the simple example of signing a plain text file.</p>
+<p><code>$ gpg2 --sign -u &lt;your_email_or_keycode&gt; message.txt</code></p>
+<p>Problem with this approach is that the 'message.txt.gpg' that is output by the
+above command contains some unreadable combination of the message as well as the
+signature. Hence for the purpose of purely signing a document, this is not the
+best method. Let's see a better method.</p>
+<p><code>$ gpg2 --output message.sig -u &lt;your_email_or_keycode&gt; --detach-sign message.txt</code></p>
+<p>This results in the original file remaining intact but an accompanying signature
+file being generated.</p>
+<p><strong>So how do we verify a signature?</strong></p>
+<p><code>$ gpg2 --verify message.sig message.txt</code></p>
+<div class="codehilite"><pre><span></span><span class="n">gpg</span><span class="o">:</span> <span class="n">Signature</span> <span class="n">made</span> <span class="n">Wednesday</span> <span class="mi">20</span> <span class="n">February</span> <span class="mi">2019</span> <span class="mi">12</span><span class="o">:</span><span class="mi">42</span><span class="o">:</span><span class="mi">29</span> <span class="n">PM</span> <span class="n">IST</span>
+<span class="n">gpg</span><span class="o">:</span>                <span class="n">using</span> <span class="n">RSA</span> <span class="n">key</span> <span class="mi">2</span><span class="n">BD08C0C8FBA6B435BC88C7DBA5A224BE8B35A34</span>
+<span class="n">gpg</span><span class="o">:</span>                <span class="n">issuer</span> <span class="s2">&quot;test@demo.com&quot;</span>
+<span class="n">gpg</span><span class="o">:</span> <span class="n">Good</span> <span class="n">signature</span> <span class="n">from</span> <span class="s2">&quot;Test User (A test key pair for demo.) &lt;test@demo.com&gt;&quot;</span> <span class="o">[</span><span class="n">ultimate</span><span class="o">]</span>
+</pre></div>
+
+
+<p>Notice the 'good signature' part in the above output. That's GPG telling us that
+it has been able to verify the signature.</p>
+<h3>Web of Trust</h3>
+<p>Let's go back to the very beginning of this article. Can anyone stop you from
+entering somebody else's name and e-mail address? No! Does that mean anyone can
+create a public-private key pair in anyone's name? Of course! Then how do I know
+if the public key sitting in front of me right now is made by the actual person
+or an impersonator? There is no deterministic / sure shot answer to this question.</p>
+<p>Suppose you ask me - "Where is Alice?" and I point to her saying, "There she
+is!". What do you do? Do you ask her to produce her documents or take biometric
+scans? No! You trust me to point you to the right Alice. Of course, I wasn't
+there and you met Alice directly, you'd demand a rigorous proof of identity but
+when going through me, a trusted friend, you trust me to point to the correct
+Alice.</p>
+<p>The same way, while it is indeed possible to create public keys in anyone's
+name, we must only trust those keys which many people, preferably people you
+know have verified to be the right key. So, how is this possible? How does
+someone verify another's key? Here is the break down.</p>
+<p><strong>Step 1</strong>: Get the key. Let's say the key is from a file
+<code>$ gpg2 --import &lt;filenme&gt;</code></p>
+<p>If it is from a server,
+<code>$ gpg2 --keyserver &lt;server&gt; --recv-keys &lt;email or code&gt;</code></p>
+<p><strong>Step 2</strong>: Get the finger print of the key.
+<code>$ gpg2 --fingerprint test@demo.com</code>
+    pub   rsa3072 2019-02-20 [SC] [expires: 2021-02-19]
+          2BD0 8C0C 8FBA 6B43 5BC8  8C7D BA5A 224B E8B3 5A34
+    uid           [ultimate] Test User (A test key pair for demo.) <a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#116;&#101;&#115;&#116;&#64;&#100;&#101;&#109;&#111;&#46;&#99;&#111;&#109;">&#116;&#101;&#115;&#116;&#64;&#100;&#101;&#109;&#111;&#46;&#99;&#111;&#109;</a>
+    sub   rsa3072 2019-02-20 [E] [expires: 2021-02-19]</p>
+<p><code>2BD0 8C0C 8FBA 6B43 5BC8  8C7D BA5A 224B E8B3 5A34</code> is the fingerprint of the
+public key. Now find some means of independently contacting the said user and
+asking them to read out the fingerprint. Or use some reliable means of matching
+the fingerprint.</p>
+<p><strong>Step 3</strong>: Sign the public key
+Now that you have verified the fingerprint, you can tell the world that you
+trust the key by signing it. To do this,</p>
+<p><code>$ gpg2 --sign-key &lt;email_or_code&gt;</code>
+Optionally, you can add <code>--ask-cert-level</code> to specify the level of trust (a
+number from 0 to 4) indicating your level of trust.</p>
+<p><strong>Step 4</strong>: Send the signed key back to the user.
+Either export it as a file and email the file to the user OR use the
+<code>--send-keys</code> option to upload the signed copy to a public key server.</p>
+<p>To ensure that updated signatures are always present on the system, the user can
+run the command with some frequency.</p>
+<p><code>$ gpg2 --refresh-keys</code></p>
+<p>Phew! We've come a long way. Just one last concept to master before calling
+ourselves as decent users of GPG.</p>
+<h3>And back to Symmetric Encryption</h3>
+<p>We started out the first article in the series by pointing out the problems of
+symmetric encryption. While it is indeed problematic to use this form of
+encryption for public communication, there are still areas where this encryption
+is indeed the best solution. The simplest, for example is encrypting a ZIP file.
+Here, we provide a password which serves as the key to encrypt and the same is
+used for decrypting. This way your file is protected from unwanted or
+unauthorized access.</p>
+<p>Here, the shortcoming of symmetric encryption does not matter to us is so long
+as we are not transmitting messages and/or keys. We keep the file in the
+computer, we allow the computer itself to be accessed by multiple people but
+nobody without a password can access the protected file. So, symmetric
+encryption can be used to actually encryption files which we do not wish to
+share over networks but we don't want anyone gaining access to our system to see
+the contents of these files.</p>
+<p>Ideal candidates of files that can benefit from such protection are recovation
+certificates and private keys. If you provided a password when generating your
+public-private key pair, you already have unknowingly used symmetric encryption
+for to protect your private key. Let's now see how to protect any file with
+symmetric encryption consciously. Let's assume we want to upload our revocation
+certificate to the cloud. But as an extra precaution, we will encrypt it before
+uploading.</p>
+<p><code>$ gpg2 --symmetric &lt;filename&gt;</code></p>
+<p>You will be prompted for the password twice and voila - your file is now
+encrypted. To decrypt,</p>
+<p><code>gpg2 --decrypt &lt;filename&gt;</code></p>
+<hr />
+<p>With this we conclude the two part post on using GPG. I intend to write a
+separate article about configuring your e-mail client to use your public private
+key pair to secure your e-mails. I could've written this here but I guess this
+post is already too long! Happy security!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2019-02-20-gpg-2'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<script src="../static/js/scroll_top.js"></script>
+
+
+</body>
+
+</html>
