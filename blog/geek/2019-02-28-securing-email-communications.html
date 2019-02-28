@@ -1,0 +1,235 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title> Securing Your (Web) E-mail with GPG </title>
+
+
+    
+    
+    <meta name="description" content="An article that builds upon the know-how of GnuPG to secure (web) e-mail.">
+    
+
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../pygments.css">
+
+    
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="https://vkaustubh.github.io">Home Page</a></li>
+                    <li class="active"><a href="../index.html">Blog Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Securing Your (Web) E-mail with GPG</h2>
+    <span class="date"> Thursday, 28 February, 2019</span>
+    <div></div>
+    <br/>
+
+    <p>This article assumes that you know the basics of asymmetric encryption and have
+generated a public-private key already. If this is not the case, you must follow
+articles to satisfy that assumption. I have written in the past two articles
+titled "Towards using GPG For Security" which you can refer to, in order to
+learn about encryption and also generate a public-private key pair.</p>
+<p>Okay! So you have understood asymmetric encryption and how it works and would
+now like to send secure mails to specific people. How do you go about doing
+this? Well, if you have read the two articles cited above, you already have the
+know-how of how to do this. You write down your mail in the form of a plain text
+file and then run the gpg command to encrypt it. You can then send a regular
+mail to the person you wish to and attach that file. The person on the other end
+can download the file and use a relevant gpg command in order to decrypt it
+using their private key (assuming you used the corresponding public key to
+perform the encryption).</p>
+<p>But this is inconvenient, especially if you would like to constantly sign your
+e-mails OR encrypt them. In such a case, we would like to directly tell our
+e-mail program to know how to find our public and private keys and use them to
+secure the e-mails that we want. It is for this reason that a lot of people move
+away from their web browser and use a tool such as Thunderbird or Outlook. So,
+there are plenty of articles which already cover how to achieve the integration
+of your GPG keys with these tools. Here is an 
+<a href="https://linuxconfig.org/encrypt-your-email-with-gpg-thunderbird-and-enigmail">example of an article for
+Thunderbird</a>.</p>
+<p>However, I was always curious about whether I could achieve this goal without
+actually configuring a stand-alone e-mail client and do the process of composing
+a secure e-mail without leaving the comfort of the browser. It took me a while
+to arrive at a solution. in this article, I am going to focus on extending
+Mozilla Firefox to secure my GMail communication. With very slight adaptation,
+these instructions should be able to work for Google Chrome and other popular
+e-mail services.</p>
+<p><strong>Step One: Install the Mailvelope extension for Firefox browser</strong>: To do this,
+just, while in the Firefox window, just press the Alt key to reveal the menu
+bar. Click Tools --&gt; Add Ons. Type Mailvelope inside search box labelled "Find
+more extensions". In the search results, click on Mailvelope and click Install.
+Depending on your settings, you will be asked to grant some permissions which
+you can respond positively.</p>
+<p>That's it. You now have Mailvelope installed. To confirm, notice the lock icon
+in the top right region of your browser.</p>
+<p><strong>Step Two: Configure your Public and Private Keys</strong>: Click on the lock icon in
+your browser. Click on Dashboard and now you will see some options in front of
+you.</p>
+<p>As this stage we need to choose the "Manage Keys" option. Here we can do a
+couple of things. We can generate a public-private key pair. But note that this
+will use an OpenPGP.js library in order to do so. And you will not get the rich
+plethora of options available using command line gpg tool. Therefore I am
+assuming that you have used gpg tool and constructed a public-private key pair
+as well as a revocation certificate (which is always a good idea).</p>
+<p>Export your public and private key if not already done so. For convenience, the
+commands are as follows. For public key,</p>
+<p><code>$ gpg2 --output &lt;email&gt;.pub.key --armor --export &lt;email&gt;</code></p>
+<p><code>$ gpg2 --output &lt;email&gt;.pri.key --armor --export-secret-keys &lt;email&gt;</code></p>
+<p>I can't stress this enough. The private key in the form of a file is something you
+must treat with a lot of caution. Do not casually make it available on a web
+page or store it carelessly in a pen drive which you will likely hand around for
+people asking them to share their photos or videos.</p>
+<p>Now, click on Import. Next, click on <code>Select a key text file to import</code>. From
+the file browser, choose the public key file. Repeat the process and import the
+private key. When you import the private key you will get a message which says
+that it has identified the pair.</p>
+<p>This is also a good time to import a couple of public keys of the people to whom
+you will be sending encrypted e-mails. It is also possible for you to find the
+public keys in this window itself using a public key server. At the time of
+writing, the default public keyserver is that of Ubuntu. But it is possible for
+you to change this easily.</p>
+<p><strong>Step 3: Send an Encrypted Mail</strong>: Open your GMail and compose a new mail. As
+usual, fill out the recipient's e-mail address and subject of the mail. And
+now in the body of the mail, you will find an icon that looks like a notepad
+with a pencil on it. Click it. And a new window shall appear where you can type
+the private e-mail.</p>
+<p>Once you have typed the e-mail you can click "Encrypt". If your private key is
+secured with a password, you will be prompted for it. Please enter this and
+press Ok. You will now see the body of the e-mail filled with something that
+looks like this</p>
+<div class="codehilite"><pre><span></span>-----BEGIN PGP MESSAGE-----
+Version: Mailvelope v3.0.2
+Comment: https://www.mailvelope.com
+
+wcDMA+GV1KSdQvYfAQv/XPF2WaG7/Cb01/uyFDG0Oh5QrljTIZytv2hu54y7
+VBDMuwTRKr6AMXD7uCC0DIrQAV2z8+ISovcSpJfUzK1boR2akMnWgkN8z7/Q
+17TaTYncvNb+IM2MC1Jx90DLiUXNkbfN
+...
+...
+-----END PGP MESSAGE-----
+</pre></div>
+
+
+<p>That's it, you can now send this mail to the user by hitting "Send".</p>
+<p>To sign your e-mail as well, you need to select this option from the Mailvelope
+compose window. Just click on Options near the lower left region of the window
+and you select the key you want to use to sign the e-mail.</p>
+<p><strong>Step 4: Reading Encrypted E-mail</strong>:</p>
+<p>Let's assume that someone has sent you a mail which is encrypted. It will
+contain text which looks like the example above. If Mailvelope is configured
+correctly, as soon as you move the cursor over such a text it will fade and a
+lock icon will appear on it. Your cursor will also change into a key! Just click
+and enter your private key password, then hit Ok. Then the encrypted body text
+will be replaced with decrypyted text, assuming you are using the right keys and
+passwords.</p>
+<p>If the e-mail has been signed by the recipient, you can also see "Signed
+digitally" link on the top right of the message box. Clicking it will verify
+that the signture matches and display a message.</p>
+<hr />
+<p>Well, that's it. This is how you can secure your e-mail and sign it. And that
+too, without leaving the comfort of the browser. But before we conclude, it's
+worth asking that golden question.</p>
+<p><strong>I am loading both my public and private keys in Mailvelope. Isn't that
+dangerous?</strong></p>
+<p>This is a perfectly valid and in fact a critical question. I was scared of
+trusting Mailvelope too which is why I went on several forums discussing this
+tool and here is a summary of reasons why I decided to trust it.</p>
+<ul>
+<li>Firstly, it is open source which means a lot of people have studied the source
+  code and ensured that it treats your keys and other data with respect and does
+  not divulge it in anyway.</li>
+<li>It stores your keys on your hard drive, not in the browser cache or cookies or
+  on some kind of a cloud store.</li>
+<li>Even when it asks for the password to your private key, its default option is
+  not remember it temporarily unless you choose to let it.</li>
+</ul>
+<p>Hope that helps you! Happy secured communications!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2019-02-28-securing-email-communications.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2019-02-28-securing-email-communications'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<script src="../static/js/scroll_top.js"></script>
+
+
+</body>
+
+</html>
