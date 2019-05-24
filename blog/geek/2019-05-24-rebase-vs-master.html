@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    
+<title> Git Rebase vs Merge </title>
+
+
+    
+    
+    <meta name="description" content="An article describing a situation where the differences between merge and rebase options in git become obvious and how interactive rebasing emerges as a savior.">
+    
+
+
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
+    <link rel="stylesheet" href="../static/css/main.css">
+    <script type="text/javascript" src="../static/js/jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="../static/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="../pygments.css">
+
+    
+    
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+    
+
+</head>
+
+<body>
+
+    <div class="container banner">
+
+        <h1> Kaustubh Vaghmare </h1>
+        <h3> (Blog Space) </h3>
+    </div>
+
+    <div class="container navArea">
+         <nav class="navbar navbar-right">
+              <div class="container-fluid">
+               
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="https://vkaustubh.github.io">Home Page</a></li>
+                    <li class="active"><a href="../index.html">Blog Home</a></li>
+                    <li class="active"><a href="../general.html">General</a></li>
+                    <li class="active"><a href="../geek.html">For Geeks</a></li>
+                </ul>
+              </div>
+</nav>
+
+    </div>
+
+    <div class="container content">
+    
+            
+
+<div class="col-md-offset-1 col-md-8">
+    <h2>Git Rebase vs Merge</h2>
+    <span class="date"> Friday, 24 May, 2019</span>
+    <div></div>
+    <br/>
+
+    <p><strong>Note: This article assumes that you already know what the commands <code>git merge</code>
+and <code>git rebase</code> do and what difference using one over the other makes to the
+history of your git project. There are several resources on the Internet which
+explain the difference between the two as well as how to use these commands.
+This article purely focuses on describing a situation I recently encountered
+within a small team I was working with.</strong></p>
+<p>My team went through a series of articles on git strategies and ended up being
+confused! There are many strategies out there but in the end, there are two
+problems I find with studying articles that describe these strategies.</p>
+<ul>
+<li>
+<p>Just like you cannot appreciate swimming until you are trying it in a real
+  pool and no amount of instructions can help, same is the case with git
+  branching strategies. You can go on and on but you will not be able to
+  appreciate everything. This is because a git strategy evolves from painful
+  experience of having first adopted less efficient strategies.</p>
+</li>
+<li>
+<p>Even if you choose a so-called well tested strategy, chances that you have
+  understood its fine points completely, are low. You will likely not implement
+  the strategy the way it should be implemented.</p>
+</li>
+</ul>
+<p>So we decided to take some inspiration but eventually come up with a simple
+strategy that apparently worked and went ahead with it. Here is a brief
+description.</p>
+<ul>
+<li>The project maintainer alone works on the master branch.</li>
+<li>Each team member starts a topic branch named after the issue that describes
+  the feature to be implemented and proceeds to work on it.</li>
+<li>The team member eventually creates a merge request with the master branch as
+  the target.</li>
+<li>The maintainer reviews the code, tests it and merges it ONLY if the merge is a
+  straightforward fast-forward!!! ('keep master's history as clean as you can'
+  felt like a good approach)</li>
+<li>If the master could not fast forward to a branch mentioned in a merge request,
+  the latter would have to be rebased through a joint effort involving the
+  maintainer and the developer. And then it would be merged.</li>
+</ul>
+<p>This worked really well and one fine day we rolled out the first ever public
+version of the (web) application. We celebrated and then started working on the
+next set of features. But now we realize that we have a test server which the
+stakeholder can use to test new features and a production server. So, we create
+a <code>live_test</code> branch which we reserve for initial delivery of features with
+master tracking the production version.</p>
+<p>So, the process continues only this time most merge requests are targeted on the
+<code>live_test</code> branch so that as soon as the merge is carried out, the stakeholder
+can play with the test server. (Some of the experts may find all this naive and
+that is the point! The article is all about describing a naive approach and
+enumerate the lessons learned from it!)</p>
+<p>Now, here is where we started hitting limitations. Three developers create three
+branches <code>f1</code>, <code>f2</code> and <code>f3</code> for three features. It turns out all of them finish
+developing them at once and we decide to push the changes to the live test
+server. For this, we adopt the same approach outlined above. f1 is merged into
+live test branch with a simple fast-forward. But f2 needs a rebase to satisfy
+our demand of linear history and then f3 on top of that. Great! The graph looks
+all neat and linear. But our stakeholder drops a bomb which I was intuitively
+expecting but for some reason did not end up putting safeguards in place. He
+said, "Release f1 and f3, we need to work more on f2".</p>
+<p>Now, why was this a bomb? Well, let me first write some commands down to create
+a fresh repository and show you the situation we were facing. Now, don't worry
+about reading each and every command. Just scroll through and check out the
+repository graph that results from the these commands. But if you want to
+recreate the situation, you can copy the contents into a file with (for
+convenience) a .sh extension, place it an empty folder (so that existing folders
+don't become git repositories all of a sudden!) and run <code>sh some.sh</code>.</p>
+<div class="codehilite"><pre><span></span><span class="n">git</span> <span class="n">init</span>
+<span class="n">echo</span> <span class="s">&quot;Someone&quot;</span> &gt; <span class="n">a</span>.<span class="n">txt</span>
+<span class="n">git</span> <span class="n">add</span> .
+<span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;Initial commit&quot;</span>
+<span class="n">echo</span> <span class="s">&quot;Someone has comegitk &amp;!&quot;</span> &gt; <span class="n">b</span>.<span class="n">txt</span>
+<span class="n">git</span> <span class="n">add</span> <span class="n">b</span>.<span class="n">txt</span> 
+<span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;Second commit&quot;</span>
+<span class="n">echo</span> <span class="s">&quot;More things to do&quot;</span> &gt; <span class="n">c</span>.<span class="n">txt</span>
+<span class="n">git</span> <span class="n">add</span> .
+<span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;Third commit&quot;</span>
+<span class="n">echo</span> <span class="s">&quot;Second line&quot;</span> &gt;&gt; <span class="n">b</span>.<span class="n">txt</span> 
+<span class="n">git</span> <span class="n">add</span> .
+<span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;First live deployment&quot;</span>
+<span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">live_test</span>
+<span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">f1</span>
+<span class="n">echo</span> <span class="s">&quot;Param Computer&quot;</span> &gt; <span class="n">d</span>.<span class="n">txt</span>
+<span class="n">git</span> <span class="n">add</span> .
+<span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;F1 commit 1&quot;</span>
+<span class="n">echo</span> <span class="s">&quot;Second line&quot;</span> &gt;&gt; <span class="n">d</span>.<span class="n">txt</span> 
+<span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F1 commit 2&quot;</span>
+<span class="n">echo</span> <span class="s">&quot;Third line&quot;</span> &gt;&gt; <span class="n">d</span>.<span class="n">txt</span> 
+<span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F1 commit 3&quot;</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">live_test</span> 
+<span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">f2</span>
+<span class="n">echo</span> <span class="s">&quot;My HPC&quot;</span> &gt; <span class="n">f</span>.<span class="n">txt</span>
+<span class="n">git</span> <span class="n">add</span> .
+<span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;F2 commit 1&quot;</span>
+<span class="n">echo</span> <span class="s">&quot;Second Line&quot;</span> &gt;&gt; <span class="n">f</span>.<span class="n">txt</span> 
+<span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F2 commit 2&quot;</span>
+<span class="n">echo</span> <span class="s">&quot;Third line&quot;</span> &gt;&gt; <span class="n">f</span>.<span class="n">txt</span> 
+<span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F2 commit 3&quot;</span>
+<span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">f3</span>
+<span class="n">git</span> <span class="n">branch</span> -<span class="n">d</span> <span class="n">f3</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">test_live</span>
+<span class="n">git</span> <span class="n">checkout</span> -<span class="n">d</span> <span class="n">f3</span>
+<span class="n">git</span> <span class="n">branch</span> -<span class="n">d</span> <span class="n">f3</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">live_test</span> 
+<span class="n">git</span> <span class="n">branch</span> -<span class="n">D</span> <span class="n">f3</span>
+<span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">f3</span>
+<span class="n">echo</span> <span class="s">&quot;Shared Writing&quot;</span> &gt; <span class="n">p</span>.<span class="n">txt</span>
+<span class="n">git</span> <span class="n">add</span> .
+<span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;F3 commit 1&quot;</span>
+<span class="n">echo</span> <span class="s">&quot;Second line&quot;</span> &gt;&gt; <span class="n">p</span>.<span class="n">txt</span> 
+<span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F3 commit 2&quot;</span>
+<span class="n">echo</span> <span class="s">&quot;Third line&quot;</span> &gt;&gt; <span class="n">p</span>.<span class="n">txt</span>
+<span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F3 commit 3&quot;</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">live_test</span> 
+<span class="n">git</span> <span class="n">merge</span> <span class="n">f1</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">f2</span>
+<span class="n">git</span> <span class="n">rebase</span> <span class="n">live_test</span> 
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">live_test</span> 
+<span class="n">git</span> <span class="n">merge</span> <span class="n">f2</span>
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">f3</span>
+<span class="n">git</span> <span class="n">rebase</span> <span class="n">live_test</span> 
+<span class="n">git</span> <span class="n">checkout</span> <span class="n">live_test</span> 
+<span class="n">git</span> <span class="n">merge</span> <span class="n">f3</span>
+</pre></div>
+
+
+<p><img alt="Branch History Example" src="../static/images/blog_images/rebase_merge1.png" /></p>
+<p>So, you see what has happened. f3 and f2 branches have lost their meaning
+because of a rebase. Why? The whole point of a branch is that it contains
+commits dedicated to an issue, topic or a small goal. But f2 now contains f1
+feature's implementation and f3 contains f2 and f1. So, what? Well, now let us
+get back to the situation which we were facing! We need to release f1 and f3 to
+the world. So, we need to move the master branch (which in our scheme of things
+represents the production server) to include f1 and f3 features.</p>
+<div class="codehilite"><pre><span></span>$ git checkout master
+$ git merge f1
+</pre></div>
+
+
+<p>The above command solves the problem of getting f1 in. But will the following
+include f3?</p>
+<div class="codehilite"><pre><span></span>$ git merge f3
+</pre></div>
+
+
+<p>No! Because of our blind love for linear histories we have rebased f3 which now
+includes commits from f2 and therefore when merged, will introduce the feature
+f2 into master! What can we do? Well, firstly learn our lesson! My and my
+engineers spent considerable time how our lack of past experience led us to not
+foresee this problem. We wanted to discuss a better git strategy for future
+projects but first we needed to attack the problem at hand - get f3 into master
+without f2.</p>
+<p>This is a situation for which interactive rebase was designed! Interactive
+rebase is an incredibly powerful tool. And we are about to demonstrate its use.
+What we will do is ...</p>
+<ul>
+<li>Create a version of f3 branch intended for merging into the master.</li>
+<li>Edit it so that it looks like it originally was - something that took the latest
+  commit of master and added the code patches needed to implement feature f3
+  alone.</li>
+<li>And now we can either merge it into master OR do a rebase, whatever suits your
+  taste.</li>
+</ul>
+<p>Let us switch to the f3 branch.</p>
+<div class="codehilite"><pre><span></span>$ git checkout f3
+</pre></div>
+
+
+<p>Now, </p>
+<div class="codehilite"><pre><span></span>$ git checkout -b f3_for_master
+</pre></div>
+
+
+<p>will create a new version of this branch and check it out. The name chosen is
+'f3_for_master'. We could have directly worked on f3 but chose to create a
+copy of the branch to play safe. We didn't know and nor had the time to
+speculate whether the f3 branch as it stood was going to have future value or
+not. So, we adopt the simple principle that "what is excess may be trimmed but
+what is already trimmed away may not be recoverable". Now, we do an interactive
+rebase.</p>
+<div class="codehilite"><pre><span></span>$ git rebase --interactive master
+</pre></div>
+
+
+<p>This should open your text editor with the following lines.</p>
+<div class="codehilite"><pre><span></span>pick 0113eaa F1 commit 1                                                                                                           
+pick ce0b8d6 F1 commit 2
+pick 87a8ccc F1 commit 3
+pick 3745903 F2 commit 1
+pick e9f3442 F2 commit 2
+pick 113cec7 F2 commit 3
+pick afad226 F3 commit 1
+pick 5787d0a F3 commit 2
+pick ab3cb39 F3 commit 3
+</pre></div>
+
+
+<p>We can delete the lines corresponding to those commits which are not a part of
+the original f3 branch before it was rebased.</p>
+<p>So, our final set of lines look like.</p>
+<div class="codehilite"><pre><span></span>pick afad226 F3 commit 1
+pick 5787d0a F3 commit 2
+pick ab3cb39 F3 commit 3
+</pre></div>
+
+
+<p>We save and quit. We can now see how the branches look like</p>
+<p><img alt="Branch History Example" src="../static/images/blog_images/rebase_merge2.png" /></p>
+<p>So 'f3_for_master' is now what a feature branch should be - something which
+strictly adds those patches which when merged into any branch will ideally
+introduce that feature into that branch.</p>
+<p>Merging this into master is now straightforward. I hope this article has
+been helpful in understanding what is that one sacrifices when choosing to merge
+or to rebase. I will confess that our workflow is quite basic and surely we
+could have done a better job in choosing a better workflow. But I am also quite
+convinced that the retelling of our experience is bound to help people
+deliberating over what kind of situations one can encounter in various
+workflows.</p>
+<p>Please feel free to share your thoughts below about similar experiences OR
+strategies to better handle this and similar situations.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2019-05-24-rebase-vs-master.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2019-05-24-rebase-vs-master'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+
+
+        </div>
+
+        <div class="container footer">
+            <p> Copyright 2018. All rights reserved. </p>
+       </div>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+
+<script src="../static/js/scroll_top.js"></script>
+
+
+</body>
+
+</html>
