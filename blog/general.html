@@ -1,29 +1,29 @@
-<!DOCTYPE HTML>
-
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    
-    <title> Kaustubh's Blog Space </title>
-    
+  <meta charset="UTF-8">
+  
+  <title> Kaustubh's Blog Space</title>
+  
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
 
-    
-    
-
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
     <link rel="stylesheet" href="static/css/main.css">
-    <script type="text/javascript" src="static/js/jquery-3.2.0.min.js"></script>
-    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
+  
+  <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
+   <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-    <link rel="stylesheet" href="pygments.css">
-
-    
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
-    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
-
-
+<link rel="stylesheet" href="pygments.css">
+ 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
     <script>
@@ -33,36 +33,214 @@
 
       gtag('config', 'UA-120740166-1');
     </script>
-    
 
+    
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
+    <script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+  
+<style>
+
+.bg-dark {
+    background-color: #000 !important;
+}
+  .jumbotron
+  {
+      background-color: #000;
+      color: white;
+      font-family: Open Sans;
+      margin-bottom: 0px;
+  }
+
+    .navbar
+  {
+    font-size: 20px;
+  }
+
+  html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  }
+
+  body
+  {
+      background: url(static/images/main_background.jpg); /* https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-143-1920x1200.jpg); /* url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-060-2560x1600.jpg); /*url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-039-1920x1080.jpg);*/
+    font-family: Raleway;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    position: relative;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato"
+  }
+
+   #spaceBeforeFooter {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+   }
+
+  footer {
+      padding-top: 1em;
+      background-color: #000;
+      color: white;
+      padding-bottom: 1em;
+      font-family: Raleway;
+   }
+
+   footer h2 {
+    padding-bottom: 0.2em;
+   }
+
+    footer img {
+        margin-left: 1.5em;
+    }
+    footer p {
+        font-size: 1.0em;
+    }
+
+
+
+  .overlay
+  {
+
+   background-color: #eeeef6;
+   background-color: white;
+   margin-top: -30px;
+   padding: 20px;
+   margin-bottom: 50px;
+
+  }
+
+  .card
+  {
+    min-height: 110px;
+    color: #FBF7F9;
+    background-color: #343a40;
+  }
+
+  .brand-name
+  {
+      font-family: Montserrat;
+      font-variant: small-caps;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FBF7F9 !important;
+      text-decoration: none;
+  }
+
+  .nav-item
+  {
+    font-family: Open Sans;
+    font-variant: small-caps;
+    color: white;
+  }
+
+  .customCard
+  {
+    margin-bottom: 20px;
+   }
+
+   .pointer
+   {
+   cursor: pointer;
+   }
+
+
+  .image-card
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+  }
+
+  .carousel-item {
+      color: black;
+      background-color: black !important;
+   }
+
+ .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ }
+
+ .nav-align-left {
+  margin-left: 15px;
+ }
+
+ .nav-align-right {
+  margin-right: 15px;
+ }
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item
+{
+  color: #fff;
+  background-color: #000;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  <!--border: 1px solid #fff;-->
+  padding: 10px;
+  font-size: 1em;
+}
+</style>
 </head>
 
 <body>
-
-    <div class="container banner">
-
-        <h1> Kaustubh Vaghmare </h1>
-        <h3> (Blog Space) </h3>
+<div class="align-items-center" align="center">
+    <div class="d-lg-none navbar navbar-expand-lg bg-dark navbar-dark" >
+        <h2 class="navbar-brand brand-name" align="center">
+          Kaustubh Vaghmare's <br> <small> Home Page </small></h2>
     </div>
-
-    <div class="container navArea">
-         <nav class="navbar navbar-right">
-              <div class="container-fluid">
-               
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="https://vkaustubh.github.io">Home Page</a></li>
-                    <li class="active"><a href="index.html">Blog Home</a></li>
-                    <li class="active"><a href="general.html">General</a></li>
-                    <li class="active"><a href="geek.html">For Geeks</a></li>
-                </ul>
-              </div>
-</nav>
-
+    <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark">
+      <h2 class="navbar-brand brand-name" style="margin-left: 0.5em; margin-top: 10px;">  Kaustubh Vaghmare's <br> <small>Home Page</small> </h2>
     </div>
+</div>
+<div >
 
-    <div class="container content">
-    
-            
+    <nav class="navbar navbar-expand-md navbar-light bg-faded bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                  <a class="nav-link" style="" href="https://vkaustubh.github.io">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="index.html">Blog Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link"
+                     href="general.html">General</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="geek.html">For Geeks</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
+  
 <div class="col-md-offset-1 col-md-8">
 
 <h1> Welcome to the general section! </h1>
@@ -96,7 +274,7 @@ whether I believe in what I wrote or not! </p>
 <br>
 
     <script>
-        var pages = $.parseJSON("[{\"date\": \"11 June, 2019\", \"path\": \"\u003ca href=\u0027general/2019-06-11-punctuality-for-dummies.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Punctuality for Dummies\"}, {\"date\": \"02 December, 2018\", \"path\": \"\u003ca href=\u0027general/2018-12-02-western-coastline-destruction.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Western Coastline Destruction\"}, {\"date\": \"18 September, 2018\", \"path\": \"\u003ca href=\u0027general/2018-09-18-era-narrow-rigid-classifier.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Era of the Narrow Rigid Classifiers\"}, {\"date\": \"05 September, 2018\", \"path\": \"\u003ca href=\u0027general/2018-09-05-wish-you-the-same.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Wish You The Same (A Teacher\u0027s Day Special)\"}, {\"date\": \"29 June, 2018\", \"path\": \"\u003ca href=\u0027general/2018-06-29-student-teacher-full-circle.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Teacher - Student Full Circle\"}, {\"date\": \"02 April, 2018\", \"path\": \"\u003ca href=\u0027general/2018-04-02-the-last-days.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Last Days\"}, {\"date\": \"25 February, 2018\", \"path\": \"\u003ca href=\u0027general/2018-02-25-tribute-to-managers.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"A Tribute to Managers and Leaders\"}, {\"date\": \"17 July, 2012\", \"path\": \"\u003ca href=\u0027general/2012-07-17-human-thought-and-animal-thought.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Human Thought and the Animal Thought\"}, {\"date\": \"07 July, 2012\", \"path\": \"\u003ca href=\u0027general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Is It Really Safe To Put Too Much Information Out There?\"}, {\"date\": \"02 July, 2012\", \"path\": \"\u003ca href=\u0027general/2012-07-02-a-reboot-on-sharing-ideas.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"A Reboot, On Sharing Ideas\"}, {\"date\": \"12 March, 2012\", \"path\": \"\u003ca href=\u0027general/2012-03-12-smart-tech-smart-people.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Smart Technology is Here, Where are the Smart People?\"}, {\"date\": \"04 March, 2012\", \"path\": \"\u003ca href=\u0027general/2012-03-04-apples-oranges.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Apples and Oranges\"}, {\"date\": \"04 September, 2011\", \"path\": \"\u003ca href=\u0027general/2011-09-04-the-exceptional.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Exceptional\"}, {\"date\": \"03 September, 2011\", \"path\": \"\u003ca href=\u0027general/2011-09-03-mind-observer-friendship.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Mind of an Observer of Friendship\"}, {\"date\": \"31 May, 2011\", \"path\": \"\u003ca href=\u0027general/2011-05-31-fashion-vedas-upanishads.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Fashion of Vedas and Upanishads\"}, {\"date\": \"06 May, 2011\", \"path\": \"\u003ca href=\u0027general/2011-05-06-fame-or-peace.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Fame or Peace\"}, {\"date\": \"14 December, 2010\", \"path\": \"\u003ca href=\u0027general/2010-12-14-narrow-minded-accounting.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Narrow Minded Accounting\"}, {\"date\": \"08 December, 2010\", \"path\": \"\u003ca href=\u0027general/2010-12-08-small-things.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Small Things\"}, {\"date\": \"19 June, 2010\", \"path\": \"\u003ca href=\u0027general/2010-06-19-real-value-of-life.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Real Value of Human Life\"}, {\"date\": \"30 April, 2010\", \"path\": \"\u003ca href=\u0027general/2010-04-30-walking-a-path.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Walking a Path\"}, {\"date\": \"29 April, 2010\", \"path\": \"\u003ca href=\u0027general/2010-04-29-lost-in-words.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Lost in Words\"}, {\"date\": \"04 January, 2010\", \"path\": \"\u003ca href=\u0027general/2010-01-04-faith-trust-limits-skepticism.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Faith and Trust \\u2013 The Limits of Skepticism\"}, {\"date\": \"02 January, 2010\", \"path\": \"\u003ca href=\u0027general/2010-01-02-when-ignorance-not-bliss.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"When Ignorance Is Not Bliss\"}, {\"date\": \"28 December, 2009\", \"path\": \"\u003ca href=\u0027general/2009-12-28-mind-fanatic-second-kind.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"In The Mind of the Fanatic of the Second Kind\"}, {\"date\": \"06 November, 2009\", \"path\": \"\u003ca href=\u0027general/2009-11-06-deepavali-today.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Deepavali Today!\"}, {\"date\": \"30 May, 2009\", \"path\": \"\u003ca href=\u0027general/2009-05-30-end-of-logic.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The End of Logic\"}, {\"date\": \"05 May, 2009\", \"path\": \"\u003ca href=\u0027general/2009-05-05-what-does-help.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"What Does Help?\"}, {\"date\": \"01 May, 2009\", \"path\": \"\u003ca href=\u0027general/2009-05-01-the-running-spiritualist.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Running Spiritualist\"}, {\"date\": \"29 December, 2008\", \"path\": \"\u003ca href=\u0027general/2008-12-29-inter-religious-harmony.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Inter-religious Harmony\"}, {\"date\": \"29 October, 2008\", \"path\": \"\u003ca href=\u0027general/2008-10-29-left-behind.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Left Behind!\"}, {\"date\": \"18 October, 2008\", \"path\": \"\u003ca href=\u0027general/2008-10-18-failure-to-communicate.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Failure to Communicate!\"}, {\"date\": \"13 October, 2008\", \"path\": \"\u003ca href=\u0027general/2008-10-13-a-father.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"A Father\"}, {\"date\": \"20 July, 2008\", \"path\": \"\u003ca href=\u0027general/2008-07-20-exploitation-invited.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Exploitation Invited!\"}, {\"date\": \"11 April, 2007\", \"path\": \"\u003ca href=\u0027general/2007-04-11-source-of-knowledge.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Source Of Knowledge\"}, {\"date\": \"05 April, 2007\", \"path\": \"\u003ca href=\u0027general/2007-04-05-an-imaginary-conversation-me-and-friend.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"An Imaginary Conversation Between Me And A Friend\"}, {\"date\": \"11 January, 2007\", \"path\": \"\u003ca href=\u0027general/2007-01-11-philosophers-two-types.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"\\\"Philosophers\\\" - The 2 Types\"}, {\"date\": \"19 October, 2006\", \"path\": \"\u003ca href=\u0027general/2006-10-19-senseless-plundering-of-natural-resources.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Senseless Plundering of Natural Resources\"}, {\"date\": \"20 September, 2006\", \"path\": \"\u003ca href=\u0027general/2006-09-20-silly-days.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Silly Days\"}, {\"date\": \"29 May, 2006\", \"path\": \"\u003ca href=\u0027general/2006-05-29-why-damn-dan-brown.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Why Damn Dan Brown?\"}, {\"date\": \"26 May, 2006\", \"path\": \"\u003ca href=\u0027general/2006-05-26-the-metallic-thought.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"The Metallic Thought\"}, {\"date\": \"25 May, 2006\", \"path\": \"\u003ca href=\u0027general/2006-05-26-physics-and-humility.html\u0027\u003e Read \u003c/a\u003e\", \"title\": \"Physics and Humility\"}]");
+        var pages = $.parseJSON("[{\"title\": \"Punctuality for Dummies\", \"date\": \"11 June, 2019\", \"path\": \"\u003ca href=\u0027general/2019-06-11-punctuality-for-dummies.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Western Coastline Destruction\", \"date\": \"02 December, 2018\", \"path\": \"\u003ca href=\u0027general/2018-12-02-western-coastline-destruction.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Era of the Narrow Rigid Classifiers\", \"date\": \"18 September, 2018\", \"path\": \"\u003ca href=\u0027general/2018-09-18-era-narrow-rigid-classifier.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Wish You The Same (A Teacher\u0027s Day Special)\", \"date\": \"05 September, 2018\", \"path\": \"\u003ca href=\u0027general/2018-09-05-wish-you-the-same.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Teacher - Student Full Circle\", \"date\": \"29 June, 2018\", \"path\": \"\u003ca href=\u0027general/2018-06-29-student-teacher-full-circle.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Last Days\", \"date\": \"02 April, 2018\", \"path\": \"\u003ca href=\u0027general/2018-04-02-the-last-days.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"A Tribute to Managers and Leaders\", \"date\": \"25 February, 2018\", \"path\": \"\u003ca href=\u0027general/2018-02-25-tribute-to-managers.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Human Thought and the Animal Thought\", \"date\": \"17 July, 2012\", \"path\": \"\u003ca href=\u0027general/2012-07-17-human-thought-and-animal-thought.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Is It Really Safe To Put Too Much Information Out There?\", \"date\": \"07 July, 2012\", \"path\": \"\u003ca href=\u0027general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"A Reboot, On Sharing Ideas\", \"date\": \"02 July, 2012\", \"path\": \"\u003ca href=\u0027general/2012-07-02-a-reboot-on-sharing-ideas.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Smart Technology is Here, Where are the Smart People?\", \"date\": \"12 March, 2012\", \"path\": \"\u003ca href=\u0027general/2012-03-12-smart-tech-smart-people.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Apples and Oranges\", \"date\": \"04 March, 2012\", \"path\": \"\u003ca href=\u0027general/2012-03-04-apples-oranges.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Exceptional\", \"date\": \"04 September, 2011\", \"path\": \"\u003ca href=\u0027general/2011-09-04-the-exceptional.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Mind of an Observer of Friendship\", \"date\": \"03 September, 2011\", \"path\": \"\u003ca href=\u0027general/2011-09-03-mind-observer-friendship.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Fashion of Vedas and Upanishads\", \"date\": \"31 May, 2011\", \"path\": \"\u003ca href=\u0027general/2011-05-31-fashion-vedas-upanishads.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Fame or Peace\", \"date\": \"06 May, 2011\", \"path\": \"\u003ca href=\u0027general/2011-05-06-fame-or-peace.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Narrow Minded Accounting\", \"date\": \"14 December, 2010\", \"path\": \"\u003ca href=\u0027general/2010-12-14-narrow-minded-accounting.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Small Things\", \"date\": \"08 December, 2010\", \"path\": \"\u003ca href=\u0027general/2010-12-08-small-things.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Real Value of Human Life\", \"date\": \"19 June, 2010\", \"path\": \"\u003ca href=\u0027general/2010-06-19-real-value-of-life.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Walking a Path\", \"date\": \"30 April, 2010\", \"path\": \"\u003ca href=\u0027general/2010-04-30-walking-a-path.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Lost in Words\", \"date\": \"29 April, 2010\", \"path\": \"\u003ca href=\u0027general/2010-04-29-lost-in-words.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Faith and Trust \\u2013 The Limits of Skepticism\", \"date\": \"04 January, 2010\", \"path\": \"\u003ca href=\u0027general/2010-01-04-faith-trust-limits-skepticism.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"When Ignorance Is Not Bliss\", \"date\": \"02 January, 2010\", \"path\": \"\u003ca href=\u0027general/2010-01-02-when-ignorance-not-bliss.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"In The Mind of the Fanatic of the Second Kind\", \"date\": \"28 December, 2009\", \"path\": \"\u003ca href=\u0027general/2009-12-28-mind-fanatic-second-kind.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Deepavali Today!\", \"date\": \"06 November, 2009\", \"path\": \"\u003ca href=\u0027general/2009-11-06-deepavali-today.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The End of Logic\", \"date\": \"30 May, 2009\", \"path\": \"\u003ca href=\u0027general/2009-05-30-end-of-logic.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"What Does Help?\", \"date\": \"05 May, 2009\", \"path\": \"\u003ca href=\u0027general/2009-05-05-what-does-help.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Running Spiritualist\", \"date\": \"01 May, 2009\", \"path\": \"\u003ca href=\u0027general/2009-05-01-the-running-spiritualist.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Inter-religious Harmony\", \"date\": \"29 December, 2008\", \"path\": \"\u003ca href=\u0027general/2008-12-29-inter-religious-harmony.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Left Behind!\", \"date\": \"29 October, 2008\", \"path\": \"\u003ca href=\u0027general/2008-10-29-left-behind.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Failure to Communicate!\", \"date\": \"18 October, 2008\", \"path\": \"\u003ca href=\u0027general/2008-10-18-failure-to-communicate.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"A Father\", \"date\": \"13 October, 2008\", \"path\": \"\u003ca href=\u0027general/2008-10-13-a-father.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Exploitation Invited!\", \"date\": \"20 July, 2008\", \"path\": \"\u003ca href=\u0027general/2008-07-20-exploitation-invited.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Source Of Knowledge\", \"date\": \"11 April, 2007\", \"path\": \"\u003ca href=\u0027general/2007-04-11-source-of-knowledge.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"An Imaginary Conversation Between Me And A Friend\", \"date\": \"05 April, 2007\", \"path\": \"\u003ca href=\u0027general/2007-04-05-an-imaginary-conversation-me-and-friend.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"\\\"Philosophers\\\" - The 2 Types\", \"date\": \"11 January, 2007\", \"path\": \"\u003ca href=\u0027general/2007-01-11-philosophers-two-types.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Senseless Plundering of Natural Resources\", \"date\": \"19 October, 2006\", \"path\": \"\u003ca href=\u0027general/2006-10-19-senseless-plundering-of-natural-resources.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Silly Days\", \"date\": \"20 September, 2006\", \"path\": \"\u003ca href=\u0027general/2006-09-20-silly-days.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Why Damn Dan Brown?\", \"date\": \"29 May, 2006\", \"path\": \"\u003ca href=\u0027general/2006-05-29-why-damn-dan-brown.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Metallic Thought\", \"date\": \"26 May, 2006\", \"path\": \"\u003ca href=\u0027general/2006-05-26-the-metallic-thought.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Physics and Humility\", \"date\": \"25 May, 2006\", \"path\": \"\u003ca href=\u0027general/2006-05-26-physics-and-humility.html\u0027\u003e Read \u003c/a\u003e\"}]");
         $("#bloglist").DataTable({
             data: pages,
             columns: [
@@ -113,20 +291,24 @@ whether I believe in what I wrote or not! </p>
 
 
 
+</div>
 
+<footer>
 
+    <div class="container">
+        <div align="center">
+          The web site has been created using Bootstrap, Django/django-freeze starting from a blank file. Background image courtesy of <a href="https://www.setaswall.com/">SetAsWell</a>. All rights reserved. Copyright &copy; 2019.
         </div>
+    </div>
 
-        <div class="container footer">
-            <p> Copyright 2018. All rights reserved. </p>
-       </div>
+</footer>
 
        <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
-         data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon
+             glyphicon-chevron-up"> Up </span></a>
 
 <script src="static/js/scroll_top.js"></script>
 
 
 </body>
-
 </html>
