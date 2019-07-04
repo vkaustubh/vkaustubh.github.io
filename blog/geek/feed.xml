@@ -1,96 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Geek Articles by Kaustubh Vaghmare</title>
-  <id>http://localhost/geek/feed.xml</id>
+  <id>https://vkaustubh.github.io/blog/geek/feed.xml</id>
   <updated>2019-05-24T00:00:00Z</updated>
-  <link href="http://localhost/" />
-  <link href="http://localhost/geek/feed.xml" rel="self" />
+  <link href="https://vkaustubh.github.io/blog/general.html" />
+  <link href="https://vkaustubh.github.io/blog/geek/feed.xml" rel="self" />
   <generator>Werkzeug</generator>
-  <entry xml:base="http://localhost/geek/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Git Rebase vs Merge</title>
-    <id>http://localhost/geek/2019-05-24-rebase-vs-master.html</id>
+    <id>https://vkaustubh.github.io/geek/2019-05-24-rebase-vs-master.html</id>
     <updated>2019-05-24T00:00:00Z</updated>
-    <link href="http://localhost/geek/2019-05-24-rebase-vs-master.html" />
+    <link href="https://vkaustubh.github.io/geek/2019-05-24-rebase-vs-master.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">An article describing a situation where the differences between merge and rebase options in git become obvious and how interactive rebasing emerges as a savior.</content>
   </entry>
-  <entry xml:base="http://localhost/geek/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Securing Your (Web) E-mail with GPG</title>
-    <id>http://localhost/geek/2019-02-28-securing-email-communications.html</id>
+    <id>https://vkaustubh.github.io/geek/2019-02-28-securing-email-communications.html</id>
     <updated>2019-02-28T00:00:00Z</updated>
-    <link href="http://localhost/geek/2019-02-28-securing-email-communications.html" />
+    <link href="https://vkaustubh.github.io/geek/2019-02-28-securing-email-communications.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">An article that builds upon the know-how of GnuPG to secure (web) e-mail.</content>
   </entry>
-  <entry xml:base="http://localhost/geek/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Towards using GPG For Security - Part 2</title>
-    <id>http://localhost/geek/2019-02-20-gpg-2.html</id>
+    <id>https://vkaustubh.github.io/geek/2019-02-20-gpg-2.html</id>
     <updated>2019-02-20T00:00:00Z</updated>
-    <link href="http://localhost/geek/2019-02-20-gpg-2.html" />
+    <link href="https://vkaustubh.github.io/geek/2019-02-20-gpg-2.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Second of two articles guiding readers towards usage of GPG.</content>
   </entry>
-  <entry xml:base="http://localhost/geek/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Towards using GPG For Security - Part 1</title>
-    <id>http://localhost/geek/2019-02-20-gpg-1.html</id>
+    <id>https://vkaustubh.github.io/geek/2019-02-20-gpg-1.html</id>
     <updated>2019-02-20T00:00:00Z</updated>
-    <link href="http://localhost/geek/2019-02-20-gpg-1.html" />
+    <link href="https://vkaustubh.github.io/geek/2019-02-20-gpg-1.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">A first of two articles guiding readers towards usage of GPG.</content>
   </entry>
-  <entry xml:base="http://localhost/geek/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Python Decorators</title>
-    <id>http://localhost/geek/2018-09-24-python-decorators.html</id>
+    <id>https://vkaustubh.github.io/geek/2018-09-24-python-decorators.html</id>
     <updated>2018-09-24T00:00:00Z</updated>
-    <link href="http://localhost/geek/2018-09-24-python-decorators.html" />
+    <link href="https://vkaustubh.github.io/geek/2018-09-24-python-decorators.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">My take on understanding and explaining Python decorators.</content>
   </entry>
-  <entry xml:base="http://localhost/geek/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">The Scary Scale of Ten</title>
-    <id>http://localhost/geek/2018-09-20-the-scary-scale-of-ten.html</id>
+    <id>https://vkaustubh.github.io/geek/2018-09-20-the-scary-scale-of-ten.html</id>
     <updated>2018-09-20T00:00:00Z</updated>
-    <link href="http://localhost/geek/2018-09-20-the-scary-scale-of-ten.html" />
+    <link href="https://vkaustubh.github.io/geek/2018-09-20-the-scary-scale-of-ten.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">What goes on in your mind when you are asked to rate yourself on a scale of ten?</content>
   </entry>
-  <entry xml:base="http://localhost/geek/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">When are APIs RESTful?</title>
-    <id>http://localhost/geek/2018-06-02-rest-api.html</id>
+    <id>https://vkaustubh.github.io/geek/2018-06-02-rest-api.html</id>
     <updated>2018-06-01T00:00:00Z</updated>
-    <link href="http://localhost/geek/2018-06-02-rest-api.html" />
+    <link href="https://vkaustubh.github.io/geek/2018-06-02-rest-api.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">An exploration of the subtle differences that decide whether a web service is RESTful or not.</content>
   </entry>
-  <entry xml:base="http://localhost/geek/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Setting up a Chroot Jail SFTP Server</title>
-    <id>http://localhost/geek/2018-05-29-setting-up-sftp-server.html</id>
+    <id>https://vkaustubh.github.io/geek/2018-05-29-setting-up-sftp-server.html</id>
     <updated>2018-05-29T00:00:00Z</updated>
-    <link href="http://localhost/geek/2018-05-29-setting-up-sftp-server.html" />
+    <link href="https://vkaustubh.github.io/geek/2018-05-29-setting-up-sftp-server.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Describes how to setup an SFTP server where the user is jailed in a specified directory.</content>
   </entry>
-  <entry xml:base="http://localhost/geek/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">The Unteachable Parts of Data Science</title>
-    <id>http://localhost/geek/2018-04-22-unteachable-parts-of-data-science.html</id>
+    <id>https://vkaustubh.github.io/geek/2018-04-22-unteachable-parts-of-data-science.html</id>
     <updated>2018-02-22T00:00:00Z</updated>
-    <link href="http://localhost/geek/2018-04-22-unteachable-parts-of-data-science.html" />
+    <link href="https://vkaustubh.github.io/geek/2018-04-22-unteachable-parts-of-data-science.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>

@@ -1,415 +1,415 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">General Articles by Kaustubh Vaghmare</title>
-  <id>http://localhost/general/feed.xml</id>
+  <id>https://vkaustubh.github.io/blog/general/feed.xml</id>
   <updated>2019-06-11T00:00:00Z</updated>
-  <link href="http://localhost/" />
-  <link href="http://localhost/general/feed.xml" rel="self" />
+  <link href="https://vkaustubh.github.io/blog/general.html" />
+  <link href="https://vkaustubh.github.io/blog/general/feed.xml" rel="self" />
   <generator>Werkzeug</generator>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Punctuality for Dummies</title>
-    <id>http://localhost/general/2019-06-11-punctuality-for-dummies.html</id>
+    <id>https://vkaustubh.github.io/general/2019-06-11-punctuality-for-dummies.html</id>
     <updated>2019-06-11T00:00:00Z</updated>
-    <link href="http://localhost/general/2019-06-11-punctuality-for-dummies.html" />
+    <link href="https://vkaustubh.github.io/general/2019-06-11-punctuality-for-dummies.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">A simple guide for beginners and confused professionals about the meaning of punctuality and how to realize this simple, important and desirable virtue.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Western Coastline Destruction</title>
-    <id>http://localhost/general/2018-12-02-western-coastline-destruction.html</id>
+    <id>https://vkaustubh.github.io/general/2018-12-02-western-coastline-destruction.html</id>
     <updated>2018-12-02T00:00:00Z</updated>
-    <link href="http://localhost/general/2018-12-02-western-coastline-destruction.html" />
+    <link href="https://vkaustubh.github.io/general/2018-12-02-western-coastline-destruction.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Apprehension of the ever degrading quality of the western coastline of India through the years as observed by me.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Era of the Narrow Rigid Classifiers</title>
-    <id>http://localhost/general/2018-09-18-era-narrow-rigid-classifier.html</id>
+    <id>https://vkaustubh.github.io/general/2018-09-18-era-narrow-rigid-classifier.html</id>
     <updated>2018-09-18T00:00:00Z</updated>
-    <link href="http://localhost/general/2018-09-18-era-narrow-rigid-classifier.html" />
+    <link href="https://vkaustubh.github.io/general/2018-09-18-era-narrow-rigid-classifier.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Why is it that our brain is mimicking the simplest Machine Learning models taught to beginners of the field?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Wish You The Same (A Teacher's Day Special)</title>
-    <id>http://localhost/general/2018-09-05-wish-you-the-same.html</id>
+    <id>https://vkaustubh.github.io/general/2018-09-05-wish-you-the-same.html</id>
     <updated>2018-09-05T00:00:00Z</updated>
-    <link href="http://localhost/general/2018-09-05-wish-you-the-same.html" />
+    <link href="https://vkaustubh.github.io/general/2018-09-05-wish-you-the-same.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">A short article describing my meaning behind saying &quot;Wish You The Same&quot; when wished on Teacher's Day</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Teacher - Student Full Circle</title>
-    <id>http://localhost/general/2018-06-29-student-teacher-full-circle.html</id>
+    <id>https://vkaustubh.github.io/general/2018-06-29-student-teacher-full-circle.html</id>
     <updated>2018-06-29T00:00:00Z</updated>
-    <link href="http://localhost/general/2018-06-29-student-teacher-full-circle.html" />
+    <link href="https://vkaustubh.github.io/general/2018-06-29-student-teacher-full-circle.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">A journey of a student who does not understand certain things about his teachers and then comes full circle and becomes a teacher himself.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Last Days</title>
-    <id>http://localhost/general/2018-04-02-the-last-days.html</id>
+    <id>https://vkaustubh.github.io/general/2018-04-02-the-last-days.html</id>
     <updated>2018-04-02T00:00:00Z</updated>
-    <link href="http://localhost/general/2018-04-02-the-last-days.html" />
+    <link href="https://vkaustubh.github.io/general/2018-04-02-the-last-days.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">It is important for both employers and employees to demonstrate professional behavior in the last days of their relationship.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">A Tribute to Managers and Leaders</title>
-    <id>http://localhost/general/2018-02-25-tribute-to-managers.html</id>
+    <id>https://vkaustubh.github.io/general/2018-02-25-tribute-to-managers.html</id>
     <updated>2018-02-25T00:00:00Z</updated>
-    <link href="http://localhost/general/2018-02-25-tribute-to-managers.html" />
+    <link href="https://vkaustubh.github.io/general/2018-02-25-tribute-to-managers.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Manage and leadership is not a trivial task. A small tribute to anyone who has attempted this task.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Human Thought and the Animal Thought</title>
-    <id>http://localhost/general/2012-07-17-human-thought-and-animal-thought.html</id>
+    <id>https://vkaustubh.github.io/general/2012-07-17-human-thought-and-animal-thought.html</id>
     <updated>2012-07-17T00:00:00Z</updated>
-    <link href="http://localhost/general/2012-07-17-human-thought-and-animal-thought.html" />
+    <link href="https://vkaustubh.github.io/general/2012-07-17-human-thought-and-animal-thought.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Are we really evolved beings solely gifted with rationality? Or is rationality just a slave tool dictated by the animal thought?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Is It Really Safe To Put Too Much Information Out There?</title>
-    <id>http://localhost/general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there.html</id>
+    <id>https://vkaustubh.github.io/general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there.html</id>
     <updated>2012-07-07T00:00:00Z</updated>
-    <link href="http://localhost/general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there.html" />
+    <link href="https://vkaustubh.github.io/general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">We must be careful in terms of how much information we put out on various Internet platforms. The dangers arising due to our being careless are  becoming stronger.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">A Reboot, On Sharing Ideas</title>
-    <id>http://localhost/general/2012-07-02-a-reboot-on-sharing-ideas.html</id>
+    <id>https://vkaustubh.github.io/general/2012-07-02-a-reboot-on-sharing-ideas.html</id>
     <updated>2012-07-02T00:00:00Z</updated>
-    <link href="http://localhost/general/2012-07-02-a-reboot-on-sharing-ideas.html" />
+    <link href="https://vkaustubh.github.io/general/2012-07-02-a-reboot-on-sharing-ideas.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Some thoughts on the importance of sharing ideas with mutual respect.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Smart Technology is Here, Where are the Smart People?</title>
-    <id>http://localhost/general/2012-03-12-smart-tech-smart-people.html</id>
+    <id>https://vkaustubh.github.io/general/2012-03-12-smart-tech-smart-people.html</id>
     <updated>2012-03-12T00:00:00Z</updated>
-    <link href="http://localhost/general/2012-03-12-smart-tech-smart-people.html" />
+    <link href="https://vkaustubh.github.io/general/2012-03-12-smart-tech-smart-people.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">The need for smartness on part of the users of all of today's smart technology.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Apples and Oranges</title>
-    <id>http://localhost/general/2012-03-04-apples-oranges.html</id>
+    <id>https://vkaustubh.github.io/general/2012-03-04-apples-oranges.html</id>
     <updated>2012-03-04T00:00:00Z</updated>
-    <link href="http://localhost/general/2012-03-04-apples-oranges.html" />
+    <link href="https://vkaustubh.github.io/general/2012-03-04-apples-oranges.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Is it fair to keep commparing two completely different media - the written medium and the cinema or the stage?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Exceptional</title>
-    <id>http://localhost/general/2011-09-04-the-exceptional.html</id>
+    <id>https://vkaustubh.github.io/general/2011-09-04-the-exceptional.html</id>
     <updated>2011-09-04T00:00:00Z</updated>
-    <link href="http://localhost/general/2011-09-04-the-exceptional.html" />
+    <link href="https://vkaustubh.github.io/general/2011-09-04-the-exceptional.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">The pitfalls of our habit to generalize a population or a group based on the exceptional elements present in it.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Mind of an Observer of Friendship</title>
-    <id>http://localhost/general/2011-09-03-mind-observer-friendship.html</id>
+    <id>https://vkaustubh.github.io/general/2011-09-03-mind-observer-friendship.html</id>
     <updated>2011-09-03T00:00:00Z</updated>
-    <link href="http://localhost/general/2011-09-03-mind-observer-friendship.html" />
+    <link href="https://vkaustubh.github.io/general/2011-09-03-mind-observer-friendship.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">A morose observation of how friendship starts and potentially evolves over time.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Fashion of Vedas and Upanishads</title>
-    <id>http://localhost/general/2011-05-31-fashion-vedas-upanishads.html</id>
+    <id>https://vkaustubh.github.io/general/2011-05-31-fashion-vedas-upanishads.html</id>
     <updated>2011-05-31T00:00:00Z</updated>
-    <link href="http://localhost/general/2011-05-31-fashion-vedas-upanishads.html" />
+    <link href="https://vkaustubh.github.io/general/2011-05-31-fashion-vedas-upanishads.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Has it become more of a fashion to throw around an air of awareness of these texts? Or are we really interested in the ancient world view embedded in them?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Fame or Peace</title>
-    <id>http://localhost/general/2011-05-06-fame-or-peace.html</id>
+    <id>https://vkaustubh.github.io/general/2011-05-06-fame-or-peace.html</id>
     <updated>2011-05-06T00:00:00Z</updated>
-    <link href="http://localhost/general/2011-05-06-fame-or-peace.html" />
+    <link href="https://vkaustubh.github.io/general/2011-05-06-fame-or-peace.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">How much are we willing to throw away to become famous public figures?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Narrow Minded Accounting</title>
-    <id>http://localhost/general/2010-12-14-narrow-minded-accounting.html</id>
+    <id>https://vkaustubh.github.io/general/2010-12-14-narrow-minded-accounting.html</id>
     <updated>2010-12-14T00:00:00Z</updated>
-    <link href="http://localhost/general/2010-12-14-narrow-minded-accounting.html" />
+    <link href="https://vkaustubh.github.io/general/2010-12-14-narrow-minded-accounting.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">It is easy to make decisions with the short term picture in mind. It takea a disciplined mind to see the bigger picture.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Small Things</title>
-    <id>http://localhost/general/2010-12-08-small-things.html</id>
+    <id>https://vkaustubh.github.io/general/2010-12-08-small-things.html</id>
     <updated>2010-12-08T00:00:00Z</updated>
-    <link href="http://localhost/general/2010-12-08-small-things.html" />
+    <link href="https://vkaustubh.github.io/general/2010-12-08-small-things.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">The smallest of things have the potential of becoming major issues.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Real Value of Human Life</title>
-    <id>http://localhost/general/2010-06-19-real-value-of-life.html</id>
+    <id>https://vkaustubh.github.io/general/2010-06-19-real-value-of-life.html</id>
     <updated>2010-06-19T00:00:00Z</updated>
-    <link href="http://localhost/general/2010-06-19-real-value-of-life.html" />
+    <link href="https://vkaustubh.github.io/general/2010-06-19-real-value-of-life.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">It is easy to safe that all life is valuable but is our society reflecting this often stated ideal?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Walking a Path</title>
-    <id>http://localhost/general/2010-04-30-walking-a-path.html</id>
+    <id>https://vkaustubh.github.io/general/2010-04-30-walking-a-path.html</id>
     <updated>2010-04-30T00:00:00Z</updated>
-    <link href="http://localhost/general/2010-04-30-walking-a-path.html" />
+    <link href="https://vkaustubh.github.io/general/2010-04-30-walking-a-path.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">A commentary on choices. Especially the choice of following the beaten path and that of crafting one of our own.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Lost in Words</title>
-    <id>http://localhost/general/2010-04-29-lost-in-words.html</id>
+    <id>https://vkaustubh.github.io/general/2010-04-29-lost-in-words.html</id>
     <updated>2010-04-29T00:00:00Z</updated>
-    <link href="http://localhost/general/2010-04-29-lost-in-words.html" />
+    <link href="https://vkaustubh.github.io/general/2010-04-29-lost-in-words.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">It is easy to get lost in words even though they are merely a map of the true thought that they try to convey.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Faith and Trust – The Limits of Skepticism</title>
-    <id>http://localhost/general/2010-01-04-faith-trust-limits-skepticism.html</id>
+    <id>https://vkaustubh.github.io/general/2010-01-04-faith-trust-limits-skepticism.html</id>
     <updated>2010-01-04T00:00:00Z</updated>
-    <link href="http://localhost/general/2010-01-04-faith-trust-limits-skepticism.html" />
+    <link href="https://vkaustubh.github.io/general/2010-01-04-faith-trust-limits-skepticism.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">When Ignorance Is Not Bliss</title>
-    <id>http://localhost/general/2010-01-02-when-ignorance-not-bliss.html</id>
+    <id>https://vkaustubh.github.io/general/2010-01-02-when-ignorance-not-bliss.html</id>
     <updated>2010-01-02T00:00:00Z</updated>
-    <link href="http://localhost/general/2010-01-02-when-ignorance-not-bliss.html" />
+    <link href="https://vkaustubh.github.io/general/2010-01-02-when-ignorance-not-bliss.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">While there might be circumstances when you feel like stating that ignorance is bliss, in most circumstances there is a huge price to pay for ignorance.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">In The Mind of the Fanatic of the Second Kind</title>
-    <id>http://localhost/general/2009-12-28-mind-fanatic-second-kind.html</id>
+    <id>https://vkaustubh.github.io/general/2009-12-28-mind-fanatic-second-kind.html</id>
     <updated>2009-12-28T00:00:00Z</updated>
-    <link href="http://localhost/general/2009-12-28-mind-fanatic-second-kind.html" />
+    <link href="https://vkaustubh.github.io/general/2009-12-28-mind-fanatic-second-kind.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Maybe we need a new breed of fanatics in today's world.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Deepavali Today!</title>
-    <id>http://localhost/general/2009-11-06-deepavali-today.html</id>
+    <id>https://vkaustubh.github.io/general/2009-11-06-deepavali-today.html</id>
     <updated>2009-11-06T00:00:00Z</updated>
-    <link href="http://localhost/general/2009-11-06-deepavali-today.html" />
+    <link href="https://vkaustubh.github.io/general/2009-11-06-deepavali-today.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">What Diwali should be and what it has become.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The End of Logic</title>
-    <id>http://localhost/general/2009-05-30-end-of-logic.html</id>
+    <id>https://vkaustubh.github.io/general/2009-05-30-end-of-logic.html</id>
     <updated>2009-05-30T00:00:00Z</updated>
-    <link href="http://localhost/general/2009-05-30-end-of-logic.html" />
+    <link href="https://vkaustubh.github.io/general/2009-05-30-end-of-logic.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">How far can we push the boundaries of logic? Can someone be truly logical?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">What Does Help?</title>
-    <id>http://localhost/general/2009-05-05-what-does-help.html</id>
+    <id>https://vkaustubh.github.io/general/2009-05-05-what-does-help.html</id>
     <updated>2009-05-05T00:00:00Z</updated>
-    <link href="http://localhost/general/2009-05-05-what-does-help.html" />
+    <link href="https://vkaustubh.github.io/general/2009-05-05-what-does-help.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">What does help indeed in achieving a peace of mind?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Running Spiritualist</title>
-    <id>http://localhost/general/2009-05-01-the-running-spiritualist.html</id>
+    <id>https://vkaustubh.github.io/general/2009-05-01-the-running-spiritualist.html</id>
     <updated>2009-05-01T00:00:00Z</updated>
-    <link href="http://localhost/general/2009-05-01-the-running-spiritualist.html" />
+    <link href="https://vkaustubh.github.io/general/2009-05-01-the-running-spiritualist.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Does spirituality really mean we should abandon our society, family etc and run to the forest?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Inter-religious Harmony</title>
-    <id>http://localhost/general/2008-12-29-inter-religious-harmony.html</id>
+    <id>https://vkaustubh.github.io/general/2008-12-29-inter-religious-harmony.html</id>
     <updated>2008-12-29T00:00:00Z</updated>
-    <link href="http://localhost/general/2008-12-29-inter-religious-harmony.html" />
+    <link href="https://vkaustubh.github.io/general/2008-12-29-inter-religious-harmony.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">What is really needed for achieving a society of inter religious harmony?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Left Behind!</title>
-    <id>http://localhost/general/2008-10-29-left-behind.html</id>
+    <id>https://vkaustubh.github.io/general/2008-10-29-left-behind.html</id>
     <updated>2008-10-29T00:00:00Z</updated>
-    <link href="http://localhost/general/2008-10-29-left-behind.html" />
+    <link href="https://vkaustubh.github.io/general/2008-10-29-left-behind.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Are men getting left behind in today's age where women are taking on their roles without abandoning fully, their traditional roles?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Failure to Communicate!</title>
-    <id>http://localhost/general/2008-10-18-failure-to-communicate.html</id>
+    <id>https://vkaustubh.github.io/general/2008-10-18-failure-to-communicate.html</id>
     <updated>2008-10-18T00:00:00Z</updated>
-    <link href="http://localhost/general/2008-10-18-failure-to-communicate.html" />
+    <link href="https://vkaustubh.github.io/general/2008-10-18-failure-to-communicate.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Why is it becoming easier and easier to stay out of touch with each other?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">A Father</title>
-    <id>http://localhost/general/2008-10-13-a-father.html</id>
+    <id>https://vkaustubh.github.io/general/2008-10-13-a-father.html</id>
     <updated>2008-10-13T00:00:00Z</updated>
-    <link href="http://localhost/general/2008-10-13-a-father.html" />
+    <link href="https://vkaustubh.github.io/general/2008-10-13-a-father.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">A translation of a beautiful Marathi article describing the importance of a father in a family and the injustice done by our literature to him.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Exploitation Invited!</title>
-    <id>http://localhost/general/2008-07-20-exploitation-invited.html</id>
+    <id>https://vkaustubh.github.io/general/2008-07-20-exploitation-invited.html</id>
     <updated>2008-07-20T00:00:00Z</updated>
-    <link href="http://localhost/general/2008-07-20-exploitation-invited.html" />
+    <link href="https://vkaustubh.github.io/general/2008-07-20-exploitation-invited.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">See how an immatured and a disunited workflow invites exploitation in the modern corporate work environment.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Source Of Knowledge</title>
-    <id>http://localhost/general/2007-04-11-source-of-knowledge.html</id>
+    <id>https://vkaustubh.github.io/general/2007-04-11-source-of-knowledge.html</id>
     <updated>2007-04-11T00:00:00Z</updated>
-    <link href="http://localhost/general/2007-04-11-source-of-knowledge.html" />
+    <link href="https://vkaustubh.github.io/general/2007-04-11-source-of-knowledge.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">What's your source of knowledge? A pile of books or life itself?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">An Imaginary Conversation Between Me And A Friend</title>
-    <id>http://localhost/general/2007-04-05-an-imaginary-conversation-me-and-friend.html</id>
+    <id>https://vkaustubh.github.io/general/2007-04-05-an-imaginary-conversation-me-and-friend.html</id>
     <updated>2007-04-05T00:00:00Z</updated>
-    <link href="http://localhost/general/2007-04-05-an-imaginary-conversation-me-and-friend.html" />
+    <link href="https://vkaustubh.github.io/general/2007-04-05-an-imaginary-conversation-me-and-friend.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">The conflict between celibacy, motherhood and divinity.</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">&quot;Philosophers&quot; - The 2 Types</title>
-    <id>http://localhost/general/2007-01-11-philosophers-two-types.html</id>
+    <id>https://vkaustubh.github.io/general/2007-01-11-philosophers-two-types.html</id>
     <updated>2007-01-11T00:00:00Z</updated>
-    <link href="http://localhost/general/2007-01-11-philosophers-two-types.html" />
+    <link href="https://vkaustubh.github.io/general/2007-01-11-philosophers-two-types.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Are you the philosopher that throws mere words into the wind? Or do you walk the path you preach?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Senseless Plundering of Natural Resources</title>
-    <id>http://localhost/general/2006-10-19-senseless-plundering-of-natural-resources.html</id>
+    <id>https://vkaustubh.github.io/general/2006-10-19-senseless-plundering-of-natural-resources.html</id>
     <updated>2006-10-19T00:00:00Z</updated>
-    <link href="http://localhost/general/2006-10-19-senseless-plundering-of-natural-resources.html" />
+    <link href="https://vkaustubh.github.io/general/2006-10-19-senseless-plundering-of-natural-resources.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">It is time for us to do as much as possible to conserve our natural resources no matter how small the effort may be!</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Silly Days</title>
-    <id>http://localhost/general/2006-09-20-silly-days.html</id>
+    <id>https://vkaustubh.github.io/general/2006-09-20-silly-days.html</id>
     <updated>2006-09-20T00:00:00Z</updated>
-    <link href="http://localhost/general/2006-09-20-silly-days.html" />
+    <link href="https://vkaustubh.github.io/general/2006-09-20-silly-days.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Are we going overboard with our invention of days for every single defining relationship?</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Why Damn Dan Brown?</title>
-    <id>http://localhost/general/2006-05-29-why-damn-dan-brown.html</id>
+    <id>https://vkaustubh.github.io/general/2006-05-29-why-damn-dan-brown.html</id>
     <updated>2006-05-29T00:00:00Z</updated>
-    <link href="http://localhost/general/2006-05-29-why-damn-dan-brown.html" />
+    <link href="https://vkaustubh.github.io/general/2006-05-29-why-damn-dan-brown.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Why is Dan Brown being treated like he is the harbinger of commentary against the views held sacred by billions? </content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">The Metallic Thought</title>
-    <id>http://localhost/general/2006-05-26-the-metallic-thought.html</id>
+    <id>https://vkaustubh.github.io/general/2006-05-26-the-metallic-thought.html</id>
     <updated>2006-05-26T00:00:00Z</updated>
-    <link href="http://localhost/general/2006-05-26-the-metallic-thought.html" />
+    <link href="https://vkaustubh.github.io/general/2006-05-26-the-metallic-thought.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Metal music is a music form that gives the singer and the listener to vent out their anger and frustration against the unfair world!</content>
   </entry>
-  <entry xml:base="http://localhost/general/feed.xml">
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Physics and Humility</title>
-    <id>http://localhost/general/2006-05-26-physics-and-humility.html</id>
+    <id>https://vkaustubh.github.io/general/2006-05-26-physics-and-humility.html</id>
     <updated>2006-05-25T00:00:00Z</updated>
-    <link href="http://localhost/general/2006-05-26-physics-and-humility.html" />
+    <link href="https://vkaustubh.github.io/general/2006-05-26-physics-and-humility.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
