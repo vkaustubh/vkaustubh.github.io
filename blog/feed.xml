@@ -8,9 +8,9 @@
   <generator>Werkzeug</generator>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Punctuality for Dummies</title>
-    <id>https://vkaustubh.github.io/general/2019-06-11-punctuality-for-dummies.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2019-06-11-punctuality-for-dummies.html</id>
     <updated>2019-06-11T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2019-06-11-punctuality-for-dummies.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2019-06-11-punctuality-for-dummies.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -18,9 +18,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Git Rebase vs Merge</title>
-    <id>https://vkaustubh.github.io/geek/2019-05-24-rebase-vs-master.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2019-05-24-rebase-vs-master.html</id>
     <updated>2019-05-24T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2019-05-24-rebase-vs-master.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2019-05-24-rebase-vs-master.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -28,9 +28,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Securing Your (Web) E-mail with GPG</title>
-    <id>https://vkaustubh.github.io/geek/2019-02-28-securing-email-communications.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2019-02-28-securing-email-communications.html</id>
     <updated>2019-02-28T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2019-02-28-securing-email-communications.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2019-02-28-securing-email-communications.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -38,9 +38,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Towards using GPG For Security - Part 2</title>
-    <id>https://vkaustubh.github.io/geek/2019-02-20-gpg-2.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html</id>
     <updated>2019-02-20T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2019-02-20-gpg-2.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -48,9 +48,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Towards using GPG For Security - Part 1</title>
-    <id>https://vkaustubh.github.io/geek/2019-02-20-gpg-1.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-1.html</id>
     <updated>2019-02-20T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2019-02-20-gpg-1.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-1.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -58,9 +58,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Western Coastline Destruction</title>
-    <id>https://vkaustubh.github.io/general/2018-12-02-western-coastline-destruction.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2018-12-02-western-coastline-destruction.html</id>
     <updated>2018-12-02T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2018-12-02-western-coastline-destruction.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2018-12-02-western-coastline-destruction.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -68,9 +68,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Python Decorators</title>
-    <id>https://vkaustubh.github.io/geek/2018-09-24-python-decorators.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2018-09-24-python-decorators.html</id>
     <updated>2018-09-24T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2018-09-24-python-decorators.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2018-09-24-python-decorators.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -78,9 +78,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Scary Scale of Ten</title>
-    <id>https://vkaustubh.github.io/geek/2018-09-20-the-scary-scale-of-ten.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2018-09-20-the-scary-scale-of-ten.html</id>
     <updated>2018-09-20T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2018-09-20-the-scary-scale-of-ten.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2018-09-20-the-scary-scale-of-ten.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -88,9 +88,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Era of the Narrow Rigid Classifiers</title>
-    <id>https://vkaustubh.github.io/general/2018-09-18-era-narrow-rigid-classifier.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2018-09-18-era-narrow-rigid-classifier.html</id>
     <updated>2018-09-18T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2018-09-18-era-narrow-rigid-classifier.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2018-09-18-era-narrow-rigid-classifier.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -98,9 +98,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Wish You The Same (A Teacher's Day Special)</title>
-    <id>https://vkaustubh.github.io/general/2018-09-05-wish-you-the-same.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2018-09-05-wish-you-the-same.html</id>
     <updated>2018-09-05T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2018-09-05-wish-you-the-same.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2018-09-05-wish-you-the-same.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -108,9 +108,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Teacher - Student Full Circle</title>
-    <id>https://vkaustubh.github.io/general/2018-06-29-student-teacher-full-circle.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2018-06-29-student-teacher-full-circle.html</id>
     <updated>2018-06-29T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2018-06-29-student-teacher-full-circle.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2018-06-29-student-teacher-full-circle.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -118,9 +118,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">When are APIs RESTful?</title>
-    <id>https://vkaustubh.github.io/geek/2018-06-02-rest-api.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2018-06-02-rest-api.html</id>
     <updated>2018-06-01T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2018-06-02-rest-api.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2018-06-02-rest-api.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -128,9 +128,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Setting up a Chroot Jail SFTP Server</title>
-    <id>https://vkaustubh.github.io/geek/2018-05-29-setting-up-sftp-server.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2018-05-29-setting-up-sftp-server.html</id>
     <updated>2018-05-29T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2018-05-29-setting-up-sftp-server.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2018-05-29-setting-up-sftp-server.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -138,9 +138,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Last Days</title>
-    <id>https://vkaustubh.github.io/general/2018-04-02-the-last-days.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2018-04-02-the-last-days.html</id>
     <updated>2018-04-02T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2018-04-02-the-last-days.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2018-04-02-the-last-days.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -148,9 +148,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">A Tribute to Managers and Leaders</title>
-    <id>https://vkaustubh.github.io/general/2018-02-25-tribute-to-managers.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2018-02-25-tribute-to-managers.html</id>
     <updated>2018-02-25T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2018-02-25-tribute-to-managers.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2018-02-25-tribute-to-managers.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -158,9 +158,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Unteachable Parts of Data Science</title>
-    <id>https://vkaustubh.github.io/geek/2018-04-22-unteachable-parts-of-data-science.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2018-04-22-unteachable-parts-of-data-science.html</id>
     <updated>2018-02-22T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2018-04-22-unteachable-parts-of-data-science.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2018-04-22-unteachable-parts-of-data-science.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -168,9 +168,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Human Thought and the Animal Thought</title>
-    <id>https://vkaustubh.github.io/general/2012-07-17-human-thought-and-animal-thought.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2012-07-17-human-thought-and-animal-thought.html</id>
     <updated>2012-07-17T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2012-07-17-human-thought-and-animal-thought.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2012-07-17-human-thought-and-animal-thought.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -178,9 +178,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Is It Really Safe To Put Too Much Information Out There?</title>
-    <id>https://vkaustubh.github.io/general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there.html</id>
     <updated>2012-07-07T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2012-07-07-is-it-really-safe-to-put-so-much-information-out-there.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -188,9 +188,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">A Reboot, On Sharing Ideas</title>
-    <id>https://vkaustubh.github.io/general/2012-07-02-a-reboot-on-sharing-ideas.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2012-07-02-a-reboot-on-sharing-ideas.html</id>
     <updated>2012-07-02T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2012-07-02-a-reboot-on-sharing-ideas.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2012-07-02-a-reboot-on-sharing-ideas.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -198,9 +198,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Smart Technology is Here, Where are the Smart People?</title>
-    <id>https://vkaustubh.github.io/general/2012-03-12-smart-tech-smart-people.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2012-03-12-smart-tech-smart-people.html</id>
     <updated>2012-03-12T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2012-03-12-smart-tech-smart-people.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2012-03-12-smart-tech-smart-people.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -208,9 +208,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Apples and Oranges</title>
-    <id>https://vkaustubh.github.io/general/2012-03-04-apples-oranges.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2012-03-04-apples-oranges.html</id>
     <updated>2012-03-04T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2012-03-04-apples-oranges.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2012-03-04-apples-oranges.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -218,9 +218,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Exceptional</title>
-    <id>https://vkaustubh.github.io/general/2011-09-04-the-exceptional.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2011-09-04-the-exceptional.html</id>
     <updated>2011-09-04T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2011-09-04-the-exceptional.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2011-09-04-the-exceptional.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -228,9 +228,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Mind of an Observer of Friendship</title>
-    <id>https://vkaustubh.github.io/general/2011-09-03-mind-observer-friendship.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2011-09-03-mind-observer-friendship.html</id>
     <updated>2011-09-03T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2011-09-03-mind-observer-friendship.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2011-09-03-mind-observer-friendship.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -238,9 +238,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Fashion of Vedas and Upanishads</title>
-    <id>https://vkaustubh.github.io/general/2011-05-31-fashion-vedas-upanishads.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2011-05-31-fashion-vedas-upanishads.html</id>
     <updated>2011-05-31T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2011-05-31-fashion-vedas-upanishads.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2011-05-31-fashion-vedas-upanishads.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -248,9 +248,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Fame or Peace</title>
-    <id>https://vkaustubh.github.io/general/2011-05-06-fame-or-peace.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2011-05-06-fame-or-peace.html</id>
     <updated>2011-05-06T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2011-05-06-fame-or-peace.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2011-05-06-fame-or-peace.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -258,9 +258,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Narrow Minded Accounting</title>
-    <id>https://vkaustubh.github.io/general/2010-12-14-narrow-minded-accounting.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2010-12-14-narrow-minded-accounting.html</id>
     <updated>2010-12-14T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2010-12-14-narrow-minded-accounting.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2010-12-14-narrow-minded-accounting.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -268,9 +268,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Small Things</title>
-    <id>https://vkaustubh.github.io/general/2010-12-08-small-things.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2010-12-08-small-things.html</id>
     <updated>2010-12-08T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2010-12-08-small-things.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2010-12-08-small-things.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -278,9 +278,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Real Value of Human Life</title>
-    <id>https://vkaustubh.github.io/general/2010-06-19-real-value-of-life.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2010-06-19-real-value-of-life.html</id>
     <updated>2010-06-19T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2010-06-19-real-value-of-life.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2010-06-19-real-value-of-life.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -288,9 +288,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Walking a Path</title>
-    <id>https://vkaustubh.github.io/general/2010-04-30-walking-a-path.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2010-04-30-walking-a-path.html</id>
     <updated>2010-04-30T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2010-04-30-walking-a-path.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2010-04-30-walking-a-path.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -298,9 +298,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Lost in Words</title>
-    <id>https://vkaustubh.github.io/general/2010-04-29-lost-in-words.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2010-04-29-lost-in-words.html</id>
     <updated>2010-04-29T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2010-04-29-lost-in-words.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2010-04-29-lost-in-words.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -308,18 +308,18 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Faith and Trust – The Limits of Skepticism</title>
-    <id>https://vkaustubh.github.io/general/2010-01-04-faith-trust-limits-skepticism.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2010-01-04-faith-trust-limits-skepticism.html</id>
     <updated>2010-01-04T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2010-01-04-faith-trust-limits-skepticism.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2010-01-04-faith-trust-limits-skepticism.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">When Ignorance Is Not Bliss</title>
-    <id>https://vkaustubh.github.io/general/2010-01-02-when-ignorance-not-bliss.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2010-01-02-when-ignorance-not-bliss.html</id>
     <updated>2010-01-02T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2010-01-02-when-ignorance-not-bliss.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2010-01-02-when-ignorance-not-bliss.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -327,9 +327,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">In The Mind of the Fanatic of the Second Kind</title>
-    <id>https://vkaustubh.github.io/general/2009-12-28-mind-fanatic-second-kind.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2009-12-28-mind-fanatic-second-kind.html</id>
     <updated>2009-12-28T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2009-12-28-mind-fanatic-second-kind.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2009-12-28-mind-fanatic-second-kind.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -337,9 +337,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Deepavali Today!</title>
-    <id>https://vkaustubh.github.io/general/2009-11-06-deepavali-today.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2009-11-06-deepavali-today.html</id>
     <updated>2009-11-06T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2009-11-06-deepavali-today.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2009-11-06-deepavali-today.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -347,9 +347,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The End of Logic</title>
-    <id>https://vkaustubh.github.io/general/2009-05-30-end-of-logic.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2009-05-30-end-of-logic.html</id>
     <updated>2009-05-30T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2009-05-30-end-of-logic.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2009-05-30-end-of-logic.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -357,9 +357,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">What Does Help?</title>
-    <id>https://vkaustubh.github.io/general/2009-05-05-what-does-help.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2009-05-05-what-does-help.html</id>
     <updated>2009-05-05T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2009-05-05-what-does-help.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2009-05-05-what-does-help.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -367,9 +367,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Running Spiritualist</title>
-    <id>https://vkaustubh.github.io/general/2009-05-01-the-running-spiritualist.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2009-05-01-the-running-spiritualist.html</id>
     <updated>2009-05-01T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2009-05-01-the-running-spiritualist.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2009-05-01-the-running-spiritualist.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -377,9 +377,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Inter-religious Harmony</title>
-    <id>https://vkaustubh.github.io/general/2008-12-29-inter-religious-harmony.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2008-12-29-inter-religious-harmony.html</id>
     <updated>2008-12-29T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2008-12-29-inter-religious-harmony.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2008-12-29-inter-religious-harmony.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -387,9 +387,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Left Behind!</title>
-    <id>https://vkaustubh.github.io/general/2008-10-29-left-behind.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2008-10-29-left-behind.html</id>
     <updated>2008-10-29T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2008-10-29-left-behind.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2008-10-29-left-behind.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -397,9 +397,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Failure to Communicate!</title>
-    <id>https://vkaustubh.github.io/general/2008-10-18-failure-to-communicate.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2008-10-18-failure-to-communicate.html</id>
     <updated>2008-10-18T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2008-10-18-failure-to-communicate.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2008-10-18-failure-to-communicate.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -407,9 +407,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">A Father</title>
-    <id>https://vkaustubh.github.io/general/2008-10-13-a-father.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2008-10-13-a-father.html</id>
     <updated>2008-10-13T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2008-10-13-a-father.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2008-10-13-a-father.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -417,9 +417,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Exploitation Invited!</title>
-    <id>https://vkaustubh.github.io/general/2008-07-20-exploitation-invited.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2008-07-20-exploitation-invited.html</id>
     <updated>2008-07-20T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2008-07-20-exploitation-invited.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2008-07-20-exploitation-invited.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -427,9 +427,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Source Of Knowledge</title>
-    <id>https://vkaustubh.github.io/general/2007-04-11-source-of-knowledge.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2007-04-11-source-of-knowledge.html</id>
     <updated>2007-04-11T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2007-04-11-source-of-knowledge.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2007-04-11-source-of-knowledge.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -437,9 +437,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">An Imaginary Conversation Between Me And A Friend</title>
-    <id>https://vkaustubh.github.io/general/2007-04-05-an-imaginary-conversation-me-and-friend.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2007-04-05-an-imaginary-conversation-me-and-friend.html</id>
     <updated>2007-04-05T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2007-04-05-an-imaginary-conversation-me-and-friend.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2007-04-05-an-imaginary-conversation-me-and-friend.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -447,9 +447,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">&quot;Philosophers&quot; - The 2 Types</title>
-    <id>https://vkaustubh.github.io/general/2007-01-11-philosophers-two-types.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2007-01-11-philosophers-two-types.html</id>
     <updated>2007-01-11T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2007-01-11-philosophers-two-types.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2007-01-11-philosophers-two-types.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -457,9 +457,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Senseless Plundering of Natural Resources</title>
-    <id>https://vkaustubh.github.io/general/2006-10-19-senseless-plundering-of-natural-resources.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2006-10-19-senseless-plundering-of-natural-resources.html</id>
     <updated>2006-10-19T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2006-10-19-senseless-plundering-of-natural-resources.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2006-10-19-senseless-plundering-of-natural-resources.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -467,9 +467,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Silly Days</title>
-    <id>https://vkaustubh.github.io/general/2006-09-20-silly-days.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2006-09-20-silly-days.html</id>
     <updated>2006-09-20T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2006-09-20-silly-days.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2006-09-20-silly-days.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -477,9 +477,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Why Damn Dan Brown?</title>
-    <id>https://vkaustubh.github.io/general/2006-05-29-why-damn-dan-brown.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2006-05-29-why-damn-dan-brown.html</id>
     <updated>2006-05-29T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2006-05-29-why-damn-dan-brown.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2006-05-29-why-damn-dan-brown.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -487,9 +487,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Metallic Thought</title>
-    <id>https://vkaustubh.github.io/general/2006-05-26-the-metallic-thought.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2006-05-26-the-metallic-thought.html</id>
     <updated>2006-05-26T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2006-05-26-the-metallic-thought.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2006-05-26-the-metallic-thought.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -497,9 +497,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Physics and Humility</title>
-    <id>https://vkaustubh.github.io/general/2006-05-26-physics-and-humility.html</id>
+    <id>https://vkaustubh.github.io/blog/general/2006-05-26-physics-and-humility.html</id>
     <updated>2006-05-25T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/general/2006-05-26-physics-and-humility.html" />
+    <link href="https://vkaustubh.github.io/blog/general/2006-05-26-physics-and-humility.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>

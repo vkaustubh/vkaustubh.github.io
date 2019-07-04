@@ -8,9 +8,9 @@
   <generator>Werkzeug</generator>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Git Rebase vs Merge</title>
-    <id>https://vkaustubh.github.io/geek/2019-05-24-rebase-vs-master.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2019-05-24-rebase-vs-master.html</id>
     <updated>2019-05-24T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2019-05-24-rebase-vs-master.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2019-05-24-rebase-vs-master.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -18,9 +18,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Securing Your (Web) E-mail with GPG</title>
-    <id>https://vkaustubh.github.io/geek/2019-02-28-securing-email-communications.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2019-02-28-securing-email-communications.html</id>
     <updated>2019-02-28T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2019-02-28-securing-email-communications.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2019-02-28-securing-email-communications.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -28,9 +28,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Towards using GPG For Security - Part 2</title>
-    <id>https://vkaustubh.github.io/geek/2019-02-20-gpg-2.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html</id>
     <updated>2019-02-20T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2019-02-20-gpg-2.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -38,9 +38,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Towards using GPG For Security - Part 1</title>
-    <id>https://vkaustubh.github.io/geek/2019-02-20-gpg-1.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-1.html</id>
     <updated>2019-02-20T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2019-02-20-gpg-1.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-1.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -48,9 +48,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Python Decorators</title>
-    <id>https://vkaustubh.github.io/geek/2018-09-24-python-decorators.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2018-09-24-python-decorators.html</id>
     <updated>2018-09-24T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2018-09-24-python-decorators.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2018-09-24-python-decorators.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -58,9 +58,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">The Scary Scale of Ten</title>
-    <id>https://vkaustubh.github.io/geek/2018-09-20-the-scary-scale-of-ten.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2018-09-20-the-scary-scale-of-ten.html</id>
     <updated>2018-09-20T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2018-09-20-the-scary-scale-of-ten.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2018-09-20-the-scary-scale-of-ten.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -68,9 +68,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">When are APIs RESTful?</title>
-    <id>https://vkaustubh.github.io/geek/2018-06-02-rest-api.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2018-06-02-rest-api.html</id>
     <updated>2018-06-01T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2018-06-02-rest-api.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2018-06-02-rest-api.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -78,9 +78,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Setting up a Chroot Jail SFTP Server</title>
-    <id>https://vkaustubh.github.io/geek/2018-05-29-setting-up-sftp-server.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2018-05-29-setting-up-sftp-server.html</id>
     <updated>2018-05-29T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2018-05-29-setting-up-sftp-server.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2018-05-29-setting-up-sftp-server.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
@@ -88,9 +88,9 @@
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">The Unteachable Parts of Data Science</title>
-    <id>https://vkaustubh.github.io/geek/2018-04-22-unteachable-parts-of-data-science.html</id>
+    <id>https://vkaustubh.github.io/blog/geek/2018-04-22-unteachable-parts-of-data-science.html</id>
     <updated>2018-02-22T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/geek/2018-04-22-unteachable-parts-of-data-science.html" />
+    <link href="https://vkaustubh.github.io/blog/geek/2018-04-22-unteachable-parts-of-data-science.html" />
     <author>
       <name>Kaustubh Vaghmare</name>
     </author>
