@@ -1,18 +1,18 @@
-<!DOCTYPE HTML>
-
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title> Welcome! </title>
+  <meta charset="UTF-8">
+  <title> Kaustubh's Home Page  </title>
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
 
-    <link rel="stylesheet" href="static/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="css/bootstrap-theme.min.css"> -->
-    <link rel="stylesheet" href="static/css/main.css">
-    <script type="text/javascript" src="static/js/jquery-3.2.0.min.js"></script>
-    <script type="text/javascript" src="static/js/bootstrap.min.js"></script>
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -21,71 +21,338 @@
 
       gtag('config', 'UA-120740166-1');
     </script>
-    
+
+    <link rel="stylesheet" href="static/css/main.css">
+  
+  <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
+   <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+<style>
+
+.bg-dark {
+    background-color: #000 !important;
+}
+  .jumbotron
+  {
+      background-color: #000;
+      color: white;
+      font-family: Open Sans;
+      margin-bottom: 0px;
+  }
+
+    .navbar
+  {
+    font-size: 20px;
+  }
+
+  html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  }
+
+  body
+  {
+      background: url(static/images/main_background.jpg); /* https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-143-1920x1200.jpg); /* url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-060-2560x1600.jpg); /*url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-039-1920x1080.jpg);*/
+    font-family: Raleway;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    position: relative;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato"
+  }
+
+   #spaceBeforeFooter {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+   }
+
+  footer {
+      padding-top: 1em;
+      background-color: #000;
+      color: white;
+      padding-bottom: 1em;
+      font-family: Raleway;
+   }
+
+   footer h2 {
+    padding-bottom: 0.2em;
+   }
+
+    footer img {
+        margin-left: 1.5em;
+    }
+    footer p {
+        font-size: 1.0em;
+    }
+
+
+
+  .overlay
+  {
+
+   background-color: white;
+   margin-top: -30px;
+   padding: 20px;
+   margin-bottom: 50px;
+
+  }
+
+  .card
+  {
+    min-height: 110px;
+    max-width: 400px;
+    color: #000;
+    /* background-color: #343a40*/;
+  }
+.card-img-top-custom {
+    width: 100%;
+    height: 15em;
+    object-fit: cover;
+}
+  .brand-name
+  {
+      font-family: Montserrat;
+      font-variant: small-caps;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FBF7F9 !important;
+      text-decoration: none;
+  }
+
+  .nav-item
+  {
+    font-family: Open Sans;
+    font-variant: small-caps;
+    color: white;
+  }
+
+  .customCard
+  {
+    margin-bottom: 20px;
+   }
+
+   .pointer
+   {
+   cursor: pointer;
+   }
+
+
+  .image-card
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+  }
+
+  .carousel-item {
+      color: black;
+      background-color: black !important;
+   }
+
+ .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ }
+
+ .nav-align-left {
+  margin-left: 15px;
+ }
+
+ .nav-align-right {
+  margin-right: 15px;
+ }
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item
+{
+  color: #fff;
+  background-color: #000;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  <!--border: 1px solid #fff;-->
+  padding: 10px;
+  font-size: 1em;
+}
+</style>
 </head>
 
 <body>
-
-    <div class="container banner">
-
-            <h1> Kaustubh Vaghmare </h1>
-            <h3> Data Scientist, IUCAA </h3>
+<div class="align-items-center" align="center">
+    <div class="d-lg-none navbar navbar-expand-lg bg-dark navbar-dark" >
+        <h2 class="navbar-brand brand-name" align="center">
+          Kaustubh Vaghmare's <br> <small> Home Page </small></h2>
     </div>
-
-    <div class="container navArea">
-         <nav class="navbar navbar-right">
-              <div class="container-fluid">
-               
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="index.html">Home</a></li>
-                    <li><a href="myself.html">Myself</a></li>
-                    <li><a href="https://vkaustubh.github.io/blog">Blog</a></li>
-                    <li><a href="work.html">Work</a></li>
-                  <li class="dropdown">
-                    <a class="dropdown-toggle" data-toggle="dropdown"
-                        href="#}}"> Academics
-                    <span class="caret"></span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="thesis.html">Thesis Summary</a></li>
-                        <li><a href="research.html">Research</a></li>
-                        <li><a href="publication.html">Publications</a></li>
-                        <li><a href="teaching.html">Teaching</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="resources.html">Resources</a></li>
-                  <li><a href="contact.html">Contact</a></li>
-                </ul>
-              </div>
-</nav>
-
+    <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark">
+      <h2 class="navbar-brand brand-name" style="margin-left: 0.5em; margin-top: 10px;">  Kaustubh Vaghmare's <br> <small>Home Page</small> </h2>
     </div>
+</div>
+<div >
 
-    <div class="container content">
-    
-            
+    <nav class="navbar navbar-expand-md navbar-light bg-faded bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                  <a class="nav-link" style="" href="index.html">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="myself.html">Myself</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="https://vkaustubh.github.io/blog">Blog</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="work.html">Work</a>
+                </li>
+
+                <li class="nav-item dropdown text-center">
+                    <a class="nav-link dropdown-toggle navbardrop" href="#" data-toggle="dropdown">Academics</a>
+                    <div class="dropdown-menu" >
+                      <a class="dropdown-item" href="thesis.html">Thesis Summary</a>
+                      <a class="dropdown-item" href="research.html">Research</a>
+                      <a class="dropdown-item" href="publication.html">Publications</a>
+                      <a class="dropdown-item" href="teaching.html" style=" margin-bottom: -0.5em;">Teaching</a>
+
+                    </div>
+                </li>
+
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="resources.html">Resources</a>
+                </li>
+
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="talks.html">Talks</a>
+                </li>
+
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
+  
 
 <div id='topimage'>
     <center>
         <img width='100%' src="static/images/galaxy.jpg">
     </center>
 </div>
+<br/>
+<h1> My Work</h1>
+<p> Here is a list of projects I have worked on. You can click on any card to
+know more details.</p>
+<br/>
+<div class="card-deck">
+  <div data-toggle="modal" data-target="#bardetection" class="card bg-primary">
+    <div class="card-body text-center">
+      <p class="card-text">Detection of Bars in Galaxies Using Deep Learning</p>
+    </div>
+  </div>
+  <div data-toggle="modal" data-target="#heyligo" class="card bg-warning">
+    <div class="card-body text-center">
+      <p class="card-text">Mining Observatory Logs Using Natural Language Processing</p>
+    </div>
+  </div>
+  <div data-toggle="modal" data-target="#kso" class="card bg-success">
+    <div class="card-body text-center">
+      <p class="card-text">Kodaikanal Solar Observatory Digitized Data</p>
+    </div>
+  </div>
+  <div data-toggle="modal" data-target="#biology" class="card bg-danger">
+    <div class="card-body text-center">
+      <p class="card-text">Data Archiving Solutions for Biological Data</p>
+    </div>
+  </div>
+</div>
+
+<br/>
+
+<div class="card-deck">
+  <div data-toggle="modal" data-target="#czti" class="card bg-primary">
+    <div class="card-body text-center">
+      <p class="card-text">The CZTI Data Management System</p>
+    </div>
+  </div>
+  <div data-toggle="modal" data-target="#crts" class="card bg-warning">
+    <div class="card-body text-center">
+      <p class="card-text">The Catalina Real-time Transient Survey</p>
+    </div>
+  </div>
+  <div data-toggle="modal" data-target="#dsfa" class="card bg-success">
+    <div class="card-body text-center">
+      <p class="card-text">The "Dark Skies for All" Portal</p>
+    </div>
+  </div>
+  <div data-toggle="modal" data-target="#alfresco" class="card bg-danger">
+    <div class="card-body text-center">
+      <p class="card-text">Leveraging Alfresco</p>
+    </div>
+  </div>
+</div>
 
 <br>
 
-<h1 id="table-of-contents">Table of Contents</h1>
-<ul>
-  <li><a href="#bar">Detection of Bars in Galaxies using Deep Learning</a></li>
-  <li><a href="#heyligo">Mining Observatory Logs using Natural Language
-          Processing</a></li>
-  <li><a href="#kso-dda">Kodaikanal Solar Observatory Digitized Data</a></li>
-  <li><a href="#biological"> Data Archiving Solutions for Biological Data </a></li>
-  <li><a href="#czti-dms"> The CZTI Data Management System</a></li>
-  <li><a href="#crts-web-app"> The Catalina Realtime Transient Survey </a></li>
-</ul>
 
 <br>
+<br>
+<br>
+<br>
+<br>
+<br>
 
-<h2 id="bar"> Detection of Bars in Galaxies using Deep Learning</h2>
+
+</div>
+
+<footer>
+
+    <div class="container">
+        <div align="center">
+          The web site has been created using Bootstrap, Flask/Frozen-Flask starting from a blank file. Background image courtesy of <a href="https://www.setaswall.com/">SetAsWell</a>. All rights reserved. Copyright &copy; 2019.
+        </div>
+    </div>
+
+</footer>
+
+
+<div class="modal" id="bardetection">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Detection of Bars in Galaxies using Deep Learning</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
 <p>Galaxies come in a wide variety of shapes. Some galaxies exhibit a
 bar like structure. Now, it turns out that this bar's gravitational field causes
 interesting changes in how a galaxy evolves. Thus it is very important fmor us to
@@ -99,11 +366,31 @@ specifically Convolutional Neural Networks to train a machine in cloassifying
 galaxies as barred or unbarred. The algorithm does a fantastic job with an
 accuracy of 94%. More details <a
     href="http://adsabs.harvard.edu/abs/2018MNRAS.477..894A"> here. </a></p>
+          
+      </div>
 
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
 
-<h2 id="heyligo"> Mining Observatory Logs using Natural Language
-          Processing</h2>
+    </div>
+  </div>
+</div>
 
+<div class="modal" id="heyligo">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Mining Observatory Logs using Natural Language
+          Processing</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
 <p> Observatories go through a relatively standard process of planning,
 approval, commissioning and testing. Problems are encountered in all these
 stages. Scientists record and share their observations and solutions in the form
@@ -115,8 +402,29 @@ them, is immense.</p>
 to help mine the logs of the LIGO (Laser Interferometer Gravitational wave
 Observatories) projects. The result - <a href="http://heyligo.gw.iucaa.in"> Hey
     Ligo!</a></p>
+      </div>
 
-<h2 id="kso-dda"> The Kodaikanal Digitized Data Archive </h2>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="kso">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+          <h4 class="modal-title">The Kodaikanal Digitized Data Archive </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
 
 <p> The Kodaikanal Solar observatory is operational since more than a century.
     Dedicated observers have been at work since 1904, imaging the sun using
@@ -152,8 +460,29 @@ Observatories) projects. The result - <a href="http://heyligo.gw.iucaa.in"> Hey
 <p>  You can visit the site at <a
         href="https://kso.iiap.res.in"> this link. </a> </p>
 
+      </div>
 
-<h2 id="biological"> Data Archiving Solutions for Biological Data </h2>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="biology">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Data Archiving Solutions for Biological Data</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
 
 <p> I am also working with colleages from Regional Centre of Biotechnology, at
     Faridabad to design data storage and dissemination solutions for large data
@@ -167,9 +496,29 @@ Observatories) projects. The result - <a href="http://heyligo.gw.iucaa.in"> Hey
 
 <p> The idea of this ongoing work is to adopt battle tested techniques from
     Astronomy and apply them to help organize biological data better. </b>
+      </div>
 
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
 
-<h2 id="czti-dms"> The CZTI Data Management System </h2>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="czti">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">The CZTI Data Management System</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
 
 <p> The Cadmium Zinc Telluride Image (CZTI) is one of five payloads onboard the
     Astrosat satellite, the first ever space telescope launched by India. The
@@ -192,8 +541,30 @@ Observatories) projects. The result - <a href="http://heyligo.gw.iucaa.in"> Hey
     new versions get created, one may dispose of these products knowing that
     should the need arise, the metadata can be used to reconstruct the product
     on demand. </p>
+      </div>
 
-<h2 id="crts-web-app"> The CRTS Image Archive </h2>
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="crts">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">The CRTS Image Archive</h4>
+
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
 
 <p> The Catalina Real-time Transient Survey is a collection of three telescopes
     which have operated over a period spanning more than a decade. The
@@ -219,27 +590,99 @@ Observatories) projects. The result - <a href="http://heyligo.gw.iucaa.in"> Hey
         accessed here. </a> </p>
 
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
+<div class="modal" id="dsfa">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">The "Dark Skies for All" Portal</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+          <p>The "Dark Skies For All" is an IAU 100 program which aims
+        at bringing people together to sensitivize people around the world to
+        the importance of preserving our dark skies. By reaching out to the
+        media, government agencies, colleges and institutes, the dark sky
+        ambassadors will try to achieve the goal of helping people preserve the
+        beauty of the night skies.</p>
+
+          <p>I led the team that constructed the portal for managing this program.
+          The portal can be accessed <a href="https://darkskies4all.org/">from this link.</a></p>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="alfresco">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Leveraging Alfresco</h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+          <p>The Office of Astronomy for Development (OAD) is a joint project of the
+        International Astronomical Union (IAU) and the South African National
+        Research Foundation (NRF) with the support of the Department of Science
+        and Technology (DST). The OAD primarily carries out its mission by
+        funding and coordinating projects that use astronomy as a tool to
+        address issues related to sustainable development. Since 2013, more
+        than 120 projects have been funded through the annual Call for
+        Proposals.</p>
+
+          <p>In the first part of the project, we helped the OAD adapt the Alfresco
+Enterprise Content Management system to manage their project sources. We then
+built an interface that enables users to search through materials produced by
+OAD's past funded projects. Users specify keywords in the primary search box.
+They can further narrow the search results using the filters for Project Title,
+Location, Year (of project implementation), and SDG (View the Sustainable
+Development Goals)</p>
+
+          <p> The interface may be accessed <a href="https://ddi.iucaa/in/OAD/">from this link</a>.</p>
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 
 
-        </div>
-
-        <div class="container footer">
-            <p> Copyright 2017. All rights reserved. </p>
-       </div>
 
 <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
-         data-toggle="tooltip" data-placement="left"><span class="glyphicon glyphicon-chevron-up"></span></a>
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon
+             glyphicon-chevron-up"> Up </span></a>
 
 <script src="static/js/scroll_top.js"></script>
 
 </body>
-
 </html>
