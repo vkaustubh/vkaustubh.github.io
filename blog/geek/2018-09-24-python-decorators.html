@@ -240,7 +240,7 @@
 <div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
   
 
-<div class="col-md-offset-1 col-md-8">
+<div class="col-lg-offset-1 col-lg-8">
     <h2>Python Decorators</h2>
     <span class="date"> Monday, 24 September, 2018</span>
     <div></div>
@@ -270,9 +270,9 @@ is - <strong>latter are callable</strong>.</p>
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="o">&lt;</span><span class="k">function</span> <span class="n">f</span> <span class="k">at</span> <span class="mi">0</span><span class="n">x7f667039d048</span><span class="o">&gt;</span>
-<span class="mi">5</span>
-<span class="o">&lt;</span><span class="k">class</span> <span class="s1">&#39;function&#39;</span><span class="o">&gt;</span>
+<div class="codehilite"><pre><span></span>&lt;function f at 0x7f667039d048&gt;
+5
+&lt;class &#39;function&#39;&gt;
 </pre></div>
 
 
@@ -291,7 +291,7 @@ functions are first class objects.</strong></p>
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="mi">5</span>
+<div class="codehilite"><pre><span></span>5
 </pre></div>
 
 
@@ -312,7 +312,7 @@ operator results in <code>g</code> now pointing to the same object. So, whether 
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="mi">9</span>
+<div class="codehilite"><pre><span></span>9
 </pre></div>
 
 
@@ -334,7 +334,7 @@ list, <code>map</code> then applies the function on every member of the list.</p
 
 <p> </p>
 
-<div class="codehilite"><pre><span></span><span class="mi">27</span>
+<div class="codehilite"><pre><span></span>27
 </pre></div>
 
 
@@ -351,15 +351,15 @@ it!</p>
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="c1">---------------------------------------------------------------------------</span>
+<div class="codehilite"><pre><span></span>---------------------------------------------------------------------------
 
-<span class="n">NameError</span>                                 <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="k">call</span> <span class="k">last</span><span class="p">)</span>
+NameError                                 Traceback (most recent call last)
 
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="k">input</span><span class="o">-</span><span class="mi">6</span><span class="o">-</span><span class="n">b523faf31d8e</span><span class="o">&gt;</span> <span class="k">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span><span class="p">()</span>
-<span class="c1">----&gt; 1 func(3)</span>
+&lt;ipython-input-6-b523faf31d8e&gt; in &lt;module&gt;()
+----&gt; 1 func(3)
 
 
-<span class="n">NameError</span><span class="p">:</span> <span class="n">name</span> <span class="s1">&#39;func&#39;</span> <span class="k">is</span> <span class="k">not</span> <span class="k">defined</span>
+NameError: name &#39;func&#39; is not defined
 </pre></div>
 
 
@@ -385,9 +385,9 @@ be placed inside a list.</p>
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="mi">20</span>
-<span class="mi">30</span>
-<span class="mi">40</span>
+<div class="codehilite"><pre><span></span>20
+30
+40
 </pre></div>
 
 
@@ -418,12 +418,12 @@ us how much time it took for executing the function. Let's see how we do this.</
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="n">Execution</span> <span class="n">Time</span> <span class="o">=</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">05740070343017578</span>
+<div class="codehilite"><pre><span></span>Execution Time =  0.05740070343017578
 </pre></div>
 
 
 <h3>Decorator Syntax</h3>
-<div class="codehilite"><pre><span></span><span class="n">myFunction</span> <span class="o">=</span> <span class="n">add_self_timing</span><span class="p">(</span><span class="n">myFunction</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>myFunction = add_self_timing(myFunction)
 </pre></div>
 
 
@@ -451,7 +451,7 @@ expression capability to the Python language).</p>
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="n">Execution</span> <span class="n">Time</span> <span class="o">=</span>  <span class="mi">0</span><span class="p">.</span><span class="mi">07813024520874023</span>
+<div class="codehilite"><pre><span></span>Execution Time =  0.07813024520874023
 </pre></div>
 
 
@@ -469,7 +469,7 @@ function object.</p>
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="p">[</span><span class="s1">&#39;__annotations__&#39;</span><span class="p">,</span> <span class="s1">&#39;__call__&#39;</span><span class="p">,</span> <span class="s1">&#39;__class__&#39;</span><span class="p">,</span> <span class="s1">&#39;__closure__&#39;</span><span class="p">,</span> <span class="s1">&#39;__code__&#39;</span><span class="p">,</span> <span class="s1">&#39;__defaults__&#39;</span><span class="p">,</span> <span class="s1">&#39;__delattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__dict__&#39;</span><span class="p">,</span> <span class="s1">&#39;__dir__&#39;</span><span class="p">,</span> <span class="s1">&#39;__doc__&#39;</span><span class="p">,</span> <span class="s1">&#39;__eq__&#39;</span><span class="p">,</span> <span class="s1">&#39;__format__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ge__&#39;</span><span class="p">,</span> <span class="s1">&#39;__get__&#39;</span><span class="p">,</span> <span class="s1">&#39;__getattribute__&#39;</span><span class="p">,</span> <span class="s1">&#39;__globals__&#39;</span><span class="p">,</span> <span class="s1">&#39;__gt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__hash__&#39;</span><span class="p">,</span> <span class="s1">&#39;__init__&#39;</span><span class="p">,</span> <span class="s1">&#39;__init_subclass__&#39;</span><span class="p">,</span> <span class="s1">&#39;__kwdefaults__&#39;</span><span class="p">,</span> <span class="s1">&#39;__le__&#39;</span><span class="p">,</span> <span class="s1">&#39;__lt__&#39;</span><span class="p">,</span> <span class="s1">&#39;__module__&#39;</span><span class="p">,</span> <span class="s1">&#39;__name__&#39;</span><span class="p">,</span> <span class="s1">&#39;__ne__&#39;</span><span class="p">,</span> <span class="s1">&#39;__new__&#39;</span><span class="p">,</span> <span class="s1">&#39;__qualname__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce__&#39;</span><span class="p">,</span> <span class="s1">&#39;__reduce_ex__&#39;</span><span class="p">,</span> <span class="s1">&#39;__repr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__setattr__&#39;</span><span class="p">,</span> <span class="s1">&#39;__sizeof__&#39;</span><span class="p">,</span> <span class="s1">&#39;__str__&#39;</span><span class="p">,</span> <span class="s1">&#39;__subclasshook__&#39;</span><span class="p">]</span>
+<div class="codehilite"><pre><span></span>[&#39;__annotations__&#39;, &#39;__call__&#39;, &#39;__class__&#39;, &#39;__closure__&#39;, &#39;__code__&#39;, &#39;__defaults__&#39;, &#39;__delattr__&#39;, &#39;__dict__&#39;, &#39;__dir__&#39;, &#39;__doc__&#39;, &#39;__eq__&#39;, &#39;__format__&#39;, &#39;__ge__&#39;, &#39;__get__&#39;, &#39;__getattribute__&#39;, &#39;__globals__&#39;, &#39;__gt__&#39;, &#39;__hash__&#39;, &#39;__init__&#39;, &#39;__init_subclass__&#39;, &#39;__kwdefaults__&#39;, &#39;__le__&#39;, &#39;__lt__&#39;, &#39;__module__&#39;, &#39;__name__&#39;, &#39;__ne__&#39;, &#39;__new__&#39;, &#39;__qualname__&#39;, &#39;__reduce__&#39;, &#39;__reduce_ex__&#39;, &#39;__repr__&#39;, &#39;__setattr__&#39;, &#39;__sizeof__&#39;, &#39;__str__&#39;, &#39;__subclasshook__&#39;]
 </pre></div>
 
 
@@ -480,7 +480,7 @@ function object.</p>
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="n">superBoy</span>
+<div class="codehilite"><pre><span></span>superBoy
 </pre></div>
 
 
@@ -505,7 +505,7 @@ function object.</p>
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="s1">&#39;new_guy&#39;</span>
+<div class="codehilite"><pre><span></span>&#39;new_guy&#39;
 </pre></div>
 
 
@@ -544,7 +544,7 @@ the same as the function being modified. Let's see an example.</p>
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="s1">&#39;myFunction4&#39;</span>
+<div class="codehilite"><pre><span></span>&#39;myFunction4&#39;
 </pre></div>
 
 
@@ -593,12 +593,12 @@ designing classes and indulging in OOP design. Let's see an example.</p>
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="n">Inside</span> <span class="k">method</span>
-<span class="p">(</span><span class="o">&lt;</span><span class="n">__main__</span><span class="p">.</span><span class="n">A</span> <span class="k">object</span> <span class="k">at</span> <span class="mi">0</span><span class="n">x7f66702c47b8</span><span class="o">&gt;</span><span class="p">,)</span>
-<span class="k">None</span>
-<span class="n">Inside</span> <span class="k">method</span>
-<span class="p">(</span><span class="o">&lt;</span><span class="n">__main__</span><span class="p">.</span><span class="n">A</span> <span class="k">object</span> <span class="k">at</span> <span class="mi">0</span><span class="n">x7f66702c47b8</span><span class="o">&gt;</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="k">None</span>
+<div class="codehilite"><pre><span></span>Inside method
+(&lt;__main__.A object at 0x7f66702c47b8&gt;,)
+None
+Inside method
+(&lt;__main__.A object at 0x7f66702c47b8&gt;, 2, 3, 4)
+None
 </pre></div>
 
 
@@ -621,12 +621,12 @@ context for being called. In other words, we want our method to be <strong>stati
 
 <p></p>
 
-<div class="codehilite"><pre><span></span><span class="n">Inside</span> <span class="k">method</span>
-<span class="p">()</span>
-<span class="k">None</span>
-<span class="n">Inside</span> <span class="k">method</span>
-<span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">)</span>
-<span class="k">None</span>
+<div class="codehilite"><pre><span></span>Inside method
+()
+None
+Inside method
+(2, 3, 4)
+None
 </pre></div>
 
 

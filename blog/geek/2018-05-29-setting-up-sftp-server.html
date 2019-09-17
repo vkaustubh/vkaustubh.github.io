@@ -240,7 +240,7 @@
 <div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
   
 
-<div class="col-md-offset-1 col-md-8">
+<div class="col-lg-offset-1 col-lg-8">
     <h2>Setting up a Chroot Jail SFTP Server</h2>
     <span class="date"> Tuesday, 29 May, 2018</span>
     <div></div>
@@ -323,25 +323,25 @@ stand-alone server.</p>
 <li>Take away their rights to access the graphical X11 server.</li>
 </ul>
 <p>This is achieved by adding the following lines in the 'sshd_config' file.</p>
-<div class="codehilite"><pre><span></span><span class="k">Match</span> <span class="k">Group</span> <span class="n">sftponly</span>
-        <span class="n">ChrootDirectory</span> <span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">sftpusers</span><span class="o">/%</span><span class="n">u</span>
-        <span class="n">ForceCommand</span> <span class="n">internal</span><span class="o">-</span><span class="n">sftp</span>
-        <span class="n">X11Forwarding</span> <span class="k">no</span>
-        <span class="n">AllowTcpForwarding</span> <span class="k">no</span>
+<div class="codehilite"><pre><span></span>Match Group sftponly
+        ChrootDirectory /data/sftpusers/%u
+        ForceCommand internal-sftp
+        X11Forwarding no
+        AllowTcpForwarding no
 </pre></div>
 
 
 <p>And finally, we restart our server to reflect the new additions/edits to the
 configuration file. Make sure the following command does not give you any error.</p>
-<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">init</span><span class="p">.</span><span class="n">d</span><span class="o">/</span><span class="n">ssh</span> <span class="k">restart</span>
+<div class="codehilite"><pre><span></span># /etc/init.d/ssh restart
 </pre></div>
 
 
 <p>Since we need users to belong to 'sftponly' group, let us create that group.
 Further, we are going to give a non-conventional home directory for each user
 i.e. '/data/sftpusers', so let's create that as well.</p>
-<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">groupadd</span> <span class="n">sftponly</span>
-<span class="o">#</span> <span class="n">mkdir</span> <span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">sftpusers</span>
+<div class="codehilite"><pre><span></span># groupadd sftponly
+# mkdir /data/sftpusers
 </pre></div>
 
 
@@ -352,15 +352,15 @@ could make a shell script out of the following commands. First step, creator the
 user. We use the '-m' to demand that the user's home directory be created
 automatically and the '-d' option to specify the home directory (since we need
 it to be something other than the usual '/home' directory).</p>
-<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">mkdir</span> <span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">sftpusers</span><span class="o">/</span><span class="n">abc</span>
-<span class="o">#</span> <span class="n">useradd</span> <span class="o">-</span><span class="n">d</span> <span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">sftpusers</span><span class="o">/</span><span class="n">abc</span> <span class="n">abc</span>
+<div class="codehilite"><pre><span></span># mkdir /data/sftpusers/abc
+# useradd -d /data/sftpusers/abc abc
 </pre></div>
 
 
 <p>Add the user to sftponly group and also deny them any default shell (so that
 they cannot control the command line once logged in this machine),</p>
-<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">useradd</span> <span class="o">-</span><span class="k">g</span> <span class="n">sftponly</span> <span class="n">abc</span>
-<span class="o">#</span> <span class="n">usermod</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="n">bin</span><span class="o">/</span><span class="k">false</span> <span class="n">abc</span>
+<div class="codehilite"><pre><span></span># useradd -g sftponly abc
+# usermod -s /bin/false abc
 </pre></div>
 
 
@@ -368,7 +368,7 @@ they cannot control the command line once logged in this machine),</p>
 be under the ownership of the root. So, '/data/sftpusers/abc' should be owned by
 the root. If you created this directory as a root, this should already be the
 case else you can change the ownership easily by saying,</p>
-<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">chown</span> <span class="n">root</span><span class="p">:</span><span class="n">root</span> <span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">sftpusers</span><span class="o">/</span><span class="n">abc</span>
+<div class="codehilite"><pre><span></span># chown root:root /data/sftpusers/abc
 </pre></div>
 
 
@@ -376,13 +376,13 @@ case else you can change the ownership easily by saying,</p>
 will serve as the jail be owned by the root, we have left no place where the
 user in question will have write access! So, let's create a mock home directory
 for the user within the folder and make the user its owner.</p>
-<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">mkdir</span> <span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">sftpusers</span><span class="o">/</span><span class="n">abc</span><span class="o">/</span><span class="n">abc</span>
-<span class="o">#</span> <span class="n">chown</span> <span class="n">abc</span><span class="p">:</span><span class="n">abc</span> <span class="o">/</span><span class="k">data</span><span class="o">/</span><span class="n">sftpusers</span><span class="o">/</span><span class="n">abc</span><span class="o">/</span><span class="n">abc</span>
+<div class="codehilite"><pre><span></span># mkdir /data/sftpusers/abc/abc
+# chown abc:abc /data/sftpusers/abc/abc
 </pre></div>
 
 
 <p>Final step is set a password for the user.</p>
-<div class="codehilite"><pre><span></span><span class="o">#</span> <span class="n">passwd</span> <span class="n">abc</span>
+<div class="codehilite"><pre><span></span># passwd abc
 </pre></div>
 
 

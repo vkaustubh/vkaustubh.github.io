@@ -240,7 +240,7 @@
 <div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
   
 
-<div class="col-md-offset-1 col-md-8">
+<div class="col-lg-offset-1 col-lg-8">
     <h2>Git Rebase vs Merge</h2>
     <span class="date"> Friday, 24 May, 2019</span>
     <div></div>
@@ -430,24 +430,24 @@ rebase.</p>
 
 
 <p>This should open your text editor with the following lines.</p>
-<div class="codehilite"><pre><span></span><span class="n">pick</span> <span class="mi">0113</span><span class="n">eaa</span> <span class="n">F1</span> <span class="k">commit</span> <span class="mi">1</span>                                                                                                           
-<span class="n">pick</span> <span class="n">ce0b8d6</span> <span class="n">F1</span> <span class="k">commit</span> <span class="mi">2</span>
-<span class="n">pick</span> <span class="mi">87</span><span class="n">a8ccc</span> <span class="n">F1</span> <span class="k">commit</span> <span class="mi">3</span>
-<span class="n">pick</span> <span class="mi">3745903</span> <span class="n">F2</span> <span class="k">commit</span> <span class="mi">1</span>
-<span class="n">pick</span> <span class="n">e9f3442</span> <span class="n">F2</span> <span class="k">commit</span> <span class="mi">2</span>
-<span class="n">pick</span> <span class="mi">113</span><span class="n">cec7</span> <span class="n">F2</span> <span class="k">commit</span> <span class="mi">3</span>
-<span class="n">pick</span> <span class="n">afad226</span> <span class="n">F3</span> <span class="k">commit</span> <span class="mi">1</span>
-<span class="n">pick</span> <span class="mi">5787</span><span class="n">d0a</span> <span class="n">F3</span> <span class="k">commit</span> <span class="mi">2</span>
-<span class="n">pick</span> <span class="n">ab3cb39</span> <span class="n">F3</span> <span class="k">commit</span> <span class="mi">3</span>
+<div class="codehilite"><pre><span></span>pick 0113eaa F1 commit 1                                                                                                           
+pick ce0b8d6 F1 commit 2
+pick 87a8ccc F1 commit 3
+pick 3745903 F2 commit 1
+pick e9f3442 F2 commit 2
+pick 113cec7 F2 commit 3
+pick afad226 F3 commit 1
+pick 5787d0a F3 commit 2
+pick ab3cb39 F3 commit 3
 </pre></div>
 
 
 <p>We can delete the lines corresponding to those commits which are not a part of
 the original f3 branch before it was rebased.</p>
 <p>So, our final set of lines look like.</p>
-<div class="codehilite"><pre><span></span><span class="n">pick</span> <span class="n">afad226</span> <span class="n">F3</span> <span class="k">commit</span> <span class="mi">1</span>
-<span class="n">pick</span> <span class="mi">5787</span><span class="n">d0a</span> <span class="n">F3</span> <span class="k">commit</span> <span class="mi">2</span>
-<span class="n">pick</span> <span class="n">ab3cb39</span> <span class="n">F3</span> <span class="k">commit</span> <span class="mi">3</span>
+<div class="codehilite"><pre><span></span>pick afad226 F3 commit 1
+pick 5787d0a F3 commit 2
+pick ab3cb39 F3 commit 3
 </pre></div>
 
 

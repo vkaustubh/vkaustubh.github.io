@@ -240,7 +240,7 @@
 <div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
   
 
-<div class="col-md-offset-1 col-md-8">
+<div class="col-lg-offset-1 col-lg-8">
     <h2>Towards using GPG For Security - Part 1</h2>
     <span class="date"> Wednesday, 20 February, 2019</span>
     <div></div>
@@ -327,9 +327,9 @@ discovers this and downloads it. As he peruses the material, he grows a little
 suspicious. Did Alice really write this? It doesn't sound like her. How does Bob
 verify the content in front of him is indeed Alice's?</p>
 <p>Enter checksums. Consider the following text.</p>
-<div class="codehilite"><pre><span></span><span class="n">Hello</span> <span class="n">World</span><span class="o">!</span>
-<span class="n">I</span> <span class="n">am</span> <span class="n">Alice</span><span class="p">.</span> <span class="n">Find</span> <span class="n">Mallory</span><span class="p">.</span>
-<span class="n">Kill</span> <span class="n">him</span> <span class="k">not</span><span class="p">,</span> <span class="n">keep</span> <span class="n">him</span> <span class="n">alive</span><span class="o">!</span>
+<div class="codehilite"><pre><span></span>Hello World!
+I am Alice. Find Mallory.
+Kill him not, keep him alive!
 </pre></div>
 
 
@@ -347,9 +347,9 @@ is what we mean by checksums being irreversible. The second important property
 of checksums is that the slightest change in the contents results in a
 completely different checksum. Consider a subtly different version of the same
 message by Alice.</p>
-<div class="codehilite"><pre><span></span><span class="n">Hello</span> <span class="n">World</span><span class="o">!</span>
-<span class="n">I</span> <span class="n">am</span> <span class="n">Alice</span><span class="p">.</span> <span class="n">Find</span> <span class="n">Mallory</span><span class="p">.</span>
-<span class="n">Kill</span> <span class="n">him</span><span class="p">,</span> <span class="k">not</span> <span class="n">keep</span> <span class="n">him</span> <span class="n">alive</span><span class="o">!</span>
+<div class="codehilite"><pre><span></span>Hello World!
+I am Alice. Find Mallory.
+Kill him, not keep him alive!
 </pre></div>
 
 

@@ -240,7 +240,7 @@
 <div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
   
 
-<div class="col-md-offset-1 col-md-8">
+<div class="col-lg-offset-1 col-lg-8">
     <h2>Towards using GPG For Security - Part 2</h2>
     <span class="date"> Wednesday, 20 February, 2019</span>
     <div></div>
@@ -255,20 +255,20 @@ installed. The use of Linux command line is also assumed but my best guess is
 that the commands shouldn't change much on the Windows command line. Of course,
 the notation for file path will be different. To verify,</p>
 <p><code>$ gpg2 --version</code></p>
-<div class="codehilite"><pre><span></span><span class="n">gpg</span> <span class="p">(</span><span class="n">GnuPG</span><span class="p">)</span> <span class="mi">2</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">10</span>
-<span class="n">libgcrypt</span> <span class="mi">1</span><span class="p">.</span><span class="mi">8</span><span class="p">.</span><span class="mi">4</span>
-<span class="n">Copyright</span> <span class="p">(</span><span class="k">C</span><span class="p">)</span> <span class="mi">2018</span> <span class="k">Free</span> <span class="n">Software</span> <span class="n">Foundation</span><span class="p">,</span> <span class="n">Inc</span><span class="p">.</span>
-<span class="n">License</span> <span class="n">GPLv3</span><span class="o">+</span><span class="p">:</span> <span class="n">GNU</span> <span class="n">GPL</span> <span class="k">version</span> <span class="mi">3</span> <span class="k">or</span> <span class="n">later</span> <span class="o">&lt;</span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">gnu</span><span class="p">.</span><span class="n">org</span><span class="o">/</span><span class="n">licenses</span><span class="o">/</span><span class="n">gpl</span><span class="p">.</span><span class="n">html</span><span class="o">&gt;</span>
-<span class="n">This</span> <span class="k">is</span> <span class="k">free</span> <span class="n">software</span><span class="p">:</span> <span class="n">you</span> <span class="k">are</span> <span class="k">free</span> <span class="k">to</span> <span class="n">change</span> <span class="k">and</span> <span class="n">redistribute</span> <span class="n">it</span><span class="p">.</span>
-<span class="n">There</span> <span class="k">is</span> <span class="k">NO</span> <span class="n">WARRANTY</span><span class="p">,</span> <span class="k">to</span> <span class="n">the</span> <span class="n">extent</span> <span class="n">permitted</span> <span class="k">by</span> <span class="n">law</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span>gpg (GnuPG) 2.2.10
+libgcrypt 1.8.4
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later &lt;https://gnu.org/licenses/gpl.html&gt;
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
 
-<span class="n">Home</span><span class="p">:</span> <span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">kaustubh</span><span class="o">/</span><span class="p">.</span><span class="n">gnupg</span>
-<span class="n">Supported</span> <span class="n">algorithms</span><span class="p">:</span>
-<span class="n">Pubkey</span><span class="p">:</span> <span class="n">RSA</span><span class="p">,</span> <span class="n">ELG</span><span class="p">,</span> <span class="n">DSA</span><span class="p">,</span> <span class="n">ECDH</span><span class="p">,</span> <span class="n">ECDSA</span><span class="p">,</span> <span class="n">EDDSA</span>
-<span class="n">Cipher</span><span class="p">:</span> <span class="n">IDEA</span><span class="p">,</span> <span class="mi">3</span><span class="n">DES</span><span class="p">,</span> <span class="n">CAST5</span><span class="p">,</span> <span class="n">BLOWFISH</span><span class="p">,</span> <span class="n">AES</span><span class="p">,</span> <span class="n">AES192</span><span class="p">,</span> <span class="n">AES256</span><span class="p">,</span> <span class="n">TWOFISH</span><span class="p">,</span>
-        <span class="n">CAMELLIA128</span><span class="p">,</span> <span class="n">CAMELLIA192</span><span class="p">,</span> <span class="n">CAMELLIA256</span>
-<span class="n">Hash</span><span class="p">:</span> <span class="n">SHA1</span><span class="p">,</span> <span class="n">RIPEMD160</span><span class="p">,</span> <span class="n">SHA256</span><span class="p">,</span> <span class="n">SHA384</span><span class="p">,</span> <span class="n">SHA512</span><span class="p">,</span> <span class="n">SHA224</span>
-<span class="n">Compression</span><span class="p">:</span> <span class="n">Uncompressed</span><span class="p">,</span> <span class="n">ZIP</span><span class="p">,</span> <span class="n">ZLIB</span><span class="p">,</span> <span class="n">BZIP2</span>
+Home: /home/kaustubh/.gnupg
+Supported algorithms:
+Pubkey: RSA, ELG, DSA, ECDH, ECDSA, EDDSA
+Cipher: IDEA, 3DES, CAST5, BLOWFISH, AES, AES192, AES256, TWOFISH,
+        CAMELLIA128, CAMELLIA192, CAMELLIA256
+Hash: SHA1, RIPEMD160, SHA256, SHA384, SHA512, SHA224
+Compression: Uncompressed, ZIP, ZLIB, BZIP2
 </pre></div>
 
 
@@ -278,24 +278,24 @@ we will be sharing the public key with the world, we will need to share some
 identification information along with it. This way we make it easier for people
 to keep track of our public key in their database. Let's do that now.</p>
 <p><code>$ gpg2 --full-generate-key</code></p>
-<div class="codehilite"><pre><span></span><span class="n">gpg</span> <span class="p">(</span><span class="n">GnuPG</span><span class="p">)</span> <span class="mi">2</span><span class="p">.</span><span class="mi">2</span><span class="p">.</span><span class="mi">10</span><span class="p">;</span> <span class="n">Copyright</span> <span class="p">(</span><span class="k">C</span><span class="p">)</span> <span class="mi">2018</span> <span class="k">Free</span> <span class="n">Software</span> <span class="n">Foundation</span><span class="p">,</span> <span class="n">Inc</span><span class="p">.</span>
-<span class="n">This</span> <span class="k">is</span> <span class="k">free</span> <span class="n">software</span><span class="p">:</span> <span class="n">you</span> <span class="k">are</span> <span class="k">free</span> <span class="k">to</span> <span class="n">change</span> <span class="k">and</span> <span class="n">redistribute</span> <span class="n">it</span><span class="p">.</span>
-<span class="n">There</span> <span class="k">is</span> <span class="k">NO</span> <span class="n">WARRANTY</span><span class="p">,</span> <span class="k">to</span> <span class="n">the</span> <span class="n">extent</span> <span class="n">permitted</span> <span class="k">by</span> <span class="n">law</span><span class="p">.</span>
+<div class="codehilite"><pre><span></span>gpg (GnuPG) 2.2.10; Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.
 
-<span class="n">Please</span> <span class="k">select</span> <span class="n">what</span> <span class="n">kind</span> <span class="k">of</span> <span class="k">key</span> <span class="n">you</span> <span class="n">want</span><span class="p">:</span>
-   <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="n">RSA</span> <span class="k">and</span> <span class="n">RSA</span> <span class="p">(</span><span class="k">default</span><span class="p">)</span>
-   <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="n">DSA</span> <span class="k">and</span> <span class="n">Elgamal</span>
-   <span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="n">DSA</span> <span class="p">(</span><span class="n">sign</span> <span class="k">only</span><span class="p">)</span>
-   <span class="p">(</span><span class="mi">4</span><span class="p">)</span> <span class="n">RSA</span> <span class="p">(</span><span class="n">sign</span> <span class="k">only</span><span class="p">)</span>
-<span class="n">Your</span> <span class="n">selection</span><span class="o">?</span>
+Please select what kind of key you want:
+   (1) RSA and RSA (default)
+   (2) DSA and Elgamal
+   (3) DSA (sign only)
+   (4) RSA (sign only)
+Your selection?
 </pre></div>
 
 
 <p>So, we are being asked to choose the algorithm to be used for the generation of
 the key. If you have no idea how to choose and/or the differences between the
 options, it's best to choose the default option. Press Enter.</p>
-<div class="codehilite"><pre><span></span><span class="nv">RSA</span> <span class="nv">keys</span> <span class="nv">may</span> <span class="nv">be</span> <span class="nv">between</span> <span class="mi">1024</span> <span class="nv">and</span> <span class="mi">4096</span> <span class="nv">bits</span> <span class="nv">long</span>.
-<span class="nv">What</span> <span class="nv">keysize</span> <span class="k">do</span> <span class="nv">you</span> <span class="nv">want</span>? <span class="ss">(</span><span class="mi">3072</span><span class="ss">)</span>
+<div class="codehilite"><pre><span></span>RSA keys may be between 1024 and 4096 bits long.
+What keysize do you want? (3072)
 </pre></div>
 
 
@@ -304,22 +304,22 @@ stronger the protection. But this also means longer times in terms of
 computations needed for encryption and decryption process. But with today's
 hardware, I'd imagine it should be fine to choose the highest. Here, I am using
 the default option on my machine - 3072.</p>
-<div class="codehilite"><pre><span></span><span class="nv">Requested</span> <span class="nv">keysize</span> <span class="nv">is</span> <span class="mi">3072</span> <span class="nv">bits</span>
-<span class="nv">Please</span> <span class="nv">specify</span> <span class="nv">how</span> <span class="nv">long</span> <span class="nv">the</span> <span class="nv">key</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">valid</span>.
-         <span class="mi">0</span> <span class="o">=</span> <span class="nv">key</span> <span class="nv">does</span> <span class="nv">not</span> <span class="nv">expire</span>
-      <span class="o">&lt;</span><span class="nv">n</span><span class="o">&gt;</span>  <span class="o">=</span> <span class="nv">key</span> <span class="nv">expires</span> <span class="nv">in</span> <span class="nv">n</span> <span class="nv">days</span>
-      <span class="o">&lt;</span><span class="nv">n</span><span class="o">&gt;</span><span class="nv">w</span> <span class="o">=</span> <span class="nv">key</span> <span class="nv">expires</span> <span class="nv">in</span> <span class="nv">n</span> <span class="nv">weeks</span>
-      <span class="o">&lt;</span><span class="nv">n</span><span class="o">&gt;</span><span class="nv">m</span> <span class="o">=</span> <span class="nv">key</span> <span class="nv">expires</span> <span class="nv">in</span> <span class="nv">n</span> <span class="nv">months</span>
-      <span class="o">&lt;</span><span class="nv">n</span><span class="o">&gt;</span><span class="nv">y</span> <span class="o">=</span> <span class="nv">key</span> <span class="nv">expires</span> <span class="nv">in</span> <span class="nv">n</span> <span class="nv">years</span>
-<span class="nv">Key</span> <span class="nv">is</span> <span class="nv">valid</span> <span class="k">for</span>? <span class="ss">(</span><span class="mi">0</span><span class="ss">)</span>
+<div class="codehilite"><pre><span></span>Requested keysize is 3072 bits
+Please specify how long the key should be valid.
+         0 = key does not expire
+      &lt;n&gt;  = key expires in n days
+      &lt;n&gt;w = key expires in n weeks
+      &lt;n&gt;m = key expires in n months
+      &lt;n&gt;y = key expires in n years
+Key is valid for? (0)
 </pre></div>
 
 
 <p>Next, we need to specify the expiry date of our key. While is it allowed to have
 a key that never expires, it is recommended by security experts to specify a
 period between 1 to 3 years. To choose 2 years, say <code>2y</code> and press Enter.</p>
-<div class="codehilite"><pre><span></span><span class="k">Key</span> <span class="n">expires</span> <span class="k">at</span> <span class="n">Friday</span> <span class="mi">19</span> <span class="n">February</span> <span class="mi">2021</span> <span class="mi">11</span><span class="p">:</span><span class="mi">43</span><span class="p">:</span><span class="mi">31</span> <span class="n">AM</span> <span class="n">IST</span>
-<span class="k">Is</span> <span class="n">this</span> <span class="n">correct</span><span class="o">?</span> <span class="p">(</span><span class="n">y</span><span class="o">/</span><span class="n">N</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span>Key expires at Friday 19 February 2021 11:43:31 AM IST
+Is this correct? (y/N)
 </pre></div>
 
 
@@ -377,29 +377,29 @@ following command and its associated output explains the procedure for creating
 a revocation certificate. You may be asked for a password to generate this
 certificate (assuming you provided one when creating the pair).</p>
 <p><code>$ gpg2 --output test.rev.asc --gen-revoke test@demo.com</code></p>
-<div class="codehilite"><pre><span></span><span class="nv">Create</span> <span class="nv">a</span> <span class="nv">revocation</span> <span class="nv">certificate</span> <span class="k">for</span> <span class="nv">this</span> <span class="nv">key</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">y</span>
-<span class="nv">Please</span> <span class="nv">select</span> <span class="nv">the</span> <span class="nv">reason</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">revocation</span>:
-  <span class="mi">0</span> <span class="o">=</span> <span class="nv">No</span> <span class="nv">reason</span> <span class="nv">specified</span>
-  <span class="mi">1</span> <span class="o">=</span> <span class="nv">Key</span> <span class="nv">has</span> <span class="nv">been</span> <span class="nv">compromised</span>
-  <span class="mi">2</span> <span class="o">=</span> <span class="nv">Key</span> <span class="nv">is</span> <span class="nv">superseded</span>
-  <span class="mi">3</span> <span class="o">=</span> <span class="nv">Key</span> <span class="nv">is</span> <span class="nv">no</span> <span class="nv">longer</span> <span class="nv">used</span>
-  <span class="nv">Q</span> <span class="o">=</span> <span class="nv">Cancel</span>
-<span class="ss">(</span><span class="nv">Probably</span> <span class="nv">you</span> <span class="nv">want</span> <span class="nv">to</span> <span class="nv">select</span> <span class="mi">1</span> <span class="nv">here</span><span class="ss">)</span>
-<span class="nv">Your</span> <span class="nv">decision</span>? <span class="mi">0</span>
-<span class="nv">Enter</span> <span class="nv">an</span> <span class="nv">optional</span> <span class="nv">description</span><span class="c1">; end it with an empty line:</span>
-<span class="o">&gt;</span> <span class="nv">Emergency</span>
-<span class="o">&gt;</span> 
-<span class="nv">Reason</span> <span class="k">for</span> <span class="nv">revocation</span>: <span class="nv">No</span> <span class="nv">reason</span> <span class="nv">specified</span>
-<span class="nv">Emergency</span>
-<span class="nv">Is</span> <span class="nv">this</span> <span class="nv">okay</span>? <span class="ss">(</span><span class="nv">y</span><span class="o">/</span><span class="nv">N</span><span class="ss">)</span> <span class="nv">y</span>
-<span class="nv">ASCII</span> <span class="nv">armored</span> <span class="nv">output</span> <span class="nv">forced</span>.
-<span class="nv">Revocation</span> <span class="nv">certificate</span> <span class="nv">created</span>.
+<div class="codehilite"><pre><span></span>Create a revocation certificate for this key? (y/N) y
+Please select the reason for the revocation:
+  0 = No reason specified
+  1 = Key has been compromised
+  2 = Key is superseded
+  3 = Key is no longer used
+  Q = Cancel
+(Probably you want to select 1 here)
+Your decision? 0
+Enter an optional description; end it with an empty line:
+&gt; Emergency
+&gt; 
+Reason for revocation: No reason specified
+Emergency
+Is this okay? (y/N) y
+ASCII armored output forced.
+Revocation certificate created.
 
-<span class="nv">Please</span> <span class="nv">move</span> <span class="nv">it</span> <span class="nv">to</span> <span class="nv">a</span> <span class="nv">medium</span> <span class="nv">which</span> <span class="nv">you</span> <span class="nv">can</span> <span class="nv">hide</span> <span class="nv">away</span><span class="c1">; if Mallory gets</span>
-<span class="nv">access</span> <span class="nv">to</span> <span class="nv">this</span> <span class="nv">certificate</span> <span class="nv">he</span> <span class="nv">can</span> <span class="nv">use</span> <span class="nv">it</span> <span class="nv">to</span> <span class="nv">make</span> <span class="nv">your</span> <span class="nv">key</span> <span class="nv">unusable</span>.
-<span class="nv">It</span> <span class="nv">is</span> <span class="nv">smart</span> <span class="nv">to</span> <span class="nv">print</span> <span class="nv">this</span> <span class="nv">certificate</span> <span class="nv">and</span> <span class="nv">store</span> <span class="nv">it</span> <span class="nv">away</span>, <span class="nv">just</span> <span class="nv">in</span> <span class="nv">case</span>
-<span class="nv">your</span> <span class="nv">media</span> <span class="nv">become</span> <span class="nv">unreadable</span>.  <span class="nv">But</span> <span class="nv">have</span> <span class="nv">some</span> <span class="nv">caution</span>:  <span class="nv">The</span> <span class="nv">print</span> <span class="nv">system</span> <span class="nv">of</span>
-<span class="nv">your</span> <span class="nv">machine</span> <span class="nv">might</span> <span class="nv">store</span> <span class="nv">the</span> <span class="nv">data</span> <span class="nv">and</span> <span class="nv">make</span> <span class="nv">it</span> <span class="nv">available</span> <span class="nv">to</span> <span class="nv">others</span><span class="o">!</span>
+Please move it to a medium which you can hide away; if Mallory gets
+access to this certificate he can use it to make your key unusable.
+It is smart to print this certificate and store it away, just in case
+your media become unreadable.  But have some caution:  The print system of
+your machine might store the data and make it available to others!
 </pre></div>
 
 
@@ -443,10 +443,10 @@ best method. Let's see a better method.</p>
 file being generated.</p>
 <p><strong>So how do we verify a signature?</strong></p>
 <p><code>$ gpg2 --verify message.sig message.txt</code></p>
-<div class="codehilite"><pre><span></span><span class="nv">gpg</span>: <span class="nv">Signature</span> <span class="nv">made</span> <span class="nv">Wednesday</span> <span class="mi">20</span> <span class="nv">February</span> <span class="mi">2019</span> <span class="mi">12</span>:<span class="mi">42</span>:<span class="mi">29</span> <span class="nv">PM</span> <span class="nv">IST</span>
-<span class="nv">gpg</span>:                <span class="nv">using</span> <span class="nv">RSA</span> <span class="nv">key</span> <span class="mi">2</span><span class="nv">BD08C0C8FBA6B435BC88C7DBA5A224BE8B35A34</span>
-<span class="nv">gpg</span>:                <span class="nv">issuer</span> <span class="s2">&quot;</span><span class="s">test@demo.com</span><span class="s2">&quot;</span>
-<span class="nv">gpg</span>: <span class="nv">Good</span> <span class="nv">signature</span> <span class="nv">from</span> <span class="s2">&quot;</span><span class="s">Test User (A test key pair for demo.) &lt;test@demo.com&gt;</span><span class="s2">&quot;</span> [<span class="nv">ultimate</span>]
+<div class="codehilite"><pre><span></span><span class="n">gpg</span><span class="o">:</span> <span class="n">Signature</span> <span class="n">made</span> <span class="n">Wednesday</span> <span class="mi">20</span> <span class="n">February</span> <span class="mi">2019</span> <span class="mi">12</span><span class="o">:</span><span class="mi">42</span><span class="o">:</span><span class="mi">29</span> <span class="n">PM</span> <span class="n">IST</span>
+<span class="n">gpg</span><span class="o">:</span>                <span class="n">using</span> <span class="n">RSA</span> <span class="n">key</span> <span class="mi">2</span><span class="n">BD08C0C8FBA6B435BC88C7DBA5A224BE8B35A34</span>
+<span class="n">gpg</span><span class="o">:</span>                <span class="n">issuer</span> <span class="s2">&quot;test@demo.com&quot;</span>
+<span class="n">gpg</span><span class="o">:</span> <span class="n">Good</span> <span class="n">signature</span> <span class="n">from</span> <span class="s2">&quot;Test User (A test key pair for demo.) &lt;test@demo.com&gt;&quot;</span> <span class="o">[</span><span class="n">ultimate</span><span class="o">]</span>
 </pre></div>
 
 
