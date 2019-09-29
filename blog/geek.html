@@ -19,15 +19,19 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
 
-    <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/main.css">
   
   <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
   <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
-   <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-<link rel="stylesheet" href="pygments.css">
+  <link rel="stylesheet" href="pygments.css">
+
+  <!-- Script for working MathJax for Equations Inside Blog -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
@@ -276,7 +280,7 @@ to you all.</p>
 <br>
 
     <script>
-        var pages = $.parseJSON("[{\"title\": \"Git Rebase vs Merge\", \"date\": \"24 May, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-05-24-rebase-vs-master.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Securing Your (Web) E-mail with GPG\", \"date\": \"28 February, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-02-28-securing-email-communications.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Towards using GPG For Security - Part 2\", \"date\": \"20 February, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-02-20-gpg-2.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Towards using GPG For Security - Part 1\", \"date\": \"20 February, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-02-20-gpg-1.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Python Decorators\", \"date\": \"24 September, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-09-24-python-decorators.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Scary Scale of Ten\", \"date\": \"20 September, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-09-20-the-scary-scale-of-ten.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"When are APIs RESTful?\", \"date\": \"01 June, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-06-02-rest-api.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Setting up a Chroot Jail SFTP Server\", \"date\": \"29 May, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-05-29-setting-up-sftp-server.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Unteachable Parts of Data Science\", \"date\": \"22 February, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-04-22-unteachable-parts-of-data-science.html\u0027\u003e Read \u003c/a\u003e\"}]");
+        var pages = $.parseJSON("[{\"title\": \"Checking Generalization Without Test and Validation Sets\", \"date\": \"29 September, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-09-29-generalization-without-test-set.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Git Rebase vs Merge\", \"date\": \"24 May, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-05-24-rebase-vs-master.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Securing Your (Web) E-mail with GPG\", \"date\": \"28 February, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-02-28-securing-email-communications.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Towards using GPG For Security - Part 2\", \"date\": \"20 February, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-02-20-gpg-2.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Towards using GPG For Security - Part 1\", \"date\": \"20 February, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-02-20-gpg-1.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Python Decorators\", \"date\": \"24 September, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-09-24-python-decorators.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Scary Scale of Ten\", \"date\": \"20 September, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-09-20-the-scary-scale-of-ten.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"When are APIs RESTful?\", \"date\": \"01 June, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-06-02-rest-api.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Setting up a Chroot Jail SFTP Server\", \"date\": \"29 May, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-05-29-setting-up-sftp-server.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"The Unteachable Parts of Data Science\", \"date\": \"22 February, 2018\", \"path\": \"\u003ca href=\u0027geek/2018-04-22-unteachable-parts-of-data-science.html\u0027\u003e Read \u003c/a\u003e\"}]");
         $("#bloglist").DataTable({
             data: pages,
             columns: [
@@ -311,6 +315,18 @@ to you all.</p>
 
 <script src="static/js/scroll_top.js"></script>
 
+<!-- Configuration for MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
 
 </body>
 </html>

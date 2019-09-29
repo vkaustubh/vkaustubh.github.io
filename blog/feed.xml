@@ -7,6 +7,16 @@
   <link href="https://vkaustubh.github.io/blog/feed.xml" rel="self" />
   <generator>Werkzeug</generator>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
+    <title type="text">Checking Generalization Without Test and Validation Sets</title>
+    <id>https://vkaustubh.github.io/blog/geek/2019-09-29-generalization-without-test-set.html</id>
+    <updated>2019-09-29T00:00:00Z</updated>
+    <link href="https://vkaustubh.github.io/blog/geek/2019-09-29-generalization-without-test-set.html" />
+    <author>
+      <name>Kaustubh Vaghmare</name>
+    </author>
+    <content type="html">For Machine Learning folks, who generally bypass a proper detailed course on statistics. A surprisingly old but very important technique for verifying the 'generalizability' of a model.</content>
+  </entry>
+  <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Accountability, Transparency And Consequence</title>
     <id>https://vkaustubh.github.io/blog/general/2019-09-29-accountability-transparency-consequence.html</id>
     <updated>2019-09-29T00:00:00Z</updated>

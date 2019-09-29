@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   
-<title> The Real Value of Human Life </title>
+<title> Checking Generalization Without Test and Validation Sets </title>
 
 
 
@@ -250,62 +250,99 @@
   
 
 <div class="col-lg-offset-1 col-lg-8">
-    <h2>The Real Value of Human Life</h2>
-    <span class="date"> Saturday, 19 June, 2010</span>
+    <h2>Checking Generalization Without Test and Validation Sets</h2>
+    <span class="date"> Sunday, 29 September, 2019</span>
     <div></div>
     <br/>
 
-    <p>“How can you possibly value the life of a few terrorists more than the life of a
-hundred and fifty people on board the plane?” These were the words of the
-relatives of the 150 passengers on board the IC814 plane. IC814? It is easy to
-forget, so let me remind you. This was the name of the plane that was hijacked
-several years ago and was stranded in the Kandahar airport in Aghanistan. No,
-don’t worry, this is not another article on the problem of terrorism which our
-country is in no mood to think about.</p>
-<p>But when my thoughts wonder about the real value of human life I inevitably
-remember this incident. For it literally is a perfect example of how what value
-human life has in the world today. Think about it, 500 soldiers left behind
-weeping widows and children to capture some brainwashed bas****s only to keep
-them alive and feed them with tax payer’s money. Then, more brainwashed bas****s
-come along and say, “Dear children of India, here is arithmetic problem for you.
-X terrorists held captive by you in lieu of Y passengers on board. Balance the
-equation. After thinking hard like a small baby not even capable of going to
-school, the children make a choice. An obvious choice! Can’t blame the children,
-really! But later these X terrorists, one of them, only one of them, cooks up a
-master plan with somebody else and they kill thousands and thousands of people
-in World Trade Center attacks. Amazing equation! Need I say more!</p>
-<p>Also think about the following situation. The media is news hungry. They have no
-news to report as such. And because there is no news, even the stand up
-comedians are getting desperate for new material. And finally the Columbia
-disaster happens and the famous Indian astronaut Kalpana Chawla loses her life.
-This fact, I quote from my memory of a newspaper article but I unfortunately
-cannot find a e-reference to the same. One of the comedians decides to say, “If
-Kalpana had blue eyes, I’d sing – one eye blew (blue) here and one eye blew
-there!” Of course, this comedian was crucified (not literally) for saying this!
-But I shall not be too surprised if should find comedians somewhere in the world
-not making fun of disasters.</p>
-<p>Next example one can come up with is the Swine Flu epidemic. One striking
-feature of all newspapers I recall from the newspapers is the advertisements.
-Companies which manufacture soap products (will not quote the names, they are
-pretty famous) go around advertising, “Swine Flu protection Kit.” Below are all
-the possible products they manufacture like bar soaps, hand wash, etc.
-Capitalizing on the panic! You might say, “Oh, but they were spreading awareness
-in a sense, be clean and prevent flu!” No chance! I will never buy that
-explanation. If awareness is what you want to spread, then please put guidelines
-on the holdings and let your logo only occupy a small space. Nope! It was
-nothing but the intention of capitalizing on the panic. Why? Even politicians
-were spreading awareness, but again, their party name and the photo of their
-leader were so highlighted that people would miss the guidelines of how swine
-flu can be prevented.</p>
-<p>I could go on and on quoting examples of incidents where the low value assigned
-to the human life can be revealed. I could talk about the photographer, for
-example, who captured pictures of the brutal riots of Gujarat. He was all smiles
-in accepting the award for his photo which came to be known as the face of the
-Gujarat riots. I could then compare him with another photographer who committed
-suicide, post depression after he returned from an assignment to take photos in
-a famine stricken land. But it’s okay. I expect nothing to change the value
-humans have today. But it does leave me with a question – <strong>was it always like
-this?</strong></p>
+    <p><strong>(Note: This article assumes you know your Machine Learning. By that I mean,
+you need to understand what a model is, what is meant by the three critical
+terms of Machine Learning modeling viz. overfitting, underfitting and
+generalization.)</strong></p>
+<p>Any decent book on Machine Learning will tell you that the endgame is to
+construct a good model. A good model should not underfit i.e. fail to capture
+the real patterns present in your data. A good model should not overfit i.e. it
+should not capture noise instead of real patterns. A good model should be just
+right. When this happens, the model is said to <em>generalize</em> well.</p>
+<p>So, how does one go about ensuring that the model does indeed generalize well?
+This too is Machine Learning 101. You divide your data into a training and test
+set. You train the model using the training data and keep monitoring the metric
+of your interest on the test. When you get a model that achieves minimal desired
+performance on the training set without compromising the performance on the test
+set, your model can be said to generalize well.</p>
+<p>But imagine you are a scientist, say an astronomer. And as an astronomer, you
+manage to study some 30 galaxies and painfully measure two of their properties X
+and Y. You make a plot and find a linear relationship and now you would to do
+linear regression in order to model the relationship between X and Y. You feed
+your data to one of these many routines available and get back the slope &amp;
+intercept of the line. Now, how do you determine if your fit 'generalizes' well?
+You do not have the luxury of splitting this simple 30 points data set into a
+training and test set! When this question is posed to Machine Learning engineers
+(note the word 'engineer'), my guess is that they will start coming up with
+<em>exotic</em> methods of upsampling etc.</p>
+<p>It turns out that the solution to the problem exists in the field of Statistics
+since more than four decades. To understand this solution however one needs to
+go to the basics. First off, you need to understand the <strong>Principle of Maximum
+Likelihood</strong>. This principle says that 'right model parameters' are those which
+maximize the likelihood (probability) of getting the current data set. If you
+apply this principle under the following assumptions</p>
+<ul>
+<li>that the error on Y is a Gaussian</li>
+<li>that each measurement is independent</li>
+<li>and that all errors on Y are equal (isoskedasticity)</li>
+</ul>
+<p>the principle will ask you to do a least squares! If you relax the last
+assumption, then what you get is something known as chi-square. Here is how it
+works.</p>
+<p>$$
+\chi^2 = \sum_{i=1}^N \left( \frac{y_i - \hat{y}^2 }{\sigma_i} \right)^2
+$$</p>
+<p>Now, since our measurements y<sub>i</sub>s are Gaussian random variables,
+chi-square is also a random variable. This is because it is the sum of the
+squares of random variables. Now, it turns out that geniuses from the past
+have determined the exact probability distribution that such a quantity is
+expected to follow. This distribution is known as a chi-square distribution. It
+has a complex mathematical form. It looks something like this:</p>
+<p>$$
+\chi^2(x) = \frac{x^{k/2-1}\ e^{-x/2}}{2^{k/2}\ \Gamma(k/2)}
+$$</p>
+<p>But let's look at the curve for various values
+of 'k', a parameter of the distribution called <strong>degrees of freedom</strong>.</p>
+<p><img alt="Wikipedia Image Showing Chi-Square Distribution" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Chi-square_pdf.svg/500px-Chi-square_pdf.svg.png" /></p>
+<p>We can divide our chi-square by 'k' and get something called reduced chi-square.
+This would be mathematically written as,</p>
+<p>$$
+\chi^2_{k} = \frac{\chi^2}{k} 
+$$</p>
+<p>This reduced chi-square, as we call it, has the property that its expectation or
+average value is one.</p>
+<p>$$
+\left&lt; \chi^2_{k} \right&gt; = 1
+$$</p>
+<p>So, if your model is correct, what this distribution is telling you is that
+there are some values of chi-square which are more probable than others.</p>
+<p>So, let's say that you get a reduced chi-square which is far greater than 1.
+Given the correct model, the chances of this happening are very low. Thus we say
+that the model is underfitting. Note that generally for chi-square to be very
+large, there has to be a strong disagreement between the predicted values of the
+model and the actual values of the model.</p>
+<p>Consider the opposite case. You get a reduced chi-squared which is far less
+than one. Given the correct model, the probability of this happening is also far
+too low. The model is then said to be overfitting. Note that generally for
+chi-square to be very low, the predicted values of the model are almost equal to
+the actual values.</p>
+<p>There you have it! A several decades old solution to commenting on overfitting
+and underfitting without doing a train-test split! Now, I completely acknowledge
+that you must be dazed and confused. That is because we have skipped a lot of
+details. There are textbooks written on this topic. My job was to merely present
+a condensed description of how statistics enables the answer to my original
+question.</p>
+<p>But if you are interested in a more detail explanation by me, there is a video
+recording of my lecture on this topic available at the link below.</p>
+<p><a href="https://www.youtube.com/watch?v=ZoEVLTc-svA">Probability Distributions: What They Are And How Scientists Use Them</a>
+(talk delivered at PyData Pune April 2019 Meeting)</p>
+<p><a href="https://www.youtube.com/watch?v=ZoEVLTc-svA"> <img class="img"
+width="300px" src="../static/images/blog_images/PyDataScreenShot.png"></a></p>
     <br/>
     <br/>
     <br/>
@@ -317,8 +354,8 @@ this?</strong></p>
 *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
 var disqus_config = function () {
-    this.page.url = 'https://vkaustubh.github.io/blog/general/2010-06-19-real-value-of-life.html';  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = 'general/2010-06-19-real-value-of-life'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2019-09-29-generalization-without-test-set.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2019-09-29-generalization-without-test-set'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 
 (function() { // DON'T EDIT BELOW THIS LINE

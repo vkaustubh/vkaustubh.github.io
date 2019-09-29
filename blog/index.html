@@ -19,15 +19,19 @@
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
 
-    <link rel="stylesheet" href="static/css/main.css">
+  <link rel="stylesheet" href="static/css/main.css">
   
   <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
   <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
-   <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
-<link rel="stylesheet" href="pygments.css">
+  <link rel="stylesheet" href="pygments.css">
+
+  <!-- Script for working MathJax for Equations Inside Blog -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
  
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
@@ -303,7 +307,7 @@ latter section. Hope you enjoy your sojourn here. </p>
 <br>
 
     <script>
-        var pages = $.parseJSON("[{\"title\": \"Accountability, Transparency And Consequence\", \"date\": \"29 September, 2019\", \"path\": \"\u003ca href=\u0027general/2019-09-29-accountability-transparency-consequence.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"A Wishlist of Rule Changes in Cricket\", \"date\": \"20 July, 2019\", \"path\": \"\u003ca href=\u0027general/2019-07-20-wishlist-for-cricket.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Punctuality for Dummies\", \"date\": \"11 June, 2019\", \"path\": \"\u003ca href=\u0027general/2019-06-11-punctuality-for-dummies.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Git Rebase vs Merge\", \"date\": \"24 May, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-05-24-rebase-vs-master.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Securing Your (Web) E-mail with GPG\", \"date\": \"28 February, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-02-28-securing-email-communications.html\u0027\u003e Read \u003c/a\u003e\"}]");
+        var pages = $.parseJSON("[{\"title\": \"Checking Generalization Without Test and Validation Sets\", \"date\": \"29 September, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-09-29-generalization-without-test-set.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Accountability, Transparency And Consequence\", \"date\": \"29 September, 2019\", \"path\": \"\u003ca href=\u0027general/2019-09-29-accountability-transparency-consequence.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"A Wishlist of Rule Changes in Cricket\", \"date\": \"20 July, 2019\", \"path\": \"\u003ca href=\u0027general/2019-07-20-wishlist-for-cricket.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Punctuality for Dummies\", \"date\": \"11 June, 2019\", \"path\": \"\u003ca href=\u0027general/2019-06-11-punctuality-for-dummies.html\u0027\u003e Read \u003c/a\u003e\"}, {\"title\": \"Git Rebase vs Merge\", \"date\": \"24 May, 2019\", \"path\": \"\u003ca href=\u0027geek/2019-05-24-rebase-vs-master.html\u0027\u003e Read \u003c/a\u003e\"}]");
         $("#bloglist").DataTable({
             data: pages,
             columns: [
@@ -337,6 +341,18 @@ latter section. Hope you enjoy your sojourn here. </p>
 
 <script src="static/js/scroll_top.js"></script>
 
+<!-- Configuration for MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
 
 </body>
 </html>
