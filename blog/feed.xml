@@ -2,10 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">All Articles by Kaustubh Vaghmare</title>
   <id>https://vkaustubh.github.io/blog/feed.xml</id>
-  <updated>2019-07-20T00:00:00Z</updated>
+  <updated>2019-09-29T00:00:00Z</updated>
   <link href="https://vkaustubh.github.io/blog/" />
   <link href="https://vkaustubh.github.io/blog/feed.xml" rel="self" />
   <generator>Werkzeug</generator>
+  <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
+    <title type="text">Accountability, Transparency And Consequence</title>
+    <id>https://vkaustubh.github.io/blog/general/2019-09-29-accountability-transparency-consequence.html</id>
+    <updated>2019-09-29T00:00:00Z</updated>
+    <link href="https://vkaustubh.github.io/blog/general/2019-09-29-accountability-transparency-consequence.html" />
+    <author>
+      <name>Kaustubh Vaghmare</name>
+    </author>
+    <content type="html">Accountability, how good is it as a motivator? Is it possibly the best one we could have?</content>
+  </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">A Wishlist of Rule Changes in Cricket</title>
     <id>https://vkaustubh.github.io/blog/general/2019-07-20-wishlist-for-cricket.html</id>
