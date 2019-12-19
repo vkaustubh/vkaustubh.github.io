@@ -2,10 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">Geek Articles by Kaustubh Vaghmare</title>
   <id>https://vkaustubh.github.io/blog/geek/feed.xml</id>
-  <updated>2019-09-29T00:00:00Z</updated>
+  <updated>2019-12-18T00:00:00Z</updated>
   <link href="https://vkaustubh.github.io/blog/general.html" />
   <link href="https://vkaustubh.github.io/blog/geek/feed.xml" rel="self" />
   <generator>Werkzeug</generator>
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
+    <title type="text">What is Celery?</title>
+    <id>https://vkaustubh.github.io/blog/geek/2019-12-17-introduction-to-celery.html</id>
+    <updated>2019-12-18T00:00:00Z</updated>
+    <link href="https://vkaustubh.github.io/blog/geek/2019-12-17-introduction-to-celery.html" />
+    <author>
+      <name>Kaustubh Vaghmare</name>
+    </author>
+    <content type="html">A gentle introduction to Celery - what it is and what it can do for you.</content>
+  </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Checking Generalization Without Test and Validation Sets</title>
     <id>https://vkaustubh.github.io/blog/geek/2019-09-29-generalization-without-test-set.html</id>

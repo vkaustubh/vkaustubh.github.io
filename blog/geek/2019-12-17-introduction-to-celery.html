@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<title> What is Celery? </title>
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+  <link rel="stylesheet" href="../static/css/main.css">
+  
+  <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../pygments.css">
+
+  <!-- Script for working MathJax for Equations Inside Blog -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+
+    
+    
+  
+<style>
+
+.bg-dark {
+    background-color: #000 !important;
+}
+  .jumbotron
+  {
+      background-color: #000;
+      color: white;
+      font-family: Open Sans;
+      margin-bottom: 0px;
+  }
+
+    .navbar
+  {
+    font-size: 20px;
+  }
+
+  html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  }
+
+  body
+  {
+      background: url(../static/images/main_background.jpg); /* https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-143-1920x1200.jpg); /* url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-060-2560x1600.jpg); /*url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-039-1920x1080.jpg);*/
+    font-family: Raleway;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    position: relative;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato"
+  }
+
+   #spaceBeforeFooter {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+   }
+
+  footer {
+      padding-top: 1em;
+      background-color: #000;
+      color: white;
+      padding-bottom: 1em;
+      font-family: Raleway;
+   }
+
+   footer h2 {
+    padding-bottom: 0.2em;
+   }
+
+    footer img {
+        margin-left: 1.5em;
+    }
+    footer p {
+        font-size: 1.0em;
+    }
+
+
+
+  .overlay
+  {
+
+   background-color: #eeeef6;
+   background-color: white;
+   margin-top: -30px;
+   padding: 20px;
+   margin-bottom: 50px;
+
+  }
+
+  .card
+  {
+    min-height: 110px;
+    color: #FBF7F9;
+    background-color: #343a40;
+  }
+
+  .brand-name
+  {
+      font-family: Montserrat;
+      font-variant: small-caps;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FBF7F9 !important;
+      text-decoration: none;
+  }
+
+  .nav-item
+  {
+    font-family: Open Sans;
+    font-variant: small-caps;
+    color: white;
+  }
+
+  .customCard
+  {
+    margin-bottom: 20px;
+   }
+
+   .pointer
+   {
+   cursor: pointer;
+   }
+
+
+  .image-card
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+  }
+
+  .carousel-item {
+      color: black;
+      background-color: black !important;
+   }
+
+ .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ }
+
+ .nav-align-left {
+  margin-left: 15px;
+ }
+
+ .nav-align-right {
+  margin-right: 15px;
+ }
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item
+{
+  color: #fff;
+  background-color: #000;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  <!--border: 1px solid #fff;-->
+  padding: 10px;
+  font-size: 1em;
+}
+</style>
+</head>
+
+<body>
+<div class="align-items-center" align="center">
+    <div class="d-lg-none navbar navbar-expand-lg bg-dark navbar-dark" >
+        <h2 class="navbar-brand brand-name" align="center">
+          Kaustubh Vaghmare's <br> <small> Home Page </small></h2>
+    </div>
+    <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark">
+      <h2 class="navbar-brand brand-name" style="margin-left: 0.5em; margin-top: 10px;">  Kaustubh Vaghmare's <br> <small>Home Page</small> </h2>
+    </div>
+</div>
+<div >
+
+    <nav class="navbar navbar-expand-md navbar-light bg-faded bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                  <a class="nav-link" style="" href="https://vkaustubh.github.io">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../index.html">Blog Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link"
+                     href="../general.html">General</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../geek.html">For Geeks</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
+  
+
+<div class="col-lg-offset-1 col-lg-8">
+    <h2>What is Celery?</h2>
+    <span class="date"> Wednesday, 18 December, 2019</span>
+    <div></div>
+    <br/>
+
+    <h3>Motivating Celery</h3>
+<p>Consider a scenario that arises in the design of a typical web application. What
+happens?</p>
+<ul>
+<li>There is a URL.</li>
+<li>People visit it and this results in an HTTP request.</li>
+<li>This causes a function at the backend to be executed.</li>
+<li>The function does something.</li>
+<li>And then the function returns an HTTP response.</li>
+</ul>
+<p>Now, suppose that the function does something really complex. So, the amount of
+time it takes can be very high. But until that function executes, there will
+not be any HTTP response. And without an HTTP response, the HTTP client is not
+free to do the next job (unless it doesn't care as an AJAX call wouldn't). How
+to handle this situation?</p>
+<p>We clearly need a modified workflow. Assuming that the 'thing' that the function
+is going to do is not going to contribute to the response it has to eventually
+return to the HTTP client, we can think of the following workflow.</p>
+<ul>
+<li>There is a URL.</li>
+<li>People visit it and this results in an HTTP request.</li>
+<li>This causes a function at the backend to be executed.</li>
+<li>The function schedules 'something' to be executed.</li>
+<li>And then the function returns an HTTP response.</li>
+</ul>
+<p>In the second flow, there is a subtle change. Instead of actually doing the
+thing and waiting for it be completed, we are scheduling it! So, we don't wait
+for it to finish execution and directly return a response to the HTTP client.
+This way, the HTTP client does not end up waiting for too long.</p>
+<hr />
+<p>Consider a different scenario now. You have just finished writing a complex
+program that performs analytics in a distributed manner across several nodes.
+For some reason, you could not frame your problem efficiently in one of those
+out-of-the-box distributed computing systems available today and so decided to
+roll out your own implementation. It works really well! But now you want to
+allow people to use it through some interface.</p>
+<p>As the number of users increase, you find that your program gets overloaded and
+crashes. What would be great is if you had a system that queues up your requests
+and only allows them to be executed in a controlled manner. This ensures that
+too many parallel processes don't end up overburdening your system.</p>
+<hr />
+<p>What is common to both the scenarios described above?</p>
+<ul>
+<li>Firstly, you don't want tasks executed in a serial fashion.</li>
+<li>Secondly, you want a list of requests to be maintained and to be executed as
+  situation permits.</li>
+</ul>
+<p>In other words, you need a <strong>task queuing system!</strong> And that is exactly what Celery
+is! Having motivated the kind of problems Celery can solve, let us now explore
+the architecture of Celery in some detail.</p>
+<h3>The Architecture of Celery</h3>
+<p>At the bare minimum level, Celery is made up of the following two components.</p>
+<ul>
+<li>A task queue</li>
+<li>And a Celery Worker</li>
+</ul>
+<p>A task queue, as the name implies, is something that can maintain a queue of
+all the tasks along with some metadata about each task such as priority,
+arguments, etc. And someone has to do these tasks, right? That's the Celery
+worker. A Celery worker is a process that can read a task off the task queue and
+perform it.</p>
+<p>Now, your tasks can be of two types</p>
+<ul>
+<li>Like those which send an e-mail. They just do things! They don't return the
+  results to be consumed by someone.</li>
+<li>Like those which perform some calculations and return a result.</li>
+</ul>
+<p>If your tasks are like the first, well and good! The two components of a Celery
+system, described above, are all you need. But if you need to store and track
+the results of the tasks, you need a third component. So, let's add it to our
+list.</p>
+<ul>
+<li>A Result Queue</li>
+</ul>
+<p>And the following diagram essentially summarizes how these three components work
+together. In words, here is what happens.</p>
+<ul>
+<li>Tasks are put in the task queue by you.</li>
+<li>The Celery workers constantly monitor the queue. As soon as they find a task,
+  they 'pop it off' and start working on it.</li>
+<li>And when the task is finished, the Celery workers update the results in the
+  Result Queue.</li>
+</ul>
+<p><img class="img" width="100%" alt="Basic Architecture of Celery" 
+src="../static/images/blog_images/CeleryArchitecture.png"></p>
+<h3>The Beauty Of Choice</h3>
+<p>Celery</p>
+<ul>
+<li>does not come with a task queue or a result queue system.</li>
+<li>and neither does it impose strongly on what should be used for this.</li>
+</ul>
+<p>Instead, it gives you a choice among the following to use as a task queue or a
+result queue. For a task queue, you can use</p>
+<ul>
+<li>RabbitMQ (a message broker system)</li>
+<li>Redis (a distributed in-memory key-value database)</li>
+<li>Amazon SQS</li>
+</ul>
+<p>For the result queue, you can use</p>
+<ul>
+<li>Redis (an in-memory key-value store, highly used for caching applications)</li>
+<li>Relational databases</li>
+<li>RabbitMQ (again)</li>
+<li>and more.</li>
+</ul>
+<p><em>Please see the <a href="https://celery.readthedocs.org">offical documentation</a> for a
+more comprehensive list.</em></p>
+<p>So, you get to choose according to your preferences, what Celery will use for a
+task and/or a result queue.</p>
+<h3>The Beauty of Scalability</h3>
+<p>Do you think your Task Queue itself will be so loaded that you may want to place
+it on a separate physical or cloud server? Sure, keep it separate then! Do you
+think your architecture can benefit from keeping the result queue on a separate
+server, which is perhaps on the same network as some service which will use
+these results for further downstream analysis? No problem, separate it out! Or
+for now, it is just okay if everything sits on the same server? No problem!</p>
+<p>Now, remember that the Celery Worker is responsible for communicating with the
+task queue and taking its work. It is worth noting that the Queue does not find
+the worker and gives it work - it is the worker which finds the Queue and takes
+the work! And this makes a ton of difference. A worker is nothing but a process
+that is designed to monitor the queue and pop off a task from it when available.
+So, if you have one worker, tasks will be get executed serially.</p>
+<p>But you can spawn another worker without having to meddle or play with the task
+queue and now you have two workers popping off tasks two at a time and executing
+them. Since the queue itself does not need to know the details of the workers,
+you can start as many workers as you want and on any machine you want - so long
+as the worker has knowledge of and access to the task queue (and the result
+queue).</p>
+<h3>Where From Here?</h3>
+<p>I have deliberately avoided writing any code here. The Celery documentation does
+a superb job in terms of helping you with the code and quite frankly, I don't
+see a better way explaining the implementation of a basic Celery code than what
+has already been covered here. So, I strongly urge you to check out the <a href="https://celery.readthedocs.org">original
+documentation</a> to start using Celery.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2019-12-17-introduction-to-celery.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2019-12-17-introduction-to-celery'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+
+<footer>
+
+    <div class="container">
+        <div align="center">
+          The web site has been created using Bootstrap, Django/django-freeze starting from a blank file. Background image courtesy of <a href="https://www.setaswall.com/">SetAsWell</a>. All rights reserved. Copyright &copy; 2019.
+        </div>
+    </div>
+
+</footer>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon
+             glyphicon-chevron-up"> Up </span></a>
+
+<script src="static/js/scroll_top.js"></script>
+
+<!-- Configuration for MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+</body>
+</html>
