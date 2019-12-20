@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<title> Internship for Dummies </title>
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+  <link rel="stylesheet" href="../static/css/main.css">
+  
+  <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../pygments.css">
+
+  <!-- Script for working MathJax for Equations Inside Blog -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+
+    
+    
+  
+<style>
+
+.bg-dark {
+    background-color: #000 !important;
+}
+  .jumbotron
+  {
+      background-color: #000;
+      color: white;
+      font-family: Open Sans;
+      margin-bottom: 0px;
+  }
+
+    .navbar
+  {
+    font-size: 20px;
+  }
+
+  html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  }
+
+  body
+  {
+      background: url(../static/images/main_background.jpg); /* https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-143-1920x1200.jpg); /* url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-060-2560x1600.jpg); /*url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-039-1920x1080.jpg);*/
+    font-family: Raleway;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    position: relative;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato"
+  }
+
+   #spaceBeforeFooter {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+   }
+
+  footer {
+      padding-top: 1em;
+      background-color: #000;
+      color: white;
+      padding-bottom: 1em;
+      font-family: Raleway;
+   }
+
+   footer h2 {
+    padding-bottom: 0.2em;
+   }
+
+    footer img {
+        margin-left: 1.5em;
+    }
+    footer p {
+        font-size: 1.0em;
+    }
+
+
+
+  .overlay
+  {
+
+   background-color: #eeeef6;
+   background-color: white;
+   margin-top: -30px;
+   padding: 20px;
+   margin-bottom: 50px;
+
+  }
+
+  .card
+  {
+    min-height: 110px;
+    color: #FBF7F9;
+    background-color: #343a40;
+  }
+
+  .brand-name
+  {
+      font-family: Montserrat;
+      font-variant: small-caps;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FBF7F9 !important;
+      text-decoration: none;
+  }
+
+  .nav-item
+  {
+    font-family: Open Sans;
+    font-variant: small-caps;
+    color: white;
+  }
+
+  .customCard
+  {
+    margin-bottom: 20px;
+   }
+
+   .pointer
+   {
+   cursor: pointer;
+   }
+
+
+  .image-card
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+  }
+
+  .carousel-item {
+      color: black;
+      background-color: black !important;
+   }
+
+ .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ }
+
+ .nav-align-left {
+  margin-left: 15px;
+ }
+
+ .nav-align-right {
+  margin-right: 15px;
+ }
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item
+{
+  color: #fff;
+  background-color: #000;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  <!--border: 1px solid #fff;-->
+  padding: 10px;
+  font-size: 1em;
+}
+</style>
+</head>
+
+<body>
+<div class="align-items-center" align="center">
+    <div class="d-lg-none navbar navbar-expand-lg bg-dark navbar-dark" >
+        <h2 class="navbar-brand brand-name" align="center">
+          Kaustubh Vaghmare's <br> <small> Home Page </small></h2>
+    </div>
+    <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark">
+      <h2 class="navbar-brand brand-name" style="margin-left: 0.5em; margin-top: 10px;">  Kaustubh Vaghmare's <br> <small>Home Page</small> </h2>
+    </div>
+</div>
+<div >
+
+    <nav class="navbar navbar-expand-md navbar-light bg-faded bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                  <a class="nav-link" style="" href="https://vkaustubh.github.io">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../index.html">Blog Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link"
+                     href="../general.html">General</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../geek.html">For Geeks</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
+  
+
+<div class="col-lg-offset-1 col-lg-8">
+    <h2>Internship for Dummies</h2>
+    <span class="date"> Friday, 20 December, 2019</span>
+    <div></div>
+    <br/>
+
+    <p><strong>Note 1: While this article targets mostly those who are or will become
+interns and those who will be guiding interns, it might still be of interest to
+all others since it contains a dose of common sense courtesies and ethics.</strong></p>
+<p><strong>Note 2: My own experiences which drive me to write these guidelines stem from
+my career largely in academia but it is my strong belief that the guidelines I
+am about to lay down will be valid for corporate houses or startups as well.</strong></p>
+<p>Education in a university, by itself is incomplete. Otherwise you would not need
+internship, would you? Even before the word 'safe space' was coined,
+universities and colleges have been safe spaces. You can do your assignment
+incorrectly, write your exam horribly or screw up in one of your competitions
+and the consequences are not dire. Also, the consequences are generally limited
+to you, or perhaps your near ones.</p>
+<p>But the real world is not safe! Mistakes can be very expensive. Consequences can
+be dire. Hence a gap exists between what you feel the world is, based on your
+theoretical understanding and what the world is, in actuality. And internships help you
+in a big way towards bridging this gap. Internships offer a student a chance to
+learn more about the real world, witness the practical applications of their
+skills in solving real problems and learn about the extra care and soft skills
+needed to strive in a real work culture.</p>
+<p>The opposite is also true. Institutes and industries are seldom going to be
+happy with a student, freshly baked in a University or a college and coming to
+work for them with a complete lack of understanding of what might be considered
+most basic for someone working in that sector. Offering internships allows the
+companies to also transfer down the latest in terms of working standards, best
+practices etc. to the college. This way, the amount of orientation needed to bring
+a student to be a reliable member of the workforce, is considerably reduced.</p>
+<p>Internships, maybe at some point of time were all about bridging the gaps in
+theory and practice but in my observation, have also become a course in basic
+ethics. Basic ethics, which a student should know, are seldom exhibited by the
+students and a lot of time, energy and emotion is lost sometimes in first
+teaching basic ethics and common sense. The present article is based on my
+experience as both a student interning as well as a mentor / guide to many interns.
+I hope this helps prospective interns and guides to have a smoother and
+productive journey of internship.</p>
+<h3>Realizations</h3>
+<p>As an intern,</p>
+<ul>
+<li>Realize, that you are being given the most valuable resource a professional
+  could ever give you, their time!</li>
+<li>Realize that every moment spent by your guides with you, they are reducing an
+  overall net output. Most experienced guides can do far much more in 30 minutes
+  than you can do in your 30 minutes.</li>
+<li>Realize that you have been given an opportunity to experience real work before
+  experiencing it anyway - so, learn, observe and be alert.</li>
+<li>Realize that if you do great work, you are going to open more opportunities
+  for yourself either at the place where you intern or through the recommendations
+  of your guides.</li>
+<li>Realize that you are representing your college or university and your screw
+  ups can filter down to your college and affect future colleagues. On a
+  positive note, you can be responsible for the enhancement of your colleagues'
+  opportunities as well.</li>
+<li>Realize that it is now your burden to give something of value to your guide or
+  guide's organization. And if you cannot, at least let them smile when
+  they think of you and let them shower praises among their peers about your
+  qualities.</li>
+</ul>
+<p>As a guide,</p>
+<ul>
+<li>Realize that you are contributing to the upliftment of your local education
+  standards by mentoring students and bringing them up to be better members of
+  the workforce or the researchers.</li>
+<li>Realize that you are now responsible for these students. If you never had the
+  time to guide them well, you shouldn't have committed to taking them, to begin
+  with. (Or if something has changed since the time you committed, you must find
+  another colleague, who can share this responsibility.)</li>
+<li>Realize that this student here could in principle become the next addition to
+  your workforce. Atleast they should be treated this way, else there is not
+  much point to the internship.</li>
+<li>Realize that you too were a diamond in the rough at some point in your career.
+  You couldn't exactly repay your guides and hence we operate on the principle
+  of 'paying it forward'.</li>
+</ul>
+<h3>Do's</h3>
+<p>For the intern,</p>
+<ul>
+<li>Follow time! Be punctual! Be before time! Read my article on "<a href="https://vkaustubh.github.io/blog/general/2019-06-11-punctuality-for-dummies.html">Punctuality for
+  Dummies</a>" to understand more about this.</li>
+<li>Maintain a dedicated journal or notebook - document all your meetings,
+  document all instructions and all learning.</li>
+<li>Report! Report! Report! Especially in those cases where you don't meet your
+  guide everyday and can exercise a choice in taking appointments, make sure you
+  report at regular intervals even if the report does not contain positive news.
+  Do this via e-mail if you cannot do it in person.</li>
+<li>Adapt to your host environment. Try to resonate or sync with the timings,
+  norms, cultures and preferences of the environment. It could be something as
+  simple as a greeting or a dress code - but try to gel in!</li>
+<li>Interact and network with colleagues other than your guide and guide's team.
+  They can prove to be a valuable source of information and guidance for your
+  problems. As a corrolary, if they offer you advice on 'how to handle your
+  guide', take it with a pinch of salt. Form your own opinion!</li>
+<li>Inform your guide about any deadlines, personal or those set by your college,
+  in advance. Don't reveal them in the last minute. Having once informed them,
+  remind them gently on a couple of other occassions.</li>
+<li>If report or other formalities involve the guide, inform the guide
+  sufficiently in advance. Give them sufficient time to execute these formalities.</li>
+<li>If you are going to present your work to some committee, ensure that you send
+  out an invite to your guide. They may not be able to join but you should
+  invite them anyway.</li>
+<li>Go beyond the call of duty! Your guide asks you to do X, your job is not just
+  to do X but also research on how to get it done, spend extra hours acquiring
+  those skills needed to finish X and also see if you squeeze in that extra
+  'delta X'.</li>
+<li>If you are giving internal presentations, it wouldn't be a bad idea to ask if
+  a) there is an institute wide presentation template, b) whether you can or
+  should use it and c) use it! This creates a warm feeling that you are willing
+  to be a full part of the team even though it's temporary.</li>
+<li>Write a thank you and concluding note when you finish your internship - not
+  just to the guide but also all the people who helped.</li>
+<li>Acknowledge all e-mails and other communication throughout the internship. The
+  modern generation, I have witnessed, is superbly bad at acknowledging receipt
+  of e-mails and keeping people informed.</li>
+</ul>
+<p>For the guide,</p>
+<ul>
+<li>Setup an achievable and value adding goal for your intern. The goal can be a
+  little exaggerated and beyond the reach of the intern but ensure there is a
+  milestone which will leave the intern with a sense of satisfaction.</li>
+<li>Setup a routine for your intern - a rhythm of work, updates, reports etc.
+  Almost the same as you would do for your employee or peer.</li>
+<li>If the intern is doing this as a part of the curriculum, pay attention to a)
+  what is expected, b) what role you have to play in the evaluation and c) any
+  other formalities. Make sure you deliver your part on time.</li>
+<li>Introduce the intern to the team. Make them feel more like an employee or a
+  member than an intern.</li>
+<li>Ensure intern has access to training, resources, people etc. to be able to
+  complete their job.</li>
+<li>Set expectations clearly, break down tasks.</li>
+<li>Demand reports, preferably in the same format your organization uses.</li>
+<li>Do a periodic mock appraisal or something similar - freely praise the positives and
+  give critical suggestions for improvement.</li>
+<li>Track their reports and ensure you comment, even if in a single line, on each
+  report they send to you.</li>
+<li>Lead by example!</li>
+</ul>
+<h3>Don'ts</h3>
+<p>For the intern,</p>
+<ul>
+<li>Don't stay out of touch for a very long time in case there is scope to do so.
+  Even if you have not finished your quantum of work, you must report it along
+  with the reasons or difficulties you are facing.</li>
+<li>Don't take liberties with any facilities being offered by your guide or
+  guide's team. eg. flexible timing doesn't imply a) you can choose less hours
+  of work, b) you can work when nobody is around or there is no overlap with a
+  common timing followed. Similarly, don't exploit the pantry or any other such
+  facility.</li>
+<li>Don't stray off too much from the directions given by your guide. Yes, if you
+  find a better way to do things, they will be happy BUT if you don't deliver as
+  a result of your 'experimentation', they will lose interest in giving you more
+  than a formal advice.</li>
+</ul>
+<p>For the guide,</p>
+<ul>
+<li>Don't ignore disciplinary issues. A part of your job is to discipline the
+  intern, bring them one level up. If they do something bad, you must ensure
+  they don't repeat it.</li>
+<li>Don't treat your charge of mentoring the intern lightly.</li>
+<li>Don't give trivial or manual work to your intern, from which they may not
+  learn anything. (Don't exploit them!)</li>
+</ul>
+<h3>Summary</h3>
+<p>Internships, in my opinion, help in the following ways:</p>
+<ul>
+<li>Prepare students for real life.</li>
+<li>Bridge the gap between theory and application.</li>
+<li>Present an opportunity for the organization to identify potential future
+  members of their workforce.</li>
+<li>Allow the centers of education to better understand the needs of the employers
+  in the current time.</li>
+</ul>
+<p>If at the end of the internship, these goals are not met - the internship cannot
+be considered successful. So, please treat internships seriously! Happy
+interning! Happy mentoring! And let development never stop!</p>
+<p>(<em>A shout out to my friend and colleague, Dr. Kaushal Sharma, for agreeing to
+patiently review the first draft and offer valuable suggestions.</em>)</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2019-12-20-internship-for-dummies.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2019-12-20-internship-for-dummies'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+
+<footer>
+
+    <div class="container">
+        <div align="center">
+          The web site has been created using Bootstrap, Django/django-freeze starting from a blank file. Background image courtesy of <a href="https://www.setaswall.com/">SetAsWell</a>. All rights reserved. Copyright &copy; 2019.
+        </div>
+    </div>
+
+</footer>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon
+             glyphicon-chevron-up"> Up </span></a>
+
+<script src="static/js/scroll_top.js"></script>
+
+<!-- Configuration for MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+</body>
+</html>
