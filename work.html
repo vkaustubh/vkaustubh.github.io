@@ -321,6 +321,31 @@ know more details.</p>
   </div>
 </div>
 
+<br />
+
+<div class="card-deck">
+  <div data-toggle="modal" data-target="#quickdb" class="card bg-primary">
+    <div class="card-body text-center">
+      <p class="card-text">QuickDB</p>
+    </div>
+  </div>
+  <div data-toggle="modal" data-target="#oadvolunteer" class="card bg-warning">
+    <div class="card-body text-center">
+      <p class="card-text">OAD Volunteer Portal</p>
+    </div>
+  </div>
+  <div data-toggle="modal" data-target="#spectralclassification" class="card bg-success">
+    <div class="card-body text-center">
+      <p class="card-text">Spectral Classification Using Deep Learning</p>
+    </div>
+  </div>
+  <div style="visibility: hidden" data-toggle="modal" data-target="#" class="card bg-warning">
+    <div class="card-body text-center">
+      <p class="card-text">OAD Volunteer Portal</p>
+    </div>
+  </div>
+</div>
+
 <br>
 
 
@@ -680,8 +705,105 @@ Development Goals)</p>
   </div>
 </div>
 
+<div class="modal" id="quickdb">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"> QuickDB </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
 
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p> QuickDB is an in-house database promising an SQL interface that enables astronomers
+        to access the Subaru Hyper Suprime Camera (HSC) data. QuickDB has been designed to leverage
+        in-RAM processing and MapReduce and allow very quick processing of SQL queries on terabyte scales
+        of data. The SQL functionality has been extended to suit common functions needed by Astronomers
+        such as cross-matches, histogram (1-d and 2-d), flux to magnitude conversions etc.</p>
+
+        <p> I led the team that constructed a scheduler and health keeping system for this database. I
+        personally constructed a Jupyter notebook interface to interact with the scheduler. The system
+        is currently being deployed for an upcoming data release and will be public soon.</p>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="oadvolunteer">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"> OAD Volunteer Portal </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p>The Office of Astronomy for Development (OAD) is a part of the Internationl Astronomical Union (IAU)
+        and is responsible for coordinating projects around the world aimed at using Astronomy for 
+        general public good. Many good souls come forth to volunteer for these events. There has been
+        no efficient system in place for coordinating the volunteers. </p>
+
+        <p> I have been working with OAD office based in Cape Town, South Africa to construct a system which helps
+        advertise projects for which volunteers can come forward, connect project coordinators with volunteers
+        and more.</p>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="spectralclassification">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title"> Spectral Classification Using Deep Learning </h4>
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        <p> Stars come in a wide variety of classes. For historical reasons, these stars have been
+        given labels O, B, A, F, G, K and M. Within each category, one has sub-classes designated with
+        numbers 0 - 9. So that's 70 classes. Plus for each type, there can be five "luminosity" classes.
+        Modern telescopes have obtained spectra for millions of stars. It is not possible for human experts
+        to sit down and classify these stars on the basis of the spectra. Several automated techniques have
+        been proposed in the past. One of the most commonly used ones rely on matching a given spectrum against
+        a set of templates. This can be quite inefficient computationally.</p>
+
+        <p> We managed to use autoencoders and 1-d Convolutional Neural Networks to not only improve the
+        current state of the art's performance by a factor of two but also improve the computation speeds
+        by several factors.</p>
+
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div>
+
+    </div>
+  </div>
+</div>
 <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
          data-toggle="tooltip" data-placement="left"><span class="glyphicon
              glyphicon-chevron-up"> Up </span></a>
