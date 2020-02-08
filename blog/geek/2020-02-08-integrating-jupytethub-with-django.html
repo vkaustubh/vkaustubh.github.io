@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<title> Integrating JupyterHub with Django using OAuth </title>
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+  <link rel="stylesheet" href="../static/css/main.css">
+  
+  <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../pygments.css">
+
+  <!-- Script for working MathJax for Equations Inside Blog -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+
+    
+    
+  
+<style>
+
+.bg-dark {
+    background-color: #000 !important;
+}
+  .jumbotron
+  {
+      background-color: #000;
+      color: white;
+      font-family: Open Sans;
+      margin-bottom: 0px;
+  }
+
+    .navbar
+  {
+    font-size: 20px;
+  }
+
+  html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  }
+
+  body
+  {
+      background: url(../static/images/main_background.jpg); /* https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-143-1920x1200.jpg); /* url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-060-2560x1600.jpg); /*url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-039-1920x1080.jpg);*/
+    font-family: Raleway;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    position: relative;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato"
+  }
+
+   #spaceBeforeFooter {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+   }
+
+  footer {
+      padding-top: 1em;
+      background-color: #000;
+      color: white;
+      padding-bottom: 1em;
+      font-family: Raleway;
+   }
+
+   footer h2 {
+    padding-bottom: 0.2em;
+   }
+
+    footer img {
+        margin-left: 1.5em;
+    }
+    footer p {
+        font-size: 1.0em;
+    }
+
+
+
+  .overlay
+  {
+
+   background-color: #eeeef6;
+   background-color: white;
+   margin-top: -30px;
+   padding: 20px;
+   margin-bottom: 50px;
+
+  }
+
+  .card
+  {
+    min-height: 110px;
+    color: #FBF7F9;
+    background-color: #343a40;
+  }
+
+  .brand-name
+  {
+      font-family: Montserrat;
+      font-variant: small-caps;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FBF7F9 !important;
+      text-decoration: none;
+  }
+
+  .nav-item
+  {
+    font-family: Open Sans;
+    font-variant: small-caps;
+    color: white;
+  }
+
+  .customCard
+  {
+    margin-bottom: 20px;
+   }
+
+   .pointer
+   {
+   cursor: pointer;
+   }
+
+
+  .image-card
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+  }
+
+  .carousel-item {
+      color: black;
+      background-color: black !important;
+   }
+
+ .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ }
+
+ .nav-align-left {
+  margin-left: 15px;
+ }
+
+ .nav-align-right {
+  margin-right: 15px;
+ }
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item
+{
+  color: #fff;
+  background-color: #000;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  <!--border: 1px solid #fff;-->
+  padding: 10px;
+  font-size: 1em;
+}
+</style>
+</head>
+
+<body>
+<div class="align-items-center" align="center">
+    <div class="d-lg-none navbar navbar-expand-lg bg-dark navbar-dark" >
+        <h2 class="navbar-brand brand-name" align="center">
+          Kaustubh Vaghmare's <br> <small> Home Page </small></h2>
+    </div>
+    <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark">
+      <h2 class="navbar-brand brand-name" style="margin-left: 0.5em; margin-top: 10px;">  Kaustubh Vaghmare's <br> <small>Home Page</small> </h2>
+    </div>
+</div>
+<div >
+
+    <nav class="navbar navbar-expand-md navbar-light bg-faded bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                  <a class="nav-link" style="" href="https://vkaustubh.github.io">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../index.html">Blog Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link"
+                     href="../general.html">General</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../geek.html">For Geeks</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
+  
+
+<div class="col-lg-offset-1 col-lg-8">
+    <h2>Integrating JupyterHub with Django using OAuth</h2>
+    <span class="date"> Saturday, 08 February, 2020</span>
+    <div></div>
+    <br/>
+
+    <h3>Objectives</h3>
+<p>Imagine that you have just coded a Django web application which is capable of
+offering users the ability to login and use various services. You have now
+decided that you want to give the users the ability to interact with the
+services you provide using a Jupyter notebook spawned from within the Django web
+application. How would you do it?</p>
+<p>Well, the good folks in the Jupyter community have already given us "<a href="https://jupyter.org/hub">JupyterHub</a>"
+which allows users to spawn their own notebook servers starting from a single
+starting point - 'the hub' - after authenticating themselves in some way. By
+default, the JupyterHub system authenticates users against the Linux usernames
+and passwords for user accounts created on that system. So, the real change we
+need to make is to somehow tell JupyterHub to authenticate using the user
+accounts stored in the Django application.</p>
+<p>These are the goals of this tutorial:</p>
+<ul>
+<li>Configure Django application to store user accounts.</li>
+<li>Setup JupyterHub to talk to our Django application and authenticate users.</li>
+</ul>
+<p>Let's begin! You will of course gain more insight into the workings if you
+follow along but if you wish to directly obtain the minimal working source code,
+<a href="https://github.com/vkaustubh/django-oauth-jupyterhub-demo">check out this Github repository</a>.</p>
+<h3>Setting Up Django</h3>
+<p>We are going to make a Django application from scratch. We are going to assume
+that you have some basic experience in Django and thus not explain every single
+step in this process. We want to create a virtual environment in a separare
+folder, install Django inside it and create a new project which we call
+"service_provider" since it will provide the user authentication service.</p>
+<div class="codehilite"><pre><span></span>$ mkdir django-oauth-jupyterhub-demo
+$ <span class="nb">cd</span> django-oauth-jupyterhub-demo
+$ python3 -m venv venv/
+$ <span class="nb">source</span> venv/bin/activate
+$ pip3 install <span class="nv">django</span><span class="o">==</span><span class="m">2</span>.2.7
+$ django-admin startproject service_provider
+</pre></div>
+
+
+<p>By default, Django is designed to use SQLite as a database. For our current
+purposes, we want to continue using the same. So, let us now create the database
+by 'migrating' it and create our first superuser.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> service_provider
+$ python manage.py migrate
+$ python manage.py createsuperuser
+<span class="o">(</span>enter the details prompted<span class="o">)</span>
+</pre></div>
+
+
+<p>Let us now test that everything works fine. Start the development server by
+saying,</p>
+<div class="codehilite"><pre><span></span>$ python manage.py runserver
+</pre></div>
+
+
+<p>Point your favorite browser to <code>http://127.0.0.1:8000/</code> and see if the success
+page appears. Next, head to <code>http://127.0.0.1:8000/admin</code> and see if you are
+able to login using the username and password you specified during the process
+of creating the super user.</p>
+<h3>Crash Course in OAuth</h3>
+<p>If you are a regular netizen, you would have done the following many times. You
+come across a site which requires you to login. You click on Login and you are
+given an option to use your existing Google or Github or some other login to
+sign into the web site. Stackoverflow, Evernote etc. are examples of such sites.
+This is great because it saves you, the user, the trouble of creating a new
+account and managing it. Instead you allow Google or Github or whatever to
+authenticate you using the account you created with them and share some
+information with the service you are trying to use. Here, we say that Google or
+Github are service providers and applications such as Evernote or Stackoverflow
+are client applications.</p>
+<p>The mechanism by which a client application is able to authenticate a user using
+account information stored and maintained on the service provider's application
+or database is called OAuth or Open Authentication. Note that this is A popular
+way to achieve this - there can be other methods to do this as well!</p>
+<p>In our example, Django will be the service provider since it will store all the
+user accounts and details while JupyterHub will be the client application.</p>
+<p>What does Django need to do in order to support the OAuth mechanism?</p>
+<ul>
+<li>Maintain user accounts (Django does that easily out of the box and we have
+  already created our first account!)</li>
+<li>Maintain a database of client applications which are allowed to use Django
+  accounts for authentication.</li>
+<li>Have some mechanism of receiving the request from the client application,
+  taking permissions from the user to share information with the client
+  application and then setup a method by which the client app now recognizes the
+  user.</li>
+</ul>
+<p>Phew! Sounds like hard work! Well, Django comes with an extension which allows
+this to be mostly automated. Let's set Django up for this.</p>
+<h3>Setting OAuth on Django Side</h3>
+<p>We begin by installing the Django OAuth Toolkit. This can be done by saying,</p>
+<div class="codehilite"><pre><span></span>$ pip install django-oauth-toolkit<span class="o">==</span><span class="m">1</span>.2.0
+</pre></div>
+
+
+<p>Next, we need to install this app into our Django project. So, open up 
+<code>service_provider/settings.py</code> and under <code>INSTALLED_APPS</code> list, add
+<code>oauth2_provider</code>. So, this part of your <code>settings.py</code> file will look something
+like this:</p>
+<div class="codehilite"><pre><span></span>INSTALLED_APPS = [
+    &#39;django.contrib.admin&#39;,
+    &#39;django.contrib.auth&#39;,
+    &#39;django.contrib.contenttypes&#39;,
+    &#39;django.contrib.sessions&#39;,
+    &#39;django.contrib.messages&#39;,
+    &#39;django.contrib.staticfiles&#39;,
+
+    &#39;oauth2_provider&#39;,
+]
+</pre></div>
+
+
+<p>And under <code>MIDDLEWARE</code> add the following entry:</p>
+<div class="codehilite"><pre><span></span>&#39;oauth2_provider.middleware.OAuth2TokenMiddleware&#39;,
+</pre></div>
+
+
+<p>That's it - all the logic needed to handle OAuth is now within your Django
+application. In order to maintain a list of applications, the access credentials
+and more, the OAuth toolkit that we just installed needs some tables to exist in
+the database. Let's run the <code>migrate</code> command and update our database.</p>
+<div class="codehilite"><pre><span></span>$ python manage.py migrate
+</pre></div>
+
+
+<p>If you are curious to see what new models have been introduced by this, check
+out the Django admin console and see what has changed!</p>
+<p>Some more settings are needed by the way! Unfortunately, because we are now
+going to ask two applications (likely hosted on two separate URLs) to send
+requests to each other, we are going trigger some security mechanisms placed
+inside Django. When something hosted on one URL triggers a request to something
+hosted on another URL it is called Cross Origin Resource Sharing (CORS). Unless
+the headers of the HTTP request are populated with some information, such
+requests are generally blocked by good browsers and good web applications. So,
+we need to tweak Django to deal with this. Without too much explanation here is
+what needs to be done.</p>
+<div class="codehilite"><pre><span></span>$ pip install django-cors-middleware<span class="o">==</span><span class="m">1</span>.4.0
+</pre></div>
+
+
+<p>Open <code>service_provider/settings.py</code>. Under <code>INSTALLED_APPS</code>, add the following
+line:</p>
+<div class="codehilite"><pre><span></span>&#39;corsheaders&#39;,
+</pre></div>
+
+
+<p>And under <code>MIDDLEWARE</code> add,</p>
+<div class="codehilite"><pre><span></span>&#39;corsheaders.middleware.CorsMiddleware&#39;,
+</pre></div>
+
+
+<p>And run a migration.</p>
+<div class="codehilite"><pre><span></span>$ python manage.py migrate
+</pre></div>
+
+
+<h3>Setting up Django URLs</h3>
+<p>The final step in terms of Django code changes is to setup the URLs over which
+Django app can be told that a client application needs a user to be
+authenticated. Yes, the client application needs to know the URL or address over
+which it ask Django for user information etc. </p>
+<p>Now, the most essential URLs mandated by OAuth framework are already available
+to us thanks to our installing the <code>oauth2_provider</code> application. All we need to
+do is to tell Django to expose them to the world.</p>
+<p>Open <code>service_provider/urls.py</code> and under the <code>urlpatterns</code> list, add the
+following entry:</p>
+<div class="codehilite"><pre><span></span>path(&#39;o/&#39;, include(&#39;oauth2_provider.urls&#39;, namespace=&#39;oauth2_provider&#39;)),
+</pre></div>
+
+
+<p>At the top of the file, you will need to add the following:</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.urls</span> <span class="kn">import</span> <span class="n">include</span>
+</pre></div>
+
+
+<p>Now, we are going to go to our browser and type <code>http://127.0.0.1:8000/o/applications/</code>.
+Then click "Click here". Enter the following information.</p>
+<ul>
+<li><strong>Name</strong>: JupyterHub</li>
+<li><strong>Client id</strong>: (can leave as is)</li>
+<li><strong>Client secret</strong>: (can leave as is)</li>
+<li><strong>Client type</strong>: Confidential</li>
+<li><strong>Authorization grant type</strong>: Authorization code</li>
+<li>Redirect urls: http://localhost:8010/hub/oauth_callback</li>
+</ul>
+<p>Please copy the Client ID and Client Secret in a text file somewhere and keep it
+handy. We are going to need it later!</p>
+<p>The final URL we need to setup is the one that returns a JSON containing the
+currently logged in user! This is needed by JupyterHub and is not a part of the
+minimal requirements of the OAuth framework.</p>
+<p><strong>WARNING</strong>: I'm breaking form here! Ideally, you should have a separate Django
+application with its collection of URL definitions and view functions, all
+neatly arranged. But for the sake of achieving a bare minimal working example,
+I'm going to <strong>avoid creating any app at all</strong> and define a view function inside
+the main project's <code>urls.py</code>. For your main ready-to-serve application, you should
+be separate out this logic as per your style.</p>
+<p>Next, open <code>service_provider/urls.py</code> and add the following code.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">django.http</span> <span class="kn">import</span> <span class="n">HttpResponse</span>
+<span class="kn">from</span> <span class="nn">django.contrib.auth.decorators</span> <span class="kn">import</span> <span class="n">login_required</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="nd">@login_required</span><span class="p">()</span>
+<span class="k">def</span> <span class="nf">userdata</span><span class="p">(</span><span class="n">request</span><span class="p">):</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">user</span>
+    <span class="k">return</span> <span class="n">HttpResponse</span><span class="p">(</span>
+        <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">({</span>
+            <span class="s1">&#39;username&#39;</span><span class="p">:</span> <span class="n">user</span><span class="o">.</span><span class="n">username</span>
+        <span class="p">}),</span>
+        <span class="n">content_type</span><span class="o">=</span><span class="s1">&#39;application/json&#39;</span>
+    <span class="p">)</span>
+</pre></div>
+
+
+<p>And in the <code>urlpatterns</code> list, add</p>
+<div class="codehilite"><pre><span></span>path(&#39;userdata&#39;, userdata, name=&#39;userdata&#39;)
+</pre></div>
+
+
+<p>To test if this works, ensure you are logged in (using the admin console) and
+type <code>http://127.0.0.1:8000/userdata</code> - you should get a JSON data dump
+containing the key "username".</p>
+<p>If the user is not logged in and tries to access a page which requires the user
+to be logged in, Django automatically tries to redirect the user to the login
+page in a way such that once the user logs in successfully, the user is
+redirected back to the page they were trying to access initially. By default,
+the view function responsible for login requires a template to be defined as
+<code>registration/login.html</code> but instead of creating a page we can use ask Django
+to use the Django admin login page for now.</p>
+<p>Open the <code>settings.py</code> file and add the following line:</p>
+<div class="codehilite"><pre><span></span>LOGIN_URL = &#39;/admin/login&#39;
+</pre></div>
+
+
+<p>Finally, our Django application which by default had only one way of
+authenticating a user - by the default <em>User</em> model - needs to be told to
+recognize also those users who have identified themselves via OAuth. So, we add
+the <code>settings.py</code> the following lines:</p>
+<div class="codehilite"><pre><span></span>AUTHENTICATION_BACKENDS = (
+    &#39;oauth2_provider.backends.OAuth2Backend&#39;,
+    &#39;django.contrib.auth.backends.ModelBackend&#39;
+)
+</pre></div>
+
+
+<p>That's the last change to be made to Django.</p>
+<h3>Enter JupyterHub</h3>
+<p>We are now ready to bring in the last piece of the puzzle - JupyterHub itself!
+Start by installing it and the Jupyterhub extension that supports OAuth
+framework.</p>
+<div class="codehilite"><pre><span></span>$ pip install <span class="nv">jupyter</span><span class="o">==</span><span class="m">1</span>.0.0 <span class="nv">jupyterhub</span><span class="o">==</span><span class="m">1</span>.0.0 <span class="nv">oauthenticator</span><span class="o">==</span><span class="m">0</span>.9.0
+</pre></div>
+
+
+<p>Now, alongside our parent Django project folder <code>service_provider</code> we are going
+to create a new folder called <code>hub_config</code> where our JupyterHub config files will
+be kept and from where the Jupyterhub will be launched.</p>
+<div class="codehilite"><pre><span></span>$ <span class="nb">cd</span> &lt;path/to/django-oauth-jupyterhub-demo&gt;
+$ mkdir hub_config
+$ <span class="nb">cd</span> hub_config
+</pre></div>
+
+
+<p>Next, we are going to create a file called <code>jupyterhub_config.py</code> which will
+contain the following code dump which I've explained with inline comments.</p>
+<div class="codehilite"><pre><span></span><span class="err">#</span> <span class="nx">This</span> <span class="nx">is</span> <span class="nx">how</span> <span class="nx">we</span> <span class="nx">tell</span> <span class="nx">Jupyter</span> <span class="nx">to</span> <span class="nx">use</span> <span class="nx">OAuth</span> <span class="nx">instead</span> <span class="nx">of</span> <span class="nx">the</span> <span class="k">default</span>
+<span class="err">#</span> <span class="nx">authentication</span> <span class="nx">which</span> <span class="nx">is</span> <span class="nx">done</span> <span class="nx">using</span> <span class="nx">local</span> <span class="nx">Linux</span> <span class="nx">user</span> <span class="nx">accounts</span><span class="p">.</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">JupyterHub</span><span class="p">.</span><span class="nx">authenticator_class</span> <span class="o">=</span> <span class="s1">&#39;oauthenticator.generic.GenericOAuthenticator&#39;</span>
+
+<span class="err">#</span> <span class="nx">Where</span> <span class="nx">should</span> <span class="nx">Django</span> <span class="nx">pass</span> <span class="nx">the</span> <span class="nx">authentication</span> <span class="nx">results</span> <span class="nx">back</span> <span class="nx">to</span><span class="o">?</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">oauth_callback_url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:8010/hub/oauth_callback&#39;</span>
+
+<span class="err">#</span> <span class="nx">What</span> <span class="nx">is</span> <span class="nx">the</span> <span class="nx">client</span> <span class="nx">ID</span> <span class="nx">and</span> <span class="nx">client</span> <span class="nx">secret</span> <span class="k">for</span> <span class="nx">Jupyterhub</span> <span class="nx">provided</span> <span class="nx">Django</span><span class="o">?</span>
+
+<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">client_id</span> <span class="o">=</span> <span class="s1">&#39;irhIz1p3G8lyiBDWv66LzuwLacyV1i98jJP0qXQx&#39;</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">client_secret</span> <span class="o">=</span> <span class="s1">&#39;tidEvFtozIJTTIfmHqkBEnlEtFl0Wd3tB7WnD2EvXDkRkk36Lphr5N3RoPaJhuJBaSuQ2j3WZSF7OrCrdGwG9ejEWty1VN</span>
+<span class="s1">gkjon3EyTdKpeBXVLw8q4nk0szvU3tHUx6&#39;</span>
+
+<span class="err">#</span> <span class="nx">Where</span> <span class="nx">can</span> <span class="nx">Jupyterhub</span> <span class="nx">get</span> <span class="nx">the</span> <span class="nx">token</span> <span class="nx">from</span><span class="o">?</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">token_url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:8000/o/token/&#39;</span>
+
+<span class="err">#</span> <span class="nx">Where</span> <span class="nx">can</span> <span class="nx">it</span> <span class="nx">get</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">name</span> <span class="nx">from</span><span class="o">?</span> <span class="nx">What</span> <span class="nx">method</span> <span class="nx">shall</span> <span class="nx">it</span> <span class="nx">use</span><span class="o">?</span>
+<span class="err">#</span> <span class="nx">What</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">JSON</span> <span class="nx">output</span> <span class="nx">is</span> <span class="nx">the</span> <span class="nx">username</span><span class="o">?</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">userdata_url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:8000/userdata&#39;</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">userdata_method</span> <span class="o">=</span> <span class="s1">&#39;GET&#39;</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">userdata_params</span> <span class="o">=</span> <span class="p">{}</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">username_key</span> <span class="o">=</span> <span class="s1">&#39;username&#39;</span>
+
+<span class="err">#</span> <span class="nx">What</span> <span class="nx">address</span> <span class="nx">will</span> <span class="nx">Jupyterhub</span> <span class="nx">be</span> <span class="nx">accessed</span> <span class="nx">from</span><span class="o">?</span>
+<span class="nx">c</span><span class="p">.</span><span class="nx">JupyterHub</span><span class="p">.</span><span class="nx">bind_url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:8010&#39;</span>
+
+<span class="err">#</span> <span class="nx">By</span> <span class="k">default</span> <span class="nx">Jupyterhub</span> <span class="nx">requires</span> <span class="nx">that</span> <span class="nx">a</span> <span class="nx">Linux</span> <span class="nx">user</span> <span class="nx">exist</span> <span class="k">for</span> <span class="nx">every</span>
+<span class="err">#</span> <span class="nx">authenticated</span> <span class="nx">user</span><span class="p">.</span> <span class="nx">For</span> <span class="nx">testing</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">are</span> <span class="nx">going</span> <span class="nx">to</span> <span class="nx">trick</span> <span class="nx">JupyterHub</span>
+<span class="err">#</span> <span class="nx">to</span> <span class="nx">merely</span> <span class="nx">pretend</span> <span class="nx">that</span> <span class="nx">such</span> <span class="nx">a</span> <span class="nx">user</span> <span class="nx">exists</span> <span class="nx">and</span> <span class="nx">launch</span> <span class="nx">notebook</span> <span class="nx">servers</span>
+<span class="err">#</span> <span class="k">for</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">user</span> <span class="nx">running</span> <span class="nx">the</span> <span class="nx">hub</span> <span class="nx">process</span> <span class="nx">itself</span><span class="o">!</span>
+<span class="nx">from</span> <span class="nx">jupyterhub</span><span class="p">.</span><span class="nx">spawner</span> <span class="kr">import</span> <span class="nx">LocalProcessSpawner</span>
+
+<span class="kr">class</span> <span class="nx">SameUserSpawner</span><span class="p">(</span><span class="nx">LocalProcessSpawner</span><span class="p">)</span><span class="o">:</span>
+    <span class="s2">&quot;&quot;&quot;Local spawner that runs single-user servers as the same user as the Hub itself.</span>
+
+<span class="s2">    Overrides user-specific env setup with no-ops.</span>
+<span class="s2">    &quot;&quot;&quot;</span>
+
+    <span class="nx">def</span> <span class="nx">make_preexec_fn</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span><span class="o">:</span>
+        <span class="s2">&quot;&quot;&quot;no-op to avoid setuid&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nx">lambda</span> : <span class="kt">None</span>
+
+    <span class="nx">def</span> <span class="nx">user_env</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">env</span><span class="p">)</span><span class="o">:</span>
+        <span class="s2">&quot;&quot;&quot;no-op to avoid setting HOME dir, etc.&quot;&quot;&quot;</span> 
+        <span class="k">return</span> <span class="nx">env</span>
+
+<span class="nx">c</span><span class="p">.</span><span class="nx">JupyterHub</span><span class="p">.</span><span class="nx">spawner_class</span> <span class="o">=</span> <span class="nx">SameUserSpawner</span>
+</pre></div>
+
+
+<p>Wow! That was a lot. Take some time to read the settings and absorb them!</p>
+<h3>Launching and Testing JupyterHub</h3>
+<p>Now, keep the Django server running as is! Next, we are going to have to launch
+Jupyterhub but Jupyterhub requires some more pieces of info in the form of
+environment variables - the URL in Django which will authorize JupyterHub as an
+application and which gives the token. So, we will create a shell script that
+initializes these variables and then launches the hub.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5
+6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ch">#! /bin/bash</span>
+
+<span class="nb">export</span> <span class="nv">OAUTH2_AUTHORIZE_URL</span><span class="o">=</span><span class="s2">&quot;http://localhost:8000/o/authorize&quot;</span>
+<span class="nb">export</span> <span class="nv">OAUTH2_TOKEN_URL</span><span class="o">=</span><span class="s2">&quot;http://localhost:8000/o/token/&quot;</span>
+
+jupyterhub -f jupyterhub_config.py
+</pre></div>
+</td></tr></table>
+
+<p>Let's launch!</p>
+<div class="codehilite"><pre><span></span>$ chmod u+x launch.sh
+$ ./launch.sh
+</pre></div>
+
+
+<p>And now test! Head to <code>http://localhost:8010</code>. Click on the button "Sign In With
+GenericOAuth2". If you are logged into admin console already, then you should be
+take to a page where you click Authorize. If you are not already logged in, the
+Login page will appear first after which the page where you click Authorize will
+present itself. Once you click Authorize, your Jupyter notebook should launch.</p>
+<p>That's it! JupyterHub has successfully learned how to authenticate a user using
+user account information stored in your Django application!</p>
+<p><strong>Remember</strong>: 
+<a href="https://github.com/vkaustubh/django-oauth-jupyterhub-demo">Source Code Available Here</a>.</p>
+<p><strong>Note</strong>: In the application that I actually built I had to containerize both
+the Django application as well as JupyterHub and allow the latter to launch
+per user notebook servers as containers. I'll try to bring this out in a future
+tutorial.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2020-02-08-integrating-jupytethub-with-django.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2020-02-08-integrating-jupytethub-with-django'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+
+<footer>
+
+    <div class="container">
+        <div align="center">
+          The web site has been created using Bootstrap, Django/django-freeze starting from a blank file. Background image courtesy of <a href="https://www.setaswall.com/">SetAsWell</a>. All rights reserved. Copyright &copy; 2019.
+        </div>
+    </div>
+
+</footer>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon
+             glyphicon-chevron-up"> Up </span></a>
+
+<script src="static/js/scroll_top.js"></script>
+
+<!-- Configuration for MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+</body>
+</html>
