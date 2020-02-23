@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<title> Blogging With Flask </title>
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+  <link rel="stylesheet" href="../static/css/main.css">
+  
+  <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../pygments.css">
+
+  <!-- Script for working MathJax for Equations Inside Blog -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+
+    
+    
+  
+<style>
+
+.bg-dark {
+    background-color: #000 !important;
+}
+  .jumbotron
+  {
+      background-color: #000;
+      color: white;
+      font-family: Open Sans;
+      margin-bottom: 0px;
+  }
+
+    .navbar
+  {
+    font-size: 20px;
+  }
+
+  html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  }
+
+  body
+  {
+      background: url(../static/images/main_background.jpg); /* https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-143-1920x1200.jpg); /* url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-060-2560x1600.jpg); /*url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-039-1920x1080.jpg);*/
+    font-family: Raleway;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    position: relative;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato"
+  }
+
+   #spaceBeforeFooter {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+   }
+
+  footer {
+      padding-top: 1em;
+      background-color: #000;
+      color: white;
+      padding-bottom: 1em;
+      font-family: Raleway;
+   }
+
+   footer h2 {
+    padding-bottom: 0.2em;
+   }
+
+    footer img {
+        margin-left: 1.5em;
+    }
+    footer p {
+        font-size: 1.0em;
+    }
+
+
+
+  .overlay
+  {
+
+   background-color: #eeeef6;
+   background-color: white;
+   margin-top: -30px;
+   padding: 20px;
+   margin-bottom: 50px;
+
+  }
+
+  .card
+  {
+    min-height: 110px;
+    color: #FBF7F9;
+    background-color: #343a40;
+  }
+
+  .brand-name
+  {
+      font-family: Montserrat;
+      font-variant: small-caps;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FBF7F9 !important;
+      text-decoration: none;
+  }
+
+  .nav-item
+  {
+    font-family: Open Sans;
+    font-variant: small-caps;
+    color: white;
+  }
+
+  .customCard
+  {
+    margin-bottom: 20px;
+   }
+
+   .pointer
+   {
+   cursor: pointer;
+   }
+
+
+  .image-card
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+  }
+
+  .carousel-item {
+      color: black;
+      background-color: black !important;
+   }
+
+ .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ }
+
+ .nav-align-left {
+  margin-left: 15px;
+ }
+
+ .nav-align-right {
+  margin-right: 15px;
+ }
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item
+{
+  color: #fff;
+  background-color: #000;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  <!--border: 1px solid #fff;-->
+  padding: 10px;
+  font-size: 1em;
+}
+</style>
+</head>
+
+<body>
+<div class="align-items-center" align="center">
+    <div class="d-lg-none navbar navbar-expand-lg bg-dark navbar-dark" >
+        <h2 class="navbar-brand brand-name" align="center">
+          Kaustubh Vaghmare's <br> <small> Home Page </small></h2>
+    </div>
+    <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark">
+      <h2 class="navbar-brand brand-name" style="margin-left: 0.5em; margin-top: 10px;">  Kaustubh Vaghmare's <br> <small>Home Page</small> </h2>
+    </div>
+</div>
+<div >
+
+    <nav class="navbar navbar-expand-md navbar-light bg-faded bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                  <a class="nav-link" style="" href="https://vkaustubh.github.io">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../index.html">Blog Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link"
+                     href="../general.html">General</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../geek.html">For Geeks</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
+  
+
+<div class="col-lg-offset-1 col-lg-8">
+    <h2>Blogging With Flask</h2>
+    <span class="date"> Sunday, 23 February, 2020</span>
+    <div></div>
+    <br/>
+
+    <h3>Objectives</h3>
+<p>Do you own your blog? If you have posted your blog on LinkedIn, Blogspot,
+Wordpress, Medium and the likes - I'd argue you don't fully own your blog! To me
+personally, ownership means many things</p>
+<ul>
+<li>You can write the blog using whatever tool you like (in my case it is my
+  favorite text editor - vim)</li>
+<li>You can change the layout, the source code etc. on a whim!</li>
+<li>You can change the domain over which your posts appear.</li>
+<li>And more.</li>
+</ul>
+<p>How do you achieve this? Well, it's not really hard if you already know how to
+write HTML and CSS. You just generate pages after pages in HTML and host them
+wherever you want to host them! But that is not efficient for a number of
+reasons:</p>
+<ul>
+<li>Wrestling with HTML tags takes away from the most important thing - focusing
+  on your thoughts that are transferring from some deep part of your biological
+  neural network through the fingers and onto the screen.</li>
+<li>You end up doing rather inefficient things such as copy-pasting the layout and
+  navigation bar code from page to page.</li>
+<li>If you have a page that contains an index of your blogs, you end up making
+  manual entries and further become prone to more errors.</li>
+</ul>
+<p>What's the solution? If you knew a tool like Django or Flask (a web application
+framework) you could write simple programs to generate these pages in a more
+efficient manner. But if you want to host these applications in the public
+domain, you need a hosting service and that costs money! What if you could ask
+your web application framework to generate a static set of HTML pages that you
+could put anywhere you wanted? That's the best of both worlds - that's what
+Flask Frozen does. And if you want the liberating experience of writing a blog
+that you completely own and are willing to pay a little bit of price in terms of
+learning some new tech for it - you are reading the right tutorial!</p>
+<p><strong>NOTE</strong>: The working source code for this entire tutorial is available at the
+<a href="https://github.com/vkaustubh/flask-blog-tutorial">following Github repository</a>.</p>
+<h3>Setting Up</h3>
+<p>Let's do the usual thing of creating a separate folder for our project and
+initialize our own virtual environment in it.</p>
+<div class="codehilite"><pre><span></span>mkdir flask-blog-tutorial
+cd flask-blog-tutorial
+python3 -m venv venv/
+source venv/bin/activate
+pip install flask frozen-flask flask-flatpages
+</pre></div>
+
+
+<p>Just to clarify, we have installed three main packages in our new virtual
+environment</p>
+<ul>
+<li>Flask, the microframework used for building sites</li>
+<li>Frozen-Flask, the extension that generates static pages by analyzing our web
+  application's views (functions responsible for producing a page or more
+  technically an HTTP response for a given URL)</li>
+<li>Flask-Flatpages, this extension can convert Markdown documents into HTML
+  pages. We are going to write our blog posts in Markdown, a far more convenient
+  format than HTML.</li>
+</ul>
+<p>Next, we are going to make two folders - one for our 'static' content - this
+includes any CSS files, images, JavaScript files and anything else that does not
+change; the other for our 'templates' which are blueprints for manufacturing our
+final pages.</p>
+<div class="codehilite"><pre><span></span>mkdir templates
+mkdir static
+</pre></div>
+
+
+<h3>Basic Flask Application Setup</h3>
+<p>Here is the basic philosophy of desiging a flask application in a super
+condensed form.</p>
+<ul>
+<li>You initialize a <code>Flask()</code> object, usually called <code>app</code>.</li>
+<li>You define some 'view functions' and associate them with URLs. When this URL
+  is visited, the corresponding function is executed and what is returned by
+  this function is the response your browser or client receives.</li>
+<li><code>app.run()</code> starts a light weight HTTP server so that you can test your
+  application without having to setup a full fledged production server.</li>
+</ul>
+<p>Simple enough? Let's do this. Open a file called <code>sitebuilder.py</code> and add the
+following code in it.</p>
+<div class="codehilite"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
+
+<span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">True</span>
+
+<span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+<span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">from_object</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
+
+<span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">host</span><span class="o">=</span><span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span> <span class="n">port</span><span class="o">=</span><span class="mi">5001</span><span class="p">)</span>
+</pre></div>
+
+
+<p>What's happening here? We have done exactly what we mentioned in the basic
+philosophy of how Flask works. The <code>@app.route()</code> decorator is binding the
+function <code>index()</code> to the root URL <code>/</code>. And it will create a page using
+<code>index.html</code> which we are yet to define.</p>
+<p>Since the template files don't exist, the above code cannot work. Let's fix
+this. Inside the <code>templates</code> directory we created earlier, create a new file
+called <code>base.html</code> and write the following in it.</p>
+<div class="codehilite"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;en&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;UTF-8&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span> My Flask Blog<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">header</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span> My Common Header<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">header</span><span class="p">&gt;</span>
+
+  <span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
+
+  <span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</pre></div>
+
+
+<p>This is your standard HTML syntax - nothing new here except for the <code>{% block
+content %}</code> and <code>{% endblock %}</code> tags. This is part of the Jinja2 template
+syntax which essentially is a way of saying "this is a block called 'content'
+and we are going to replace it in the future with something else". This will
+become clear immediately below.</p>
+<p>Now, create another file called <code>index.html</code>. And place the following content in
+it.</p>
+<div class="codehilite"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
+
+<span class="nt">&lt;p&gt;</span> Welcome to my blog! Enjoy.<span class="nt">&lt;/p&gt;</span>
+
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+
+
+<p>Here is what we are saying here - the <code>index.html</code> will just look like
+<code>base.html</code> except that the block 'content' will be replaced with whatever we
+are putting in this file. This is called 'template inheritance'.</p>
+<p>Do you see the power of this approach? Anything common to all pages on your
+blog - the headings, the footers, the navigation bars, the CSS etc. can now be
+placed inside <code>base.html</code> and the changes will reflect on all other pages so
+long as they 'extend' this <code>base.html</code>. So, no more messy multiple changes when
+you decide to change your layout or add a new navigation bar item.</p>
+<p>Time to give this a spin. On your command line, say</p>
+<div class="codehilite"><pre><span></span>python sitebuilder.py
+</pre></div>
+
+
+<p>Use your browser to visit <code>http://127.0.0.1:5001/</code> and see your page in action!
+If you feel like, try making changes to your HTML files and see what happens.</p>
+<h3>Blog Posts</h3>
+<p>Now, how do you write a blog post and make it accessible from a URL? We shall
+tackle this now. Let's go to our <code>sitebuilder.py</code> and add the following lines.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">flask_flatpages</span> <span class="kn">import</span> <span class="n">FlatPages</span>
+
+<span class="n">FLATPAGES_AUTO_RELOAD</span> <span class="o">=</span> <span class="n">DEBUG</span>
+<span class="n">FLATPAGES_EXTENSION</span> <span class="o">=</span> <span class="s1">&#39;.md&#39;</span>
+
+<span class="n">pages</span> <span class="o">=</span> <span class="n">FlatPages</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&lt;path:path&gt;.html&#39;</span><span class="p">)</span>
+<span class="k">def</span> <span class="nf">page</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="n">page</span> <span class="o">=</span> <span class="n">pages</span><span class="o">.</span><span class="n">get_or_404</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;page.html&#39;</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Let's dissect this carefully.</p>
+<ul>
+<li>First, we are giving some instructions to the Flask development server that
+  should there be changes in our pages, they will be auto-reloaded.</li>
+<li>Next, that our pages will be stored internally with the extension <code>.md</code> - so
+  any other file with any other extension is not considered by Flask</li>
+<li>By passing <code>app</code> object to the <code>FlatPages</code> constructor we are indirectly
+  providing all the information about our app that is needed to locate the pages
+  we create and render them.</li>
+<li>We are defining a new view function which will be associated with all URLs that
+  read <code>something.com/abc.html</code>. The <code>abc</code> part will be extracted and passed
+  down to the view function.</li>
+<li>Inside the view function, we take advantage of the <code>pages</code> object constructed
+  by <code>FlatPages</code> to query for a page matching the name <code>path</code>.</li>
+</ul>
+<p>Phew! That's a lot. Let's dwelve a bit further. Let's temporarily modify our
+<code>page()</code> function to say</p>
+<div class="codehilite"><pre><span></span>def page(path):
+    print(&quot;Page function running&quot;)
+    page = pages.get_or_404(path)
+    return render_template(&#39;page.html&#39;, page=page)
+</pre></div>
+
+
+<p>We have just added a <code>print()</code> statement to understand the workflow. Now, in
+your browser type <code>http://127.0.0.1:5001/first.html</code>, you will get a 404 (Not
+Found) error. This is expected. But check out the terminal - the message "Page
+function running" should appear indicating that this function was correctly
+matched to the URL. But since the page did not exist, a 404 response was
+returned. So, let's fix that.</p>
+<div class="codehilite"><pre><span></span>$ mkdir pages
+</pre></div>
+
+
+<p>Inside pages, create a file called <code>first.md</code> and type the following</p>
+<div class="codehilite"><pre><span></span>\\ blank line 
+\\ blank line
+# My First Blog
+
+Here is some content for this blog. Written in Markdown.
+
+- Bullet point 1
+- Bullet point 2
+- Bullet point 3
+</pre></div>
+
+
+<p>Note: The two blank lines at the top of the file are deliberate and needed.
+Don't type the <code>\\ blank line</code> part - but keep the lines empty at the top of the
+file.</p>
+<p>And now, refresh our 404 exhibiting browser page. You should now get an error
+saying <code>TemplateNotFound</code>. This means it has found the correct entry in the
+<code>pages</code> object but was not able to find <code>page.html</code> file. So, here is the
+lesson - the way we have setup things, an attempt to visit <code>/first.html</code> on our
+site causes a search for <code>first</code> inside <code>pages</code> which in turn can exist only if
+<code>pages/first.md</code> exists. Remember <code>.md</code> is because we configured
+<code>FLATPAGES_EXTENSION</code> variable as <code>.md</code>.</p>
+<p>It's easy to fix the <code>TemplateNotFound</code> error. Just create a <code>page.html</code> inside
+<code>templates</code> directory and type in the following.</p>
+<div class="codehilite"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span><span class="x"></span>
+
+<span class="cp">{{</span> <span class="nv">page.html</span><span class="o">|</span><span class="nf">safe</span> <span class="cp">}}</span><span class="x"></span>
+
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span><span class="x"></span>
+</pre></div>
+
+
+<p>Most of this should be clear now except the <code>page.html|safe</code>. This is what's
+happening here.</p>
+<ul>
+<li><code>page</code> is an object containing an attribute called <code>html</code> which stores the
+  HTML code obtained by parsing the Markdown present in our file <code>first.md</code>.</li>
+<li><code>|safe</code> essentially tells Flask (or Jinja) that this HTML is 'safe' - it does
+  not need to modified in any way. (Else all tags will be ignored and converted
+  to safe HTML representations and your blog post will contain HTML tags! Try
+  removing and see what happens!)</li>
+</ul>
+<p>Now, refresh our page in the browser again. And you should see your blog!
+Woohoo!</p>
+<h3>Blog Post Metadata</h3>
+<p>Actually, <code>.md</code> files are not pure Markdown files. They are special syntax files
+which contain Markdown. This is why we had to put two empty lines at the top.
+These two empty lines separate the metadata of the file from the actual content.
+So, what we will do now is to modify <code>first.md</code> to read as follows.</p>
+<div class="codehilite"><pre><span></span><span class="n">title</span><span class="o">:</span> <span class="n">My</span> <span class="n">First</span> <span class="n">Blog</span>
+<span class="n">date</span><span class="o">:</span> <span class="mi">2020</span><span class="o">-</span><span class="mi">02</span><span class="o">-</span><span class="mi">23</span>
+<span class="n">category</span><span class="o">:</span> <span class="n">general</span>
+
+
+<span class="n">Here</span> <span class="k">is</span> <span class="n">some</span> <span class="n">content</span> <span class="k">for</span> <span class="k">this</span> <span class="n">blog</span><span class="o">.</span> <span class="n">Written</span> <span class="k">in</span> <span class="n">Markdown</span><span class="o">.</span>
+
+<span class="o">-</span> <span class="n">Bullet</span> <span class="n">point</span> <span class="mi">1</span>
+<span class="o">-</span> <span class="n">Bullet</span> <span class="n">point</span> <span class="mi">2</span>
+<span class="o">-</span> <span class="n">Bullet</span> <span class="n">point</span> <span class="mi">3</span>
+</pre></div>
+
+
+<p>Now, the three items - <code>title</code>, <code>date</code> and <code>category</code> are available as
+attributes of the <code>page</code> object inside the <code>page.html</code> template. We can modify
+the template to read as follows.</p>
+<div class="codehilite"><pre><span></span><span class="cp">{%</span> <span class="k">extends</span> <span class="s2">&quot;base.html&quot;</span> <span class="cp">%}</span>
+
+<span class="cp">{%</span> <span class="k">block</span> <span class="nv">content</span> <span class="cp">%}</span>
+
+<span class="nt">&lt;h1&gt;</span> <span class="cp">{{</span> <span class="nv">page.title</span> <span class="cp">}}</span> <span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;small&gt;</span> Published on <span class="cp">{{</span> <span class="nv">page.date.strftime</span><span class="o">(</span><span class="s1">&#39;%A, %d %B, %Y&#39;</span><span class="o">)</span> <span class="cp">}}</span> <span class="nt">&lt;/small&gt;</span>
+<span class="nt">&lt;br&gt;</span>
+<span class="cp">{{</span> <span class="nv">page.html</span><span class="o">|</span><span class="nf">safe</span> <span class="cp">}}</span>
+
+<span class="cp">{%</span> <span class="k">endblock</span> <span class="cp">%}</span>
+</pre></div>
+
+
+<p>See how we are now rendering the title of the blog using <code>page.title</code>. Also,
+notice that we using <code>strftime</code> function available with Python <code>datetime</code>
+objects for deciding how the date will be displayed.</p>
+<p>Great! You can now creating <code>second.md</code>, <code>third.md</code> and whatever else suits your
+fancy inside the <code>pages</code> directory and access them using URLs such as
+<code>/second.html</code>, <code>/third.html</code>. And more. If you are like me and like to
+organize blogs in multiple categories, just create sub-folders inside <code>pages</code>
+directory and the URLs will change to <code>/subfolder/first.html</code> and so on.</p>
+<h3>Freezing Pages</h3>
+<p>What we have done so far is to have a web application that is running functions
+according to URLs and these functions are responsible for generating the pages.
+But as mentioned at the beginning of the tutorial, hosting this application can
+be tricky. What we want to do is to deploy plain HTML pages. The process of
+converting 'dynamic' pages (which are generated on the fly) into 'static' HTML
+pages is what we call 'freezing' here. Let's do this.</p>
+<p>Add the following lines to <code>sitebuilder.py</code> at suitable places.</p>
+<div class="codehilite"><pre><span></span><span class="kn">from</span> <span class="nn">flask_frozen</span> <span class="kn">import</span> <span class="n">Freezer</span>
+<span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">url_for</span>
+
+<span class="n">freezer</span> <span class="o">=</span> <span class="n">Freezer</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
+
+<span class="nd">@freezer.register_generator</span>
+<span class="k">def</span> <span class="nf">pagelist</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">pages</span><span class="p">:</span>
+        <span class="k">yield</span> <span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">page</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
+</pre></div>
+
+
+<p>Replace the <code>app.run(...)</code> line with the following piece of code.</p>
+<div class="codehilite"><pre><span></span>if __name__ == &#39;__main__&#39;:
+    if len(sys.argv) &gt; 1 and sys.argv[1] == &#39;build&#39;:
+        freezer.freeze()
+    else:
+        app.run(host=&#39;0.0.0.0&#39;, port=5001)
+</pre></div>
+
+
+<p>Let's review the essential parts of this code.</p>
+<ul>
+<li>We are passing <code>app</code> to Freezer - this allows it to fetch whatever information
+  it needs about the app in order to do its job.</li>
+<li>We are defining a function whose job it is to generate URLs for each post in
+  <code>pages</code> object.</li>
+<li>And we are decorating with <code>freezer.register_generator</code> so that among the
+  things Flask Freeze has to freeze, this will include all our pages.</li>
+<li>Finally, we give two modes to our <code>sitebuilder.py</code> application - one where we
+  run it simply by saying <code>python sitebuilder.py</code> and we can use this to see how
+  our pages look like as we change them in real time. And another mode where we
+  require that our new set of static pages be generated.</li>
+</ul>
+<p>To see the freezing in action, terminate the development server if running and
+type in the following command.</p>
+<div class="codehilite"><pre><span></span>$ python sitebuilder.py build
+</pre></div>
+
+
+<p>Ignore the warnings that appear. Head to the <code>build</code> folder and you will find
+the HTML pages generated there! Job well done.</p>
+<h3>Publishing Your Blog</h3>
+<p>If you take all the files inside <code>build</code> and place them where the root folder of
+your site is configured, it's done - you have published your blog!</p>
+<p>If you don't have a hosting server with a document root configured for you, here
+is what you can do</p>
+<ul>
+<li>Register or Sign In to your Github account.</li>
+<li>Create a new repository called <code>&lt;yourUserName&gt;.github.io</code></li>
+<li>Add your <code>build/</code> files inside this repository (see Git and Github help
+  manuals for learning how to do this.)</li>
+<li>Done!</li>
+</ul>
+<p>Visiting <code>&lt;yourUserName&gt;.github.io</code> should display your pages.</p>
+<h3>Bonus Material - A List of All Blog Posts</h3>
+<p>While not a part of the original goal laid out at the beginning, let us cover
+something which is obvious - having a list of all your posts displayed on the
+<code>index.html</code> page.</p>
+<p>Change the <code>index()</code> function to the following:</p>
+<div class="codehilite"><pre><span></span>@app.route(&#39;/&#39;)
+def index():
+    return render_template(&#39;index.html&#39;, pages=pages)
+</pre></div>
+
+
+<p>And add the following to your <code>index.html</code>.</p>
+<div class="codehilite"><pre><span></span><span class="nt">&lt;h3&gt;</span>Contents<span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;table</span> <span class="na">border=</span><span class="s">&quot;2px&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;thead&gt;</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span> Title <span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span> Link <span class="nt">&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="nt">&lt;/thead&gt;</span>
+
+
+  <span class="cp">{%</span> <span class="k">for</span> <span class="nv">page</span> <span class="k">in</span> <span class="nv">pages</span> <span class="cp">%}</span>
+  <span class="nt">&lt;tr&gt;</span>
+    <span class="nt">&lt;td&gt;</span> <span class="cp">{{</span> <span class="nv">page.title</span> <span class="cp">}}</span><span class="nt">&lt;/td&gt;</span>
+    <span class="nt">&lt;td&gt;</span> <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">&quot;</span><span class="cp">{{</span> <span class="nv">page.path</span> <span class="cp">}}</span><span class="s">.html&quot;</span><span class="nt">&gt;</span> Read <span class="nt">&lt;/a&gt;&lt;/td&gt;</span>
+  <span class="nt">&lt;/tr&gt;</span>
+  <span class="cp">{%</span> <span class="k">endfor</span> <span class="cp">%}</span>
+
+<span class="nt">&lt;/table&gt;</span>
+</pre></div>
+
+
+<p>What did we do?</p>
+<ul>
+<li>We modified our <code>index()</code> view function to pass the <code>pages</code> object to the
+  template.</li>
+<li>In the template, we loop over the <code>pages</code> object and populate table rows
+  containing the blog post title and a hyper link. Note that since the path does
+  not contain <code>.html</code> inside it, we add it manually.</li>
+</ul>
+<h3>Proceeding Further</h3>
+<p>There is much more hard work that needs to be done to achieve a fully
+functioning and ready to publish blog. Here is what I recommend as future course
+of action.</p>
+<ul>
+<li>Style it up. I recommend using something like "Bootstrap" to get the best
+  possible look. Or you could explore some ready made templates.</li>
+<li>Learn more about Markdown syntax since you will be writing blog posts in
+  Markdown.</li>
+<li>Look at Disqus as a means of adding a "Comments" section to your blog posts.
+  The way this works is that you create an account with Disqus, follow their
+  instructions in adding a Javascript to your blog page and Disqus does
+  everything else. It does require a unique identity for each page to separate
+  out the comments - you will need to code a bit to generate this unique ID.</li>
+<li>Look into something like Google Analytics to get visitor statistics for your
+  pages.</li>
+<li>Look into RSS feeds to enable users to subscribe to your blog.</li>
+</ul>
+<p><strong>NOTE</strong>: The working source code for this entire tutorial is available at the
+<a href="https://github.com/vkaustubh/flask-blog-tutorial">following Github repository</a>.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2020-02-23-blogging-with-flask.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2020-02-23-blogging-with-flask'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+
+<footer>
+
+    <div class="container">
+        <div align="center">
+          The web site has been created using Bootstrap, Django/django-freeze starting from a blank file. Background image courtesy of <a href="https://www.setaswall.com/">SetAsWell</a>. All rights reserved. Copyright &copy; 2019.
+        </div>
+    </div>
+
+</footer>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon
+             glyphicon-chevron-up"> Up </span></a>
+
+<script src="static/js/scroll_top.js"></script>
+
+<!-- Configuration for MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+</body>
+</html>
