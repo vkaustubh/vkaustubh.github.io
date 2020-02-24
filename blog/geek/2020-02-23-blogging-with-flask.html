@@ -544,7 +544,9 @@ the template to read as follows.</p>
 
 <p>See how we are now rendering the title of the blog using <code>page.title</code>. Also,
 notice that we using <code>strftime</code> function available with Python <code>datetime</code>
-objects for deciding how the date will be displayed.</p>
+objects for deciding how the date will be displayed. Below is a screenshot of
+what the blog page would look like at this stage.</p>
+<p><img alt="Blog Post Example Image" src="../static/images/blog_images/flask_blog_first.png" /></p>
 <p>Great! You can now creating <code>second.md</code>, <code>third.md</code> and whatever else suits your
 fancy inside the <code>pages</code> directory and access them using URLs such as
 <code>/second.html</code>, <code>/third.html</code>. And more. If you are like me and like to
@@ -654,6 +656,9 @@ def index():
   containing the blog post title and a hyper link. Note that since the path does
   not contain <code>.html</code> inside it, we add it manually.</li>
 </ul>
+<p>Below is a screenshot of what the index page looks like, assuming a single blog
+post.</p>
+<p><img alt="Index Page After Contents Table" src="../static/images/blog_images/flask_blog_index.png" /></p>
 <h3>Proceeding Further</h3>
 <p>There is much more hard work that needs to be done to achieve a fully
 functioning and ready to publish blog. Here is what I recommend as future course
