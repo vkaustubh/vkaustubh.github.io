@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<title> Motivating Basic Statistics - for Programmers </title>
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+  <link rel="stylesheet" href="../static/css/main.css">
+  
+  <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../pygments.css">
+
+  <!-- Script for working MathJax for Equations Inside Blog -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+
+    
+    
+  
+<style>
+
+.bg-dark {
+    background-color: #000 !important;
+}
+  .jumbotron
+  {
+      background-color: #000;
+      color: white;
+      font-family: Open Sans;
+      margin-bottom: 0px;
+  }
+
+    .navbar
+  {
+    font-size: 20px;
+  }
+
+  html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  }
+
+  body
+  {
+      background: url(../static/images/main_background.jpg); /* https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-143-1920x1200.jpg); /* url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-060-2560x1600.jpg); /*url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-039-1920x1080.jpg);*/
+    font-family: Raleway;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    position: relative;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato"
+  }
+
+   #spaceBeforeFooter {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+   }
+
+  footer {
+      padding-top: 1em;
+      background-color: #000;
+      color: white;
+      padding-bottom: 1em;
+      font-family: Raleway;
+   }
+
+   footer h2 {
+    padding-bottom: 0.2em;
+   }
+
+    footer img {
+        margin-left: 1.5em;
+    }
+    footer p {
+        font-size: 1.0em;
+    }
+
+
+
+  .overlay
+  {
+
+   background-color: #eeeef6;
+   background-color: white;
+   margin-top: -30px;
+   padding: 20px;
+   margin-bottom: 50px;
+
+  }
+
+  .card
+  {
+    min-height: 110px;
+    color: #FBF7F9;
+    background-color: #343a40;
+  }
+
+  .brand-name
+  {
+      font-family: Montserrat;
+      font-variant: small-caps;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FBF7F9 !important;
+      text-decoration: none;
+  }
+
+  .nav-item
+  {
+    font-family: Open Sans;
+    font-variant: small-caps;
+    color: white;
+  }
+
+  .customCard
+  {
+    margin-bottom: 20px;
+   }
+
+   .pointer
+   {
+   cursor: pointer;
+   }
+
+
+  .image-card
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+  }
+
+  .carousel-item {
+      color: black;
+      background-color: black !important;
+   }
+
+ .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ }
+
+ .nav-align-left {
+  margin-left: 15px;
+ }
+
+ .nav-align-right {
+  margin-right: 15px;
+ }
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item
+{
+  color: #fff;
+  background-color: #000;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  <!--border: 1px solid #fff;-->
+  padding: 10px;
+  font-size: 1em;
+}
+</style>
+</head>
+
+<body>
+<div class="align-items-center" align="center">
+    <div class="d-lg-none navbar navbar-expand-lg bg-dark navbar-dark" >
+        <h2 class="navbar-brand brand-name" align="center">
+          Kaustubh Vaghmare's <br> <small> Home Page </small></h2>
+    </div>
+    <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark">
+      <h2 class="navbar-brand brand-name" style="margin-left: 0.5em; margin-top: 10px;">  Kaustubh Vaghmare's <br> <small>Home Page</small> </h2>
+    </div>
+</div>
+<div >
+
+    <nav class="navbar navbar-expand-md navbar-light bg-faded bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                  <a class="nav-link" style="" href="https://vkaustubh.github.io">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../index.html">Blog Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link"
+                     href="../general.html">General</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../geek.html">For Geeks</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
+  
+
+<div class="col-lg-offset-1 col-lg-8">
+    <h2>Motivating Basic Statistics - for Programmers</h2>
+    <span class="date"> Tuesday, 07 April, 2020</span>
+    <div></div>
+    <br/>
+
+    <h3>The Non Statistical Thinking Fallacy</h3>
+<p>It was a fine Saturday morning! Oh, I know this is a very cliched way of
+beginning any piece of literature but what can I do? It was a Saturday! It was a
+morning, and a fine one at that! I was attending a Meetup aimed at explaining
+Redis, an in-memory database typically used for speeding up your programs. An
+example code was being explained, executed and the time it took to execute was
+being measured.</p>
+<p>A suspicious man in the audience eyes the code with keen eyes. After a while he
+says, "I think you should swap these two lines. The code will run even faster."
+Not everyone agrees and the audience gets divided and a debate takes us all
+astray from the main topic. With the hope of solving the debate once and for
+all, the person in-charge of the demo promptly swaps the two lines and reruns
+the program. It takes lesser time to execute!</p>
+<p>Our suspicious man grins and looks at the audience with an emphatic look.
+Another person in the audience is still not convinced. "There should not be any
+difference." A polite request from the speaker suggests the audience to discuss
+it later.</p>
+<p>What do you think? What is the problem with this scenario? Well, it is a
+meaningless way of settling a debate - that's the problem. It suffers from the
+'non statistical thinking fallacy'. This fallacy arises when a person ignores an
+important fact - <strong>almost all measurements are noisy</strong>.</p>
+<h3>Enter Random Variables</h3>
+<p>A random variable is a quantity whose output cannot be predicted exactly. We
+also call it 'noise' in many contexts. Almost all measurements have a source of
+noise. So, even if the the true value of some quantity is deterministic, the
+measured value is a random variable.</p>
+<p>$$
+t_{measured} = t_{actual} + noise
+$$</p>
+<p>In the example scenario above, the source of noises could be plenty</p>
+<ul>
+<li>background activities by the operating system</li>
+<li>flushing of I/O buffers</li>
+<li>network communication glitches</li>
+<li>and more.</li>
+</ul>
+<p>So, a single measurement of time taken by version A of the code and time taken
+by the version B of code is simply not enough to conclude whether the two
+versions (differing by a line swap) are indeed different in terms of execution
+time.</p>
+<p>So, how shall we conclude in such a case? These are exactly the kind of
+questions that Statistics is designed to answer.</p>
+<h3>Central Limit Theorem</h3>
+<p>Say we measure the time taken to execute version A many times. Each time it will
+be different - this confirms that we are dealing with a random variable. There
+are two important properties we can compute from our measurements</p>
+<ul>
+<li>the average or the mean</li>
+</ul>
+<p>$$
+\mu = \sum_i \frac{t_i}{N}
+$$</p>
+<ul>
+<li>and the 'standard deviation' or its square known as the 'variance'</li>
+</ul>
+<p>$$
+\sigma^2 = \sum_i \frac{(t_i - \mu)^2}{N-1}
+$$</p>
+<p>The average tells us the 'central value' around which our measurements dance.
+The standard deviation tells us <em>how much or how far they dance</em>. So, if we
+decide to take any one measurement and quote it as the time taken for the
+program to execute, our estimate has an uncertainty around it quantified by the
+standard deviation.  But let us say that we decide to take the average of all
+the measurements and quote the average instead? Are we still equally uncertain
+about our estimate?</p>
+<p>The central limit theorem, among other things, says that our uncertainty on the
+average (not any individual measurement) is actually lesser than the uncertainty
+of any individual measurement. This uncertainty is called 'standard error' and
+is given by the Central Limit Theorem as</p>
+<p>$$
+SE = \frac{\sigma}{\sqrt{N}}
+$$</p>
+<p>So, if you obtained the average using 4 measurements, your uncertainty goes down
+by 2, if you obtained it using 100 measurements, your uncertainty goes down by
+10. Hence the instruction by your school and college teachers during an
+experiment to repeat the measurement many times and take an average.</p>
+<p>Going back to our debating programmers, the first fallacy committed there is
+that they are relying on a single measurement where the level of uncertainty is
+considerably high.</p>
+<h3>Settling The Dispute</h3>
+<p>So, how shall we settle the question of whether version A of the code and
+version B are indeed different in terms of execution time? Here is a simple step
+by step prescription.</p>
+<ul>
+<li>Measure the execution time for version A, N times.</li>
+<li>Measure the execution time for version B, N times.</li>
+<li>Compute the average and standard deviations for A and B using the respective
+  measurements and the above formula.</li>
+<li>Then measure the difference between the averages for A and B in units of 'how
+  spread their values are' i.e. their standard deviations.</li>
+</ul>
+<p>For convenience, let us assume their standard deviations are equal, then the
+distance could be defined as</p>
+<p>$$
+d = \frac{\mu_A - \mu_B}{\sigma}
+$$</p>
+<p>The <em>larger</em> the value of this difference, the <em>more adamant you can be</em> that
+versions A and B differ in execution times. Typically, if the distance 'd' as
+described above is less than 3, you should be skeptical. Or you could try doing
+more measurements so that standard deviation goes down as root of N and you get
+a newer estimate of 'd'.</p>
+<p>Can you quantify the 'adamancy' allowed? Yes! We will however need more advanced
+concepts such as confidence intervals, Student's t-distribution, p-value and
+more. Perhaps another time!</p>
+<h3>Beyond Execution Times</h3>
+<p>I took the example of the execution time as a measured quantity because I
+witnessed two programmers participating in this futile discussion, suffering
+from the <em>non statistical thinking fallacy</em>. But the world of computer science
+is filled with many examples where such a fallacy can be a problem (thankfully,
+where it matters, experts don't succumb to it). A few examples come to mind</p>
+<ul>
+<li>what is latency of the new network we installed?</li>
+<li>is component A causing the slowdown in our network?</li>
+<li>what is the average available bandwidth in the new connection?</li>
+<li>is model A performing better than model B?</li>
+<li>and many more.</li>
+</ul>
+<h3>Conclusions</h3>
+<p>I hope I have been able to demonstrate to you the necessity to keep some basic
+statistical principles at the forefront of your thought process, especially when
+measured quantities are involved. In some cases, people just are not aware. In
+other cases, people forget to think like this. Statistics is an important
+subject. Sure, we can leave the super advanced concepts to the statisticians but
+the basics <strong>are an absolute must</strong>.</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/geek/2020-04-07-motivating-basic-statistics-programmers.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'geek/2020-04-07-motivating-basic-statistics-programmers'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+
+<footer>
+
+    <div class="container">
+        <div align="center">
+          The web site has been created using Bootstrap, Django/django-freeze starting from a blank file. Background image courtesy of <a href="https://www.setaswall.com/">SetAsWell</a>. All rights reserved. Copyright &copy; 2019.
+        </div>
+    </div>
+
+</footer>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon
+             glyphicon-chevron-up"> Up </span></a>
+
+<script src="static/js/scroll_top.js"></script>
+
+<!-- Configuration for MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+</body>
+</html>
