@@ -2,10 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">General Articles by Kaustubh Vaghmare</title>
   <id>https://vkaustubh.github.io/blog/general/feed.xml</id>
-  <updated>2019-12-20T00:00:00Z</updated>
+  <updated>2020-05-01T00:00:00Z</updated>
   <link href="https://vkaustubh.github.io/blog/general.html" />
   <link href="https://vkaustubh.github.io/blog/general/feed.xml" rel="self" />
   <generator>Werkzeug</generator>
+  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
+    <title type="text">A Killer Named Anxiety</title>
+    <id>https://vkaustubh.github.io/blog/general/2020-05-01-killer-named-anxiety.html</id>
+    <updated>2020-05-01T00:00:00Z</updated>
+    <link href="https://vkaustubh.github.io/blog/general/2020-05-01-killer-named-anxiety.html" />
+    <author>
+      <name>Kaustubh Vaghmare</name>
+    </author>
+    <content type="html">A description of self induced anxieties that promise to slowly kill our well being and mental health.</content>
+  </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Internship for Dummies</title>
     <id>https://vkaustubh.github.io/blog/general/2019-12-20-internship-for-dummies.html</id>
@@ -15,16 +25,6 @@
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">Seemingly obvious but clearly not obvious guidelines to follow when you are interning at an institute or a company OR when you are guiding an intern.</content>
-  </entry>
-  <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
-    <title type="text">Checking Generalization Without Test and Validation Sets</title>
-    <id>https://vkaustubh.github.io/blog/geek/2019-09-29-generalization-without-test-set.html</id>
-    <updated>2019-09-29T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/blog/geek/2019-09-29-generalization-without-test-set.html" />
-    <author>
-      <name>Kaustubh Vaghmare</name>
-    </author>
-    <content type="html">For Machine Learning folks, who generally bypass a proper detailed course on statistics. A surprisingly old but very important technique for verifying the 'generalizability' of a model.</content>
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/general/feed.xml">
     <title type="text">Accountability, Transparency And Consequence</title>

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<title> A Killer Named Anxiety </title>
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+  <link rel="stylesheet" href="../static/css/main.css">
+  
+  <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../pygments.css">
+
+  <!-- Script for working MathJax for Equations Inside Blog -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+
+    
+    
+  
+<style>
+
+.bg-dark {
+    background-color: #000 !important;
+}
+  .jumbotron
+  {
+      background-color: #000;
+      color: white;
+      font-family: Open Sans;
+      margin-bottom: 0px;
+  }
+
+    .navbar
+  {
+    font-size: 20px;
+  }
+
+  html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  }
+
+  body
+  {
+      background: url(../static/images/main_background.jpg); /* https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-143-1920x1200.jpg); /* url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-060-2560x1600.jpg); /*url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-039-1920x1080.jpg);*/
+    font-family: Raleway;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    position: relative;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato"
+  }
+
+   #spaceBeforeFooter {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+   }
+
+  footer {
+      padding-top: 1em;
+      background-color: #000;
+      color: white;
+      padding-bottom: 1em;
+      font-family: Raleway;
+   }
+
+   footer h2 {
+    padding-bottom: 0.2em;
+   }
+
+    footer img {
+        margin-left: 1.5em;
+    }
+    footer p {
+        font-size: 1.0em;
+    }
+
+
+
+  .overlay
+  {
+
+   background-color: #eeeef6;
+   background-color: white;
+   margin-top: -30px;
+   padding: 20px;
+   margin-bottom: 50px;
+
+  }
+
+  .card
+  {
+    min-height: 110px;
+    color: #FBF7F9;
+    background-color: #343a40;
+  }
+
+  .brand-name
+  {
+      font-family: Montserrat;
+      font-variant: small-caps;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FBF7F9 !important;
+      text-decoration: none;
+  }
+
+  .nav-item
+  {
+    font-family: Open Sans;
+    font-variant: small-caps;
+    color: white;
+  }
+
+  .customCard
+  {
+    margin-bottom: 20px;
+   }
+
+   .pointer
+   {
+   cursor: pointer;
+   }
+
+
+  .image-card
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+  }
+
+  .carousel-item {
+      color: black;
+      background-color: black !important;
+   }
+
+ .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ }
+
+ .nav-align-left {
+  margin-left: 15px;
+ }
+
+ .nav-align-right {
+  margin-right: 15px;
+ }
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item
+{
+  color: #fff;
+  background-color: #000;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  <!--border: 1px solid #fff;-->
+  padding: 10px;
+  font-size: 1em;
+}
+</style>
+</head>
+
+<body>
+<div class="align-items-center" align="center">
+    <div class="d-lg-none navbar navbar-expand-lg bg-dark navbar-dark" >
+        <h2 class="navbar-brand brand-name" align="center">
+          Kaustubh Vaghmare's <br> <small> Home Page </small></h2>
+    </div>
+    <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark">
+      <h2 class="navbar-brand brand-name" style="margin-left: 0.5em; margin-top: 10px;">  Kaustubh Vaghmare's <br> <small>Home Page</small> </h2>
+    </div>
+</div>
+<div >
+
+    <nav class="navbar navbar-expand-md navbar-light bg-faded bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                  <a class="nav-link" style="" href="https://vkaustubh.github.io">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../index.html">Blog Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link"
+                     href="../general.html">General</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../geek.html">For Geeks</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
+  
+
+<div class="col-lg-offset-1 col-lg-8">
+    <h2>A Killer Named Anxiety</h2>
+    <span class="date"> Friday, 01 May, 2020</span>
+    <div></div>
+    <br/>
+
+    <p>Imagine you are a hunter-gatherer of what might be largely considered a long
+lost past. You are walking through a forest and there is a rustling of the
+leaves. Millions of years of evolution have made you sharp to this particular
+sound. While the sound may be caused by the wind blowing through the leaves, it
+can also be caused by a predator hunting for its prey - you! You become
+immediately alert and your breathing slows down. You have not had food for days
+and are on the way to forage for some when you hear this rustling of leaves.</p>
+<p>You know the difference between the rustling of the leaves caused by the wind
+and the rustling caused by a predator moving stealthily towards its prey. Your
+mind, already a little anxious now, begins to watch out for further signs.
+Slowly, the breathing of the predator and its footsteps become more apparent.
+And instinctively you turn your eyes towards a particular direction and find
+yourself staring at a wolf! Then something truly magical happens! Despite having
+not eaten decent food for days, a rush of energy comes in and you start running
+towards safety. Where did your energy come from?</p>
+<h3>Meet Cortisol</h3>
+<p>Cortisol is a naturally occurring hormone in your body. And when faced with
+danger or the notion of danger, your body's balanced production of cortisol goes
+out for a toss and your levels of cortisol rise. These elevated levels of
+cortisol divert the focus of your body towards processing your reserve stores of
+energy and making them available. It is by this availability of energy (blood
+glucose) that you are able to find a sudden source of energy which allows your
+'fight or flight' response.</p>
+<p>And thank goodness this happens! Else in the slightest face of danger we would
+continue to gallop around like idiots and any predator, animate or inanimate,
+will have us where it wants and we wouldn't survive too long. But good things
+are good only if they come at the right place and at the right time. An
+unseasonal rain might be a welcome sight but can wreck havoc on the delicate
+balance of nature. Same way, imagine that your levels of cortisol were always
+elevated! What would happen?</p>
+<p>When cortisol kicks into action, it completely changes the priorities of your
+body. It may slow down your digestive processes, your growth and healing
+processes and may even compromise your immune system. The focus is on giving you
+enough energy to escape the situation. But imagine there is no situation. Then
+not only is your body being denied a healthy occurrence of various processes but
+you are not 'fighting or flighting' and using these excess energy. We call it
+'high sugar' in our casual conversations.</p>
+<p>Some people suffer from disorders such as Cushing's Syndrome aka
+hypercortisolism. They are doomed to suffer its consequences unless medical
+intervention is available. But there are those among us who are voluntarily
+submitting to a condition of elevated cortisol and its associated problems.</p>
+<h3>Meet High Cortisol's Modern Friends</h3>
+<p>Are you anxious? Er ... no, you might say, giving a broad convincing smile. Are
+you sure? Oh ... of course, comes the reply. And then you glance over to your
+side where your phone has been kept. No sooner had the waiter brought your
+exotic dish than you had taken a photograph of it and uploaded it to your
+Facebook wall, and sent it out to your Whatsapp friends. The LED on the top of
+the phone which starts glowing when a new notification has arrived, is not
+blinking.</p>
+<p>You turn your gaze and look at your friend again with whom you are having lunch.
+A few moments later, you are looking again at your phone. You cannot resist and
+you quickly grab your phone and open Whatsapp. A double blue tick on your close
+friend's chat window. She has read your message! Strange. Why hasn't she
+replied? What could be wrong? Ah, what about your other friend? A double grey
+tick - she still hasn't seen the message. Hmmm! Ok. Another friend, double blue
+and no reply! What? Why?</p>
+<p>You turn back to your friend and he is not at all pleased. He is meeting you
+after such a long time and here you are, more anxious about potential comments
+from your friends over a picture you took of a dish. The conversation turns sour
+and dull. Your friend quickly wraps up the lunch and then excuses himself for
+wanting to go elsewhere for another appointment. You feel bad, of course, since
+you are in general a good human being and also completely aware that your friend
+is a little upset. You come back home with a double dose of worries and in that
+trance fail to ackowledge your waiting parents who are eager to share something
+with you. Now they are upset and the chain goes on!</p>
+<p><strong>This is self-inflicted hypercortisolism!</strong></p>
+<p>It's bad enough that modern work places are sources of stress and anxiety and
+here you have to inflict more on yourself. And if you think this is not messing
+up your levels of cortisol, think again. And then ask yourself - what kind of an
+idiot inflicts such a condition on one's body? Well, then stare at yourself in
+the mirror and hope that you are not that idiot.</p>
+<h3>Personal Suggestions for Escaping Self Inflicted Hypercortisolism</h3>
+<p>There are obvious solutions in the form of exercise and Yoga. These physical
+activities help manage cortisol levels as well as the associated changes
+produced in the body because of elevated levels of cortisol. But here are my
+personal suggestions apart from obvious.</p>
+<ul>
+<li>
+<p>Guided meditation in the middle of the action. Plenty of podcasts, Youtube
+  videos and apps exist which provide guided meditations of various lengths. Try
+  to find a quiet place and do these.</p>
+</li>
+<li>
+<p>Tomato meters! The <strong>Pomodoro</strong> technique suggests slicing your day in cycles
+  of 25 minute bursts of non-distracted work followed by mandatory 5 minute
+  breaks. I follow this less for productivity but more for the mandatory breaks.</p>
+</li>
+<li>
+<p>Shutting down the Internet on the phone for prolonged periods on specific
+  days.</p>
+</li>
+<li>
+<p>Having a real hobby to pursue during free times. If you love it, following the
+  previous idea becomes trivial.</p>
+</li>
+<li>
+<p>Disable mobile data when meeting up with real people.</p>
+</li>
+<li>
+<p>Meet more real people and invest more time with them.</p>
+</li>
+</ul>
+<p>I am sure there are many more methods out there. But to provide an exhaustive
+list is not the intention of this post. This post is to bring out the severe
+danger that lies in self inflicted stress and the necessity to acknowledge its
+presence. Once acknowledged, it becomes easier to solve the problem. Beware of
+the killer named anxiety!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2020-05-01-killer-named-anxiety.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2020-05-01-killer-named-anxiety'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+
+<footer>
+
+    <div class="container">
+        <div align="center">
+          The web site has been created using Bootstrap, Django/django-freeze starting from a blank file. Background image courtesy of <a href="https://www.setaswall.com/">SetAsWell</a>. All rights reserved. Copyright &copy; 2019.
+        </div>
+    </div>
+
+</footer>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon
+             glyphicon-chevron-up"> Up </span></a>
+
+<script src="static/js/scroll_top.js"></script>
+
+<!-- Configuration for MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+</body>
+</html>
