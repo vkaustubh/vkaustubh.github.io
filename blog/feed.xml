@@ -2,10 +2,20 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title type="text">All Articles by Kaustubh Vaghmare</title>
   <id>https://vkaustubh.github.io/blog/feed.xml</id>
-  <updated>2020-05-01T00:00:00Z</updated>
+  <updated>2021-01-15T00:00:00Z</updated>
   <link href="https://vkaustubh.github.io/blog/" />
   <link href="https://vkaustubh.github.io/blog/feed.xml" rel="self" />
   <generator>Werkzeug</generator>
+  <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
+    <title type="text">The Shortcut Brain</title>
+    <id>https://vkaustubh.github.io/blog/general/2021-01-15-the-shortcut-brain.html</id>
+    <updated>2021-01-15T00:00:00Z</updated>
+    <link href="https://vkaustubh.github.io/blog/general/2021-01-15-the-shortcut-brain.html" />
+    <author>
+      <name>Kaustubh Vaghmare</name>
+    </author>
+    <content type="html">My rather strong opinion on people taking or preferring shortcuts in everything.</content>
+  </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">A Killer Named Anxiety</title>
     <id>https://vkaustubh.github.io/blog/general/2020-05-01-killer-named-anxiety.html</id>
@@ -127,16 +137,6 @@
     <content type="html">An article that builds upon the know-how of GnuPG to secure (web) e-mail.</content>
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
-    <title type="text">Towards using GPG For Security - Part 2</title>
-    <id>https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html</id>
-    <updated>2019-02-20T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html" />
-    <author>
-      <name>Kaustubh Vaghmare</name>
-    </author>
-    <content type="html">Second of two articles guiding readers towards usage of GPG.</content>
-  </entry>
-  <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">Towards using GPG For Security - Part 1</title>
     <id>https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-1.html</id>
     <updated>2019-02-20T00:00:00Z</updated>
@@ -145,6 +145,16 @@
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">A first of two articles guiding readers towards usage of GPG.</content>
+  </entry>
+  <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
+    <title type="text">Towards using GPG For Security - Part 2</title>
+    <id>https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html</id>
+    <updated>2019-02-20T00:00:00Z</updated>
+    <link href="https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html" />
+    <author>
+      <name>Kaustubh Vaghmare</name>
+    </author>
+    <content type="html">Second of two articles guiding readers towards usage of GPG.</content>
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/feed.xml">
     <title type="text">The Western Coastline Destruction</title>

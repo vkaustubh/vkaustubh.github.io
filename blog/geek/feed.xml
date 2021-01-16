@@ -77,16 +77,6 @@
     <content type="html">An article that builds upon the know-how of GnuPG to secure (web) e-mail.</content>
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
-    <title type="text">Towards using GPG For Security - Part 2</title>
-    <id>https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html</id>
-    <updated>2019-02-20T00:00:00Z</updated>
-    <link href="https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html" />
-    <author>
-      <name>Kaustubh Vaghmare</name>
-    </author>
-    <content type="html">Second of two articles guiding readers towards usage of GPG.</content>
-  </entry>
-  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Towards using GPG For Security - Part 1</title>
     <id>https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-1.html</id>
     <updated>2019-02-20T00:00:00Z</updated>
@@ -95,6 +85,16 @@
       <name>Kaustubh Vaghmare</name>
     </author>
     <content type="html">A first of two articles guiding readers towards usage of GPG.</content>
+  </entry>
+  <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
+    <title type="text">Towards using GPG For Security - Part 2</title>
+    <id>https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html</id>
+    <updated>2019-02-20T00:00:00Z</updated>
+    <link href="https://vkaustubh.github.io/blog/geek/2019-02-20-gpg-2.html" />
+    <author>
+      <name>Kaustubh Vaghmare</name>
+    </author>
+    <content type="html">Second of two articles guiding readers towards usage of GPG.</content>
   </entry>
   <entry xml:base="https://vkaustubh.github.io/blog/geek/feed.xml">
     <title type="text">Python Decorators</title>

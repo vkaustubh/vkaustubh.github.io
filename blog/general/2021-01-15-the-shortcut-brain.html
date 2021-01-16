@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<title> The Shortcut Brain </title>
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+  <link rel="stylesheet" href="../static/css/main.css">
+  
+  <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../pygments.css">
+
+  <!-- Script for working MathJax for Equations Inside Blog -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120740166-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-120740166-1');
+    </script>
+
+    
+    
+  
+<style>
+
+.bg-dark {
+    background-color: #000 !important;
+}
+  .jumbotron
+  {
+      background-color: #000;
+      color: white;
+      font-family: Open Sans;
+      margin-bottom: 0px;
+  }
+
+    .navbar
+  {
+    font-size: 20px;
+  }
+
+  html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  }
+
+  body
+  {
+      background: url(../static/images/main_background.jpg); /* https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-143-1920x1200.jpg); /* url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-060-2560x1600.jpg); /*url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-039-1920x1080.jpg);*/
+    font-family: Raleway;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    position: relative;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato"
+  }
+
+   #spaceBeforeFooter {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+   }
+
+  footer {
+      padding-top: 1em;
+      background-color: #000;
+      color: white;
+      padding-bottom: 1em;
+      font-family: Raleway;
+   }
+
+   footer h2 {
+    padding-bottom: 0.2em;
+   }
+
+    footer img {
+        margin-left: 1.5em;
+    }
+    footer p {
+        font-size: 1.0em;
+    }
+
+
+
+  .overlay
+  {
+
+   background-color: #eeeef6;
+   background-color: white;
+   margin-top: -30px;
+   padding: 20px;
+   margin-bottom: 50px;
+
+  }
+
+  .card
+  {
+    min-height: 110px;
+    color: #FBF7F9;
+    background-color: #343a40;
+  }
+
+  .brand-name
+  {
+      font-family: Montserrat;
+      font-variant: small-caps;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FBF7F9 !important;
+      text-decoration: none;
+  }
+
+  .nav-item
+  {
+    font-family: Open Sans;
+    font-variant: small-caps;
+    color: white;
+  }
+
+  .customCard
+  {
+    margin-bottom: 20px;
+   }
+
+   .pointer
+   {
+   cursor: pointer;
+   }
+
+
+  .image-card
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+  }
+
+  .carousel-item {
+      color: black;
+      background-color: black !important;
+   }
+
+ .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ }
+
+ .nav-align-left {
+  margin-left: 15px;
+ }
+
+ .nav-align-right {
+  margin-right: 15px;
+ }
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item
+{
+  color: #fff;
+  background-color: #000;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  <!--border: 1px solid #fff;-->
+  padding: 10px;
+  font-size: 1em;
+}
+</style>
+</head>
+
+<body>
+<div class="align-items-center" align="center">
+    <div class="d-lg-none navbar navbar-expand-lg bg-dark navbar-dark" >
+        <h2 class="navbar-brand brand-name" align="center">
+          Kaustubh Vaghmare's <br> <small> Home Page </small></h2>
+    </div>
+    <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark">
+      <h2 class="navbar-brand brand-name" style="margin-left: 0.5em; margin-top: 10px;">  Kaustubh Vaghmare's <br> <small>Home Page</small> </h2>
+    </div>
+</div>
+<div >
+
+    <nav class="navbar navbar-expand-md navbar-light bg-faded bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                  <a class="nav-link" style="" href="https://vkaustubh.github.io">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../index.html">Blog Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link"
+                     href="../general.html">General</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../geek.html">For Geeks</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
+  
+
+<div class="col-lg-offset-1 col-lg-8">
+    <h2>The Shortcut Brain</h2>
+    <span class="date"> Friday, 15 January, 2021</span>
+    <div></div>
+    <br/>
+
+    <p>For a brief moment, I was a regular content creator on Youtube. I had christened
+my channel as <a href="https://www.youtube.com/c/KnowledgeablyYours/featured"><em>Knowledgeably Yours</em></a>
+and after a two minute video introducing
+myself, the first real video I posted on Youtube was a 45 minute video titled
+"<a href="https://www.youtube.com/watch?v=Tlr7Ieo2AfU"><em>How to become an Astronomer?</em></a>" 
+And one of the earliest feedbacks that I got from
+the people who saw the video was "You might lose an audience if you keep making
+videos these long!". Both because of this feedback and the general limitations of
+my videography and video editing equipment, most of my subsequent videos were
+restricted to 10 - 15 minutes of duration. Eventually, the videos stopped, for
+reasons I shall not go into here, but the theme of "keep them short" appeared in
+many places for me.</p>
+<p>It appeared after this and it also appeared in a retrospective analysis of the
+various interactions that I had had with many people in the past. One particular
+interaction that I remembered was with a student who wished to learn a
+programming concept and had approached me for advice. There was very little
+advice that I could give him because of the manner in which the question was
+posed by him - "<em>I wish to learn this but I don't want to learn from a book. I
+would appreciate if you could point me to some Youtube video, a short and a
+simple one.</em>" My reply to the student was brutal - "<em>Well, it seems you are more
+interested in declaring to the world that you know something about something
+rather than truly learning. I am the wrong person to guide you there.</em>"</p>
+<p>If you care about something, you cannot insist on learning about it in a lazy
+manner. Maybe you wish to understand how your privacy is at stake because of the
+changes in the terms and conditions of your favorite social media or messaging
+platform. Maybe you wish to learn whether a particular change in the tax law
+affects your investment philosophy in a bitter manner. Maybe you wish to
+understand a new subject which is likely to become the center stage of your
+career. Maybe you wish to understand the disease you were unfortunately
+diagnosed with, recently. It doesn't matter! If the goal is to learn something,
+you can rule out everything but the most diligent of approaches towards it.</p>
+<p>This is different from awareness by the way. You want to be aware of something -
+you can read a Twitter feed, a casual post on the social media, a short video on
+Youtube etc. But awareness is not learning. To be aware of data privacy issue is
+to only not get alarmed when in the next cocktail party, somebody discusses the
+issue. To learn about data privacy means to have enough information in your
+hands to form an opinion and take the necessary action or devise the correct
+strategy in response to it. But it seems like people confuse awareness with
+learning. You cannot learn anything properly with a single "five minutes read"
+blog post, a social media post or a Youtube clip.</p>
+<p>Whenever I want to seriously learn about something and not merely develop an
+awareness of it, this is how I personally prefer searching for sources.</p>
+<ul>
+<li>
+<p><strong>Books</strong>: Books have the biggest advantage of being detailed, having enough
+  space to build a strong foundation that allows the harder stuff to become more
+easy to absorb and also plenty of space to guide on how to develop further
+knowledge.</p>
+</li>
+<li>
+<p><strong>Courses</strong>: A series of lectures covering the topic. They are quite detailed
+  and are especially important when nobody has bothered writing a book that is
+of sufficient pedagagical quality. If books are hard to read or unavailable,
+lecture series become a great starting point. <em>Tip: If you do a Youtube search,
+use the Filters option to search for Playlists as opposed to Videos. And once
+you find playlists, open them and ensure that they are named sequentially since
+sometimes playlists are a random collection of related (or unrelated) videos.</em></p>
+</li>
+<li>
+<p><strong>Long Videos</strong>: For me, personally, a person who is explaining a complex
+  topic in a short video, is merely spreading awareness and this I consider
+different from teaching. So, I generally use the filters to give me the longest
+possible videos about a subject. In general these tend to be more detailed and
+the person making the video cares about explaning something to the audience.</p>
+</li>
+</ul>
+<p>"Long" and "short" as words used to describe durations associated with lectures
+or videos deserve a bit of elaboration here. For example, an hour video
+explaining the whole of a programming language is actually quite short. But a 10
+minute video explaining only one single concept of a programming language is
+long. In other words, there is no absolute meaning to the words 'long' and
+'short' as used by me here. The meaning is relative to the coverage of the
+concept in that video.</p>
+<p>And I think it is also worth clarifying here that I am not ruling out blog
+posts, social media and other modalities of acquiring knowledge. I am instead
+arguing that knowledge comes in different depths. There is the mere awareness
+which simply enables you to apparently look less stupid when involved in a
+social gathering where the topic is being discussed. And then there is learning,
+which is truly empowering. My criticism of the use of <em>shortcut modalities</em> is
+purely from the endeavour of learning.</p>
+<p>Coming back to where we started - my Youtube channel - I take some heart from
+the fact that my longest video is also my most watched video. There is hope
+after all!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2021-01-15-the-shortcut-brain.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2021-01-15-the-shortcut-brain'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+
+<footer>
+
+    <div class="container">
+        <div align="center">
+          The web site has been created using Bootstrap, Django/django-freeze starting from a blank file. Background image courtesy of <a href="https://www.setaswall.com/">SetAsWell</a>. All rights reserved. Copyright &copy; 2019.
+        </div>
+    </div>
+
+</footer>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon
+             glyphicon-chevron-up"> Up </span></a>
+
+<script src="static/js/scroll_top.js"></script>
+
+<!-- Configuration for MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+</body>
+</html>
