@@ -329,12 +329,12 @@ following code in it.</p>
 
 <span class="kn">from</span> <span class="nn">flask</span> <span class="kn">import</span> <span class="n">Flask</span><span class="p">,</span> <span class="n">render_template</span>
 
-<span class="n">DEBUG</span> <span class="o">=</span> <span class="bp">True</span>
+<span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">True</span>
 
 <span class="n">app</span> <span class="o">=</span> <span class="n">Flask</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="n">app</span><span class="o">.</span><span class="n">config</span><span class="o">.</span><span class="n">from_object</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
-<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">index</span><span class="p">():</span>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">)</span>
 
@@ -411,7 +411,7 @@ tackle this now. Let's go to our <code>sitebuilder.py</code> and add the followi
 
 <span class="n">pages</span> <span class="o">=</span> <span class="n">FlatPages</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
 
-<span class="nd">@app.route</span><span class="p">(</span><span class="s1">&#39;/&lt;path:path&gt;.html&#39;</span><span class="p">)</span>
+<span class="nd">@app</span><span class="o">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&lt;path:path&gt;.html&#39;</span><span class="p">)</span>
 <span class="k">def</span> <span class="nf">page</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
     <span class="n">page</span> <span class="o">=</span> <span class="n">pages</span><span class="o">.</span><span class="n">get_or_404</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;page.html&#39;</span><span class="p">,</span> <span class="n">page</span><span class="o">=</span><span class="n">page</span><span class="p">)</span>
@@ -435,10 +435,10 @@ tackle this now. Let's go to our <code>sitebuilder.py</code> and add the followi
 </ul>
 <p>Phew! That's a lot. Let's dwelve a bit further. Let's temporarily modify our
 <code>page()</code> function to say</p>
-<div class="codehilite"><pre><span></span>def page(path):
-    print(&quot;Page function running&quot;)
-    page = pages.get_or_404(path)
-    return render_template(&#39;page.html&#39;, page=page)
+<div class="codehilite"><pre><span></span><span class="nv">def</span> <span class="nv">page</span><span class="ss">(</span><span class="nv">path</span><span class="ss">)</span>:
+    <span class="nv">print</span><span class="ss">(</span><span class="s2">&quot;</span><span class="s">Page function running</span><span class="s2">&quot;</span><span class="ss">)</span>
+    <span class="nv">page</span> <span class="o">=</span> <span class="nv">pages</span>.<span class="nv">get_or_404</span><span class="ss">(</span><span class="nv">path</span><span class="ss">)</span>
+    <span class="k">return</span> <span class="nv">render_template</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">page.html</span><span class="s1">&#39;</span>, <span class="nv">page</span><span class="o">=</span><span class="nv">page</span><span class="ss">)</span>
 </pre></div>
 
 
@@ -453,15 +453,15 @@ returned. So, let's fix that.</p>
 
 
 <p>Inside pages, create a file called <code>first.md</code> and type the following</p>
-<div class="codehilite"><pre><span></span>\\ blank line 
-\\ blank line
-# My First Blog
+<div class="codehilite"><pre><span></span>\\ <span class="nv">blank</span> <span class="nv">line</span> 
+\\ <span class="nv">blank</span> <span class="nv">line</span>
+# <span class="nv">My</span> <span class="nv">First</span> <span class="nv">Blog</span>
 
-Here is some content for this blog. Written in Markdown.
+<span class="nv">Here</span> <span class="nv">is</span> <span class="nv">some</span> <span class="nv">content</span> <span class="k">for</span> <span class="nv">this</span> <span class="nv">blog</span>. <span class="nv">Written</span> <span class="nv">in</span> <span class="nv">Markdown</span>.
 
-- Bullet point 1
-- Bullet point 2
-- Bullet point 3
+<span class="o">-</span> <span class="nv">Bullet</span> <span class="nv">point</span> <span class="mi">1</span>
+<span class="o">-</span> <span class="nv">Bullet</span> <span class="nv">point</span> <span class="mi">2</span>
+<span class="o">-</span> <span class="nv">Bullet</span> <span class="nv">point</span> <span class="mi">3</span>
 </pre></div>
 
 
@@ -556,7 +556,7 @@ pages is what we call 'freezing' here. Let's do this.</p>
 
 <span class="n">freezer</span> <span class="o">=</span> <span class="n">Freezer</span><span class="p">(</span><span class="n">app</span><span class="p">)</span>
 
-<span class="nd">@freezer.register_generator</span>
+<span class="nd">@freezer</span><span class="o">.</span><span class="n">register_generator</span>
 <span class="k">def</span> <span class="nf">pagelist</span><span class="p">():</span>
     <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">pages</span><span class="p">:</span>
         <span class="k">yield</span> <span class="n">url_for</span><span class="p">(</span><span class="s1">&#39;page&#39;</span><span class="p">,</span> <span class="n">path</span><span class="o">=</span><span class="n">page</span><span class="o">.</span><span class="n">path</span><span class="p">)</span>
@@ -564,11 +564,11 @@ pages is what we call 'freezing' here. Let's do this.</p>
 
 
 <p>Replace the <code>app.run(...)</code> line with the following piece of code.</p>
-<div class="codehilite"><pre><span></span>if __name__ == &#39;__main__&#39;:
-    if len(sys.argv) &gt; 1 and sys.argv[1] == &#39;build&#39;:
-        freezer.freeze()
-    else:
-        app.run(host=&#39;0.0.0.0&#39;, port=5001)
+<div class="codehilite"><pre><span></span><span class="k">if</span> <span class="nv">__name__</span> <span class="o">==</span> <span class="s1">&#39;</span><span class="s">__main__</span><span class="s1">&#39;</span>:
+    <span class="k">if</span> <span class="nv">len</span><span class="ss">(</span><span class="nv">sys</span>.<span class="nv">argv</span><span class="ss">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="nv">and</span> <span class="nv">sys</span>.<span class="nv">argv</span>[<span class="mi">1</span>] <span class="o">==</span> <span class="s1">&#39;</span><span class="s">build</span><span class="s1">&#39;</span>:
+        <span class="nv">freezer</span>.<span class="nv">freeze</span><span class="ss">()</span>
+    <span class="k">else</span>:
+        <span class="nv">app</span>.<span class="nv">run</span><span class="ss">(</span><span class="nv">host</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">0.0.0.0</span><span class="s1">&#39;</span>, <span class="nv">port</span><span class="o">=</span><span class="mi">5001</span><span class="ss">)</span>
 </pre></div>
 
 
@@ -611,9 +611,9 @@ is what you can do</p>
 something which is obvious - having a list of all your posts displayed on the
 <code>index.html</code> page.</p>
 <p>Change the <code>index()</code> function to the following:</p>
-<div class="codehilite"><pre><span></span>@app.route(&#39;/&#39;)
-def index():
-    return render_template(&#39;index.html&#39;, pages=pages)
+<div class="codehilite"><pre><span></span><span class="nv">@app</span><span class="p">.</span><span class="n">route</span><span class="p">(</span><span class="s1">&#39;/&#39;</span><span class="p">)</span><span class="w"></span>
+<span class="n">def</span><span class="w"> </span><span class="k">index</span><span class="p">()</span><span class="err">:</span><span class="w"></span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">render_template</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">,</span><span class="w"> </span><span class="n">pages</span><span class="o">=</span><span class="n">pages</span><span class="p">)</span><span class="w"></span>
 </pre></div>
 
 

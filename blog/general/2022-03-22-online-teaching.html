@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+<title> Online Teaching </title>
+
+
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+   <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Popper JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> 
+
+  <link rel="stylesheet" href="../static/css/main.css">
+  
+  <link rel='stylesheet' property='stylesheet' id='montserrat700-css'  href='//fonts.googleapis.com/css?family=Montserrat%3A700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link rel='stylesheet' property='stylesheet' id='raleway500700-css'  href='//fonts.googleapis.com/css?family=Raleway%3A500%2C700&#038;ver=4.7.12' type='text/css' media='all' />
+  <link href="https://fonts.googleapis.com/css?family=Russo+One&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../pygments.css">
+
+  <!-- Script for working MathJax for Equations Inside Blog -->
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+
+    
+    
+  
+<style>
+
+.bg-dark {
+    background-color: #000 !important;
+}
+  .jumbotron
+  {
+      background-color: #000;
+      color: white;
+      font-family: Open Sans;
+      margin-bottom: 0px;
+  }
+
+    .navbar
+  {
+    font-size: 20px;
+  }
+
+  html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  }
+
+  body
+  {
+      background: url(../static/images/main_background.jpg); /* https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-143-1920x1200.jpg); /* url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-060-2560x1600.jpg); /*url(https://www.setaswall.com/wp-content/uploads/2018/09/Fractal-Wallpaper-039-1920x1080.jpg);*/
+    font-family: Raleway;
+    background-attachment: fixed;
+    padding:0;
+    margin:0;
+    position: relative;
+    background-size: cover;
+    background-position: right bottom;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Lato"
+  }
+
+   #spaceBeforeFooter {
+    height: 10px;
+    margin: 0;
+    padding: 0;
+   }
+
+  footer {
+      padding-top: 1em;
+      background-color: #000;
+      color: white;
+      padding-bottom: 1em;
+      font-family: Raleway;
+   }
+
+   footer h2 {
+    padding-bottom: 0.2em;
+   }
+
+    footer img {
+        margin-left: 1.5em;
+    }
+    footer p {
+        font-size: 1.0em;
+    }
+
+
+
+  .overlay
+  {
+
+   background-color: #eeeef6;
+   background-color: white;
+   margin-top: -30px;
+   padding: 20px;
+   margin-bottom: 50px;
+
+  }
+
+  .card
+  {
+    min-height: 110px;
+    color: #FBF7F9;
+    background-color: #343a40;
+  }
+
+  .brand-name
+  {
+      font-family: Montserrat;
+      font-variant: small-caps;
+      font-size: 25px;
+      font-weight: bold;
+      color: #FBF7F9 !important;
+      text-decoration: none;
+  }
+
+  .nav-item
+  {
+    font-family: Open Sans;
+    font-variant: small-caps;
+    color: white;
+  }
+
+  .customCard
+  {
+    margin-bottom: 20px;
+   }
+
+   .pointer
+   {
+   cursor: pointer;
+   }
+
+
+  .image-card
+  {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 125px;
+    margin: auto;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 15px;
+    font-family: arial;
+  }
+
+  .carousel-item {
+      color: black;
+      background-color: black !important;
+   }
+
+ .carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+ }
+
+ .nav-align-left {
+  margin-left: 15px;
+ }
+
+ .nav-align-right {
+  margin-right: 15px;
+ }
+
+
+.dropdown-item.active, .dropdown-item:active {
+    color: black;
+    background-color: white;
+}
+
+.dropdown-item
+{
+  color: #fff;
+  background-color: #000;
+  margin-top: -0.5em;
+  margin-bottom: 0.5em;
+  <!--border: 1px solid #fff;-->
+  padding: 10px;
+  font-size: 1em;
+}
+</style>
+</head>
+
+<body>
+<div class="align-items-center" align="center">
+    <div class="d-lg-none navbar navbar-expand-lg bg-dark navbar-dark" >
+        <h2 class="navbar-brand brand-name" align="center">
+          Kaustubh Vaghmare's <br> <small> Home Page </small></h2>
+    </div>
+    <div class="d-none d-lg-block navbar navbar-expand-lg bg-dark navbar-dark">
+      <h2 class="navbar-brand brand-name" style="margin-left: 0.5em; margin-top: 10px;">  Kaustubh Vaghmare's <br> <small>Home Page</small> </h2>
+    </div>
+</div>
+<div >
+
+    <nav class="navbar navbar-expand-md navbar-light bg-faded bg-dark navbar-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 dual-collapse2 order-1 order-md-0">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item text-center">
+                  <a class="nav-link" style="" href="https://vkaustubh.github.io">Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../index.html">Blog Home</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link"
+                     href="../general.html">General</a>
+                </li>
+                <li class="nav-item text-center">
+                  <a class="nav-link" href="../geek.html">For Geeks</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
+
+</div>
+
+<div class="container overlay shadow " style="border-radius:10px; margin-top: 2em;">
+  
+
+<div class="col-lg-offset-1 col-lg-8">
+    <h2>Online Teaching</h2>
+    <span class="date"> Tuesday, 22 March, 2022</span>
+    <div></div>
+    <br/>
+
+    <p>Very recently, I was contacted by a representative from one of the many
+corporations (I hate to call them education providers) and asked if I would be
+willing to take classes for their students on an adhoc basic on weekends. I love
+teaching and consider it an honorable profession. Unsurprisingly, I agreed to
+discuss the opportunity further. The academic panel wanted a demonstration of my
+abilities to teach and I was more than happy to point them to a <a href="https://www.youtube.com/watch?v=ZoEVLTc-svA">long 1.5 hour
+lecture</a> that I gave to a mixed
+audience on probability distributions. Without wasting much time, they came back
+to me and observed that in this video, I have addressed a live audience and used a
+whiteboard whereas I would be expected to teach students online and use digital
+tools.</p>
+<p>This should have been first alarm bell but I indulged them and gave them a fresh
+recording on a mutually decided topic. They took their own sweet time and came
+back to me with a feedback modeled using the classical "good news first, bad
+news later" approach.</p>
+<ul>
+<li>
+<p>The good news was that my communication skills were excellent. That my
+  understanding of the subject was good. That my use of annotations was good
+  too!</p>
+</li>
+<li>
+<p>And then they delivered the bad news - I was not engaging the audience enough
+  (in a demo recording!!!), I was not using graphics (yes, student imagination
+  is not to be pushed, everything must be illustrated with modern graphics), I
+  was not conducting random polls (yes, it gives the students a much needed break
+  every few minutes after they have become very tired) and I was not providing
+  any use cases (why would I spill all my beans in a demo recording with no
+  contract of how the recording itself will be used).</p>
+</li>
+</ul>
+<p>There was an audacious suggestion that I agree to recording or performing
+another demo session. My reply to them made the following very clear.</p>
+<ul>
+<li>
+<p>I would not do another demo session. If an academic panel made of IITians and
+  IIMians was not able to judge my teaching abilities based on two recorded
+  sessions, then it was not worth providing more evidence.</p>
+</li>
+<li>
+<p>And that when it comes to methods of engagement, we would have to agree to
+  disagree. Most great teachers do not use graphics, do not use polls and do not
+  use pop quizzes in the middle of the lectures. My style of teaching makes a
+  student feel as if they are a part of a classroom where a real teacher is
+  standing in front of them and they are being taken through a journey. Students
+  have praised me considerably for this refreshing method of teaching that
+  breaks the (what I believe are stupid) norms of massive online teaching
+  models.</p>
+</li>
+<li>
+<p>That my students have never complained of being disengaged and this was a fact
+  that could not be demonstrated in a recorded session.</p>
+</li>
+</ul>
+<p>Sure enough, there was a polite acknowledgement but I have not heard anything
+back from them. And I guess I don't want to! The whole incident made me think of
+the best lecturers whose magic I was lucky enough to witness. In some cases,
+these teachers stood at the blackboard with no notes and just a chalk in their
+hand. And then they weaved the most engrossing of narratives which kept us
+hooked for not ten minutes but hours and hours. We forgot our thirst, we forgot
+our hunger and we forgot time!</p>
+<p>This state where the mind enters a trance and does some real learning has been
+recognized in brain studies and has in fact been given a name - it is called the
+"flow state". And only people who are absorbed in what they do, with sufficient
+depth, can alone realize this state and use the full power of their brains in
+crafting ideas and learning things in depth. And guess what modern teaching is
+doing - it is going in the opposite direction! Just look at some of the rules
+that have been written by someone for designing online courses - keep videos
+shorter than 10 minutes, conduct many pop quizzes, show lots of animations and
+graphics and give plenty of examples. How can someone enter that state of flow
+and do real deep learning if we are going to be constantly bombarded by
+interruptions?</p>
+<p>When I expressed this view to some people, they pointed out to me that perhaps
+there is no market for such teachers which is why the corporations offering
+these MOOCs have adopted this model. I am not sure what to make of this. But I
+have plently of students who wish to hear more of what I have to say precisely
+because of the classical approach that I take! But yes, we could still argue
+that these students are in minority and that majority of the students who will
+eventually give their money to the corporations, don't care about this kind of
+deep study. And to this, I have only one thing to say - may God save their
+souls!</p>
+<p>Another argument that was presented is - these corporations need to give jobs.
+And jobs require practical knowledge. And practical knowledge, for it to be
+imparted properly, perhaps requires this kind of method of teaching. Again, a
+very interesting point but my counter to this is simple - don't people who learn the
+classical way get a job? In fact I would argue that the top most jobs are
+reserved for these people! Because it is not the sole purpose of the teacher to
+present information to a student. A higher purpose is to teach students how to
+think. And the engineering of our brain can only happen if it is deeply
+involved in the teaching and learning process.</p>
+<p>I have witnessed the magical web being weaved by many teachers. And all teachers
+known for this magic had one thing in common - their ability to dilate time,
+their ability to inspire, their ability to touch the students at a sub-conscious
+level, their ability to reengineer the thought process of the students. And it
+is from this very fine cadre of magicians that I try and learn how to perform
+the magic myself. And it leaves me with such immense satisfaction that I will
+never hesitate in saying no to corporations that do not recognize this ability
+or the students who can't value it!</p>
+<p>Happy learning! Happy teaching!</p>
+    <br/>
+    <br/>
+    <br/>
+
+    <div id="disqus_thread"></div>
+<script>
+
+/**
+*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+var disqus_config = function () {
+    this.page.url = 'https://vkaustubh.github.io/blog/general/2022-03-22-online-teaching.html';  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = 'general/2022-03-22-online-teaching'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://vkaustubh-blog.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+</div>
+
+<footer>
+
+    <div class="container">
+        <div align="center">
+          The web site has been created using Bootstrap, Django/django-freeze starting from a blank file. Background image courtesy of <a href="https://www.setaswall.com/">SetAsWell</a>. All rights reserved. Copyright &copy; 2019.
+        </div>
+    </div>
+
+</footer>
+
+       <a id="back-to-top" href="#" class="btn btn-primary btn-lg back-to-top" role="button" 
+         data-toggle="tooltip" data-placement="left"><span class="glyphicon
+             glyphicon-chevron-up"> Up </span></a>
+
+<script src="static/js/scroll_top.js"></script>
+
+<!-- Configuration for MathJax -->
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    extensions: ["tex2jax.js"],
+    jax: ["input/TeX", "output/HTML-CSS"],
+    tex2jax: {
+      inlineMath: [ ['$','$'], ["\(","\)"] ],
+      processEscapes: true
+    },
+    "HTML-CSS": { availableFonts: ["TeX"] }
+  });
+</script>
+
+</body>
+</html>

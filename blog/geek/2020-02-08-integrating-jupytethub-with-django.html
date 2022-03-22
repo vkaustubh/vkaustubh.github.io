@@ -409,7 +409,7 @@ to us thanks to our installing the <code>oauth2_provider</code> application. All
 do is to tell Django to expose them to the world.</p>
 <p>Open <code>service_provider/urls.py</code> and under the <code>urlpatterns</code> list, add the
 following entry:</p>
-<div class="codehilite"><pre><span></span>path(&#39;o/&#39;, include(&#39;oauth2_provider.urls&#39;, namespace=&#39;oauth2_provider&#39;)),
+<div class="codehilite"><pre><span></span><span class="nv">path</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">o/</span><span class="s1">&#39;</span>, <span class="k">include</span><span class="ss">(</span><span class="s1">&#39;</span><span class="s">oauth2_provider.urls</span><span class="s1">&#39;</span>, <span class="nv">namespace</span><span class="o">=</span><span class="s1">&#39;</span><span class="s">oauth2_provider</span><span class="s1">&#39;</span><span class="ss">))</span>,
 </pre></div>
 
 
@@ -480,10 +480,10 @@ to use the Django admin login page for now.</p>
 authenticating a user - by the default <em>User</em> model - needs to be told to
 recognize also those users who have identified themselves via OAuth. So, we add
 the <code>settings.py</code> the following lines:</p>
-<div class="codehilite"><pre><span></span>AUTHENTICATION_BACKENDS = (
-    &#39;oauth2_provider.backends.OAuth2Backend&#39;,
-    &#39;django.contrib.auth.backends.ModelBackend&#39;
-)
+<div class="codehilite"><pre><span></span><span class="n">AUTHENTICATION_BACKENDS</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="s">&#39;oauth2_provider.backends.OAuth2Backend&#39;</span><span class="p">,</span>
+    <span class="s">&#39;django.contrib.auth.backends.ModelBackend&#39;</span>
+<span class="p">)</span>
 </pre></div>
 
 
@@ -507,53 +507,53 @@ $ <span class="nb">cd</span> hub_config
 
 <p>Next, we are going to create a file called <code>jupyterhub_config.py</code> which will
 contain the following code dump which I've explained with inline comments.</p>
-<div class="codehilite"><pre><span></span><span class="err">#</span> <span class="nx">This</span> <span class="nx">is</span> <span class="nx">how</span> <span class="nx">we</span> <span class="nx">tell</span> <span class="nx">Jupyter</span> <span class="nx">to</span> <span class="nx">use</span> <span class="nx">OAuth</span> <span class="nx">instead</span> <span class="nx">of</span> <span class="nx">the</span> <span class="k">default</span>
-<span class="err">#</span> <span class="nx">authentication</span> <span class="nx">which</span> <span class="nx">is</span> <span class="nx">done</span> <span class="nx">using</span> <span class="nx">local</span> <span class="nx">Linux</span> <span class="nx">user</span> <span class="nx">accounts</span><span class="p">.</span>
-<span class="nx">c</span><span class="p">.</span><span class="nx">JupyterHub</span><span class="p">.</span><span class="nx">authenticator_class</span> <span class="o">=</span> <span class="s1">&#39;oauthenticator.generic.GenericOAuthenticator&#39;</span>
+<div class="codehilite"><pre><span></span># <span class="nv">This</span> <span class="nv">is</span> <span class="nv">how</span> <span class="nv">we</span> <span class="nv">tell</span> <span class="nv">Jupyter</span> <span class="nv">to</span> <span class="nv">use</span> <span class="nv">OAuth</span> <span class="nv">instead</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">default</span>
+# <span class="nv">authentication</span> <span class="nv">which</span> <span class="nv">is</span> <span class="nv">done</span> <span class="nv">using</span> <span class="nv">local</span> <span class="nv">Linux</span> <span class="nv">user</span> <span class="nv">accounts</span>.
+<span class="nv">c</span>.<span class="nv">JupyterHub</span>.<span class="nv">authenticator_class</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">oauthenticator.generic.GenericOAuthenticator</span><span class="s1">&#39;</span>
 
-<span class="err">#</span> <span class="nx">Where</span> <span class="nx">should</span> <span class="nx">Django</span> <span class="nx">pass</span> <span class="nx">the</span> <span class="nx">authentication</span> <span class="nx">results</span> <span class="nx">back</span> <span class="nx">to</span><span class="o">?</span>
-<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">oauth_callback_url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:8010/hub/oauth_callback&#39;</span>
+# <span class="nv">Where</span> <span class="nv">should</span> <span class="nv">Django</span> <span class="nv">pass</span> <span class="nv">the</span> <span class="nv">authentication</span> <span class="nv">results</span> <span class="nv">back</span> <span class="nv">to</span>?
+<span class="nv">c</span>.<span class="nv">GenericOAuthenticator</span>.<span class="nv">oauth_callback_url</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">http://localhost:8010/hub/oauth_callback</span><span class="s1">&#39;</span>
 
-<span class="err">#</span> <span class="nx">What</span> <span class="nx">is</span> <span class="nx">the</span> <span class="nx">client</span> <span class="nx">ID</span> <span class="nx">and</span> <span class="nx">client</span> <span class="nx">secret</span> <span class="k">for</span> <span class="nx">Jupyterhub</span> <span class="nx">provided</span> <span class="nx">Django</span><span class="o">?</span>
+# <span class="nv">What</span> <span class="nv">is</span> <span class="nv">the</span> <span class="nv">client</span> <span class="nv">ID</span> <span class="nv">and</span> <span class="nv">client</span> <span class="nv">secret</span> <span class="k">for</span> <span class="nv">Jupyterhub</span> <span class="nv">provided</span> <span class="nv">Django</span>?
 
-<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">client_id</span> <span class="o">=</span> <span class="s1">&#39;irhIz1p3G8lyiBDWv66LzuwLacyV1i98jJP0qXQx&#39;</span>
-<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">client_secret</span> <span class="o">=</span> <span class="s1">&#39;tidEvFtozIJTTIfmHqkBEnlEtFl0Wd3tB7WnD2EvXDkRkk36Lphr5N3RoPaJhuJBaSuQ2j3WZSF7OrCrdGwG9ejEWty1VN</span>
-<span class="s1">gkjon3EyTdKpeBXVLw8q4nk0szvU3tHUx6&#39;</span>
+<span class="nv">c</span>.<span class="nv">GenericOAuthenticator</span>.<span class="nv">client_id</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">irhIz1p3G8lyiBDWv66LzuwLacyV1i98jJP0qXQx</span><span class="s1">&#39;</span>
+<span class="nv">c</span>.<span class="nv">GenericOAuthenticator</span>.<span class="nv">client_secret</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">tidEvFtozIJTTIfmHqkBEnlEtFl0Wd3tB7WnD2EvXDkRkk36Lphr5N3RoPaJhuJBaSuQ2j3WZSF7OrCrdGwG9ejEWty1VN</span>
+<span class="nv">gkjon3EyTdKpeBXVLw8q4nk0szvU3tHUx6</span><span class="s1">&#39;</span>
 
-<span class="err">#</span> <span class="nx">Where</span> <span class="nx">can</span> <span class="nx">Jupyterhub</span> <span class="nx">get</span> <span class="nx">the</span> <span class="nx">token</span> <span class="nx">from</span><span class="o">?</span>
-<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">token_url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:8000/o/token/&#39;</span>
+# <span class="nv">Where</span> <span class="nv">can</span> <span class="nv">Jupyterhub</span> <span class="nv">get</span> <span class="nv">the</span> <span class="nv">token</span> <span class="nv">from</span>?
+<span class="nv">c</span>.<span class="nv">GenericOAuthenticator</span>.<span class="nv">token_url</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">http://localhost:8000/o/token/</span><span class="s1">&#39;</span>
 
-<span class="err">#</span> <span class="nx">Where</span> <span class="nx">can</span> <span class="nx">it</span> <span class="nx">get</span> <span class="nx">the</span> <span class="nx">user</span> <span class="nx">name</span> <span class="nx">from</span><span class="o">?</span> <span class="nx">What</span> <span class="nx">method</span> <span class="nx">shall</span> <span class="nx">it</span> <span class="nx">use</span><span class="o">?</span>
-<span class="err">#</span> <span class="nx">What</span> <span class="nx">key</span> <span class="k">in</span> <span class="nx">the</span> <span class="nx">JSON</span> <span class="nx">output</span> <span class="nx">is</span> <span class="nx">the</span> <span class="nx">username</span><span class="o">?</span>
-<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">userdata_url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:8000/userdata&#39;</span>
-<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">userdata_method</span> <span class="o">=</span> <span class="s1">&#39;GET&#39;</span>
-<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">userdata_params</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="nx">c</span><span class="p">.</span><span class="nx">GenericOAuthenticator</span><span class="p">.</span><span class="nx">username_key</span> <span class="o">=</span> <span class="s1">&#39;username&#39;</span>
+# <span class="nv">Where</span> <span class="nv">can</span> <span class="nv">it</span> <span class="nv">get</span> <span class="nv">the</span> <span class="nv">user</span> <span class="nv">name</span> <span class="nv">from</span>? <span class="nv">What</span> <span class="nv">method</span> <span class="nv">shall</span> <span class="nv">it</span> <span class="nv">use</span>?
+# <span class="nv">What</span> <span class="nv">key</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">JSON</span> <span class="nv">output</span> <span class="nv">is</span> <span class="nv">the</span> <span class="nv">username</span>?
+<span class="nv">c</span>.<span class="nv">GenericOAuthenticator</span>.<span class="nv">userdata_url</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">http://localhost:8000/userdata</span><span class="s1">&#39;</span>
+<span class="nv">c</span>.<span class="nv">GenericOAuthenticator</span>.<span class="nv">userdata_method</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">GET</span><span class="s1">&#39;</span>
+<span class="nv">c</span>.<span class="nv">GenericOAuthenticator</span>.<span class="nv">userdata_params</span> <span class="o">=</span> {}
+<span class="nv">c</span>.<span class="nv">GenericOAuthenticator</span>.<span class="nv">username_key</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">username</span><span class="s1">&#39;</span>
 
-<span class="err">#</span> <span class="nx">What</span> <span class="nx">address</span> <span class="nx">will</span> <span class="nx">Jupyterhub</span> <span class="nx">be</span> <span class="nx">accessed</span> <span class="nx">from</span><span class="o">?</span>
-<span class="nx">c</span><span class="p">.</span><span class="nx">JupyterHub</span><span class="p">.</span><span class="nx">bind_url</span> <span class="o">=</span> <span class="s1">&#39;http://localhost:8010&#39;</span>
+# <span class="nv">What</span> <span class="nv">address</span> <span class="nv">will</span> <span class="nv">Jupyterhub</span> <span class="nv">be</span> <span class="nv">accessed</span> <span class="nv">from</span>?
+<span class="nv">c</span>.<span class="nv">JupyterHub</span>.<span class="nv">bind_url</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="s">http://localhost:8010</span><span class="s1">&#39;</span>
 
-<span class="err">#</span> <span class="nx">By</span> <span class="k">default</span> <span class="nx">Jupyterhub</span> <span class="nx">requires</span> <span class="nx">that</span> <span class="nx">a</span> <span class="nx">Linux</span> <span class="nx">user</span> <span class="nx">exist</span> <span class="k">for</span> <span class="nx">every</span>
-<span class="err">#</span> <span class="nx">authenticated</span> <span class="nx">user</span><span class="p">.</span> <span class="nx">For</span> <span class="nx">testing</span><span class="p">,</span> <span class="nx">we</span> <span class="nx">are</span> <span class="nx">going</span> <span class="nx">to</span> <span class="nx">trick</span> <span class="nx">JupyterHub</span>
-<span class="err">#</span> <span class="nx">to</span> <span class="nx">merely</span> <span class="nx">pretend</span> <span class="nx">that</span> <span class="nx">such</span> <span class="nx">a</span> <span class="nx">user</span> <span class="nx">exists</span> <span class="nx">and</span> <span class="nx">launch</span> <span class="nx">notebook</span> <span class="nx">servers</span>
-<span class="err">#</span> <span class="k">for</span> <span class="nx">the</span> <span class="nx">same</span> <span class="nx">user</span> <span class="nx">running</span> <span class="nx">the</span> <span class="nx">hub</span> <span class="nx">process</span> <span class="nx">itself</span><span class="o">!</span>
-<span class="nx">from</span> <span class="nx">jupyterhub</span><span class="p">.</span><span class="nx">spawner</span> <span class="kr">import</span> <span class="nx">LocalProcessSpawner</span>
+# <span class="nv">By</span> <span class="nv">default</span> <span class="nv">Jupyterhub</span> <span class="nv">requires</span> <span class="nv">that</span> <span class="nv">a</span> <span class="nv">Linux</span> <span class="nv">user</span> <span class="nv">exist</span> <span class="k">for</span> <span class="nv">every</span>
+# <span class="nv">authenticated</span> <span class="nv">user</span>. <span class="k">For</span> <span class="nv">testing</span>, <span class="nv">we</span> <span class="nv">are</span> <span class="nv">going</span> <span class="nv">to</span> <span class="nv">trick</span> <span class="nv">JupyterHub</span>
+# <span class="nv">to</span> <span class="nv">merely</span> <span class="nv">pretend</span> <span class="nv">that</span> <span class="nv">such</span> <span class="nv">a</span> <span class="nv">user</span> <span class="nv">exists</span> <span class="nv">and</span> <span class="nv">launch</span> <span class="nv">notebook</span> <span class="nv">servers</span>
+# <span class="k">for</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">user</span> <span class="nv">running</span> <span class="nv">the</span> <span class="nv">hub</span> <span class="nv">process</span> <span class="nv">itself</span><span class="o">!</span>
+<span class="nv">from</span> <span class="nv">jupyterhub</span>.<span class="nv">spawner</span> <span class="nv">import</span> <span class="nv">LocalProcessSpawner</span>
 
-<span class="kr">class</span> <span class="nx">SameUserSpawner</span><span class="p">(</span><span class="nx">LocalProcessSpawner</span><span class="p">)</span><span class="o">:</span>
-    <span class="s2">&quot;&quot;&quot;Local spawner that runs single-user servers as the same user as the Hub itself.</span>
+<span class="nv">class</span> <span class="nv">SameUserSpawner</span><span class="ss">(</span><span class="nv">LocalProcessSpawner</span><span class="ss">)</span>:
+    <span class="s2">&quot;&quot;&quot;</span><span class="s">Local spawner that runs single-user servers as the same user as the Hub itself.</span>
 
-<span class="s2">    Overrides user-specific env setup with no-ops.</span>
-<span class="s2">    &quot;&quot;&quot;</span>
+    <span class="nv">Overrides</span> <span class="nv">user</span><span class="o">-</span><span class="nv">specific</span> <span class="nv">env</span> <span class="nv">setup</span> <span class="nv">with</span> <span class="nv">no</span><span class="o">-</span><span class="nv">ops</span>.
+    <span class="s2">&quot;&quot;&quot;</span>
 
-    <span class="nx">def</span> <span class="nx">make_preexec_fn</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">name</span><span class="p">)</span><span class="o">:</span>
-        <span class="s2">&quot;&quot;&quot;no-op to avoid setuid&quot;&quot;&quot;</span>
-        <span class="k">return</span> <span class="nx">lambda</span> : <span class="kt">None</span>
+    <span class="nv">def</span> <span class="nv">make_preexec_fn</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">name</span><span class="ss">)</span>:
+        <span class="s2">&quot;&quot;&quot;</span><span class="s">no-op to avoid setuid</span><span class="s2">&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="nv">lambda</span> : <span class="nv">None</span>
 
-    <span class="nx">def</span> <span class="nx">user_env</span><span class="p">(</span><span class="nx">self</span><span class="p">,</span> <span class="nx">env</span><span class="p">)</span><span class="o">:</span>
-        <span class="s2">&quot;&quot;&quot;no-op to avoid setting HOME dir, etc.&quot;&quot;&quot;</span> 
-        <span class="k">return</span> <span class="nx">env</span>
+    <span class="nv">def</span> <span class="nv">user_env</span><span class="ss">(</span><span class="nv">self</span>, <span class="nv">env</span><span class="ss">)</span>:
+        <span class="s2">&quot;&quot;&quot;</span><span class="s">no-op to avoid setting HOME dir, etc.</span><span class="s2">&quot;&quot;&quot;</span> 
+        <span class="k">return</span> <span class="nv">env</span>
 
-<span class="nx">c</span><span class="p">.</span><span class="nx">JupyterHub</span><span class="p">.</span><span class="nx">spawner_class</span> <span class="o">=</span> <span class="nx">SameUserSpawner</span>
+<span class="nv">c</span>.<span class="nv">JupyterHub</span>.<span class="nv">spawner_class</span> <span class="o">=</span> <span class="nv">SameUserSpawner</span>
 </pre></div>
 
 
@@ -564,12 +564,12 @@ Jupyterhub but Jupyterhub requires some more pieces of info in the form of
 environment variables - the URL in Django which will authorize JupyterHub as an
 application and which gives the token. So, we will create a shell script that
 initializes these variables and then launches the hub.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
-2
-3
-4
-5
-6</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ch">#! /bin/bash</span>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span></pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="ch">#! /bin/bash</span>
 
 <span class="nb">export</span> <span class="nv">OAUTH2_AUTHORIZE_URL</span><span class="o">=</span><span class="s2">&quot;http://localhost:8000/o/authorize&quot;</span>
 <span class="nb">export</span> <span class="nv">OAUTH2_TOKEN_URL</span><span class="o">=</span><span class="s2">&quot;http://localhost:8000/o/token/&quot;</span>

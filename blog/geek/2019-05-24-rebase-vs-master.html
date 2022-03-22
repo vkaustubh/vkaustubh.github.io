@@ -314,34 +314,34 @@ convenience) a .sh extension, place it an empty folder (so that existing folders
 don't become git repositories all of a sudden!) and run <code>sh some.sh</code>.</p>
 <div class="codehilite"><pre><span></span><span class="n">git</span> <span class="n">init</span>
 <span class="n">echo</span> <span class="s">&quot;Someone&quot;</span> &gt; <span class="n">a</span>.<span class="n">txt</span>
-<span class="n">git</span> <span class="n">add</span> .
+<span class="n">git</span> <span class="nb">add</span> .
 <span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;Initial commit&quot;</span>
 <span class="n">echo</span> <span class="s">&quot;Someone has comegitk &amp;!&quot;</span> &gt; <span class="n">b</span>.<span class="n">txt</span>
-<span class="n">git</span> <span class="n">add</span> <span class="n">b</span>.<span class="n">txt</span> 
+<span class="n">git</span> <span class="nb">add</span> <span class="n">b</span>.<span class="n">txt</span> 
 <span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;Second commit&quot;</span>
 <span class="n">echo</span> <span class="s">&quot;More things to do&quot;</span> &gt; <span class="n">c</span>.<span class="n">txt</span>
-<span class="n">git</span> <span class="n">add</span> .
+<span class="n">git</span> <span class="nb">add</span> .
 <span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;Third commit&quot;</span>
 <span class="n">echo</span> <span class="s">&quot;Second line&quot;</span> &gt;&gt; <span class="n">b</span>.<span class="n">txt</span> 
-<span class="n">git</span> <span class="n">add</span> .
+<span class="n">git</span> <span class="nb">add</span> .
 <span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;First live deployment&quot;</span>
 <span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">live_test</span>
 <span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">f1</span>
-<span class="n">echo</span> <span class="s">&quot;Param Computer&quot;</span> &gt; <span class="n">d</span>.<span class="n">txt</span>
-<span class="n">git</span> <span class="n">add</span> .
+<span class="n">echo</span> <span class="s">&quot;Param Computer&quot;</span> &gt; <span class="nb">d</span>.<span class="n">txt</span>
+<span class="n">git</span> <span class="nb">add</span> .
 <span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;F1 commit 1&quot;</span>
-<span class="n">echo</span> <span class="s">&quot;Second line&quot;</span> &gt;&gt; <span class="n">d</span>.<span class="n">txt</span> 
+<span class="n">echo</span> <span class="s">&quot;Second line&quot;</span> &gt;&gt; <span class="nb">d</span>.<span class="n">txt</span> 
 <span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F1 commit 2&quot;</span>
-<span class="n">echo</span> <span class="s">&quot;Third line&quot;</span> &gt;&gt; <span class="n">d</span>.<span class="n">txt</span> 
+<span class="n">echo</span> <span class="s">&quot;Third line&quot;</span> &gt;&gt; <span class="nb">d</span>.<span class="n">txt</span> 
 <span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F1 commit 3&quot;</span>
 <span class="n">git</span> <span class="n">checkout</span> <span class="n">live_test</span> 
 <span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">f2</span>
-<span class="n">echo</span> <span class="s">&quot;My HPC&quot;</span> &gt; <span class="n">f</span>.<span class="n">txt</span>
-<span class="n">git</span> <span class="n">add</span> .
+<span class="n">echo</span> <span class="s">&quot;My HPC&quot;</span> &gt; <span class="nb">f</span>.<span class="n">txt</span>
+<span class="n">git</span> <span class="nb">add</span> .
 <span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;F2 commit 1&quot;</span>
-<span class="n">echo</span> <span class="s">&quot;Second Line&quot;</span> &gt;&gt; <span class="n">f</span>.<span class="n">txt</span> 
+<span class="n">echo</span> <span class="s">&quot;Second Line&quot;</span> &gt;&gt; <span class="nb">f</span>.<span class="n">txt</span> 
 <span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F2 commit 2&quot;</span>
-<span class="n">echo</span> <span class="s">&quot;Third line&quot;</span> &gt;&gt; <span class="n">f</span>.<span class="n">txt</span> 
+<span class="n">echo</span> <span class="s">&quot;Third line&quot;</span> &gt;&gt; <span class="nb">f</span>.<span class="n">txt</span> 
 <span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F2 commit 3&quot;</span>
 <span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">f3</span>
 <span class="n">git</span> <span class="n">branch</span> -<span class="n">d</span> <span class="n">f3</span>
@@ -352,22 +352,22 @@ don't become git repositories all of a sudden!) and run <code>sh some.sh</code>.
 <span class="n">git</span> <span class="n">branch</span> -<span class="n">D</span> <span class="n">f3</span>
 <span class="n">git</span> <span class="n">checkout</span> -<span class="n">b</span> <span class="n">f3</span>
 <span class="n">echo</span> <span class="s">&quot;Shared Writing&quot;</span> &gt; <span class="n">p</span>.<span class="n">txt</span>
-<span class="n">git</span> <span class="n">add</span> .
+<span class="n">git</span> <span class="nb">add</span> .
 <span class="n">git</span> <span class="n">commit</span> -<span class="sr">m &quot;F3 commit 1&quot;</span>
 <span class="n">echo</span> <span class="s">&quot;Second line&quot;</span> &gt;&gt; <span class="n">p</span>.<span class="n">txt</span> 
 <span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F3 commit 2&quot;</span>
 <span class="n">echo</span> <span class="s">&quot;Third line&quot;</span> &gt;&gt; <span class="n">p</span>.<span class="n">txt</span>
 <span class="n">git</span> <span class="n">commit</span> -<span class="n">am</span> <span class="s">&quot;F3 commit 3&quot;</span>
 <span class="n">git</span> <span class="n">checkout</span> <span class="n">live_test</span> 
-<span class="n">git</span> <span class="n">merge</span> <span class="n">f1</span>
+<span class="n">git</span> <span class="nb">merge</span> <span class="n">f1</span>
 <span class="n">git</span> <span class="n">checkout</span> <span class="n">f2</span>
 <span class="n">git</span> <span class="n">rebase</span> <span class="n">live_test</span> 
 <span class="n">git</span> <span class="n">checkout</span> <span class="n">live_test</span> 
-<span class="n">git</span> <span class="n">merge</span> <span class="n">f2</span>
+<span class="n">git</span> <span class="nb">merge</span> <span class="n">f2</span>
 <span class="n">git</span> <span class="n">checkout</span> <span class="n">f3</span>
 <span class="n">git</span> <span class="n">rebase</span> <span class="n">live_test</span> 
 <span class="n">git</span> <span class="n">checkout</span> <span class="n">live_test</span> 
-<span class="n">git</span> <span class="n">merge</span> <span class="n">f3</span>
+<span class="n">git</span> <span class="nb">merge</span> <span class="n">f3</span>
 </pre></div>
 
 

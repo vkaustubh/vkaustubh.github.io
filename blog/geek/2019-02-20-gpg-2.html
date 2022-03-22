@@ -294,8 +294,8 @@ Your selection?
 <p>So, we are being asked to choose the algorithm to be used for the generation of
 the key. If you have no idea how to choose and/or the differences between the
 options, it's best to choose the default option. Press Enter.</p>
-<div class="codehilite"><pre><span></span>RSA keys may be between 1024 and 4096 bits long.
-What keysize do you want? (3072)
+<div class="codehilite"><pre><span></span><span class="nv">RSA</span> <span class="nv">keys</span> <span class="nv">may</span> <span class="nv">be</span> <span class="nv">between</span> <span class="mi">1024</span> <span class="nv">and</span> <span class="mi">4096</span> <span class="nv">bits</span> <span class="nv">long</span>.
+<span class="nv">What</span> <span class="nv">keysize</span> <span class="k">do</span> <span class="nv">you</span> <span class="nv">want</span>? <span class="ss">(</span><span class="mi">3072</span><span class="ss">)</span>
 </pre></div>
 
 
@@ -304,14 +304,14 @@ stronger the protection. But this also means longer times in terms of
 computations needed for encryption and decryption process. But with today's
 hardware, I'd imagine it should be fine to choose the highest. Here, I am using
 the default option on my machine - 3072.</p>
-<div class="codehilite"><pre><span></span>Requested keysize is 3072 bits
-Please specify how long the key should be valid.
-         0 = key does not expire
-      &lt;n&gt;  = key expires in n days
-      &lt;n&gt;w = key expires in n weeks
-      &lt;n&gt;m = key expires in n months
-      &lt;n&gt;y = key expires in n years
-Key is valid for? (0)
+<div class="codehilite"><pre><span></span><span class="nv">Requested</span> <span class="nv">keysize</span> <span class="nv">is</span> <span class="mi">3072</span> <span class="nv">bits</span>
+<span class="nv">Please</span> <span class="nv">specify</span> <span class="nv">how</span> <span class="nv">long</span> <span class="nv">the</span> <span class="nv">key</span> <span class="nv">should</span> <span class="nv">be</span> <span class="nv">valid</span>.
+         <span class="mi">0</span> <span class="o">=</span> <span class="nv">key</span> <span class="nv">does</span> <span class="nv">not</span> <span class="nv">expire</span>
+      <span class="o">&lt;</span><span class="nv">n</span><span class="o">&gt;</span>  <span class="o">=</span> <span class="nv">key</span> <span class="nv">expires</span> <span class="nv">in</span> <span class="nv">n</span> <span class="nv">days</span>
+      <span class="o">&lt;</span><span class="nv">n</span><span class="o">&gt;</span><span class="nv">w</span> <span class="o">=</span> <span class="nv">key</span> <span class="nv">expires</span> <span class="nv">in</span> <span class="nv">n</span> <span class="nv">weeks</span>
+      <span class="o">&lt;</span><span class="nv">n</span><span class="o">&gt;</span><span class="nv">m</span> <span class="o">=</span> <span class="nv">key</span> <span class="nv">expires</span> <span class="nv">in</span> <span class="nv">n</span> <span class="nv">months</span>
+      <span class="o">&lt;</span><span class="nv">n</span><span class="o">&gt;</span><span class="nv">y</span> <span class="o">=</span> <span class="nv">key</span> <span class="nv">expires</span> <span class="nv">in</span> <span class="nv">n</span> <span class="nv">years</span>
+<span class="nv">Key</span> <span class="nv">is</span> <span class="nv">valid</span> <span class="k">for</span>? <span class="ss">(</span><span class="mi">0</span><span class="ss">)</span>
 </pre></div>
 
 
@@ -377,29 +377,29 @@ following command and its associated output explains the procedure for creating
 a revocation certificate. You may be asked for a password to generate this
 certificate (assuming you provided one when creating the pair).</p>
 <p><code>$ gpg2 --output test.rev.asc --gen-revoke test@demo.com</code></p>
-<div class="codehilite"><pre><span></span>Create a revocation certificate for this key? (y/N) y
-Please select the reason for the revocation:
-  0 = No reason specified
-  1 = Key has been compromised
-  2 = Key is superseded
-  3 = Key is no longer used
-  Q = Cancel
-(Probably you want to select 1 here)
-Your decision? 0
-Enter an optional description; end it with an empty line:
-&gt; Emergency
-&gt; 
-Reason for revocation: No reason specified
-Emergency
-Is this okay? (y/N) y
-ASCII armored output forced.
-Revocation certificate created.
+<div class="codehilite"><pre><span></span><span class="nt">Create</span> <span class="nt">a</span> <span class="nt">revocation</span> <span class="nt">certificate</span> <span class="nt">for</span> <span class="nt">this</span> <span class="nt">key</span><span class="o">?</span> <span class="o">(</span><span class="nt">y</span><span class="o">/</span><span class="nt">N</span><span class="o">)</span> <span class="nt">y</span>
+<span class="nt">Please</span> <span class="nt">select</span> <span class="nt">the</span> <span class="nt">reason</span> <span class="nt">for</span> <span class="nt">the</span> <span class="nt">revocation</span><span class="o">:</span>
+  <span class="nt">0</span> <span class="o">=</span> <span class="nt">No</span> <span class="nt">reason</span> <span class="nt">specified</span>
+  <span class="nt">1</span> <span class="o">=</span> <span class="nt">Key</span> <span class="nt">has</span> <span class="nt">been</span> <span class="nt">compromised</span>
+  <span class="nt">2</span> <span class="o">=</span> <span class="nt">Key</span> <span class="nt">is</span> <span class="nt">superseded</span>
+  <span class="nt">3</span> <span class="o">=</span> <span class="nt">Key</span> <span class="nt">is</span> <span class="nt">no</span> <span class="nt">longer</span> <span class="nt">used</span>
+  <span class="nt">Q</span> <span class="o">=</span> <span class="nt">Cancel</span>
+<span class="o">(</span><span class="nt">Probably</span> <span class="nt">you</span> <span class="nt">want</span> <span class="nt">to</span> <span class="nt">select</span> <span class="nt">1</span> <span class="nt">here</span><span class="o">)</span>
+<span class="nt">Your</span> <span class="nt">decision</span><span class="o">?</span> <span class="nt">0</span>
+<span class="nt">Enter</span> <span class="nt">an</span> <span class="nt">optional</span> <span class="nt">description</span><span class="o">;</span> <span class="nt">end</span> <span class="nt">it</span> <span class="nt">with</span> <span class="nt">an</span> <span class="nt">empty</span> <span class="nt">line</span><span class="o">:</span>
+<span class="o">&gt;</span> <span class="nt">Emergency</span>
+<span class="o">&gt;</span> 
+<span class="nt">Reason</span> <span class="nt">for</span> <span class="nt">revocation</span><span class="o">:</span> <span class="nt">No</span> <span class="nt">reason</span> <span class="nt">specified</span>
+<span class="nt">Emergency</span>
+<span class="nt">Is</span> <span class="nt">this</span> <span class="nt">okay</span><span class="o">?</span> <span class="o">(</span><span class="nt">y</span><span class="o">/</span><span class="nt">N</span><span class="o">)</span> <span class="nt">y</span>
+<span class="nt">ASCII</span> <span class="nt">armored</span> <span class="nt">output</span> <span class="nt">forced</span><span class="o">.</span>
+<span class="nt">Revocation</span> <span class="nt">certificate</span> <span class="nt">created</span><span class="o">.</span>
 
-Please move it to a medium which you can hide away; if Mallory gets
-access to this certificate he can use it to make your key unusable.
-It is smart to print this certificate and store it away, just in case
-your media become unreadable.  But have some caution:  The print system of
-your machine might store the data and make it available to others!
+<span class="nt">Please</span> <span class="nt">move</span> <span class="nt">it</span> <span class="nt">to</span> <span class="nt">a</span> <span class="nt">medium</span> <span class="nt">which</span> <span class="nt">you</span> <span class="nt">can</span> <span class="nt">hide</span> <span class="nt">away</span><span class="o">;</span> <span class="nt">if</span> <span class="nt">Mallory</span> <span class="nt">gets</span>
+<span class="nt">access</span> <span class="nt">to</span> <span class="nt">this</span> <span class="nt">certificate</span> <span class="nt">he</span> <span class="nt">can</span> <span class="nt">use</span> <span class="nt">it</span> <span class="nt">to</span> <span class="nt">make</span> <span class="nt">your</span> <span class="nt">key</span> <span class="nt">unusable</span><span class="o">.</span>
+<span class="nt">It</span> <span class="nt">is</span> <span class="nt">smart</span> <span class="nt">to</span> <span class="nt">print</span> <span class="nt">this</span> <span class="nt">certificate</span> <span class="nt">and</span> <span class="nt">store</span> <span class="nt">it</span> <span class="nt">away</span><span class="o">,</span> <span class="nt">just</span> <span class="nt">in</span> <span class="nt">case</span>
+<span class="nt">your</span> <span class="nt">media</span> <span class="nt">become</span> <span class="nt">unreadable</span><span class="o">.</span>  <span class="nt">But</span> <span class="nt">have</span> <span class="nt">some</span> <span class="nt">caution</span><span class="o">:</span>  <span class="nt">The</span> <span class="nt">print</span> <span class="nt">system</span> <span class="nt">of</span>
+<span class="nt">your</span> <span class="nt">machine</span> <span class="nt">might</span> <span class="nt">store</span> <span class="nt">the</span> <span class="nt">data</span> <span class="nt">and</span> <span class="nt">make</span> <span class="nt">it</span> <span class="nt">available</span> <span class="nt">to</span> <span class="nt">others</span><span class="o">!</span>
 </pre></div>
 
 
@@ -443,10 +443,10 @@ best method. Let's see a better method.</p>
 file being generated.</p>
 <p><strong>So how do we verify a signature?</strong></p>
 <p><code>$ gpg2 --verify message.sig message.txt</code></p>
-<div class="codehilite"><pre><span></span><span class="n">gpg</span><span class="o">:</span> <span class="n">Signature</span> <span class="n">made</span> <span class="n">Wednesday</span> <span class="mi">20</span> <span class="n">February</span> <span class="mi">2019</span> <span class="mi">12</span><span class="o">:</span><span class="mi">42</span><span class="o">:</span><span class="mi">29</span> <span class="n">PM</span> <span class="n">IST</span>
-<span class="n">gpg</span><span class="o">:</span>                <span class="n">using</span> <span class="n">RSA</span> <span class="n">key</span> <span class="mi">2</span><span class="n">BD08C0C8FBA6B435BC88C7DBA5A224BE8B35A34</span>
-<span class="n">gpg</span><span class="o">:</span>                <span class="n">issuer</span> <span class="s2">&quot;test@demo.com&quot;</span>
-<span class="n">gpg</span><span class="o">:</span> <span class="n">Good</span> <span class="n">signature</span> <span class="n">from</span> <span class="s2">&quot;Test User (A test key pair for demo.) &lt;test@demo.com&gt;&quot;</span> <span class="o">[</span><span class="n">ultimate</span><span class="o">]</span>
+<div class="codehilite"><pre><span></span><span class="nl">gpg</span><span class="p">:</span><span class="w"> </span><span class="n">Signature</span><span class="w"> </span><span class="n">made</span><span class="w"> </span><span class="n">Wednesday</span><span class="w"> </span><span class="mi">20</span><span class="w"> </span><span class="n">February</span><span class="w"> </span><span class="mi">2019</span><span class="w"> </span><span class="mi">12</span><span class="err">:</span><span class="mi">42</span><span class="err">:</span><span class="mi">29</span><span class="w"> </span><span class="n">PM</span><span class="w"> </span><span class="n">IST</span><span class="w"></span>
+<span class="nl">gpg</span><span class="p">:</span><span class="w">                </span><span class="k">using</span><span class="w"> </span><span class="n">RSA</span><span class="w"> </span><span class="k">key</span><span class="w"> </span><span class="mi">2</span><span class="n">BD08C0C8FBA6B435BC88C7DBA5A224BE8B35A34</span><span class="w"></span>
+<span class="nl">gpg</span><span class="p">:</span><span class="w">                </span><span class="n">issuer</span><span class="w"> </span><span class="ss">&quot;test@demo.com&quot;</span><span class="w"></span>
+<span class="nl">gpg</span><span class="p">:</span><span class="w"> </span><span class="n">Good</span><span class="w"> </span><span class="n">signature</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="ss">&quot;Test User (A test key pair for demo.) &lt;test@demo.com&gt;&quot;</span><span class="w"> </span><span class="o">[</span><span class="n">ultimate</span><span class="o">]</span><span class="w"></span>
 </pre></div>
 
 
